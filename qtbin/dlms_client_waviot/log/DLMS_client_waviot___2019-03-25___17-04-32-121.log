@@ -1,0 +1,5537 @@
+2019.03.25 17:04:32.327  (Wrn)  QMetaObject::connectSlotsByName: No matching signal for on_pushButton_ADE_Write_clicked()
+2019.03.25 17:04:32.370  (Exc)  {widget_connect.cpp;  99} N strok 0
+2019.03.25 17:04:35.345  (Exc)  {mainwindow.cpp; 171} start_timer
+2019.03.25 17:04:35.345  (Exc)  {hdlc_dlms_exchange.cpp;1337} 1 32
+2019.03.25 17:04:35.346  (Exc)  {hdlc_dlms_exchange.cpp;1354} "7EA0070341935A647E"
+2019.03.25 17:04:35.346  (Exc)  {widget_connect.cpp; 962} TX "7EA0070341935A647E"
+2019.03.25 17:04:35.358  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA0" 2
+2019.03.25 17:04:35.396  (Exc)  {hdlc_dlms_exchange.cpp;1383} "204103733E9D818014050200800602" 15
+2019.03.25 17:04:35.399  (Exc)  {hdlc_dlms_exchange.cpp;1383} "0080070400000001080400000001CE" 15
+2019.03.25 17:04:35.407  (Exc)  {hdlc_dlms_exchange.cpp;1383} "6A7E" 2
+2019.03.25 17:04:35.408  (Exc)  {hdlc_dlms_exchange.cpp;1155} cf_UA
+2019.03.25 17:04:35.409  (Exc)  {pdu_worker.cpp;  29} {
+    "UA": {
+    }
+}
+
+2019.03.25 17:04:35.409  (Exc)  {hdlc_dlms_exchange.cpp;1377} "6034A1090607608574050801018A0207808B0760857405080201AC088006526561646572BE10040E01000000065F1F0400001E1DFFFF"
+2019.03.25 17:04:35.410  (Exc)  {hdlc_dlms_exchange.cpp; 962} "7EA04203411029AAE6E6006034A1090607608574050801018A0207808B0760857405080201AC088006526561646572BE10040E01000000065F1F0400001E1DFFFFB6E17E"
+2019.03.25 17:04:35.410  (Exc)  {widget_connect.cpp; 962} TX "7EA04203411029AAE6E6006034A1090607608574050801018A0207808B0760857405080201AC088006526561646572BE10040E01000000065F1F0400001E1DFFFFB6E17E"
+2019.03.25 17:04:35.488  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA037" 3
+2019.03.25 17:04:35.504  (Exc)  {hdlc_dlms_exchange.cpp;1383} "4103302179E6E7006129A10906076085" 16
+2019.03.25 17:04:35.534  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7405080101A203020100A305A10302" 15
+2019.03.25 17:04:35.536  (Exc)  {hdlc_dlms_exchange.cpp;1383} "0100BE10040E0800065F1F0400001E" 15
+2019.03.25 17:04:35.565  (Exc)  {hdlc_dlms_exchange.cpp;1383} "1D10000007AD177E" 8
+2019.03.25 17:04:35.566  (Exc)  {hdlc_dlms_exchange.cpp;1164} "6129A109060760857405080101A203020100A305A103020100BE10040E0800065F1F0400001E1D10000007"
+2019.03.25 17:04:35.567  (Exc)  {hdlc_dlms_exchange.cpp; 481} PDU "6129A109060760857405080101A203020100A305A103020100BE10040E0800065F1F0400001E1D10000007"
+2019.03.25 17:04:35.568  (Exc)  {pdu_worker.cpp;  29} {
+    "aare": {
+        "application-context-name": 1,
+        "result": 0,
+        "result-source-diagnostic": {
+            "acse-service-user": 0
+        },
+        "user-information": "0800065F1F0400001E1D10000007"
+    }
+}
+
+2019.03.25 17:04:35.603  (Wrn)  setGeometry: Unable to set geometry 530x464+-1063+285 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  532x464+-1063+285 (frame: 8, 31, 8, 8, custom margin: 0, 0, 0, 0, minimum size: 530x340, maximum size: 16777215x16777215).
+2019.03.25 17:04:35.627  (Exc)  {widget_connect.cpp; 121} s0.setNum(n); "0"
+2019.03.25 17:04:35.627  (Exc)  {widget_connect.cpp; 123} stroka0000000
+2019.03.25 17:04:35.688  (Exc)  {hdlc_dlms_exchange.cpp;  68} HDLC_MAC_stringify_controller_PDU:  "7EA0190341323ABDE6E600C001C100010000600100FF020089A07E"
+2019.03.25 17:04:35.698  (Exc)  {widget_connect.cpp; 962} TX "7EA0190341323ABDE6E600C001C100010000600100FF020089A07E"
+2019.03.25 17:04:35.743  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA0194103522418E6E700C401C1" 14
+2019.03.25 17:04:35.768  (Exc)  {hdlc_dlms_exchange.cpp;1383} "00090737373232323739157D7E" 13
+2019.03.25 17:04:35.769  (Exc)  {hdlc_dlms_exchange.cpp;1164} "C401C100090737373232323739"
+2019.03.25 17:04:35.769  (Exc)  {hdlc_dlms_exchange.cpp; 481} PDU "C401C100090737373232323739"
+2019.03.25 17:04:35.770  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "37373232323739"
+}
+
+2019.03.25 17:04:35.771  (Exc)  {pdu_worker.cpp;  29} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "37373232323739"
+                }
+            }
+        }
+    }
+}
+
+2019.03.25 17:04:35.777  (Exc)  {hdlc_dlms_exchange.cpp;  68} HDLC_MAC_stringify_controller_PDU:  "7EA0190341540ABBE6E600C001C100010000600101FF020032BC7E"
+2019.03.25 17:04:35.778  (Exc)  {widget_connect.cpp; 962} TX "7EA0190341540ABBE6E600C001C100010000600101FF020032BC7E"
+2019.03.25 17:04:35.823  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA01C4103744732E6E700C401C1" 14
+2019.03.25 17:04:35.839  (Exc)  {hdlc_dlms_exchange.cpp;1383} "00090A332E31000000000000003205" 15
+2019.03.25 17:04:35.855  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7E" 1
+2019.03.25 17:04:35.856  (Exc)  {hdlc_dlms_exchange.cpp;1164} "C401C100090A332E3100000000000000"
+2019.03.25 17:04:35.856  (Exc)  {hdlc_dlms_exchange.cpp; 481} PDU "C401C100090A332E3100000000000000"
+2019.03.25 17:04:35.857  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "332E3100000000000000"
+}
+
+2019.03.25 17:04:35.858  (Exc)  {pdu_worker.cpp;  29} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "332E3100000000000000"
+                }
+            }
+        }
+    }
+}
+
+2019.03.25 17:04:35.867  (Wrn)  setGeometry: Unable to set geometry 532x654+-1063+285 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  532x662+-1063+285 (frame: 8, 31, 8, 8, custom margin: 0, 0, 0, 0, minimum size: 530x654, maximum size: 16777215x16777215).
+2019.03.25 17:04:35.889  (Wrn)  setGeometry: Unable to set geometry 839x887+-1063+285 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  841x895+-1063+285 (frame: 8, 31, 8, 8, custom margin: 0, 0, 0, 0, minimum size: 839x887, maximum size: 16777215x16777215).
+2019.03.25 17:04:35.907  (Exc)  {hdlc_dlms_exchange.cpp;  68} HDLC_MAC_stringify_controller_PDU:  "7EA0190341761AB9E6E600C001C100010000600102FF0200FF997E"
+2019.03.25 17:04:35.944  (Exc)  {widget_connect.cpp; 962} TX "7EA0190341761AB9E6E600C001C100010000600102FF0200FF997E"
+2019.03.25 17:04:35.983  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA0" 2
+2019.03.25 17:04:36.000  (Exc)  {hdlc_dlms_exchange.cpp;1383} "16410396F52AE6E700C401C1000904" 15
+2019.03.25 17:04:36.015  (Exc)  {hdlc_dlms_exchange.cpp;1383} "35334538E1867E" 7
+2019.03.25 17:04:36.016  (Exc)  {hdlc_dlms_exchange.cpp;1164} "C401C100090435334538"
+2019.03.25 17:04:36.016  (Exc)  {hdlc_dlms_exchange.cpp; 481} PDU "C401C100090435334538"
+2019.03.25 17:04:36.017  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "35334538"
+}
+
+2019.03.25 17:04:36.017  (Exc)  {pdu_worker.cpp;  29} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "35334538"
+                }
+            }
+        }
+    }
+}
+
+2019.03.25 17:04:36.025  (Exc)  {hdlc_dlms_exchange.cpp;  68} HDLC_MAC_stringify_controller_PDU:  "7EA0190341986AB7E6E600C001C100010000600103FF020044857E"
+2019.03.25 17:04:36.026  (Exc)  {widget_connect.cpp; 962} TX "7EA0190341986AB7E6E600C001C100010000600103FF020044857E"
+2019.03.25 17:04:36.063  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA0264103B8" 6
+2019.03.25 17:04:36.079  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7BAEE6E700C401C1000914332E312E35" 16
+2019.03.25 17:04:36.096  (Exc)  {hdlc_dlms_exchange.cpp;1383} "2E3100000000000000000000000000" 15
+2019.03.25 17:04:36.111  (Exc)  {hdlc_dlms_exchange.cpp;1383} "844D7E" 3
+2019.03.25 17:04:36.112  (Exc)  {hdlc_dlms_exchange.cpp;1164} "C401C1000914332E312E352E3100000000000000000000000000"
+2019.03.25 17:04:36.112  (Exc)  {hdlc_dlms_exchange.cpp; 481} PDU "C401C1000914332E312E352E3100000000000000000000000000"
+2019.03.25 17:04:36.113  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "332E312E352E3100000000000000000000000000"
+}
+
+2019.03.25 17:04:36.113  (Exc)  {pdu_worker.cpp;  29} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "332E312E352E3100000000000000000000000000"
+                }
+            }
+        }
+    }
+}
+
+2019.03.25 17:04:36.119  (Exc)  {hdlc_dlms_exchange.cpp;  68} HDLC_MAC_stringify_controller_PDU:  "7EA0190341BA7AB5E6E600C001C100010100000402FF0200A5B97E"
+2019.03.25 17:04:36.119  (Exc)  {widget_connect.cpp; 962} TX "7EA0190341BA7AB5E6E600C001C100010100000402FF0200A5B97E"
+2019.03.25 17:04:36.160  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA0134103DACACCE6" 9
+2019.03.25 17:04:36.175  (Exc)  {hdlc_dlms_exchange.cpp;1383} "E700C401C1001200018AA07E" 12
+2019.03.25 17:04:36.176  (Exc)  {hdlc_dlms_exchange.cpp;1164} "C401C100120001"
+2019.03.25 17:04:36.176  (Exc)  {hdlc_dlms_exchange.cpp; 481} PDU "C401C100120001"
+2019.03.25 17:04:36.177  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 1
+}
+
+2019.03.25 17:04:36.177  (Exc)  {pdu_worker.cpp;  29} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "long-unsigned": 1
+                }
+            }
+        }
+    }
+}
+
+2019.03.25 17:04:36.182  (Exc)  {hdlc_dlms_exchange.cpp;  68} HDLC_MAC_stringify_controller_PDU:  "7EA0190341DC4AB3E6E600C001C100010100000403FF02001EA57E"
+2019.03.25 17:04:36.183  (Exc)  {widget_connect.cpp; 962} TX "7EA0190341DC4AB3E6E600C001C100010100000403FF02001EA57E"
+2019.03.25 17:04:36.223  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA0134103FCFE88E6E7" 10
+2019.03.25 17:04:36.239  (Exc)  {hdlc_dlms_exchange.cpp;1383} "00C401C1001200018AA07E" 11
+2019.03.25 17:04:36.240  (Exc)  {hdlc_dlms_exchange.cpp;1164} "C401C100120001"
+2019.03.25 17:04:36.240  (Exc)  {hdlc_dlms_exchange.cpp; 481} PDU "C401C100120001"
+2019.03.25 17:04:36.241  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 1
+}
+
+2019.03.25 17:04:36.242  (Exc)  {pdu_worker.cpp;  29} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "long-unsigned": 1
+                }
+            }
+        }
+    }
+}
+
+2019.03.25 17:04:36.246  (Exc)  {hdlc_dlms_exchange.cpp;  68} HDLC_MAC_stringify_controller_PDU:  "7EA0190341FE5AB1E6E600C001C100010000600104FF020065D27E"
+2019.03.25 17:04:36.247  (Exc)  {widget_connect.cpp; 962} TX "7EA0190341FE5AB1E6E600C001C100010000600104FF020065D27E"
+2019.03.25 17:04:36.287  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA01341031EE24CE6" 9
+2019.03.25 17:04:36.303  (Exc)  {hdlc_dlms_exchange.cpp;1383} "E700C401C1001207E39E297E" 12
+2019.03.25 17:04:36.304  (Exc)  {hdlc_dlms_exchange.cpp;1164} "C401C1001207E3"
+2019.03.25 17:04:36.305  (Exc)  {hdlc_dlms_exchange.cpp; 481} PDU "C401C1001207E3"
+2019.03.25 17:04:36.305  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 2019
+}
+
+2019.03.25 17:04:36.306  (Exc)  {pdu_worker.cpp;  29} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "long-unsigned": 2019
+                }
+            }
+        }
+    }
+}
+
+2019.03.25 17:04:36.311  (Exc)  {hdlc_dlms_exchange.cpp;  68} HDLC_MAC_stringify_controller_PDU:  "7EA0190341102ABFE6E600C001C100010000010000FF020057287E"
+2019.03.25 17:04:36.312  (Exc)  {widget_connect.cpp; 962} TX "7EA0190341102ABFE6E600C001C100010000010000FF020057287E"
+2019.03.25 17:04:36.351  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA01D410330DC2AE6" 9
+2019.03.25 17:04:36.368  (Exc)  {hdlc_dlms_exchange.cpp;1383} "E700C401C1001907E3031901110428" 15
+2019.03.25 17:04:36.384  (Exc)  {hdlc_dlms_exchange.cpp;1383} "0000B400CC117E" 7
+2019.03.25 17:04:36.384  (Exc)  {hdlc_dlms_exchange.cpp;1164} "C401C1001907E30319011104280000B400"
+2019.03.25 17:04:36.385  (Exc)  {hdlc_dlms_exchange.cpp; 481} PDU "C401C1001907E30319011104280000B400"
+2019.03.25 17:04:36.385  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "date-time": "07E30319011104280000B400"
+}
+
+2019.03.25 17:04:36.386  (Exc)  {pdu_worker.cpp;  29} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "date-time": "07E30319011104280000B400"
+                }
+            }
+        }
+    }
+}
+
+2019.03.25 17:04:36.395  (Exc)  {pdu_worker.cpp;  92} pdu_worker(0x39c5860) TXe5 "EF17"
+2019.03.25 17:04:36.395  (Exc)  {pdu_worker.cpp; 107} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF17"
+            }
+        }
+    }
+}
+
+2019.03.25 17:04:36.396  (Exc)  {hdlc_dlms_exchange.cpp;1377} "C101C1000100006001FEFF02000902EF17"
+2019.03.25 17:04:36.397  (Exc)  {hdlc_dlms_exchange.cpp; 962} "7EA01D034132D6CFE6E600C101C1000100006001FEFF02000902EF1729067E"
+2019.03.25 17:04:36.397  (Exc)  {widget_connect.cpp; 962} TX "7EA01D034132D6CFE6E600C101C1000100006001FEFF02000902EF1729067E"
+2019.03.25 17:04:36.447  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA01A410352E93DE6E700C501C1" 14
+2019.03.25 17:04:36.465  (Exc)  {hdlc_dlms_exchange.cpp;1383} "000908EF170001C012C0127C0E7E" 14
+2019.03.25 17:04:36.466  (Exc)  {hdlc_dlms_exchange.cpp;1164} "C501C1000908EF170001C012C012"
+2019.03.25 17:04:36.467  (Exc)  {hdlc_dlms_exchange.cpp; 481} PDU "C501C1000908EF170001C012C012"
+2019.03.25 17:04:36.467  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "EF170001C012C012"
+}
+
+2019.03.25 17:04:36.469  (Exc)  {pdu_worker.cpp;  29} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": "EF170001C012C012"
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.03.25 17:04:36.477  (Exc)  {hdlc_dlms_exchange.cpp;  68} HDLC_MAC_stringify_controller_PDU:  "7EA0190341540ABBE6E600C001C1000101005E0700FF030004FD7E"
+2019.03.25 17:04:36.477  (Exc)  {widget_connect.cpp; 962} TX "7EA0190341540ABBE6E600C001C1000101005E0700FF030004FD7E"
+2019.03.25 17:04:36.512  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7E" 1
+2019.03.25 17:04:36.528  (Exc)  {hdlc_dlms_exchange.cpp;1383} "A87E410374F5C8E6E700C402C1000000" 16
+2019.03.25 17:04:36.546  (Exc)  {hdlc_dlms_exchange.cpp;1383} "0001008201E8012702041200080906" 15
+2019.03.25 17:04:36.568  (Exc)  {hdlc_dlms_exchange.cpp;1383} "0000010000FF0F0212000002041200" 15
+2019.03.25 17:04:36.575  (Exc)  {hdlc_dlms_exchange.cpp;1383} "03090601000B0700FF0F021200000204" 16
+2019.03.25 17:04:36.598  (Exc)  {hdlc_dlms_exchange.cpp;1383} "120003090601001F0700FF0F021200" 15
+2019.03.25 17:04:36.629  (Exc)  {hdlc_dlms_exchange.cpp;1383} "00020412000309060100330700FF0F" 15
+2019.03.25 17:04:36.632  (Exc)  {hdlc_dlms_exchange.cpp;1383} "02120000020412000309060100470700" 16
+2019.03.25 17:04:36.658  (Exc)  {hdlc_dlms_exchange.cpp;1383} "FF0F02120000020412000309060100" 15
+2019.03.25 17:04:36.659  (Exc)  {hdlc_dlms_exchange.cpp;1383} "5BD6497E" 4
+2019.03.25 17:04:36.660  (Exc)  {hdlc_dlms_exchange.cpp;1148} "7EA00703417146A07E"
+2019.03.25 17:04:36.660  (Exc)  {widget_connect.cpp; 962} TX "7EA00703417146A07E"
+2019.03.25 17:04:36.688  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA87E410396E90C0700FF0F02" 13
+2019.03.25 17:04:36.706  (Exc)  {hdlc_dlms_exchange.cpp;1383} "1200000204120003090601000C0700" 15
+2019.03.25 17:04:36.738  (Exc)  {hdlc_dlms_exchange.cpp;1383} "FF0F02120000020412000309060100200700FF0F0212000002041200030906" 31
+2019.03.25 17:04:36.769  (Exc)  {hdlc_dlms_exchange.cpp;1383} "0100340700FF0F02120000020412000309060100480700FF0F0212000002" 30
+2019.03.25 17:04:36.799  (Exc)  {hdlc_dlms_exchange.cpp;1383} "0412000309060100210700FF0F02120000020412000309060100350700FF0F" 31
+2019.03.25 17:04:36.821  (Exc)  {hdlc_dlms_exchange.cpp;1383} "021200000299B37E" 8
+2019.03.25 17:04:36.822  (Exc)  {hdlc_dlms_exchange.cpp;1148} "7EA00703419148477E"
+2019.03.25 17:04:36.823  (Exc)  {widget_connect.cpp; 962} TX "7EA00703419148477E"
+2019.03.25 17:04:36.846  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA87E4103B895C404120003" 12
+2019.03.25 17:04:36.863  (Exc)  {hdlc_dlms_exchange.cpp;1383} "09060100490700FF0F021200000204" 15
+2019.03.25 17:04:36.879  (Exc)  {hdlc_dlms_exchange.cpp;1383} "120003090601000D0700FF0F021200" 15
+2019.03.25 17:04:36.895  (Exc)  {hdlc_dlms_exchange.cpp;1383} "000204120003090601000E0700FF0F02" 16
+2019.03.25 17:04:36.912  (Exc)  {hdlc_dlms_exchange.cpp;1383} "120000020412000309060100090700" 15
+2019.03.25 17:04:36.928  (Exc)  {hdlc_dlms_exchange.cpp;1383} "FF0F02120000020412000309060100" 15
+2019.03.25 17:04:36.943  (Exc)  {hdlc_dlms_exchange.cpp;1383} "1D0700FF0F02120000020412000309" 15
+2019.03.25 17:04:36.959  (Exc)  {hdlc_dlms_exchange.cpp;1383} "060100310700FF0F0212000002041200" 16
+2019.03.25 17:04:36.974  (Exc)  {hdlc_dlms_exchange.cpp;1383} "030906010045A4067E" 9
+2019.03.25 17:04:36.975  (Exc)  {hdlc_dlms_exchange.cpp;1148} "7EA0070341B14A667E"
+2019.03.25 17:04:36.976  (Exc)  {widget_connect.cpp; 962} TX "7EA0070341B14A667E"
+2019.03.25 17:04:36.990  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA8" 2
+2019.03.25 17:04:37.006  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7E4103DA81840700FF0F021200000204" 16
+2019.03.25 17:04:37.023  (Exc)  {hdlc_dlms_exchange.cpp;1383} "12000309060100010700FF0F021200" 15
+2019.03.25 17:04:37.039  (Exc)  {hdlc_dlms_exchange.cpp;1383} "00020412000309060100150700FF0F" 15
+2019.03.25 17:04:37.055  (Exc)  {hdlc_dlms_exchange.cpp;1383} "02120000020412000309060100290700" 16
+2019.03.25 17:04:37.070  (Exc)  {hdlc_dlms_exchange.cpp;1383} "FF0F02120000020412000309060100" 15
+2019.03.25 17:04:37.087  (Exc)  {hdlc_dlms_exchange.cpp;1383} "3D0700FF0F02120000020412000309" 15
+2019.03.25 17:04:37.102  (Exc)  {hdlc_dlms_exchange.cpp;1383} "060100030700FF0F0212000002041200" 16
+2019.03.25 17:04:37.123  (Exc)  {hdlc_dlms_exchange.cpp;1383} "0309060100170700FF0F0212000002" 15
+2019.03.25 17:04:37.135  (Exc)  {hdlc_dlms_exchange.cpp;1383} "75307E" 3
+2019.03.25 17:04:37.135  (Exc)  {hdlc_dlms_exchange.cpp;1148} "7EA0070341D14C057E"
+2019.03.25 17:04:37.136  (Exc)  {widget_connect.cpp; 962} TX "7EA0070341D14C057E"
+2019.03.25 17:04:37.150  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA0" 2
+2019.03.25 17:04:37.167  (Exc)  {hdlc_dlms_exchange.cpp;1383} "2C4103FCF57604120003090601002B07" 16
+2019.03.25 17:04:37.183  (Exc)  {hdlc_dlms_exchange.cpp;1383} "00FF0F021200000204120003090601" 15
+2019.03.25 17:04:37.199  (Exc)  {hdlc_dlms_exchange.cpp;1383} "003F0700FF0F02120000841F7E" 13
+2019.03.25 17:04:37.199  (Exc)  {hdlc_dlms_exchange.cpp;1164} "C402C10000000001008201E80127020412000809060000010000FF0F021200000204120003090601000B0700FF0F021200000204120003090601001F0700FF0F02120000020412000309060100330700FF0F02120000020412000309060100470700FF0F021200000204120003090601005B0700FF0F021200000204120003090601000C0700FF0F02120000020412000309060100200700FF0F02120000020412000309060100340700FF0F02120000020412000309060100480700FF0F02120000020412000309060100210700FF0F02120000020412000309060100350700FF0F02120000020412000309060100490700FF0F021200000204120003090601000D0700FF0F021200000204120003090601000E0700FF0F02120000020412000309060100090700FF0F021200000204120003090601001D0700FF0F02120000020412000309060100310700FF0F02120000020412000309060100450700FF0F02120000020412000309060100010700FF0F02120000020412000309060100150700FF0F02120000020412000309060100290700FF0F021200000204120003090601003D0700FF0F02120000020412000309060100030700FF0F02120000020412000309060100170700FF0F021200000204120003090601002B0700FF0F021200000204120003090601003F0700FF0F02120000"
+2019.03.25 17:04:37.200  (Exc)  {hdlc_dlms_exchange.cpp; 481} PDU "C402C10000000001008201E80127020412000809060000010000FF0F021200000204120003090601000B0700FF0F021200000204120003090601001F0700FF0F02120000020412000309060100330700FF0F02120000020412000309060100470700FF0F021200000204120003090601005B0700FF0F021200000204120003090601000C0700FF0F02120000020412000309060100200700FF0F02120000020412000309060100340700FF0F02120000020412000309060100480700FF0F02120000020412000309060100210700FF0F02120000020412000309060100350700FF0F02120000020412000309060100490700FF0F021200000204120003090601000D0700FF0F021200000204120003090601000E0700FF0F02120000020412000309060100090700FF0F021200000204120003090601001D0700FF0F02120000020412000309060100310700FF0F02120000020412000309060100450700FF0F02120000020412000309060100010700FF0F02120000020412000309060100150700FF0F02120000020412000309060100290700FF0F021200000204120003090601003D0700FF0F02120000020412000309060100030700FF0F02120000020412000309060100170700FF0F021200000204120003090601002B0700FF0F021200000204120003090601003F0700FF0F02120000"
+2019.03.25 17:04:37.200  (Exc)  {hdlc_dlms_exchange.cpp; 693} last_block 0
+2019.03.25 17:04:37.201  (Exc)  {hdlc_dlms_exchange.cpp; 694} block_index 1
+2019.03.25 17:04:37.201  (Exc)  {hdlc_dlms_exchange.cpp;1177} buf_block 1 "0127020412000809060000010000FF0F021200000204120003090601000B0700FF0F021200000204120003090601001F0700FF0F02120000020412000309060100330700FF0F02120000020412000309060100470700FF0F021200000204120003090601005B0700FF0F021200000204120003090601000C0700FF0F02120000020412000309060100200700FF0F02120000020412000309060100340700FF0F02120000020412000309060100480700FF0F02120000020412000309060100210700FF0F02120000020412000309060100350700FF0F02120000020412000309060100490700FF0F021200000204120003090601000D0700FF0F021200000204120003090601000E0700FF0F02120000020412000309060100090700FF0F021200000204120003090601001D0700FF0F02120000020412000309060100310700FF0F02120000020412000309060100450700FF0F02120000020412000309060100010700FF0F02120000020412000309060100150700FF0F02120000020412000309060100290700FF0F021200000204120003090601003D0700FF0F02120000020412000309060100030700FF0F02120000020412000309060100170700FF0F021200000204120003090601002B0700FF0F021200000204120003090601003F0700FF0F02120000"
+2019.03.25 17:04:37.202  (Exc)  {hdlc_dlms_exchange.cpp;  68} HDLC_MAC_stringify_controller_PDU:  "7EA0130341F6BCE1E6E600C0028100000001737F7E"
+2019.03.25 17:04:37.202  (Exc)  {widget_connect.cpp; 962} TX "7EA0130341F6BCE1E6E600C0028100000001737F7E"
+2019.03.25 17:04:37.230  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA8" 2
+2019.03.25 17:04:37.375  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7E41031EA904E6E700C40281FF00000002008200D8020412000309060100010800FF0F02120000020412000309060100020800FF0F02120000020412000309060100030800FF0F02120000020412000309060100040800FF0F02120000020412000309060100580800FF0F02120000020412000309060100590800" 123
+2019.03.25 17:04:37.380  (Exc)  {hdlc_dlms_exchange.cpp;1383} "97147E" 3
+2019.03.25 17:04:37.381  (Exc)  {hdlc_dlms_exchange.cpp;1148} "7EA00703411140C37E"
+2019.03.25 17:04:37.381  (Exc)  {widget_connect.cpp; 962} TX "7EA00703411140C37E"
+2019.03.25 17:04:37.407  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA07B410330A2F8FF0F021200" 13
+2019.03.25 17:04:37.422  (Exc)  {hdlc_dlms_exchange.cpp;1383} "000204120003090601000C0701FF0F02" 16
+2019.03.25 17:04:37.438  (Exc)  {hdlc_dlms_exchange.cpp;1383} "1200000204120003090601000C0702" 15
+2019.03.25 17:04:37.458  (Exc)  {hdlc_dlms_exchange.cpp;1383} "FF0F02120000020412000309060100" 15
+2019.03.25 17:04:37.471  (Exc)  {hdlc_dlms_exchange.cpp;1383} "0C0703FF0F0212000002041200030906" 16
+2019.03.25 17:04:37.489  (Exc)  {hdlc_dlms_exchange.cpp;1383} "010051070AFF0F0212000002041200" 15
+2019.03.25 17:04:37.506  (Exc)  {hdlc_dlms_exchange.cpp;1383} "0309060100510715FF0F0212000002" 15
+2019.03.25 17:04:37.521  (Exc)  {hdlc_dlms_exchange.cpp;1383} "0412000309060100510702FF0F021200" 16
+2019.03.25 17:04:37.537  (Exc)  {hdlc_dlms_exchange.cpp;1383} "00EA987E" 4
+2019.03.25 17:04:37.538  (Exc)  {hdlc_dlms_exchange.cpp;1164} "C40281FF00000002008200D8020412000309060100010800FF0F02120000020412000309060100020800FF0F02120000020412000309060100030800FF0F02120000020412000309060100040800FF0F02120000020412000309060100580800FF0F02120000020412000309060100590800FF0F021200000204120003090601000C0701FF0F021200000204120003090601000C0702FF0F021200000204120003090601000C0703FF0F0212000002041200030906010051070AFF0F02120000020412000309060100510715FF0F02120000020412000309060100510702FF0F02120000"
+2019.03.25 17:04:37.539  (Exc)  {hdlc_dlms_exchange.cpp; 481} PDU "C40281FF00000002008200D8020412000309060100010800FF0F02120000020412000309060100020800FF0F02120000020412000309060100030800FF0F02120000020412000309060100040800FF0F02120000020412000309060100580800FF0F02120000020412000309060100590800FF0F021200000204120003090601000C0701FF0F021200000204120003090601000C0702FF0F021200000204120003090601000C0703FF0F0212000002041200030906010051070AFF0F02120000020412000309060100510715FF0F02120000020412000309060100510702FF0F02120000"
+2019.03.25 17:04:37.539  (Exc)  {hdlc_dlms_exchange.cpp; 693} last_block 255
+2019.03.25 17:04:37.540  (Exc)  {hdlc_dlms_exchange.cpp; 694} block_index 2
+2019.03.25 17:04:37.540  (Exc)  {hdlc_dlms_exchange.cpp;1186} buf_block 2 "020412000309060100010800FF0F02120000020412000309060100020800FF0F02120000020412000309060100030800FF0F02120000020412000309060100040800FF0F02120000020412000309060100580800FF0F02120000020412000309060100590800FF0F021200000204120003090601000C0701FF0F021200000204120003090601000C0702FF0F021200000204120003090601000C0703FF0F0212000002041200030906010051070AFF0F02120000020412000309060100510715FF0F02120000020412000309060100510702FF0F02120000"
+2019.03.25 17:04:37.541  (Exc)  {hdlc_dlms_exchange.cpp;1188} buf_block summ "0127020412000809060000010000FF0F021200000204120003090601000B0700FF0F021200000204120003090601001F0700FF0F02120000020412000309060100330700FF0F02120000020412000309060100470700FF0F021200000204120003090601005B0700FF0F021200000204120003090601000C0700FF0F02120000020412000309060100200700FF0F02120000020412000309060100340700FF0F02120000020412000309060100480700FF0F02120000020412000309060100210700FF0F02120000020412000309060100350700FF0F02120000020412000309060100490700FF0F021200000204120003090601000D0700FF0F021200000204120003090601000E0700FF0F02120000020412000309060100090700FF0F021200000204120003090601001D0700FF0F02120000020412000309060100310700FF0F02120000020412000309060100450700FF0F02120000020412000309060100010700FF0F02120000020412000309060100150700FF0F02120000020412000309060100290700FF0F021200000204120003090601003D0700FF0F02120000020412000309060100030700FF0F02120000020412000309060100170700FF0F021200000204120003090601002B0700FF0F021200000204120003090601003F0700FF0F02120000020412000309060100010800FF0F02120000020412000309060100020800FF0F02120000020412000309060100030800FF0F02120000020412000309060100040800FF0F02120000020412000309060100580800FF0F02120000020412000309060100590800FF0F021200000204120003090601000C0701FF0F021200000204120003090601000C0702FF0F021200000204120003090601000C0703FF0F0212000002041200030906010051070AFF0F02120000020412000309060100510715FF0F02120000020412000309060100510702FF0F02120000"
+2019.03.25 17:04:37.541  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 8
+}
+
+2019.03.25 17:04:37.542  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0000010000FF"
+}
+
+2019.03.25 17:04:37.542  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.543  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.543  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 8
+        },
+        {
+            "octet-string": "0000010000FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.543  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.544  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01000B0700FF"
+}
+
+2019.03.25 17:04:37.544  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.545  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.545  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01000B0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.546  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.546  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01001F0700FF"
+}
+
+2019.03.25 17:04:37.546  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.547  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.547  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01001F0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.547  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.548  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100330700FF"
+}
+
+2019.03.25 17:04:37.548  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.548  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.549  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100330700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.549  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.550  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100470700FF"
+}
+
+2019.03.25 17:04:37.550  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.550  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.551  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100470700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.551  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.551  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01005B0700FF"
+}
+
+2019.03.25 17:04:37.552  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.552  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.553  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01005B0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.553  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.553  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01000C0700FF"
+}
+
+2019.03.25 17:04:37.554  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.554  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.555  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01000C0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.555  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.555  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100200700FF"
+}
+
+2019.03.25 17:04:37.556  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.556  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.556  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100200700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.557  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.557  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100340700FF"
+}
+
+2019.03.25 17:04:37.558  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.558  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.558  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100340700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.559  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.559  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100480700FF"
+}
+
+2019.03.25 17:04:37.559  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.559  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.559  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100480700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.560  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.560  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100210700FF"
+}
+
+2019.03.25 17:04:37.560  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.560  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.560  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100210700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.561  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.561  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100350700FF"
+}
+
+2019.03.25 17:04:37.561  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.561  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.562  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100350700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.562  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.562  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100490700FF"
+}
+
+2019.03.25 17:04:37.562  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.562  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.563  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100490700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.563  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.563  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01000D0700FF"
+}
+
+2019.03.25 17:04:37.563  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.563  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.564  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01000D0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.564  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.564  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01000E0700FF"
+}
+
+2019.03.25 17:04:37.564  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.564  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.564  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01000E0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.565  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.565  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100090700FF"
+}
+
+2019.03.25 17:04:37.565  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.565  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.565  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100090700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.566  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.566  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01001D0700FF"
+}
+
+2019.03.25 17:04:37.566  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.566  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.566  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01001D0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.566  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.566  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100310700FF"
+}
+
+2019.03.25 17:04:37.566  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.566  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.567  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100310700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.567  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.567  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100450700FF"
+}
+
+2019.03.25 17:04:37.567  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.568  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.568  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100450700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.568  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.569  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100010700FF"
+}
+
+2019.03.25 17:04:37.569  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.569  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.569  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100010700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.570  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.570  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100150700FF"
+}
+
+2019.03.25 17:04:37.570  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.570  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.570  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100150700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.571  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.571  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100290700FF"
+}
+
+2019.03.25 17:04:37.571  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.571  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.571  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100290700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.572  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.572  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01003D0700FF"
+}
+
+2019.03.25 17:04:37.572  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.572  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.572  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01003D0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.573  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.573  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100030700FF"
+}
+
+2019.03.25 17:04:37.573  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.573  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.574  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100030700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.574  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.574  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100170700FF"
+}
+
+2019.03.25 17:04:37.574  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.574  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.574  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100170700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.575  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.575  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01002B0700FF"
+}
+
+2019.03.25 17:04:37.575  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.575  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.575  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01002B0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.576  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.576  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01003F0700FF"
+}
+
+2019.03.25 17:04:37.576  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.576  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.576  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01003F0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.577  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.577  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100010800FF"
+}
+
+2019.03.25 17:04:37.577  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.577  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.578  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100010800FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.578  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.578  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100020800FF"
+}
+
+2019.03.25 17:04:37.578  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.578  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.579  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100020800FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.579  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.579  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100030800FF"
+}
+
+2019.03.25 17:04:37.579  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.579  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.580  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100030800FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.580  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.580  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100040800FF"
+}
+
+2019.03.25 17:04:37.580  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.580  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.581  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100040800FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.581  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.581  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100580800FF"
+}
+
+2019.03.25 17:04:37.581  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.581  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.582  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100580800FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.582  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.582  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100590800FF"
+}
+
+2019.03.25 17:04:37.582  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.582  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.582  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100590800FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.583  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.583  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01000C0701FF"
+}
+
+2019.03.25 17:04:37.583  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.583  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.583  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01000C0701FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.584  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.584  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01000C0702FF"
+}
+
+2019.03.25 17:04:37.584  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.584  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.584  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01000C0702FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.584  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.584  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01000C0703FF"
+}
+
+2019.03.25 17:04:37.584  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.584  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.584  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01000C0703FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.584  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.584  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "010051070AFF"
+}
+
+2019.03.25 17:04:37.585  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.585  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.585  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "010051070AFF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.585  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.585  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100510715FF"
+}
+
+2019.03.25 17:04:37.585  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.585  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.585  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100510715FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.585  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.585  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100510702FF"
+}
+
+2019.03.25 17:04:37.585  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.585  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.586  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100510702FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.586  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "array": [
+        {
+            "structure": [
+                {
+                    "long-unsigned": 8
+                },
+                {
+                    "octet-string": "0000010000FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01000B0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01001F0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100330700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100470700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01005B0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01000C0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100200700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100340700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100480700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100210700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100350700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100490700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01000D0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01000E0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100090700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01001D0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100310700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100450700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100010700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100150700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100290700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01003D0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100030700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100170700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01002B0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01003F0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100010800FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100020800FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100030800FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100040800FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100580800FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100590800FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01000C0701FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01000C0702FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01000C0703FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "010051070AFF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100510715FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100510702FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        }
+    ]
+}
+
+2019.03.25 17:04:37.587  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 8
+}
+
+2019.03.25 17:04:37.588  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0000010000FF"
+}
+
+2019.03.25 17:04:37.588  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.588  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.588  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 8
+        },
+        {
+            "octet-string": "0000010000FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.588  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.588  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01000B0700FF"
+}
+
+2019.03.25 17:04:37.588  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.588  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.588  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01000B0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.588  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.588  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01001F0700FF"
+}
+
+2019.03.25 17:04:37.588  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.588  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.588  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01001F0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.589  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.589  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100330700FF"
+}
+
+2019.03.25 17:04:37.589  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.589  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.589  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100330700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.589  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.589  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100470700FF"
+}
+
+2019.03.25 17:04:37.589  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.589  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.589  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100470700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.589  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.589  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01005B0700FF"
+}
+
+2019.03.25 17:04:37.589  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.589  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.589  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01005B0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.590  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.590  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01000C0700FF"
+}
+
+2019.03.25 17:04:37.590  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.590  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.590  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01000C0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.590  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.590  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100200700FF"
+}
+
+2019.03.25 17:04:37.590  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.590  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.590  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100200700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.590  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.590  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100340700FF"
+}
+
+2019.03.25 17:04:37.590  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.590  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.591  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100340700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.591  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.591  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100480700FF"
+}
+
+2019.03.25 17:04:37.591  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.591  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.591  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100480700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.591  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.591  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100210700FF"
+}
+
+2019.03.25 17:04:37.591  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.591  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.591  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100210700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.591  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.591  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100350700FF"
+}
+
+2019.03.25 17:04:37.591  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.591  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.592  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100350700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.592  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.592  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100490700FF"
+}
+
+2019.03.25 17:04:37.592  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.592  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.592  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100490700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.592  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.592  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01000D0700FF"
+}
+
+2019.03.25 17:04:37.592  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.592  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.592  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01000D0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.592  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.592  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01000E0700FF"
+}
+
+2019.03.25 17:04:37.592  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.593  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.593  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01000E0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.593  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.593  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100090700FF"
+}
+
+2019.03.25 17:04:37.593  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.593  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.593  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100090700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.593  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.593  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01001D0700FF"
+}
+
+2019.03.25 17:04:37.593  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.593  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.593  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01001D0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.593  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.593  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100310700FF"
+}
+
+2019.03.25 17:04:37.594  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.594  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.594  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100310700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.594  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.594  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100450700FF"
+}
+
+2019.03.25 17:04:37.594  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.594  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.594  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100450700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.594  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.594  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100010700FF"
+}
+
+2019.03.25 17:04:37.594  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.594  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.594  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100010700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.594  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.594  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100150700FF"
+}
+
+2019.03.25 17:04:37.595  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.595  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.595  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100150700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.595  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.595  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100290700FF"
+}
+
+2019.03.25 17:04:37.595  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.595  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.595  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100290700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.595  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.595  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01003D0700FF"
+}
+
+2019.03.25 17:04:37.595  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.595  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.595  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01003D0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.595  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.596  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100030700FF"
+}
+
+2019.03.25 17:04:37.596  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.596  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.596  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100030700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.596  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.596  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100170700FF"
+}
+
+2019.03.25 17:04:37.596  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.596  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.596  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100170700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.596  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.596  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01002B0700FF"
+}
+
+2019.03.25 17:04:37.597  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.597  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.597  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01002B0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.597  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.597  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01003F0700FF"
+}
+
+2019.03.25 17:04:37.597  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.597  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.597  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01003F0700FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.597  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.597  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100010800FF"
+}
+
+2019.03.25 17:04:37.597  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.597  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.597  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100010800FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.597  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.597  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100020800FF"
+}
+
+2019.03.25 17:04:37.598  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.598  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.598  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100020800FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.598  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.598  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100030800FF"
+}
+
+2019.03.25 17:04:37.598  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.598  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.598  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100030800FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.598  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.598  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100040800FF"
+}
+
+2019.03.25 17:04:37.598  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.598  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.598  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100040800FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.598  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.599  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100580800FF"
+}
+
+2019.03.25 17:04:37.599  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.599  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.599  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100580800FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.599  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.599  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100590800FF"
+}
+
+2019.03.25 17:04:37.599  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.599  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.599  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100590800FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.599  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.599  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01000C0701FF"
+}
+
+2019.03.25 17:04:37.599  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.599  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.599  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01000C0701FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.599  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.600  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01000C0702FF"
+}
+
+2019.03.25 17:04:37.600  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.600  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.600  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01000C0702FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.600  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.600  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "01000C0703FF"
+}
+
+2019.03.25 17:04:37.600  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.600  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.600  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "01000C0703FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.600  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.600  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "010051070AFF"
+}
+
+2019.03.25 17:04:37.600  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.600  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.600  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "010051070AFF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.601  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.601  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100510715FF"
+}
+
+2019.03.25 17:04:37.601  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.601  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.601  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100510715FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.601  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 3
+}
+
+2019.03.25 17:04:37.601  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "0100510702FF"
+}
+
+2019.03.25 17:04:37.602  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "integer": 2
+}
+
+2019.03.25 17:04:37.602  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "long-unsigned": 0
+}
+
+2019.03.25 17:04:37.602  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "long-unsigned": 3
+        },
+        {
+            "octet-string": "0100510702FF"
+        },
+        {
+            "integer": 2
+        },
+        {
+            "long-unsigned": 0
+        }
+    ]
+}
+
+2019.03.25 17:04:37.602  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "array": [
+        {
+            "structure": [
+                {
+                    "long-unsigned": 8
+                },
+                {
+                    "octet-string": "0000010000FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01000B0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01001F0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100330700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100470700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01005B0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01000C0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100200700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100340700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100480700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100210700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100350700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100490700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01000D0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01000E0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100090700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01001D0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100310700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100450700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100010700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100150700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100290700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01003D0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100030700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100170700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01002B0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01003F0700FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100010800FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100020800FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100030800FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100040800FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100580800FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100590800FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01000C0701FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01000C0702FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "01000C0703FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "010051070AFF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100510715FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        },
+        {
+            "structure": [
+                {
+                    "long-unsigned": 3
+                },
+                {
+                    "octet-string": "0100510702FF"
+                },
+                {
+                    "integer": 2
+                },
+                {
+                    "long-unsigned": 0
+                }
+            ]
+        }
+    ]
+}
+
+2019.03.25 17:04:37.603  (Exc)  {pdu_worker.cpp;  29} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 129,
+            "result": {
+                "data": {
+                    "array": [
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 8
+                                },
+                                {
+                                    "octet-string": "0000010000FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "01000B0700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "01001F0700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100330700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100470700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "01005B0700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "01000C0700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100200700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100340700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100480700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100210700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100350700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100490700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "01000D0700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "01000E0700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100090700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "01001D0700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100310700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100450700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100010700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100150700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100290700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "01003D0700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100030700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100170700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "01002B0700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "01003F0700FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100010800FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100020800FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100030800FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100040800FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100580800FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100590800FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "01000C0701FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "01000C0702FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "01000C0703FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "010051070AFF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100510715FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        },
+                        {
+                            "structure": [
+                                {
+                                    "long-unsigned": 3
+                                },
+                                {
+                                    "octet-string": "0100510702FF"
+                                },
+                                {
+                                    "integer": 2
+                                },
+                                {
+                                    "long-unsigned": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
+
+2019.03.25 17:04:37.604  (Exc)  {widget_power_data.cpp;  92} "0"
+2019.03.25 17:04:37.604  (Exc)  {widget_power_data.cpp;  93} ""
+2019.03.25 17:04:37.604  (Exc)  {widget_power_data.cpp;  92} "1"
+2019.03.25 17:04:37.604  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.604  (Exc)  {widget_power_data.cpp;  92} "2"
+2019.03.25 17:04:37.605  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.605  (Exc)  {widget_power_data.cpp;  92} "3"
+2019.03.25 17:04:37.605  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.605  (Exc)  {widget_power_data.cpp;  92} "4"
+2019.03.25 17:04:37.605  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.605  (Exc)  {widget_power_data.cpp;  92} "5"
+2019.03.25 17:04:37.605  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.605  (Exc)  {widget_power_data.cpp;  92} "6"
+2019.03.25 17:04:37.605  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.605  (Exc)  {widget_power_data.cpp;  92} "7"
+2019.03.25 17:04:37.605  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.605  (Exc)  {widget_power_data.cpp;  92} "8"
+2019.03.25 17:04:37.605  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.605  (Exc)  {widget_power_data.cpp;  92} "9"
+2019.03.25 17:04:37.605  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.606  (Exc)  {widget_power_data.cpp;  92} "10"
+2019.03.25 17:04:37.606  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.606  (Exc)  {widget_power_data.cpp;  92} "11"
+2019.03.25 17:04:37.606  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.606  (Exc)  {widget_power_data.cpp;  92} "12"
+2019.03.25 17:04:37.606  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.606  (Exc)  {widget_power_data.cpp;  92} "13"
+2019.03.25 17:04:37.606  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.606  (Exc)  {widget_power_data.cpp;  92} "14"
+2019.03.25 17:04:37.606  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.606  (Exc)  {widget_power_data.cpp;  92} "15"
+2019.03.25 17:04:37.606  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.606  (Exc)  {widget_power_data.cpp;  92} "16"
+2019.03.25 17:04:37.606  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.606  (Exc)  {widget_power_data.cpp;  92} "17"
+2019.03.25 17:04:37.606  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.607  (Exc)  {widget_power_data.cpp;  92} "18"
+2019.03.25 17:04:37.607  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.607  (Exc)  {widget_power_data.cpp;  92} "19"
+2019.03.25 17:04:37.607  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.607  (Exc)  {widget_power_data.cpp;  92} "20"
+2019.03.25 17:04:37.607  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.607  (Exc)  {widget_power_data.cpp;  92} "21"
+2019.03.25 17:04:37.607  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.607  (Exc)  {widget_power_data.cpp;  92} "22"
+2019.03.25 17:04:37.607  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.607  (Exc)  {widget_power_data.cpp;  92} "23"
+2019.03.25 17:04:37.607  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.607  (Exc)  {widget_power_data.cpp;  92} "24"
+2019.03.25 17:04:37.607  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.607  (Exc)  {widget_power_data.cpp;  92} "25"
+2019.03.25 17:04:37.607  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.608  (Exc)  {widget_power_data.cpp;  92} "26"
+2019.03.25 17:04:37.608  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.608  (Exc)  {widget_power_data.cpp;  92} "27"
+2019.03.25 17:04:37.608  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.608  (Exc)  {widget_power_data.cpp;  92} "28"
+2019.03.25 17:04:37.608  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.608  (Exc)  {widget_power_data.cpp;  92} "29"
+2019.03.25 17:04:37.608  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.608  (Exc)  {widget_power_data.cpp;  92} "30"
+2019.03.25 17:04:37.608  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.608  (Exc)  {widget_power_data.cpp;  92} "31"
+2019.03.25 17:04:37.608  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.608  (Exc)  {widget_power_data.cpp;  92} "32"
+2019.03.25 17:04:37.608  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.608  (Exc)  {widget_power_data.cpp;  92} "33"
+2019.03.25 17:04:37.608  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.609  (Exc)  {widget_power_data.cpp;  92} "34"
+2019.03.25 17:04:37.609  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.609  (Exc)  {widget_power_data.cpp;  92} "35"
+2019.03.25 17:04:37.609  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.609  (Exc)  {widget_power_data.cpp;  92} "36"
+2019.03.25 17:04:37.609  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.609  (Exc)  {widget_power_data.cpp;  92} "37"
+2019.03.25 17:04:37.609  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.609  (Exc)  {widget_power_data.cpp;  92} "38"
+2019.03.25 17:04:37.609  (Exc)  {widget_power_data.cpp;  93} "01000B0700FF"
+2019.03.25 17:04:37.610  (Exc)  {hdlc_dlms_exchange.cpp;  68} HDLC_MAC_stringify_controller_PDU:  "7EA0190341386012E6E600C001C1000101005E0700FF0200DCE47E"
+2019.03.25 17:04:37.610  (Exc)  {widget_connect.cpp; 962} TX "7EA0190341386012E6E600C001C1000101005E0700FF0200DCE47E"
+2019.03.25 17:04:37.646  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA87E" 3
+2019.03.25 17:04:37.662  (Exc)  {hdlc_dlms_exchange.cpp;1383} "410352C18CE6E700C401C10001010227" 16
+2019.03.25 17:04:37.678  (Exc)  {hdlc_dlms_exchange.cpp;1383} "090C07E30319011104290000B40005" 15
+2019.03.25 17:04:37.694  (Exc)  {hdlc_dlms_exchange.cpp;1383} "000013AE050000000005000013AE05" 15
+2019.03.25 17:04:37.714  (Exc)  {hdlc_dlms_exchange.cpp;1383} "00000000050000004B05000250A60500" 16
+2019.03.25 17:04:37.725  (Exc)  {hdlc_dlms_exchange.cpp;1383} "03772D05000377A9050000031D0500" 15
+2019.03.25 17:04:37.742  (Exc)  {hdlc_dlms_exchange.cpp;1383} "0003E805000003E805000003E80500" 15
+2019.03.25 17:04:37.762  (Exc)  {hdlc_dlms_exchange.cpp;1383} "0003E8050000C3280500000478050000" 16
+2019.03.25 17:04:37.774  (Exc)  {hdlc_dlms_exchange.cpp;1383} "0000050000047805000000000500AB" 15
+2019.03.25 17:04:37.790  (Exc)  {hdlc_dlms_exchange.cpp;1383} "107E" 2
+2019.03.25 17:04:37.790  (Exc)  {hdlc_dlms_exchange.cpp;1148} "7EA00703415144817E"
+2019.03.25 17:04:37.790  (Exc)  {widget_connect.cpp; 962} TX "7EA00703415144817E"
+2019.03.25 17:04:37.806  (Exc)  {hdlc_dlms_exchange.cpp;1383} "7EA06B4103" 5
+2019.03.25 17:04:37.822  (Exc)  {hdlc_dlms_exchange.cpp;1383} "74233F000000050000000005000000" 15
+2019.03.25 17:04:37.839  (Exc)  {hdlc_dlms_exchange.cpp;1383} "00050000000005FFFFFB8805000000" 15
+2019.03.25 17:04:37.854  (Exc)  {hdlc_dlms_exchange.cpp;1383} "0005FFFFFB880500000000060000C40B" 16
+2019.03.25 17:04:37.871  (Exc)  {hdlc_dlms_exchange.cpp;1383} "06000013C60600000E87060000103B" 15
+2019.03.25 17:04:37.886  (Exc)  {hdlc_dlms_exchange.cpp;1383} "060000000006000000000500000DC9" 15
+2019.03.25 17:04:37.902  (Exc)  {hdlc_dlms_exchange.cpp;1383} "05000376AB050003762F05000581B905" 16
+2019.03.25 17:04:37.919  (Exc)  {hdlc_dlms_exchange.cpp;1383} "0004679D050004679DA2AD7E" 12
+2019.03.25 17:04:37.919  (Exc)  {hdlc_dlms_exchange.cpp;1164} "C401C10001010227090C07E30319011104290000B40005000013AE050000000005000013AE0500000000050000004B05000250A6050003772D05000377A9050000031D05000003E805000003E805000003E805000003E8050000C3280500000478050000000005000004780500000000050000000005000000000500000000050000000005FFFFFB88050000000005FFFFFB880500000000060000C40B06000013C60600000E87060000103B060000000006000000000500000DC905000376AB050003762F05000581B9050004679D050004679D"
+2019.03.25 17:04:37.920  (Exc)  {hdlc_dlms_exchange.cpp; 481} PDU "C401C10001010227090C07E30319011104290000B40005000013AE050000000005000013AE0500000000050000004B05000250A6050003772D05000377A9050000031D05000003E805000003E805000003E805000003E8050000C3280500000478050000000005000004780500000000050000000005000000000500000000050000000005FFFFFB88050000000005FFFFFB880500000000060000C40B06000013C60600000E87060000103B060000000006000000000500000DC905000376AB050003762F05000581B9050004679D050004679D"
+2019.03.25 17:04:37.920  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "octet-string": "07E30319011104290000B400"
+}
+
+2019.03.25 17:04:37.920  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 5038
+}
+
+2019.03.25 17:04:37.921  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 0
+}
+
+2019.03.25 17:04:37.921  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 5038
+}
+
+2019.03.25 17:04:37.922  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 0
+}
+
+2019.03.25 17:04:37.922  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 75
+}
+
+2019.03.25 17:04:37.922  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 151718
+}
+
+2019.03.25 17:04:37.923  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 227117
+}
+
+2019.03.25 17:04:37.923  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 227241
+}
+
+2019.03.25 17:04:37.924  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 797
+}
+
+2019.03.25 17:04:37.924  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 1000
+}
+
+2019.03.25 17:04:37.924  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 1000
+}
+
+2019.03.25 17:04:37.925  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 1000
+}
+
+2019.03.25 17:04:37.925  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 1000
+}
+
+2019.03.25 17:04:37.926  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 49960
+}
+
+2019.03.25 17:04:37.926  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 1144
+}
+
+2019.03.25 17:04:37.926  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 0
+}
+
+2019.03.25 17:04:37.927  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 1144
+}
+
+2019.03.25 17:04:37.927  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 0
+}
+
+2019.03.25 17:04:37.928  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 0
+}
+
+2019.03.25 17:04:37.928  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 0
+}
+
+2019.03.25 17:04:37.928  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 0
+}
+
+2019.03.25 17:04:37.929  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 0
+}
+
+2019.03.25 17:04:37.929  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": -1144
+}
+
+2019.03.25 17:04:37.929  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 0
+}
+
+2019.03.25 17:04:37.930  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": -1144
+}
+
+2019.03.25 17:04:37.930  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 0
+}
+
+2019.03.25 17:04:37.931  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long-unsigned": 50187
+}
+
+2019.03.25 17:04:37.931  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long-unsigned": 5062
+}
+
+2019.03.25 17:04:37.931  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long-unsigned": 3719
+}
+
+2019.03.25 17:04:37.931  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long-unsigned": 4155
+}
+
+2019.03.25 17:04:37.932  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long-unsigned": 0
+}
+
+2019.03.25 17:04:37.932  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long-unsigned": 0
+}
+
+2019.03.25 17:04:37.933  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 3529
+}
+
+2019.03.25 17:04:37.933  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 226987
+}
+
+2019.03.25 17:04:37.933  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 226863
+}
+
+2019.03.25 17:04:37.933  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 360889
+}
+
+2019.03.25 17:04:37.934  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 288669
+}
+
+2019.03.25 17:04:37.934  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "double-long": 288669
+}
+
+2019.03.25 17:04:37.934  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "structure": [
+        {
+            "octet-string": "07E30319011104290000B400"
+        },
+        {
+            "double-long": 5038
+        },
+        {
+            "double-long": 0
+        },
+        {
+            "double-long": 5038
+        },
+        {
+            "double-long": 0
+        },
+        {
+            "double-long": 75
+        },
+        {
+            "double-long": 151718
+        },
+        {
+            "double-long": 227117
+        },
+        {
+            "double-long": 227241
+        },
+        {
+            "double-long": 797
+        },
+        {
+            "double-long": 1000
+        },
+        {
+            "double-long": 1000
+        },
+        {
+            "double-long": 1000
+        },
+        {
+            "double-long": 1000
+        },
+        {
+            "double-long": 49960
+        },
+        {
+            "double-long": 1144
+        },
+        {
+            "double-long": 0
+        },
+        {
+            "double-long": 1144
+        },
+        {
+            "double-long": 0
+        },
+        {
+            "double-long": 0
+        },
+        {
+            "double-long": 0
+        },
+        {
+            "double-long": 0
+        },
+        {
+            "double-long": 0
+        },
+        {
+            "double-long": -1144
+        },
+        {
+            "double-long": 0
+        },
+        {
+            "double-long": -1144
+        },
+        {
+            "double-long": 0
+        },
+        {
+            "double-long-unsigned": 50187
+        },
+        {
+            "double-long-unsigned": 5062
+        },
+        {
+            "double-long-unsigned": 3719
+        },
+        {
+            "double-long-unsigned": 4155
+        },
+        {
+            "double-long-unsigned": 0
+        },
+        {
+            "double-long-unsigned": 0
+        },
+        {
+            "double-long": 3529
+        },
+        {
+            "double-long": 226987
+        },
+        {
+            "double-long": 226863
+        },
+        {
+            "double-long": 360889
+        },
+        {
+            "double-long": 288669
+        },
+        {
+            "double-long": 288669
+        }
+    ]
+}
+
+2019.03.25 17:04:37.935  (Exc)  {hdlc_dlms_exchange.cpp; 259} {
+    "array": [
+        {
+            "structure": [
+                {
+                    "octet-string": "07E30319011104290000B400"
+                },
+                {
+                    "double-long": 5038
+                },
+                {
+                    "double-long": 0
+                },
+                {
+                    "double-long": 5038
+                },
+                {
+                    "double-long": 0
+                },
+                {
+                    "double-long": 75
+                },
+                {
+                    "double-long": 151718
+                },
+                {
+                    "double-long": 227117
+                },
+                {
+                    "double-long": 227241
+                },
+                {
+                    "double-long": 797
+                },
+                {
+                    "double-long": 1000
+                },
+                {
+                    "double-long": 1000
+                },
+                {
+                    "double-long": 1000
+                },
+                {
+                    "double-long": 1000
+                },
+                {
+                    "double-long": 49960
+                },
+                {
+                    "double-long": 1144
+                },
+                {
+                    "double-long": 0
+                },
+                {
+                    "double-long": 1144
+                },
+                {
+                    "double-long": 0
+                },
+                {
+                    "double-long": 0
+                },
+                {
+                    "double-long": 0
+                },
+                {
+                    "double-long": 0
+                },
+                {
+                    "double-long": 0
+                },
+                {
+                    "double-long": -1144
+                },
+                {
+                    "double-long": 0
+                },
+                {
+                    "double-long": -1144
+                },
+                {
+                    "double-long": 0
+                },
+                {
+                    "double-long-unsigned": 50187
+                },
+                {
+                    "double-long-unsigned": 5062
+                },
+                {
+                    "double-long-unsigned": 3719
+                },
+                {
+                    "double-long-unsigned": 4155
+                },
+                {
+                    "double-long-unsigned": 0
+                },
+                {
+                    "double-long-unsigned": 0
+                },
+                {
+                    "double-long": 3529
+                },
+                {
+                    "double-long": 226987
+                },
+                {
+                    "double-long": 226863
+                },
+                {
+                    "double-long": 360889
+                },
+                {
+                    "double-long": 288669
+                },
+                {
+                    "double-long": 288669
+                }
+            ]
+        }
+    ]
+}
+
+2019.03.25 17:04:37.936  (Exc)  {pdu_worker.cpp;  29} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "array": [
+                        {
+                            "structure": [
+                                {
+                                    "octet-string": "07E30319011104290000B400"
+                                },
+                                {
+                                    "double-long": 5038
+                                },
+                                {
+                                    "double-long": 0
+                                },
+                                {
+                                    "double-long": 5038
+                                },
+                                {
+                                    "double-long": 0
+                                },
+                                {
+                                    "double-long": 75
+                                },
+                                {
+                                    "double-long": 151718
+                                },
+                                {
+                                    "double-long": 227117
+                                },
+                                {
+                                    "double-long": 227241
+                                },
+                                {
+                                    "double-long": 797
+                                },
+                                {
+                                    "double-long": 1000
+                                },
+                                {
+                                    "double-long": 1000
+                                },
+                                {
+                                    "double-long": 1000
+                                },
+                                {
+                                    "double-long": 1000
+                                },
+                                {
+                                    "double-long": 49960
+                                },
+                                {
+                                    "double-long": 1144
+                                },
+                                {
+                                    "double-long": 0
+                                },
+                                {
+                                    "double-long": 1144
+                                },
+                                {
+                                    "double-long": 0
+                                },
+                                {
+                                    "double-long": 0
+                                },
+                                {
+                                    "double-long": 0
+                                },
+                                {
+                                    "double-long": 0
+                                },
+                                {
+                                    "double-long": 0
+                                },
+                                {
+                                    "double-long": -1144
+                                },
+                                {
+                                    "double-long": 0
+                                },
+                                {
+                                    "double-long": -1144
+                                },
+                                {
+                                    "double-long": 0
+                                },
+                                {
+                                    "double-long-unsigned": 50187
+                                },
+                                {
+                                    "double-long-unsigned": 5062
+                                },
+                                {
+                                    "double-long-unsigned": 3719
+                                },
+                                {
+                                    "double-long-unsigned": 4155
+                                },
+                                {
+                                    "double-long-unsigned": 0
+                                },
+                                {
+                                    "double-long-unsigned": 0
+                                },
+                                {
+                                    "double-long": 3529
+                                },
+                                {
+                                    "double-long": 226987
+                                },
+                                {
+                                    "double-long": 226863
+                                },
+                                {
+                                    "double-long": 360889
+                                },
+                                {
+                                    "double-long": 288669
+                                },
+                                {
+                                    "double-long": 288669
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
+
+2019.03.25 17:04:37.940  (Exc)  {widget_power_data.cpp; 133} "39"
+2019.03.25 17:04:37.941  (Exc)  {widget_power_data.cpp; 135} "0000010000FF"
+2019.03.25 17:04:37.941  (Exc)  {widget_power_data.cpp; 138} "0"
+2019.03.25 17:04:37.946  (Exc)  {widget_power_data.cpp; 135} "01000B0700FF"
+2019.03.25 17:04:37.946  (Exc)  {widget_power_data.cpp; 138} "5.038"
+2019.03.25 17:04:37.948  (Exc)  {widget_power_data.cpp; 135} "01001F0700FF"
+2019.03.25 17:04:37.948  (Exc)  {widget_power_data.cpp; 138} "0"
+2019.03.25 17:04:37.949  (Exc)  {widget_power_data.cpp; 135} "0100330700FF"
+2019.03.25 17:04:37.949  (Exc)  {widget_power_data.cpp; 138} "5.038"
+2019.03.25 17:04:37.950  (Exc)  {widget_power_data.cpp; 135} "0100470700FF"
+2019.03.25 17:04:37.951  (Exc)  {widget_power_data.cpp; 138} "0"
+2019.03.25 17:04:37.952  (Exc)  {widget_power_data.cpp; 135} "01005B0700FF"
+2019.03.25 17:04:37.952  (Exc)  {widget_power_data.cpp; 138} "0.075"
+2019.03.25 17:04:37.954  (Exc)  {widget_power_data.cpp; 135} "01000C0700FF"
+2019.03.25 17:04:37.954  (Exc)  {widget_power_data.cpp; 138} "151.7"
+2019.03.25 17:04:37.957  (Exc)  {widget_power_data.cpp; 135} "0100200700FF"
+2019.03.25 17:04:37.957  (Exc)  {widget_power_data.cpp; 138} "227.1"
+2019.03.25 17:04:37.959  (Exc)  {widget_power_data.cpp; 135} "0100340700FF"
+2019.03.25 17:04:37.959  (Exc)  {widget_power_data.cpp; 138} "227.2"
+2019.03.25 17:04:37.960  (Exc)  {widget_power_data.cpp; 135} "0100480700FF"
+2019.03.25 17:04:37.960  (Exc)  {widget_power_data.cpp; 138} "0.797"
+2019.03.25 17:04:37.961  (Exc)  {widget_power_data.cpp; 135} "0100210700FF"
+2019.03.25 17:04:37.961  (Exc)  {widget_power_data.cpp; 138} "1"
+2019.03.25 17:04:37.962  (Exc)  {widget_power_data.cpp; 135} "0100350700FF"
+2019.03.25 17:04:37.962  (Exc)  {widget_power_data.cpp; 138} "1"
+2019.03.25 17:04:37.964  (Exc)  {widget_power_data.cpp; 135} "0100490700FF"
+2019.03.25 17:04:37.964  (Exc)  {widget_power_data.cpp; 138} "1"
+2019.03.25 17:04:37.965  (Exc)  {widget_power_data.cpp; 135} "01000D0700FF"
+2019.03.25 17:04:37.965  (Exc)  {widget_power_data.cpp; 138} "1"
+2019.03.25 17:04:37.966  (Exc)  {widget_power_data.cpp; 135} "01000E0700FF"
+2019.03.25 17:04:37.966  (Exc)  {widget_power_data.cpp; 138} "49.96"
+2019.03.25 17:04:37.967  (Exc)  {widget_power_data.cpp; 135} "0100090700FF"
+2019.03.25 17:04:37.967  (Exc)  {widget_power_data.cpp; 138} "1.144"
+2019.03.25 17:04:37.968  (Exc)  {widget_power_data.cpp; 135} "01001D0700FF"
+2019.03.25 17:04:37.968  (Exc)  {widget_power_data.cpp; 138} "0"
+2019.03.25 17:04:37.970  (Exc)  {widget_power_data.cpp; 135} "0100310700FF"
+2019.03.25 17:04:37.971  (Exc)  {widget_power_data.cpp; 138} "1.144"
+2019.03.25 17:04:37.972  (Exc)  {widget_power_data.cpp; 135} "0100450700FF"
+2019.03.25 17:04:37.972  (Exc)  {widget_power_data.cpp; 138} "0"
+2019.03.25 17:04:37.973  (Exc)  {widget_power_data.cpp; 135} "0100010700FF"
+2019.03.25 17:04:37.974  (Exc)  {widget_power_data.cpp; 138} "0"
+2019.03.25 17:04:37.974  (Exc)  {widget_power_data.cpp; 135} "0100150700FF"
+2019.03.25 17:04:37.975  (Exc)  {widget_power_data.cpp; 138} "0"
+2019.03.25 17:04:37.976  (Exc)  {widget_power_data.cpp; 135} "0100290700FF"
+2019.03.25 17:04:37.976  (Exc)  {widget_power_data.cpp; 138} "0"
+2019.03.25 17:04:37.976  (Exc)  {widget_power_data.cpp; 135} "01003D0700FF"
+2019.03.25 17:04:37.976  (Exc)  {widget_power_data.cpp; 138} "0"
+2019.03.25 17:04:37.977  (Exc)  {widget_power_data.cpp; 135} "0100030700FF"
+2019.03.25 17:04:37.977  (Exc)  {widget_power_data.cpp; 138} "-1.144"
+2019.03.25 17:04:37.978  (Exc)  {widget_power_data.cpp; 135} "0100170700FF"
+2019.03.25 17:04:37.978  (Exc)  {widget_power_data.cpp; 138} "0"
+2019.03.25 17:04:37.978  (Exc)  {widget_power_data.cpp; 135} "01002B0700FF"
+2019.03.25 17:04:37.978  (Exc)  {widget_power_data.cpp; 138} "-1.144"
+2019.03.25 17:04:37.979  (Exc)  {widget_power_data.cpp; 135} "01003F0700FF"
+2019.03.25 17:04:37.979  (Exc)  {widget_power_data.cpp; 138} "0"
+2019.03.25 17:04:37.980  (Exc)  {widget_power_data.cpp; 135} "0100010800FF"
+2019.03.25 17:04:37.980  (Exc)  {widget_power_data.cpp; 138} "50.19"
+2019.03.25 17:04:37.981  (Exc)  {widget_power_data.cpp; 135} "0100020800FF"
+2019.03.25 17:04:37.981  (Exc)  {widget_power_data.cpp; 138} "5.062"
+2019.03.25 17:04:37.981  (Exc)  {widget_power_data.cpp; 135} "0100030800FF"
+2019.03.25 17:04:37.981  (Exc)  {widget_power_data.cpp; 138} "3.719"
+2019.03.25 17:04:37.982  (Exc)  {widget_power_data.cpp; 135} "0100040800FF"
+2019.03.25 17:04:37.982  (Exc)  {widget_power_data.cpp; 138} "4.155"
+2019.03.25 17:04:37.982  (Exc)  {widget_power_data.cpp; 135} "0100580800FF"
+2019.03.25 17:04:37.982  (Exc)  {widget_power_data.cpp; 138} "0"
+2019.03.25 17:04:37.983  (Exc)  {widget_power_data.cpp; 135} "0100590800FF"
+2019.03.25 17:04:37.983  (Exc)  {widget_power_data.cpp; 138} "0"
+2019.03.25 17:04:37.983  (Exc)  {widget_power_data.cpp; 135} "01000C0701FF"
+2019.03.25 17:04:37.983  (Exc)  {widget_power_data.cpp; 138} "3.529"
+2019.03.25 17:04:37.984  (Exc)  {widget_power_data.cpp; 135} "01000C0702FF"
+2019.03.25 17:04:37.984  (Exc)  {widget_power_data.cpp; 138} "227"
+2019.03.25 17:04:37.984  (Exc)  {widget_power_data.cpp; 135} "01000C0703FF"
+2019.03.25 17:04:37.985  (Exc)  {widget_power_data.cpp; 138} "226.9"
+2019.03.25 17:04:37.985  (Exc)  {widget_power_data.cpp; 135} "010051070AFF"
+2019.03.25 17:04:37.985  (Exc)  {widget_power_data.cpp; 138} "360.9"
+2019.03.25 17:04:37.986  (Exc)  {widget_power_data.cpp; 135} "0100510715FF"
+2019.03.25 17:04:37.987  (Exc)  {widget_power_data.cpp; 138} "288.7"
+2019.03.25 17:04:37.988  (Exc)  {widget_power_data.cpp; 135} "0100510702FF"
+2019.03.25 17:04:37.989  (Exc)  {widget_power_data.cpp; 138} "288.7"
