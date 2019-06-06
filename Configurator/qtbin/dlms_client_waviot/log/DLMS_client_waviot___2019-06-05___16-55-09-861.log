@@ -1,0 +1,201 @@
+2019.06.05 16:55:10.375  (Wrn)  QObject::connect: No such signal QTableView::itemActivated (QTableViewItem *)
+2019.06.05 16:55:10.375  (Wrn)  QObject::connect:  (receiver name: 'widget_tarifs')
+2019.06.05 16:55:10.385  (Wrn)  QMetaObject::connectSlotsByName: No matching signal for on_pushButton_clicked()
+2019.06.05 16:55:11.908  (Exc)  {widget_connect.cpp; 973} TX "7EA007214193D9D27E"
+2019.06.05 16:55:11.922  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 16:55:11.938  (Exc)  {widget_connect.cpp; 707} rxxxx "20412173BD8D81801405020080060200"
+2019.06.05 16:55:11.953  (Exc)  {widget_connect.cpp; 707} rxxxx "80070400000001080400000001CE6A"
+2019.06.05 16:55:11.970  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 16:55:11.973  (Exc)  {widget_connect.cpp; 973} TX "7EA042214110AA1CE6E6006034A1090607608574050801018A0207808B0760857405080201AC088006526561646572BE10040E01000000065F1F0400001E1DFFFFB6E17E"
+2019.06.05 16:55:12.065  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA03741"
+2019.06.05 16:55:12.066  (Exc)  {widget_connect.cpp; 707} rxxxx "2130A269E6E7006129A10906076085"
+2019.06.05 16:55:12.093  (Exc)  {widget_connect.cpp; 707} rxxxx "7405080101A203020100A305A10302"
+2019.06.05 16:55:12.097  (Exc)  {widget_connect.cpp; 707} rxxxx "0100BE10040E0800065F1F0400001E1D"
+2019.06.05 16:55:12.113  (Exc)  {widget_connect.cpp; 707} rxxxx "10000007AD177E"
+2019.06.05 16:55:12.114  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "aare": {
+        "application-context-name": 1,
+        "result": 0,
+        "result-source-diagnostic": {
+            "acse-service-user": 0
+        },
+        "user-information": "0800065F1F0400001E1D10000007"
+    }
+}
+
+2019.06.05 16:55:12.158  (Wrn)  setGeometry: Unable to set geometry 996x675+-1063+285 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  998x683+-1063+285 (frame: 8, 31, 8, 8, custom margin: 0, 0, 0, 0, minimum size: 996x675, maximum size: 16777215x16777215).
+2019.06.05 16:55:12.197  (Wrn)  setGeometry: Unable to set geometry 998x710+-1063+285 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  998x718+-1063+285 (frame: 8, 31, 8, 8, custom margin: 0, 0, 0, 0, minimum size: 996x710, maximum size: 16777215x16777215).
+2019.06.05 16:55:12.215  (Exc)  {widget_connect.cpp; 973} TX "7EA019214132B90BE6E600C001C100010000600101FF020032BC7E"
+2019.06.05 16:55:12.257  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01C412152F066E6E700"
+2019.06.05 16:55:12.274  (Exc)  {widget_connect.cpp; 707} rxxxx "C401C100090A312E3100000000000000"
+2019.06.05 16:55:12.290  (Exc)  {widget_connect.cpp; 707} rxxxx "7C5D7E"
+2019.06.05 16:55:12.291  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "312E3100000000000000"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 16:55:12.310  (Exc)  {widget_connect.cpp; 973} TX "7EA019214154890DE6E600C001C100010000600100FF020089A07E"
+2019.06.05 16:55:12.354  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA019412174934CE6E700C4"
+2019.06.05 16:55:12.370  (Exc)  {widget_connect.cpp; 707} rxxxx "01C100090737383337353538B38B7E"
+2019.06.05 16:55:12.371  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "37383337353538"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 16:55:12.384  (Exc)  {widget_connect.cpp; 973} TX "7EA019214176990FE6E600C001C100010000600102FF0200FF997E"
+2019.06.05 16:55:12.418  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 16:55:12.434  (Exc)  {widget_connect.cpp; 707} rxxxx "16412196763AE6E700C401C100090441"
+2019.06.05 16:55:12.450  (Exc)  {widget_connect.cpp; 707} rxxxx "3435356C097E"
+2019.06.05 16:55:12.451  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "41343535"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 16:55:12.460  (Exc)  {widget_connect.cpp; 973} TX "7EA019214198E901E6E600C001C100010000600103FF020044857E"
+2019.06.05 16:55:12.509  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0264121B8F8"
+2019.06.05 16:55:12.518  (Exc)  {widget_connect.cpp; 707} rxxxx "BEE6E700C401C1000914312E312E34"
+2019.06.05 16:55:12.546  (Exc)  {widget_connect.cpp; 707} rxxxx "2E3100000000000000000000000000"
+2019.06.05 16:55:12.547  (Exc)  {widget_connect.cpp; 707} rxxxx "29757E"
+2019.06.05 16:55:12.548  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "312E312E342E3100000000000000000000000000"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 16:55:12.558  (Exc)  {widget_connect.cpp; 973} TX "7EA0192141BAF903E6E600C001C100010100000402FF0200A5B97E"
+2019.06.05 16:55:12.594  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0134121"
+2019.06.05 16:55:12.610  (Exc)  {widget_connect.cpp; 707} rxxxx "DA49DCE6E700C401C1001200018AA0"
+2019.06.05 16:55:12.625  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 16:55:12.627  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "long-unsigned": 1
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 16:55:12.632  (Exc)  {widget_connect.cpp; 973} TX "7EA0192141DCC905E6E600C001C100010100000403FF02001EA57E"
+2019.06.05 16:55:12.673  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0134121FC7D98E6E7"
+2019.06.05 16:55:12.705  (Exc)  {widget_connect.cpp; 707} rxxxx "00C401C1001200018AA07E"
+2019.06.05 16:55:12.706  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "long-unsigned": 1
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 16:55:12.714  (Exc)  {widget_connect.cpp; 973} TX "7EA0192141FED907E6E600C001C100010000600104FF020065D27E"
+2019.06.05 16:55:12.768  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01341211E61"
+2019.06.05 16:55:12.770  (Exc)  {widget_connect.cpp; 707} rxxxx "5CE6E700C401C1001207E217387E"
+2019.06.05 16:55:12.771  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "long-unsigned": 2018
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 16:55:12.777  (Exc)  {widget_connect.cpp; 973} TX "7EA019214110A909E6E600C001C100010000010000FF020057287E"
+2019.06.05 16:55:12.822  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01D4121305F3A"
+2019.06.05 16:55:12.842  (Exc)  {widget_connect.cpp; 707} rxxxx "E6E700C401C1001907E3060503103711"
+2019.06.05 16:55:12.849  (Exc)  {widget_connect.cpp; 707} rxxxx "0000B4006EE87E"
+2019.06.05 16:55:12.851  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "date-time": "07E30605031037110000B400"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 16:55:13.901  (Exc)  {mainwindow.cpp; 483} not_tab_select false
+2019.06.05 16:55:13.902  (Exc)  {mainwindow.cpp; 488} transmitt
+2019.06.05 16:55:14.058  (Exc)  {widget_connect.cpp; 973} TX "7EA007214193D9D27E"
+2019.06.05 16:55:14.086  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA020412173BD8D8180140502008006"
+2019.06.05 16:55:14.101  (Exc)  {widget_connect.cpp; 707} rxxxx "020080070400000001080400000001"
+2019.06.05 16:55:14.117  (Exc)  {widget_connect.cpp; 707} rxxxx "CE6A7E"
+2019.06.05 16:55:14.118  (Exc)  {widget_connect.cpp; 973} TX "7EA042214110AA1CE6E6006034A1090607608574050801018A0207808B0760857405080201AC088006526561646572BE10040E01000000065F1F0400001E1DFFFFB6E17E"
+2019.06.05 16:55:14.198  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA037412130"
+2019.06.05 16:55:14.214  (Exc)  {widget_connect.cpp; 707} rxxxx "A269E6E7006129A10906076085740508"
+2019.06.05 16:55:14.230  (Exc)  {widget_connect.cpp; 707} rxxxx "0101A203020100A305A103020100BE"
+2019.06.05 16:55:14.246  (Exc)  {widget_connect.cpp; 707} rxxxx "10040E0800065F1F0400001E1D1000"
+2019.06.05 16:55:14.262  (Exc)  {widget_connect.cpp; 707} rxxxx "0007AD177E"
+2019.06.05 16:55:14.263  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "aare": {
+        "application-context-name": 1,
+        "result": 0,
+        "result-source-diagnostic": {
+            "acse-service-user": 0
+        },
+        "user-information": "0800065F1F0400001E1D10000007"
+    }
+}
+
+2019.06.05 16:55:14.270  (Exc)  {widget_connect.cpp; 973} TX "7EA019214132B90BE6E600C001C100010000600100FF020089A07E"
+2019.06.05 16:55:14.310  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA019412152A708"
+2019.06.05 16:55:14.326  (Exc)  {widget_connect.cpp; 707} rxxxx "E6E700C401C1000907373833373535"
+2019.06.05 16:55:14.342  (Exc)  {widget_connect.cpp; 707} rxxxx "38B38B7E"
+2019.06.05 16:55:14.344  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "37383337353538"
+                }
+            }
+        }
+    }
+}
+

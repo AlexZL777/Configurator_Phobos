@@ -1,0 +1,3 @@
+2019.06.05 16:23:14.735  (Wrn)  QObject::connect: No such signal QTableView::itemActivated (QTableViewItem *)
+2019.06.05 16:23:14.735  (Wrn)  QObject::connect:  (receiver name: 'widget_tarifs')
+2019.06.05 16:23:14.743  (Wrn)  QMetaObject::connectSlotsByName: No matching signal for on_pushButton_clicked()

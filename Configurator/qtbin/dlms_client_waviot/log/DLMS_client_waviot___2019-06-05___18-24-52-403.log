@@ -1,0 +1,4576 @@
+2019.06.05 18:24:52.914  (Wrn)  QObject::connect: No such signal QTableView::itemActivated (QTableViewItem *)
+2019.06.05 18:24:52.914  (Wrn)  QObject::connect:  (receiver name: 'widget_tarifs')
+2019.06.05 18:24:52.922  (Wrn)  QMetaObject::connectSlotsByName: No matching signal for on_pushButton_clicked()
+2019.06.05 18:24:54.625  (Exc)  {widget_connect.cpp; 973} TX "7EA007214193D9D27E"
+2019.06.05 18:24:54.639  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA020"
+2019.06.05 18:24:54.656  (Exc)  {widget_connect.cpp; 707} rxxxx "412173BD8D81801405020080060200"
+2019.06.05 18:24:54.672  (Exc)  {widget_connect.cpp; 707} rxxxx "80070400000001080400000001CE6A"
+2019.06.05 18:24:54.688  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:24:54.689  (Exc)  {widget_connect.cpp; 973} TX "7EA042214110AA1CE6E6006034A1090607608574050801018A0207808B0760857405080201AC088006526561646572BE10040E01000000065F1F0400001E1DFFFFB6E17E"
+2019.06.05 18:24:54.767  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0374121"
+2019.06.05 18:24:54.783  (Exc)  {widget_connect.cpp; 707} rxxxx "30A269E6E7006129A1090607608574"
+2019.06.05 18:24:54.799  (Exc)  {widget_connect.cpp; 707} rxxxx "05080101A203020100A305A1030201"
+2019.06.05 18:24:54.816  (Exc)  {widget_connect.cpp; 707} rxxxx "00BE10040E0800065F1F040000101410"
+2019.06.05 18:24:54.832  (Exc)  {widget_connect.cpp; 707} rxxxx "0000076B7F7E"
+2019.06.05 18:24:54.833  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "aare": {
+        "application-context-name": 1,
+        "result": 0,
+        "result-source-diagnostic": {
+            "acse-service-user": 0
+        },
+        "user-information": "0800065F1F040000101410000007"
+    }
+}
+
+2019.06.05 18:24:54.861  (Wrn)  setGeometry: Unable to set geometry 996x675+-1063+285 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  998x683+-1063+285 (frame: 8, 31, 8, 8, custom margin: 0, 0, 0, 0, minimum size: 996x675, maximum size: 16777215x16777215).
+2019.06.05 18:24:54.906  (Wrn)  setGeometry: Unable to set geometry 998x710+-1063+285 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  998x718+-1063+285 (frame: 8, 31, 8, 8, custom margin: 0, 0, 0, 0, minimum size: 996x710, maximum size: 16777215x16777215).
+2019.06.05 18:24:54.934  (Exc)  {widget_connect.cpp; 973} TX "7EA019214132B90BE6E600C001C100010000600101FF020032BC7E"
+2019.06.05 18:24:54.975  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA015412152939FE6E7"
+2019.06.05 18:24:54.991  (Exc)  {widget_connect.cpp; 707} rxxxx "00C401C1000903312E3117127E"
+2019.06.05 18:24:54.992  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "312E31"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:24:55.011  (Exc)  {widget_connect.cpp; 973} TX "7EA019214154890DE6E600C001C100010000600100FF020089A07E"
+2019.06.05 18:24:55.056  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA019412174934CE6E700C4"
+2019.06.05 18:24:55.072  (Exc)  {widget_connect.cpp; 707} rxxxx "01C100090737353230333739E9167E"
+2019.06.05 18:24:55.073  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "37353230333739"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:24:55.083  (Exc)  {widget_connect.cpp; 973} TX "7EA019214176990FE6E600C001C100010000600102FF0200FF997E"
+2019.06.05 18:24:55.120  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01641"
+2019.06.05 18:24:55.136  (Exc)  {widget_connect.cpp; 707} rxxxx "2196763AE6E700C401C10009044134"
+2019.06.05 18:24:55.152  (Exc)  {widget_connect.cpp; 707} rxxxx "35356C097E"
+2019.06.05 18:24:55.152  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "41343535"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:24:55.162  (Exc)  {widget_connect.cpp; 973} TX "7EA019214198E901E6E600C001C100010000600103FF020044857E"
+2019.06.05 18:24:55.200  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0194121B8F3"
+2019.06.05 18:24:55.215  (Exc)  {widget_connect.cpp; 707} rxxxx "40E6E700C401C1000907312E312E35"
+2019.06.05 18:24:55.231  (Exc)  {widget_connect.cpp; 707} rxxxx "2E33946A7E"
+2019.06.05 18:24:55.232  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "312E312E352E33"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:24:55.237  (Exc)  {widget_connect.cpp; 973} TX "7EA0192141BAF903E6E600C001C100010100000402FF0200A5B97E"
+2019.06.05 18:24:55.279  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121DAF2C0E6E700"
+2019.06.05 18:24:55.295  (Exc)  {widget_connect.cpp; 707} rxxxx "C401C1001101925C7E"
+2019.06.05 18:24:55.296  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "unsigned": 1
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:24:55.301  (Exc)  {widget_connect.cpp; 973} TX "7EA0192141DCC905E6E600C001C100010100000403FF02001EA57E"
+2019.06.05 18:24:55.343  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121FCC684E6E700"
+2019.06.05 18:24:55.375  (Exc)  {widget_connect.cpp; 707} rxxxx "C401C1001101925C7E"
+2019.06.05 18:24:55.376  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "unsigned": 1
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:24:55.385  (Exc)  {widget_connect.cpp; 973} TX "7EA0192141FED907E6E600C001C100010000600104FF020065D27E"
+2019.06.05 18:24:55.441  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01341211E61"
+2019.06.05 18:24:55.444  (Exc)  {widget_connect.cpp; 707} rxxxx "5CE6E700C401C1001207E39E297E"
+2019.06.05 18:24:55.447  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "long-unsigned": 2019
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:24:55.479  (Exc)  {widget_connect.cpp; 973} TX "7EA019214110A909E6E600C001C100010000010000FF020057287E"
+2019.06.05 18:24:55.530  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01D4121305F3A"
+2019.06.05 18:24:55.541  (Exc)  {widget_connect.cpp; 707} rxxxx "E6E700C401C1001907E3060503121833"
+2019.06.05 18:24:55.562  (Exc)  {widget_connect.cpp; 707} rxxxx "0000B40025117E"
+2019.06.05 18:24:55.563  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "date-time": "07E30605031218330000B400"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:24:55.575  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF4405FFFFFF000000"
+            }
+        }
+    }
+}
+
+2019.06.05 18:24:55.587  (Exc)  {widget_connect.cpp; 973} TX "7EA024214132C4CCE6E600C101C1000100006001FEFF02000909EF4405FFFFFF00000028227E"
+2019.06.05 18:24:55.649  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01B412152D131E6E700C501C100"
+2019.06.05 18:24:55.667  (Exc)  {widget_connect.cpp; 707} rxxxx "0909EF4485090000FFFFFF55AD7E"
+2019.06.05 18:24:55.668  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": "EF4485090000FFFFFF"
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:24:55.670  (Exc)  {widget_info.cpp; 160} data_electro5 "EF4485090000FFFFFF"
+2019.06.05 18:24:55.671  (Exc)  {widget_info.cpp; 170} state_ant 0
+2019.06.05 18:24:57.514  (Exc)  {mainwindow.cpp; 483} not_tab_select false
+2019.06.05 18:24:57.515  (Exc)  {mainwindow.cpp; 488} transmitt
+2019.06.05 18:24:57.671  (Exc)  {widget_connect.cpp; 973} TX "7EA007214193D9D27E"
+2019.06.05 18:24:57.699  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA020412173BD8D81801405020080"
+2019.06.05 18:24:57.715  (Exc)  {widget_connect.cpp; 707} rxxxx "06020080070400000001080400000001"
+2019.06.05 18:24:57.730  (Exc)  {widget_connect.cpp; 707} rxxxx "CE6A7E"
+2019.06.05 18:24:57.731  (Exc)  {widget_connect.cpp; 973} TX "7EA042214110AA1CE6E6006034A1090607608574050801018A0207808B0760857405080201AC088006526561646572BE10040E01000000065F1F0400001E1DFFFFB6E17E"
+2019.06.05 18:24:57.811  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA037412130"
+2019.06.05 18:24:57.828  (Exc)  {widget_connect.cpp; 707} rxxxx "A269E6E7006129A109060760857405"
+2019.06.05 18:24:57.856  (Exc)  {widget_connect.cpp; 707} rxxxx "080101A203020100A305A103020100BE"
+2019.06.05 18:24:57.859  (Exc)  {widget_connect.cpp; 707} rxxxx "10040E0800065F1F04000010141000"
+2019.06.05 18:24:57.875  (Exc)  {widget_connect.cpp; 707} rxxxx "00076B7F7E"
+2019.06.05 18:24:57.876  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "aare": {
+        "application-context-name": 1,
+        "result": 0,
+        "result-source-diagnostic": {
+            "acse-service-user": 0
+        },
+        "user-information": "0800065F1F040000101410000007"
+    }
+}
+
+2019.06.05 18:24:57.884  (Exc)  {widget_connect.cpp; 973} TX "7EA019214132B90BE6E600C001C100010000600100FF020089A07E"
+2019.06.05 18:24:57.923  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA019412152A708"
+2019.06.05 18:24:57.939  (Exc)  {widget_connect.cpp; 707} rxxxx "E6E700C401C1000907373532303337"
+2019.06.05 18:24:57.955  (Exc)  {widget_connect.cpp; 707} rxxxx "39E9167E"
+2019.06.05 18:24:57.956  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "37353230333739"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:01.926  (Exc)  {widget_connect.cpp; 973} TX "7EA007214193D9D27E"
+2019.06.05 18:25:01.954  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:01.956  (Exc)  {widget_connect.cpp; 707} rxxxx "A020412173BD8D8180140502008006"
+2019.06.05 18:25:01.984  (Exc)  {widget_connect.cpp; 707} rxxxx "020080070400000001080400000001CE"
+2019.06.05 18:25:01.996  (Exc)  {widget_connect.cpp; 707} rxxxx "6A7E"
+2019.06.05 18:25:01.997  (Exc)  {widget_connect.cpp; 973} TX "7EA042214110AA1CE6E6006034A1090607608574050801018A0207808B0760857405080201AC088006526561646572BE10040E01000000065F1F0400001E1DFFFFB6E17E"
+2019.06.05 18:25:02.085  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA037412130A269E6E7006129A109"
+2019.06.05 18:25:02.101  (Exc)  {widget_connect.cpp; 707} rxxxx "060760857405080101A203020100A3"
+2019.06.05 18:25:02.117  (Exc)  {widget_connect.cpp; 707} rxxxx "05A103020100BE10040E0800065F1F"
+2019.06.05 18:25:02.132  (Exc)  {widget_connect.cpp; 707} rxxxx "0400001014100000076B7F7E"
+2019.06.05 18:25:02.133  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "aare": {
+        "application-context-name": 1,
+        "result": 0,
+        "result-source-diagnostic": {
+            "acse-service-user": 0
+        },
+        "user-information": "0800065F1F040000101410000007"
+    }
+}
+
+2019.06.05 18:25:02.138  (Exc)  {widget_connect.cpp; 973} TX "7EA019214132B90BE6E600C001C100010000600100FF020089A07E"
+2019.06.05 18:25:02.180  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA019412152A708E6E700C4"
+2019.06.05 18:25:02.196  (Exc)  {widget_connect.cpp; 707} rxxxx "01C100090737353230333739E9167E"
+2019.06.05 18:25:02.196  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "37353230333739"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:02.201  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF0F0D"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:02.202  (Exc)  {widget_connect.cpp; 973} TX "7EA01E214154A85AE6E600C101C1000100006001FEFF02000903EF0F0DB2D07E"
+2019.06.05 18:25:02.245  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA022412174"
+2019.06.05 18:25:02.260  (Exc)  {widget_connect.cpp; 707} rxxxx "74C0E6E700C501C1000910EF0F0D50"
+2019.06.05 18:25:02.276  (Exc)  {widget_connect.cpp; 707} rxxxx "0066000900090000FD20000017717E"
+2019.06.05 18:25:02.276  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": "EF0F0D500066000900090000FD200000"
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:02.278  (Exc)  {widget_info.cpp; 160} data_electro5 "EF0F0D500066000900090000FD200000"
+2019.06.05 18:25:02.278  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0080"
+2019.06.05 18:25:02.278  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0080"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:02.278  (Exc)  {widget_connect.cpp; 973} TX "7EA02021417608BAE6E600C101C1000100006001FEFF02000905EF100D0080BE3D7E"
+2019.06.05 18:25:02.324  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA878412196"
+2019.06.05 18:25:02.358  (Exc)  {widget_connect.cpp; 707} rxxxx "F057E6E700C501C100096D4600895CF4F48C818900000BDE8289000000DF83"
+2019.06.05 18:25:02.372  (Exc)  {widget_connect.cpp; 707} rxxxx "89000003668489000000CB818A0000"
+2019.06.05 18:25:02.388  (Exc)  {widget_connect.cpp; 707} rxxxx "0000828A00000000838A00000000848A"
+2019.06.05 18:25:02.404  (Exc)  {widget_connect.cpp; 707} rxxxx "00000000818B00000000828B000000"
+2019.06.05 18:25:02.421  (Exc)  {widget_connect.cpp; 707} rxxxx "00838B00000000848B00000000818C00"
+2019.06.05 18:25:02.436  (Exc)  {widget_connect.cpp; 707} rxxxx "000000828C00000000838C00000000"
+2019.06.05 18:25:02.453  (Exc)  {widget_connect.cpp; 707} rxxxx "848C00000005C67E"
+2019.06.05 18:25:02.454  (Exc)  {hdlc_dlms_exchange.cpp;1149} segmentation "7EA007214191CBF17E"
+2019.06.05 18:25:02.455  (Exc)  {widget_connect.cpp; 973} TX "7EA007214191CBF17E"
+2019.06.05 18:25:02.469  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:02.485  (Exc)  {widget_connect.cpp; 707} rxxxx "A010412198929800816800000000FD"
+2019.06.05 18:25:02.500  (Exc)  {widget_connect.cpp; 707} rxxxx "4B7E"
+2019.06.05 18:25:02.501  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": "4600895CF4F48C818900000BDE8289000000DF8389000003668489000000CB818A00000000828A00000000838A00000000848A00000000818B00000000828B00000000838B00000000848B00000000818C00000000828C00000000838C00000000848C00000000816800000000"
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:02.504  (Exc)  {widget_info.cpp; 160} data_electro5 "4600895CF4F48C818900000BDE8289000000DF8389000003668489000000CB818A00000000828A00000000838A00000000848A00000000818B00000000828B00000000838B00000000848B00000000818C00000000828C00000000838C00000000848C00000000816800000000"
+2019.06.05 18:25:02.505  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0070"
+2019.06.05 18:25:02.507  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0070"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:02.508  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141B87A95E6E600C101C1000100006001FEFF02000905EF100D007031CA7E"
+2019.06.05 18:25:02.549  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA8"
+2019.06.05 18:25:02.580  (Exc)  {widget_connect.cpp; 707} rxxxx "784121BA9EBCE6E700C501C100096D"
+2019.06.05 18:25:02.580  (Exc)  {widget_connect.cpp; 707} rxxxx "4600795CC8E180818900000BDE828900"
+2019.06.05 18:25:02.597  (Exc)  {widget_connect.cpp; 707} rxxxx "0000DF8389000003668489000000CB"
+2019.06.05 18:25:02.613  (Exc)  {widget_connect.cpp; 707} rxxxx "818A00000000828A00000000838A00"
+2019.06.05 18:25:02.629  (Exc)  {widget_connect.cpp; 707} rxxxx "000000848A00000000818B0000000082"
+2019.06.05 18:25:02.645  (Exc)  {widget_connect.cpp; 707} rxxxx "8B00000000838B00000000848B0000"
+2019.06.05 18:25:02.660  (Exc)  {widget_connect.cpp; 707} rxxxx "0000818C00000000828C0000000083"
+2019.06.05 18:25:02.677  (Exc)  {widget_connect.cpp; 707} rxxxx "8C00000000848C000000DB517E"
+2019.06.05 18:25:02.677  (Exc)  {hdlc_dlms_exchange.cpp;1149} segmentation "7EA0072141B1C9D07E"
+2019.06.05 18:25:02.678  (Exc)  {widget_connect.cpp; 973} TX "7EA0072141B1C9D07E"
+2019.06.05 18:25:02.692  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 18:25:02.708  (Exc)  {widget_connect.cpp; 707} rxxxx "07412197E5F47E"
+2019.06.05 18:25:05.492  (Exc)  {widget_log.cpp; 427} count_tout 0
+2019.06.05 18:25:05.493  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0070"
+2019.06.05 18:25:05.493  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0070"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:05.513  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141FA6CF4E6E600C101C1000100006001FEFF02000905EF100D007031CA7E"
+2019.06.05 18:25:05.576  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA00741"
+2019.06.05 18:25:05.587  (Exc)  {widget_connect.cpp; 707} rxxxx "21F1D5F27E"
+2019.06.05 18:25:08.494  (Exc)  {widget_log.cpp; 427} count_tout 1
+2019.06.05 18:25:08.495  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0070"
+2019.06.05 18:25:08.496  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0070"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:08.497  (Exc)  {widget_connect.cpp; 973} TX "7EA02021411C5476E6E600C101C1000100006001FEFF02000905EF100D007031CA7E"
+2019.06.05 18:25:08.545  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA007412111DB157E"
+2019.06.05 18:25:11.499  (Exc)  {widget_log.cpp; 427} count_tout 2
+2019.06.05 18:25:11.640  (Exc)  {widget_connect.cpp; 973} TX "7EA007214193D9D27E"
+2019.06.05 18:25:11.669  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA020412173BD8D818014050200"
+2019.06.05 18:25:11.686  (Exc)  {widget_connect.cpp; 707} rxxxx "80060200800704000000010804000000"
+2019.06.05 18:25:11.702  (Exc)  {widget_connect.cpp; 707} rxxxx "01CE6A7E"
+2019.06.05 18:25:11.703  (Exc)  {widget_connect.cpp; 973} TX "7EA042214110AA1CE6E6006034A1090607608574050801018A0207808B0760857405080201AC088006526561646572BE10040E01000000065F1F0400001E1DFFFFB6E17E"
+2019.06.05 18:25:11.781  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA03741"
+2019.06.05 18:25:11.797  (Exc)  {widget_connect.cpp; 707} rxxxx "2130A269E6E7006129A10906076085"
+2019.06.05 18:25:11.813  (Exc)  {widget_connect.cpp; 707} rxxxx "7405080101A203020100A305A1030201"
+2019.06.05 18:25:11.829  (Exc)  {widget_connect.cpp; 707} rxxxx "00BE10040E0800065F1F0400001014"
+2019.06.05 18:25:11.845  (Exc)  {widget_connect.cpp; 707} rxxxx "100000076B7F7E"
+2019.06.05 18:25:11.846  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "aare": {
+        "application-context-name": 1,
+        "result": 0,
+        "result-source-diagnostic": {
+            "acse-service-user": 0
+        },
+        "user-information": "0800065F1F040000101410000007"
+    }
+}
+
+2019.06.05 18:25:11.854  (Exc)  {widget_connect.cpp; 973} TX "7EA019214132B90BE6E600C001C100010000600100FF020089A07E"
+2019.06.05 18:25:11.892  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0194121"
+2019.06.05 18:25:11.909  (Exc)  {widget_connect.cpp; 707} rxxxx "52A708E6E700C401C100090737353230"
+2019.06.05 18:25:11.926  (Exc)  {widget_connect.cpp; 707} rxxxx "333739E9167E"
+2019.06.05 18:25:11.927  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "37353230333739"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:11.929  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0070"
+2019.06.05 18:25:11.929  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0070"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:11.932  (Exc)  {widget_connect.cpp; 973} TX "7EA02021415418B8E6E600C101C1000100006001FEFF02000905EF100D007031CA7E"
+2019.06.05 18:25:11.989  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA878412174EC93E6E700C501C100"
+2019.06.05 18:25:12.006  (Exc)  {widget_connect.cpp; 707} rxxxx "096D4600795CC8E180818900000BDE82"
+2019.06.05 18:25:12.021  (Exc)  {widget_connect.cpp; 707} rxxxx "89000000DF83890000036684890000"
+2019.06.05 18:25:12.039  (Exc)  {widget_connect.cpp; 707} rxxxx "00CB818A00000000828A0000000083"
+2019.06.05 18:25:12.053  (Exc)  {widget_connect.cpp; 707} rxxxx "8A00000000848A00000000818B000000"
+2019.06.05 18:25:12.069  (Exc)  {widget_connect.cpp; 707} rxxxx "00828B00000000838B00000000848B"
+2019.06.05 18:25:12.085  (Exc)  {widget_connect.cpp; 707} rxxxx "00000000818C00000000828C00000000"
+2019.06.05 18:25:12.101  (Exc)  {widget_connect.cpp; 707} rxxxx "838C00000000848C000000DB517E"
+2019.06.05 18:25:12.102  (Exc)  {hdlc_dlms_exchange.cpp;1149} segmentation "7EA007214171C5167E"
+2019.06.05 18:25:12.103  (Exc)  {widget_connect.cpp; 973} TX "7EA007214171C5167E"
+2019.06.05 18:25:12.117  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 18:25:12.133  (Exc)  {widget_connect.cpp; 707} rxxxx "10412176E29600816800000000FD4B7E"
+2019.06.05 18:25:12.134  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": "4600795CC8E180818900000BDE8289000000DF8389000003668489000000CB818A00000000828A00000000838A00000000848A00000000818B00000000828B00000000838B00000000848B00000000818C00000000828C00000000838C00000000848C00000000816800000000"
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:12.136  (Exc)  {widget_info.cpp; 160} data_electro5 "4600795CC8E180818900000BDE8289000000DF8389000003668489000000CB818A00000000828A00000000838A00000000848A00000000818B00000000828B00000000838B00000000848B00000000818C00000000828C00000000838C00000000848C00000000816800000000"
+2019.06.05 18:25:12.137  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0060"
+2019.06.05 18:25:12.137  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0060"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:12.139  (Exc)  {widget_connect.cpp; 973} TX "7EA020214196065DE6E600C101C1000100006001FEFF02000905EF100D0060B0DA7E"
+2019.06.05 18:25:12.181  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA8"
+2019.06.05 18:25:12.197  (Exc)  {widget_connect.cpp; 707} rxxxx "784121988EBEE6E700C501C100096D46"
+2019.06.05 18:25:12.213  (Exc)  {widget_connect.cpp; 707} rxxxx "00695CA15480818900000BDE828900"
+2019.06.05 18:25:12.229  (Exc)  {widget_connect.cpp; 707} rxxxx "0000DF8389000003668489000000CB81"
+2019.06.05 18:25:12.245  (Exc)  {widget_connect.cpp; 707} rxxxx "8A00000000828A00000000838A0000"
+2019.06.05 18:25:12.261  (Exc)  {widget_connect.cpp; 707} rxxxx "0000848A00000000818B0000000082"
+2019.06.05 18:25:12.277  (Exc)  {widget_connect.cpp; 707} rxxxx "8B00000000838B00000000848B000000"
+2019.06.05 18:25:12.293  (Exc)  {widget_connect.cpp; 707} rxxxx "00818C00000000828C00000000838C"
+2019.06.05 18:25:12.309  (Exc)  {widget_connect.cpp; 707} rxxxx "00000000848C00000074D67E"
+2019.06.05 18:25:12.310  (Exc)  {hdlc_dlms_exchange.cpp;1149} segmentation "7EA007214191CBF17E"
+2019.06.05 18:25:12.310  (Exc)  {widget_connect.cpp; 973} TX "7EA007214191CBF17E"
+2019.06.05 18:25:12.324  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA007"
+2019.06.05 18:25:12.340  (Exc)  {widget_connect.cpp; 707} rxxxx "412197E5F47E"
+2019.06.05 18:25:15.134  (Exc)  {widget_log.cpp; 427} count_tout 0
+2019.06.05 18:25:15.135  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0060"
+2019.06.05 18:25:15.136  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0060"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:15.156  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141D87CF6E6E600C101C1000100006001FEFF02000905EF100D0060B0DA7E"
+2019.06.05 18:25:15.203  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0074121D1D7"
+2019.06.05 18:25:15.219  (Exc)  {widget_connect.cpp; 707} rxxxx "D37E"
+2019.06.05 18:25:18.142  (Exc)  {widget_log.cpp; 427} count_tout 1
+2019.06.05 18:25:18.143  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0060"
+2019.06.05 18:25:18.143  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0060"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:18.144  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141FA6CF4E6E600C101C1000100006001FEFF02000905EF100D0060B0DA7E"
+2019.06.05 18:25:18.194  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0074121F1D5F27E"
+2019.06.05 18:25:21.137  (Exc)  {widget_log.cpp; 427} count_tout 2
+2019.06.05 18:25:21.289  (Exc)  {widget_connect.cpp; 973} TX "7EA007214193D9D27E"
+2019.06.05 18:25:21.319  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA020412173BD8D81801405020080"
+2019.06.05 18:25:21.334  (Exc)  {widget_connect.cpp; 707} rxxxx "060200800704000000010804000000"
+2019.06.05 18:25:21.350  (Exc)  {widget_connect.cpp; 707} rxxxx "01CE6A7E"
+2019.06.05 18:25:21.352  (Exc)  {widget_connect.cpp; 973} TX "7EA042214110AA1CE6E6006034A1090607608574050801018A0207808B0760857405080201AC088006526561646572BE10040E01000000065F1F0400001E1DFFFFB6E17E"
+2019.06.05 18:25:21.430  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA03741"
+2019.06.05 18:25:21.446  (Exc)  {widget_connect.cpp; 707} rxxxx "2130A269E6E7006129A10906076085"
+2019.06.05 18:25:21.463  (Exc)  {widget_connect.cpp; 707} rxxxx "7405080101A203020100A305A1030201"
+2019.06.05 18:25:21.479  (Exc)  {widget_connect.cpp; 707} rxxxx "00BE10040E0800065F1F0400001014"
+2019.06.05 18:25:21.495  (Exc)  {widget_connect.cpp; 707} rxxxx "100000076B7F7E"
+2019.06.05 18:25:21.496  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "aare": {
+        "application-context-name": 1,
+        "result": 0,
+        "result-source-diagnostic": {
+            "acse-service-user": 0
+        },
+        "user-information": "0800065F1F040000101410000007"
+    }
+}
+
+2019.06.05 18:25:21.504  (Exc)  {widget_connect.cpp; 973} TX "7EA019214132B90BE6E600C001C100010000600100FF020089A07E"
+2019.06.05 18:25:21.543  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA019412152"
+2019.06.05 18:25:21.559  (Exc)  {widget_connect.cpp; 707} rxxxx "A708E6E700C401C100090737353230"
+2019.06.05 18:25:21.575  (Exc)  {widget_connect.cpp; 707} rxxxx "333739E9167E"
+2019.06.05 18:25:21.578  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "37353230333739"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:21.579  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0060"
+2019.06.05 18:25:21.580  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0060"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:21.582  (Exc)  {widget_connect.cpp; 973} TX "7EA02021415418B8E6E600C101C1000100006001FEFF02000905EF100D0060B0DA7E"
+2019.06.05 18:25:21.638  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA878412174EC93E6E700C501C100"
+2019.06.05 18:25:21.655  (Exc)  {widget_connect.cpp; 707} rxxxx "096D4600695CA15480818900000BDE82"
+2019.06.05 18:25:21.670  (Exc)  {widget_connect.cpp; 707} rxxxx "89000000DF83890000036684890000"
+2019.06.05 18:25:21.686  (Exc)  {widget_connect.cpp; 707} rxxxx "00CB818A00000000828A0000000083"
+2019.06.05 18:25:21.702  (Exc)  {widget_connect.cpp; 707} rxxxx "8A00000000848A00000000818B000000"
+2019.06.05 18:25:21.718  (Exc)  {widget_connect.cpp; 707} rxxxx "00828B00000000838B00000000848B"
+2019.06.05 18:25:21.735  (Exc)  {widget_connect.cpp; 707} rxxxx "00000000818C00000000828C00000000"
+2019.06.05 18:25:21.750  (Exc)  {widget_connect.cpp; 707} rxxxx "838C00000000848C00000074D67E"
+2019.06.05 18:25:21.751  (Exc)  {hdlc_dlms_exchange.cpp;1149} segmentation "7EA007214171C5167E"
+2019.06.05 18:25:21.751  (Exc)  {widget_connect.cpp; 973} TX "7EA007214171C5167E"
+2019.06.05 18:25:21.766  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA010"
+2019.06.05 18:25:21.782  (Exc)  {widget_connect.cpp; 707} rxxxx "412176E29600816800000000FD4B7E"
+2019.06.05 18:25:21.783  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": "4600695CA15480818900000BDE8289000000DF8389000003668489000000CB818A00000000828A00000000838A00000000848A00000000818B00000000828B00000000838B00000000848B00000000818C00000000828C00000000838C00000000848C00000000816800000000"
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:21.784  (Exc)  {widget_info.cpp; 160} data_electro5 "4600695CA15480818900000BDE8289000000DF8389000003668489000000CB818A00000000828A00000000838A00000000848A00000000818B00000000828B00000000838B00000000848B00000000818C00000000828C00000000838C00000000848C00000000816800000000"
+2019.06.05 18:25:21.785  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0050"
+2019.06.05 18:25:21.788  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0050"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:21.789  (Exc)  {widget_connect.cpp; 973} TX "7EA020214196065DE6E600C101C1000100006001FEFF02000905EF100D005033EB7E"
+2019.06.05 18:25:21.846  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA8784121988EBEE6E700C501C10009"
+2019.06.05 18:25:21.862  (Exc)  {widget_connect.cpp; 707} rxxxx "6D4600595C787600818900000BDE82"
+2019.06.05 18:25:21.878  (Exc)  {widget_connect.cpp; 707} rxxxx "89000000DF83890000036684890000"
+2019.06.05 18:25:21.894  (Exc)  {widget_connect.cpp; 707} rxxxx "00CB818A00000000828A00000000838A"
+2019.06.05 18:25:21.910  (Exc)  {widget_connect.cpp; 707} rxxxx "00000000848A00000000818B000000"
+2019.06.05 18:25:21.926  (Exc)  {widget_connect.cpp; 707} rxxxx "00828B00000000838B00000000848B00"
+2019.06.05 18:25:21.942  (Exc)  {widget_connect.cpp; 707} rxxxx "000000818C00000000828C00000000"
+2019.06.05 18:25:21.959  (Exc)  {widget_connect.cpp; 707} rxxxx "838C00000000848C000000BBC27E"
+2019.06.05 18:25:21.959  (Exc)  {hdlc_dlms_exchange.cpp;1149} segmentation "7EA007214191CBF17E"
+2019.06.05 18:25:21.960  (Exc)  {widget_connect.cpp; 973} TX "7EA007214191CBF17E"
+2019.06.05 18:25:21.973  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 18:25:21.989  (Exc)  {widget_connect.cpp; 707} rxxxx "07412197E5F47E"
+2019.06.05 18:25:24.777  (Exc)  {widget_log.cpp; 427} count_tout 0
+2019.06.05 18:25:24.778  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0050"
+2019.06.05 18:25:24.778  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0050"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:24.799  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141D87CF6E6E600C101C1000100006001FEFF02000905EF100D005033EB7E"
+2019.06.05 18:25:27.776  (Exc)  {widget_log.cpp; 427} count_tout 1
+2019.06.05 18:25:27.777  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0050"
+2019.06.05 18:25:27.777  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0050"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:27.797  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141FA6CF4E6E600C101C1000100006001FEFF02000905EF100D005033EB7E"
+2019.06.05 18:25:28.552  (Wrn)  setGeometry: Unable to set geometry 998x733+-1107+125 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  998x741+-1107+125 (frame: 8, 31, 8, 8, custom margin: 0, 0, 0, 0, minimum size: 996x733, maximum size: 16777215x16777215).
+2019.06.05 18:25:28.556  (Wrn)  setGeometry: Unable to set geometry 998x756+-1107+125 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  998x764+-1107+125 (frame: 8, 31, 8, 8, custom margin: 0, 0, 0, 0, minimum size: 996x756, maximum size: 16777215x16777215).
+2019.06.05 18:25:28.559  (Wrn)  setGeometry: Unable to set geometry 998x779+-1107+125 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  998x787+-1107+125 (frame: 8, 31, 8, 8, custom margin: 0, 0, 0, 0, minimum size: 996x779, maximum size: 16777215x16777215).
+2019.06.05 18:25:28.590  (Wrn)  setGeometry: Unable to set geometry 998x790+-1107+125 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  998x798+-1107+125 (frame: 8, 31, 8, 8, custom margin: 0, 0, 0, 0, minimum size: 996x790, maximum size: 16777215x16777215).
+2019.06.05 18:25:28.623  (Wrn)  setGeometry: Unable to set geometry 998x798+-1107+125 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  998x806+-1107+125 (frame: 8, 31, 8, 8, custom margin: 0, 0, 0, 0, minimum size: 996x798, maximum size: 16777215x16777215).
+2019.06.05 18:25:28.707  (Wrn)  setGeometry: Unable to set geometry 998x832+-1107+125 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  998x840+-1107+125 (frame: 8, 31, 8, 8, custom margin: 0, 0, 0, 0, minimum size: 996x832, maximum size: 16777215x16777215).
+2019.06.05 18:25:28.745  (Wrn)  setGeometry: Unable to set geometry 998x844+-1107+125 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  998x852+-1107+125 (frame: 8, 31, 8, 8, custom margin: 0, 0, 0, 0, minimum size: 996x844, maximum size: 16777215x16777215).
+2019.06.05 18:25:28.749  (Wrn)  setGeometry: Unable to set geometry 998x875+-1107+125 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  998x883+-1107+125 (frame: 8, 31, 8, 8, custom margin: 0, 0, 0, 0, minimum size: 996x875, maximum size: 16777215x16777215).
+2019.06.05 18:25:28.893  (Exc)  {mainwindow.cpp; 483} not_tab_select true
+2019.06.05 18:25:30.837  (Exc)  {widget_connect.cpp; 973} TX "7EA007214193D9D27E"
+2019.06.05 18:25:30.851  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 18:25:30.867  (Exc)  {widget_connect.cpp; 707} rxxxx "20412173BD8D81801405020080060200"
+2019.06.05 18:25:30.883  (Exc)  {widget_connect.cpp; 707} rxxxx "80070400000001080400000001CE6A"
+2019.06.05 18:25:30.899  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:30.903  (Exc)  {widget_connect.cpp; 973} TX "7EA042214110AA1CE6E6006034A1090607608574050801018A0207808B0760857405080201AC088006526561646572BE10040E01000000065F1F0400001E1DFFFFB6E17E"
+2019.06.05 18:25:30.979  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA037"
+2019.06.05 18:25:31.015  (Exc)  {widget_connect.cpp; 707} rxxxx "412130A269E6E7006129A109060760"
+2019.06.05 18:25:31.016  (Exc)  {widget_connect.cpp; 707} rxxxx "857405080101A203020100A305A10302"
+2019.06.05 18:25:31.027  (Exc)  {widget_connect.cpp; 707} rxxxx "0100BE10040E0800065F1F0400001E"
+2019.06.05 18:25:31.043  (Exc)  {widget_connect.cpp; 707} rxxxx "1D10000007AD177E"
+2019.06.05 18:25:31.044  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "aare": {
+        "application-context-name": 1,
+        "result": 0,
+        "result-source-diagnostic": {
+            "acse-service-user": 0
+        },
+        "user-information": "0800065F1F0400001E1D10000007"
+    }
+}
+
+2019.06.05 18:25:31.078  (Exc)  {widget_connect.cpp; 973} TX "7EA019214132B90BE6E600C001C100010000600101FF020032BC7E"
+2019.06.05 18:25:31.123  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01C412152F066E6E700C4"
+2019.06.05 18:25:31.140  (Exc)  {widget_connect.cpp; 707} rxxxx "01C100090A332E3100000000000000"
+2019.06.05 18:25:31.156  (Exc)  {widget_connect.cpp; 707} rxxxx "32057E"
+2019.06.05 18:25:31.158  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "332E3100000000000000"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:31.173  (Exc)  {widget_connect.cpp; 973} TX "7EA019214154890DE6E600C001C100010000600100FF020089A07E"
+2019.06.05 18:25:31.219  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA019412174934CE6E700C401C1"
+2019.06.05 18:25:31.248  (Exc)  {widget_connect.cpp; 707} rxxxx "00090737373232323739157D7E"
+2019.06.05 18:25:31.249  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "37373232323739"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:31.256  (Exc)  {widget_connect.cpp; 973} TX "7EA019214176990FE6E600C001C100010000600102FF0200FF997E"
+2019.06.05 18:25:31.310  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA016412196763AE6E700"
+2019.06.05 18:25:31.315  (Exc)  {widget_connect.cpp; 707} rxxxx "C401C100090435334538E1867E"
+2019.06.05 18:25:31.316  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "35334538"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:31.326  (Exc)  {widget_connect.cpp; 973} TX "7EA019214198E901E6E600C001C100010000600103FF020044857E"
+2019.06.05 18:25:31.365  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0264121"
+2019.06.05 18:25:31.380  (Exc)  {widget_connect.cpp; 707} rxxxx "B8F8BEE6E700C401C1000914332E31"
+2019.06.05 18:25:31.399  (Exc)  {widget_connect.cpp; 707} rxxxx "2E352E310000000000000000000000"
+2019.06.05 18:25:31.423  (Exc)  {widget_connect.cpp; 707} rxxxx "0000844D7E"
+2019.06.05 18:25:31.427  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "332E312E352E3100000000000000000000000000"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:31.446  (Exc)  {widget_connect.cpp; 973} TX "7EA0192141BAF903E6E600C001C100010100000402FF0200A5B97E"
+2019.06.05 18:25:31.501  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0134121DA49DCE6E700C401"
+2019.06.05 18:25:31.507  (Exc)  {widget_connect.cpp; 707} rxxxx "C1001200018AA07E"
+2019.06.05 18:25:31.508  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "long-unsigned": 1
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:31.516  (Exc)  {widget_connect.cpp; 973} TX "7EA0192141DCC905E6E600C001C100010100000403FF02001EA57E"
+2019.06.05 18:25:31.555  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0134121FC7D"
+2019.06.05 18:25:31.577  (Exc)  {widget_connect.cpp; 707} rxxxx "98E6E700C401C1001200018AA07E"
+2019.06.05 18:25:31.578  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "long-unsigned": 1
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:31.583  (Exc)  {widget_connect.cpp; 973} TX "7EA0192141FED907E6E600C001C100010000600104FF020065D27E"
+2019.06.05 18:25:31.619  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0134121"
+2019.06.05 18:25:31.641  (Exc)  {widget_connect.cpp; 707} rxxxx "1E615CE6E700C401C1001207E39E29"
+2019.06.05 18:25:31.668  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:31.669  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "long-unsigned": 2019
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:31.677  (Exc)  {widget_connect.cpp; 973} TX "7EA019214110A909E6E600C001C100010000010000FF020057287E"
+2019.06.05 18:25:31.715  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01D412130"
+2019.06.05 18:25:31.750  (Exc)  {widget_connect.cpp; 707} rxxxx "5F3AE6E700C401C1001907E30605031219210000B400C6B77E"
+2019.06.05 18:25:31.752  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "date-time": "07E30605031219210000B400"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:31.758  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF4405FFFFFF000000"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:31.761  (Exc)  {widget_connect.cpp; 973} TX "7EA024214132C4CCE6E600C101C1000100006001FEFF02000909EF4405FFFFFF00000028227E"
+2019.06.05 18:25:31.828  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01B412152D131E6E700C501C1000909EF448500"
+2019.06.05 18:25:31.843  (Exc)  {widget_connect.cpp; 707} rxxxx "0000FFFFFF26887E"
+2019.06.05 18:25:31.844  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": "EF4485000000FFFFFF"
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:31.845  (Exc)  {widget_info.cpp; 160} data_electro5 "EF4485000000FFFFFF"
+2019.06.05 18:25:31.846  (Exc)  {widget_info.cpp; 170} state_ant 0
+2019.06.05 18:25:33.040  (Exc)  {mainwindow.cpp; 483} not_tab_select false
+2019.06.05 18:25:33.040  (Exc)  {mainwindow.cpp; 488} transmitt
+2019.06.05 18:25:33.220  (Exc)  {widget_connect.cpp; 973} TX "7EA007214193D9D27E"
+2019.06.05 18:25:33.243  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA020412173BD"
+2019.06.05 18:25:33.264  (Exc)  {widget_connect.cpp; 707} rxxxx "8D818014050200800602008007040000"
+2019.06.05 18:25:33.272  (Exc)  {widget_connect.cpp; 707} rxxxx "0001080400000001CE6A7E"
+2019.06.05 18:25:33.274  (Exc)  {widget_connect.cpp; 973} TX "7EA042214110AA1CE6E6006034A1090607608574050801018A0207808B0760857405080201AC088006526561646572BE10040E01000000065F1F0400001E1DFFFFB6E17E"
+2019.06.05 18:25:33.352  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA03741"
+2019.06.05 18:25:33.367  (Exc)  {widget_connect.cpp; 707} rxxxx "2130A269E6E7006129A10906076085"
+2019.06.05 18:25:33.383  (Exc)  {widget_connect.cpp; 707} rxxxx "7405080101A203020100A305A10302"
+2019.06.05 18:25:33.400  (Exc)  {widget_connect.cpp; 707} rxxxx "0100BE10040E0800065F1F0400001E1D"
+2019.06.05 18:25:33.416  (Exc)  {widget_connect.cpp; 707} rxxxx "10000007AD177E"
+2019.06.05 18:25:33.417  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "aare": {
+        "application-context-name": 1,
+        "result": 0,
+        "result-source-diagnostic": {
+            "acse-service-user": 0
+        },
+        "user-information": "0800065F1F0400001E1D10000007"
+    }
+}
+
+2019.06.05 18:25:33.424  (Exc)  {widget_connect.cpp; 973} TX "7EA019214132B90BE6E600C001C100010000600100FF020089A07E"
+2019.06.05 18:25:33.464  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA019412152A708"
+2019.06.05 18:25:33.485  (Exc)  {widget_connect.cpp; 707} rxxxx "E6E700C401C1000907373732323237"
+2019.06.05 18:25:33.500  (Exc)  {widget_connect.cpp; 707} rxxxx "39157D7E"
+2019.06.05 18:25:33.502  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "37373232323739"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:33.993  (Exc)  {mainwindow.cpp; 483} not_tab_select false
+2019.06.05 18:25:33.994  (Exc)  {mainwindow.cpp; 488} transmitt
+2019.06.05 18:25:34.144  (Exc)  {widget_connect.cpp; 973} TX "7EA007214193D9D27E"
+2019.06.05 18:25:34.173  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA020412173BD8D8180"
+2019.06.05 18:25:34.189  (Exc)  {widget_connect.cpp; 707} rxxxx "14050200800602008007040000000108"
+2019.06.05 18:25:34.204  (Exc)  {widget_connect.cpp; 707} rxxxx "0400000001CE6A7E"
+2019.06.05 18:25:34.206  (Exc)  {widget_connect.cpp; 973} TX "7EA042214110AA1CE6E6006034A1090607608574050801018A0207808B0760857405080201AC088006526561646572BE10040E01000000065F1F0400001E1DFFFFB6E17E"
+2019.06.05 18:25:34.285  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0374121"
+2019.06.05 18:25:34.301  (Exc)  {widget_connect.cpp; 707} rxxxx "30A269E6E7006129A1090607608574"
+2019.06.05 18:25:34.323  (Exc)  {widget_connect.cpp; 707} rxxxx "05080101A203020100A305A103020100"
+2019.06.05 18:25:34.346  (Exc)  {widget_connect.cpp; 707} rxxxx "BE10040E0800065F1F0400001E1D10"
+2019.06.05 18:25:34.351  (Exc)  {widget_connect.cpp; 707} rxxxx "000007AD177E"
+2019.06.05 18:25:34.352  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "aare": {
+        "application-context-name": 1,
+        "result": 0,
+        "result-source-diagnostic": {
+            "acse-service-user": 0
+        },
+        "user-information": "0800065F1F0400001E1D10000007"
+    }
+}
+
+2019.06.05 18:25:34.360  (Exc)  {widget_connect.cpp; 973} TX "7EA019214132B90BE6E600C001C100010000600100FF020089A07E"
+2019.06.05 18:25:34.397  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 18:25:34.413  (Exc)  {widget_connect.cpp; 707} rxxxx "19412152A708E6E700C401C1000907"
+2019.06.05 18:25:34.429  (Exc)  {widget_connect.cpp; 707} rxxxx "37373232323739157D7E"
+2019.06.05 18:25:34.430  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "37373232323739"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:35.892  (Exc)  {widget_connect.cpp; 973} TX "7EA007214193D9D27E"
+2019.06.05 18:25:35.939  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA020412173BD8D81801405"
+2019.06.05 18:25:35.940  (Exc)  {widget_connect.cpp; 707} rxxxx "02008006020080070400000001080400"
+2019.06.05 18:25:35.969  (Exc)  {widget_connect.cpp; 707} rxxxx "000001CE6A7E"
+2019.06.05 18:25:35.974  (Exc)  {widget_connect.cpp; 973} TX "7EA042214110AA1CE6E6006034A1090607608574050801018A0207808B0760857405080201AC088006526561646572BE10040E01000000065F1F0400001E1DFFFFB6E17E"
+2019.06.05 18:25:36.065  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA037412130A269E6E7006129A10906"
+2019.06.05 18:25:36.098  (Exc)  {widget_connect.cpp; 707} rxxxx "0760857405080101A203020100A305"
+2019.06.05 18:25:36.100  (Exc)  {widget_connect.cpp; 707} rxxxx "A103020100BE10040E0800065F1F04"
+2019.06.05 18:25:36.119  (Exc)  {widget_connect.cpp; 707} rxxxx "00001E1D10000007AD177E"
+2019.06.05 18:25:36.121  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "aare": {
+        "application-context-name": 1,
+        "result": 0,
+        "result-source-diagnostic": {
+            "acse-service-user": 0
+        },
+        "user-information": "0800065F1F0400001E1D10000007"
+    }
+}
+
+2019.06.05 18:25:36.131  (Exc)  {widget_connect.cpp; 973} TX "7EA019214132B90BE6E600C001C100010000600100FF020089A07E"
+2019.06.05 18:25:36.188  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA019412152A708E6E700C401C1"
+2019.06.05 18:25:36.198  (Exc)  {widget_connect.cpp; 707} rxxxx "00090737373232323739157D7E"
+2019.06.05 18:25:36.202  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "get-response": {
+        "get-response-normal": {
+            "invoke-id-and-priority": 193,
+            "result": {
+                "data": {
+                    "octet-string": "37373232323739"
+                }
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:36.222  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF0F0D"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:36.223  (Exc)  {widget_connect.cpp; 973} TX "7EA01E214154A85AE6E600C101C1000100006001FEFF02000903EF0F0DB2D07E"
+2019.06.05 18:25:36.273  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA02241217474C0E6E700C501"
+2019.06.05 18:25:36.295  (Exc)  {widget_connect.cpp; 707} rxxxx "C1000910EF0F0D5000660005000500"
+2019.06.05 18:25:36.316  (Exc)  {widget_connect.cpp; 707} rxxxx "00FD200000A2807E"
+2019.06.05 18:25:36.318  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": "EF0F0D500066000500050000FD200000"
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:36.319  (Exc)  {widget_info.cpp; 160} data_electro5 "EF0F0D500066000500050000FD200000"
+2019.06.05 18:25:36.320  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0040"
+2019.06.05 18:25:36.321  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0040"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:36.322  (Exc)  {widget_connect.cpp; 973} TX "7EA02021417608BAE6E600C101C1000100006001FEFF02000905EF100D0040B2FB7E"
+2019.06.05 18:25:36.376  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA87E4121966A1C"
+2019.06.05 18:25:36.387  (Exc)  {widget_connect.cpp; 707} rxxxx "E6E700C501C100096D4600455CF1C0"
+2019.06.05 18:25:36.407  (Exc)  {widget_connect.cpp; 707} rxxxx "0081890000C59D8289000013F8838900"
+2019.06.05 18:25:36.422  (Exc)  {widget_connect.cpp; 707} rxxxx "00102C8489000342CF818A0000002A"
+2019.06.05 18:25:36.434  (Exc)  {widget_connect.cpp; 707} rxxxx "828A00000010838A00000086848A00"
+2019.06.05 18:25:36.455  (Exc)  {widget_connect.cpp; 707} rxxxx "004E61818B00000027828B0000000183"
+2019.06.05 18:25:36.466  (Exc)  {widget_connect.cpp; 707} rxxxx "8B0000000F848B00000017818C0000"
+2019.06.05 18:25:36.486  (Exc)  {widget_connect.cpp; 707} rxxxx "0000828C00000002838C0000001284"
+2019.06.05 18:25:36.498  (Exc)  {widget_connect.cpp; 707} rxxxx "8C0000000081680000002FF67E"
+2019.06.05 18:25:36.500  (Exc)  {hdlc_dlms_exchange.cpp;1149} segmentation "7EA007214191CBF17E"
+2019.06.05 18:25:36.500  (Exc)  {widget_connect.cpp; 973} TX "7EA007214191CBF17E"
+2019.06.05 18:25:36.528  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA00A4121B89FA60561917E"
+2019.06.05 18:25:36.529  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": "4600455CF1C00081890000C59D8289000013F883890000102C8489000342CF818A0000002A828A00000010838A00000086848A00004E61818B00000027828B00000001838B0000000F848B00000017818C00000000828C00000002838C00000012848C00000000816800000005"
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:36.530  (Exc)  {widget_info.cpp; 160} data_electro5 "4600455CF1C00081890000C59D8289000013F883890000102C8489000342CF818A0000002A828A00000010838A00000086848A00004E61818B00000027828B00000001838B0000000F848B00000017818C00000000828C00000002838C00000012848C00000000816800000005"
+2019.06.05 18:25:36.530  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0030"
+2019.06.05 18:25:36.532  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0030"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:36.532  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141B87A95E6E600C101C1000100006001FEFF02000905EF100D003035887E"
+2019.06.05 18:25:36.594  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA87E4121DA0294E6E700C501C100096D4600355C"
+2019.06.05 18:25:36.626  (Exc)  {widget_connect.cpp; 707} rxxxx "C8E18081890000C40B8289000013E2"
+2019.06.05 18:25:36.628  (Exc)  {widget_connect.cpp; 707} rxxxx "838900000F74848900005CCB818A0000"
+2019.06.05 18:25:36.658  (Exc)  {widget_connect.cpp; 707} rxxxx "0000828A0000000C838A00000068848A00000000818B00000027828B0000"
+2019.06.05 18:25:36.673  (Exc)  {widget_connect.cpp; 707} rxxxx "0001838B00000008848B00000017818C"
+2019.06.05 18:25:36.689  (Exc)  {widget_connect.cpp; 707} rxxxx "00000000828C00000001838C000000"
+2019.06.05 18:25:36.704  (Exc)  {widget_connect.cpp; 707} rxxxx "0F848C00000000816800000042D27E"
+2019.06.05 18:25:36.705  (Exc)  {hdlc_dlms_exchange.cpp;1149} segmentation "7EA0072141D1CFB37E"
+2019.06.05 18:25:36.705  (Exc)  {widget_connect.cpp; 973} TX "7EA0072141D1CFB37E"
+2019.06.05 18:25:36.720  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA00A"
+2019.06.05 18:25:36.737  (Exc)  {widget_connect.cpp; 707} rxxxx "4121FCBFA200CCC67E"
+2019.06.05 18:25:36.737  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": "4600355CC8E18081890000C40B8289000013E2838900000F74848900005CCB818A00000000828A0000000C838A00000068848A00000000818B00000027828B00000001838B00000008848B00000017818C00000000828C00000001838C0000000F848C00000000816800000000"
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:36.738  (Exc)  {widget_info.cpp; 160} data_electro5 "4600355CC8E18081890000C40B8289000013E2838900000F74848900005CCB818A00000000828A0000000C838A00000068848A00000000818B00000027828B00000001838B00000008848B00000017818C00000000828C00000001838C0000000F848C00000000816800000000"
+2019.06.05 18:25:36.739  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0020"
+2019.06.05 18:25:36.739  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0020"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:36.740  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141FA6CF4E6E600C101C1000100006001FEFF02000905EF100D0020B4987E"
+2019.06.05 18:25:36.784  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA87E41211E"
+2019.06.05 18:25:36.800  (Exc)  {widget_connect.cpp; 707} rxxxx "2A14E6E700C501C100096D4600255C"
+2019.06.05 18:25:36.816  (Exc)  {widget_connect.cpp; 707} rxxxx "A1548081890000C40B8289000013C883"
+2019.06.05 18:25:36.832  (Exc)  {widget_connect.cpp; 707} rxxxx "8900000E9A848900005CCB818A0000"
+2019.06.05 18:25:36.848  (Exc)  {widget_connect.cpp; 707} rxxxx "0000828A00000000838A0000000384"
+2019.06.05 18:25:36.864  (Exc)  {widget_connect.cpp; 707} rxxxx "8A00000000818B00000027828B000000"
+2019.06.05 18:25:36.880  (Exc)  {widget_connect.cpp; 707} rxxxx "00838B00000000848B00000017818C"
+2019.06.05 18:25:36.896  (Exc)  {widget_connect.cpp; 707} rxxxx "00000000828C00000000838C000000"
+2019.06.05 18:25:36.913  (Exc)  {widget_connect.cpp; 707} rxxxx "00848C000000008168000000E4F07E"
+2019.06.05 18:25:36.914  (Exc)  {hdlc_dlms_exchange.cpp;1149} segmentation "7EA007214111C3757E"
+2019.06.05 18:25:36.915  (Exc)  {widget_connect.cpp; 973} TX "7EA007214111C3757E"
+2019.06.05 18:25:36.928  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 18:25:36.944  (Exc)  {widget_connect.cpp; 707} rxxxx "0A412130DFAE04E8807E"
+2019.06.05 18:25:36.945  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": "4600255CA1548081890000C40B8289000013C8838900000E9A848900005CCB818A00000000828A00000000838A00000003848A00000000818B00000027828B00000000838B00000000848B00000017818C00000000828C00000000838C00000000848C00000000816800000004"
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:36.947  (Exc)  {widget_info.cpp; 160} data_electro5 "4600255CA1548081890000C40B8289000013C8838900000E9A848900005CCB818A00000000828A00000000838A00000003848A00000000818B00000027828B00000000838B00000000848B00000017818C00000000828C00000000838C00000000848C00000000816800000004"
+2019.06.05 18:25:36.948  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0010"
+2019.06.05 18:25:36.950  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0010"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:36.951  (Exc)  {widget_connect.cpp; 973} TX "7EA02021413C5657E6E600C101C1000100006001FEFF02000905EF100D001037A97E"
+2019.06.05 18:25:36.993  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:37.008  (Exc)  {widget_connect.cpp; 707} rxxxx "A87E412152429CE6E700C501C10009"
+2019.06.05 18:25:37.024  (Exc)  {widget_connect.cpp; 707} rxxxx "6D4600155C78760081890000C3E48289"
+2019.06.05 18:25:37.040  (Exc)  {widget_connect.cpp; 707} rxxxx "000013BE838900000E468489000010"
+2019.06.05 18:25:37.057  (Exc)  {widget_connect.cpp; 707} rxxxx "1C818A00000000828A00000000838A"
+2019.06.05 18:25:37.073  (Exc)  {widget_connect.cpp; 707} rxxxx "00000000848A00000000818B00000027"
+2019.06.05 18:25:37.088  (Exc)  {widget_connect.cpp; 707} rxxxx "828B00000000838B00000000848B00"
+2019.06.05 18:25:37.106  (Exc)  {widget_connect.cpp; 707} rxxxx "000017818C00000000828C0000000083"
+2019.06.05 18:25:37.120  (Exc)  {widget_connect.cpp; 707} rxxxx "8C00000000848C0000000081680000"
+2019.06.05 18:25:37.137  (Exc)  {widget_connect.cpp; 707} rxxxx "00FF5E7E"
+2019.06.05 18:25:37.137  (Exc)  {hdlc_dlms_exchange.cpp;1149} segmentation "7EA007214151C7377E"
+2019.06.05 18:25:37.137  (Exc)  {widget_connect.cpp; 973} TX "7EA007214151C7377E"
+2019.06.05 18:25:37.152  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA00A"
+2019.06.05 18:25:37.168  (Exc)  {widget_connect.cpp; 707} rxxxx "412174FFAA00CCC67E"
+2019.06.05 18:25:37.168  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": "4600155C78760081890000C3E48289000013BE838900000E4684890000101C818A00000000828A00000000838A00000000848A00000000818B00000027828B00000000838B00000000848B00000017818C00000000828C00000000838C00000000848C00000000816800000000"
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:37.169  (Exc)  {widget_info.cpp; 160} data_electro5 "4600155C78760081890000C3E48289000013BE838900000E4684890000101C818A00000000828A00000000838A00000000848A00000000818B00000027828B00000000838B00000000848B00000017818C00000000828C00000000838C00000000848C00000000816800000000"
+2019.06.05 18:25:37.169  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0000"
+2019.06.05 18:25:37.169  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0000"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:37.170  (Exc)  {widget_connect.cpp; 973} TX "7EA02021417E4036E6E600C101C1000100006001FEFF02000905EF100D0000B6B97E"
+2019.06.05 18:25:37.227  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA87E4121966A1C"
+2019.06.05 18:25:37.232  (Exc)  {widget_connect.cpp; 707} rxxxx "E6E700C501C100096D4600055C538C"
+2019.06.05 18:25:37.258  (Exc)  {widget_connect.cpp; 707} rxxxx "00818900004CF8828900000FC5838900"
+2019.06.05 18:25:37.265  (Exc)  {widget_connect.cpp; 707} rxxxx "000DCB848900000DA3818A00000000"
+2019.06.05 18:25:37.281  (Exc)  {widget_connect.cpp; 707} rxxxx "828A00000000838A00000000848A00"
+2019.06.05 18:25:37.296  (Exc)  {widget_connect.cpp; 707} rxxxx "000000818B00000027828B0000000083"
+2019.06.05 18:25:37.312  (Exc)  {widget_connect.cpp; 707} rxxxx "8B00000000848B00000017818C0000"
+2019.06.05 18:25:37.328  (Exc)  {widget_connect.cpp; 707} rxxxx "0000828C00000000838C0000000084"
+2019.06.05 18:25:37.344  (Exc)  {widget_connect.cpp; 707} rxxxx "8C000000008168000000F53A7E"
+2019.06.05 18:25:37.345  (Exc)  {hdlc_dlms_exchange.cpp;1149} segmentation "7EA007214191CBF17E"
+2019.06.05 18:25:37.346  (Exc)  {widget_connect.cpp; 973} TX "7EA007214191CBF17E"
+2019.06.05 18:25:37.360  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:37.377  (Exc)  {widget_connect.cpp; 707} rxxxx "A00A4121B89FA600CCC67E"
+2019.06.05 18:25:37.377  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": "4600055C538C00818900004CF8828900000FC5838900000DCB848900000DA3818A00000000828A00000000838A00000000848A00000000818B00000027828B00000000838B00000000848B00000017818C00000000828C00000000838C00000000848C00000000816800000000"
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:37.379  (Exc)  {widget_info.cpp; 160} data_electro5 "4600055C538C00818900004CF8828900000FC5838900000DCB848900000DA3818A00000000828A00000000838A00000000848A00000000818B00000027828B00000000838B00000000848B00000017818C00000000828C00000000838C00000000848C00000000816800000000"
+2019.06.05 18:25:37.380  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0650"
+2019.06.05 18:25:37.382  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0650"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:37.383  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141B03219E6E600C101C1000100006001FEFF02000905EF100D0650E3BF7E"
+2019.06.05 18:25:37.440  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121DAF2C0E6E700C501C10009"
+2019.06.05 18:25:37.457  (Exc)  {widget_connect.cpp; 707} rxxxx "0061127E"
+2019.06.05 18:25:37.458  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:37.458  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0640"
+2019.06.05 18:25:37.459  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0640"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:37.460  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141D22659E6E600C101C1000100006001FEFF02000905EF100D064062AF7E"
+2019.06.05 18:25:37.504  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121"
+2019.06.05 18:25:37.520  (Exc)  {widget_connect.cpp; 707} rxxxx "FCC684E6E700C501C100090061127E"
+2019.06.05 18:25:37.521  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:37.522  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0630"
+2019.06.05 18:25:37.524  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0630"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:37.526  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141F4121DE6E600C101C1000100006001FEFF02000905EF100D0630E5DC7E"
+2019.06.05 18:25:37.568  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012"
+2019.06.05 18:25:37.594  (Exc)  {widget_connect.cpp; 707} rxxxx "41211EDA40E6E700C501C10009006112"
+2019.06.05 18:25:37.600  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:37.600  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:37.601  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0620"
+2019.06.05 18:25:37.602  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0620"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:37.603  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141160ED9E6E600C101C1000100006001FEFF02000905EF100D062064CC7E"
+2019.06.05 18:25:37.648  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012412130"
+2019.06.05 18:25:37.664  (Exc)  {widget_connect.cpp; 707} rxxxx "A688E6E700C501C100090061127E"
+2019.06.05 18:25:37.664  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:37.665  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0610"
+2019.06.05 18:25:37.667  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0610"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:37.668  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141387211E6E600C101C1000100006001FEFF02000905EF100D0610E7FD7E"
+2019.06.05 18:25:37.719  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012"
+2019.06.05 18:25:37.729  (Exc)  {widget_connect.cpp; 707} rxxxx "412152B2C8E6E700C501C100090061"
+2019.06.05 18:25:37.744  (Exc)  {widget_connect.cpp; 707} rxxxx "127E"
+2019.06.05 18:25:37.745  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:37.746  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0600"
+2019.06.05 18:25:37.747  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0600"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:37.748  (Exc)  {widget_connect.cpp; 973} TX "7EA02021415A6651E6E600C101C1000100006001FEFF02000905EF100D060066ED7E"
+2019.06.05 18:25:37.792  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012412174"
+2019.06.05 18:25:37.808  (Exc)  {widget_connect.cpp; 707} rxxxx "868CE6E700C501C100090061127E"
+2019.06.05 18:25:37.809  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:37.810  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D05F0"
+2019.06.05 18:25:37.813  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D05F0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:37.814  (Exc)  {widget_connect.cpp; 973} TX "7EA02021417C5215E6E600C101C1000100006001FEFF02000905EF100D05F081307E"
+2019.06.05 18:25:37.856  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:37.872  (Exc)  {widget_connect.cpp; 707} rxxxx "21969A48E6E700C501C10009006112"
+2019.06.05 18:25:37.892  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:37.893  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:37.894  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D05E0"
+2019.06.05 18:25:37.895  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D05E0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:37.896  (Exc)  {widget_connect.cpp; 973} TX "7EA02021419E4ED1E6E600C101C1000100006001FEFF02000905EF100D05E000207E"
+2019.06.05 18:25:37.936  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:37.952  (Exc)  {widget_connect.cpp; 707} rxxxx "A0124121B8E680E6E700C501C10009"
+2019.06.05 18:25:37.968  (Exc)  {widget_connect.cpp; 707} rxxxx "0061127E"
+2019.06.05 18:25:37.969  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:37.970  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D05D0"
+2019.06.05 18:25:37.972  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D05D0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:37.973  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141B03219E6E600C101C1000100006001FEFF02000905EF100D05D083117E"
+2019.06.05 18:25:38.016  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 18:25:38.032  (Exc)  {widget_connect.cpp; 707} rxxxx "124121DAF2C0E6E700C501C100090061"
+2019.06.05 18:25:38.048  (Exc)  {widget_connect.cpp; 707} rxxxx "127E"
+2019.06.05 18:25:38.049  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:38.050  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D05C0"
+2019.06.05 18:25:38.051  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D05C0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:38.052  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141D22659E6E600C101C1000100006001FEFF02000905EF100D05C002017E"
+2019.06.05 18:25:38.096  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121"
+2019.06.05 18:25:38.112  (Exc)  {widget_connect.cpp; 707} rxxxx "FCC684E6E700C501C100090061127E"
+2019.06.05 18:25:38.113  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:38.113  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D05B0"
+2019.06.05 18:25:38.115  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D05B0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:38.115  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141F4121DE6E600C101C1000100006001FEFF02000905EF100D05B085727E"
+2019.06.05 18:25:38.159  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241211E"
+2019.06.05 18:25:38.176  (Exc)  {widget_connect.cpp; 707} rxxxx "DA40E6E700C501C100090061127E"
+2019.06.05 18:25:38.176  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:38.177  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D05A0"
+2019.06.05 18:25:38.178  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D05A0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:38.179  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141160ED9E6E600C101C1000100006001FEFF02000905EF100D05A004627E"
+2019.06.05 18:25:38.224  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012412130"
+2019.06.05 18:25:38.240  (Exc)  {widget_connect.cpp; 707} rxxxx "A688E6E700C501C100090061127E"
+2019.06.05 18:25:38.241  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:38.242  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0590"
+2019.06.05 18:25:38.245  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0590"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:38.247  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141387211E6E600C101C1000100006001FEFF02000905EF100D059087537E"
+2019.06.05 18:25:38.288  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012"
+2019.06.05 18:25:38.304  (Exc)  {widget_connect.cpp; 707} rxxxx "412152B2C8E6E700C501C100090061"
+2019.06.05 18:25:38.320  (Exc)  {widget_connect.cpp; 707} rxxxx "127E"
+2019.06.05 18:25:38.321  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:38.322  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0580"
+2019.06.05 18:25:38.323  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0580"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:38.324  (Exc)  {widget_connect.cpp; 973} TX "7EA02021415A6651E6E600C101C1000100006001FEFF02000905EF100D058006437E"
+2019.06.05 18:25:38.368  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121"
+2019.06.05 18:25:38.405  (Exc)  {widget_connect.cpp; 707} rxxxx "74868CE6E700C501C100090061127E"
+2019.06.05 18:25:38.406  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:38.409  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0570"
+2019.06.05 18:25:38.411  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0570"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:38.413  (Exc)  {widget_connect.cpp; 973} TX "7EA02021417C5215E6E600C101C1000100006001FEFF02000905EF100D057089B47E"
+2019.06.05 18:25:38.463  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121969A48E6E700"
+2019.06.05 18:25:38.479  (Exc)  {widget_connect.cpp; 707} rxxxx "C501C100090061127E"
+2019.06.05 18:25:38.480  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:38.484  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0560"
+2019.06.05 18:25:38.486  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0560"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:38.488  (Exc)  {widget_connect.cpp; 973} TX "7EA02021419E4ED1E6E600C101C1000100006001FEFF02000905EF100D056008A47E"
+2019.06.05 18:25:38.527  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:38.543  (Exc)  {widget_connect.cpp; 707} rxxxx "A0124121B8E680E6E700C501C10009"
+2019.06.05 18:25:38.560  (Exc)  {widget_connect.cpp; 707} rxxxx "0061127E"
+2019.06.05 18:25:38.560  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:38.561  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0550"
+2019.06.05 18:25:38.563  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0550"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:38.564  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141B03219E6E600C101C1000100006001FEFF02000905EF100D05508B957E"
+2019.06.05 18:25:38.608  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121"
+2019.06.05 18:25:38.624  (Exc)  {widget_connect.cpp; 707} rxxxx "DAF2C0E6E700C501C100090061127E"
+2019.06.05 18:25:38.625  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:38.625  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0540"
+2019.06.05 18:25:38.626  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0540"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:38.627  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141D22659E6E600C101C1000100006001FEFF02000905EF100D05400A857E"
+2019.06.05 18:25:38.672  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121FC"
+2019.06.05 18:25:38.688  (Exc)  {widget_connect.cpp; 707} rxxxx "C684E6E700C501C100090061127E"
+2019.06.05 18:25:38.689  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:38.689  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0530"
+2019.06.05 18:25:38.692  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0530"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:38.693  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141F4121DE6E600C101C1000100006001FEFF02000905EF100D05308DF67E"
+2019.06.05 18:25:38.735  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 18:25:38.752  (Exc)  {widget_connect.cpp; 707} rxxxx "1241211EDA40E6E700C501C1000900"
+2019.06.05 18:25:38.768  (Exc)  {widget_connect.cpp; 707} rxxxx "61127E"
+2019.06.05 18:25:38.769  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:38.769  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0520"
+2019.06.05 18:25:38.770  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0520"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:38.771  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141160ED9E6E600C101C1000100006001FEFF02000905EF100D05200CE67E"
+2019.06.05 18:25:38.816  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121"
+2019.06.05 18:25:38.832  (Exc)  {widget_connect.cpp; 707} rxxxx "30A688E6E700C501C100090061127E"
+2019.06.05 18:25:38.833  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:38.833  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0510"
+2019.06.05 18:25:38.836  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0510"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:38.837  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141387211E6E600C101C1000100006001FEFF02000905EF100D05108FD77E"
+2019.06.05 18:25:38.879  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:38.896  (Exc)  {widget_connect.cpp; 707} rxxxx "2152B2C8E6E700C501C10009006112"
+2019.06.05 18:25:38.912  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:38.913  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:38.913  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0500"
+2019.06.05 18:25:38.915  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0500"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:38.915  (Exc)  {widget_connect.cpp; 973} TX "7EA02021415A6651E6E600C101C1000100006001FEFF02000905EF100D05000EC77E"
+2019.06.05 18:25:38.960  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121"
+2019.06.05 18:25:38.976  (Exc)  {widget_connect.cpp; 707} rxxxx "74868CE6E700C501C100090061127E"
+2019.06.05 18:25:38.977  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:38.979  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D04F0"
+2019.06.05 18:25:38.981  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D04F0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:38.982  (Exc)  {widget_connect.cpp; 973} TX "7EA02021417C5215E6E600C101C1000100006001FEFF02000905EF100D04F059297E"
+2019.06.05 18:25:39.023  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:39.040  (Exc)  {widget_connect.cpp; 707} rxxxx "A0124121969A48E6E700C501C10009"
+2019.06.05 18:25:39.055  (Exc)  {widget_connect.cpp; 707} rxxxx "0061127E"
+2019.06.05 18:25:39.056  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:39.057  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D04E0"
+2019.06.05 18:25:39.058  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D04E0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:39.059  (Exc)  {widget_connect.cpp; 973} TX "7EA02021419E4ED1E6E600C101C1000100006001FEFF02000905EF100D04E0D8397E"
+2019.06.05 18:25:39.104  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121B8"
+2019.06.05 18:25:39.120  (Exc)  {widget_connect.cpp; 707} rxxxx "E680E6E700C501C100090061127E"
+2019.06.05 18:25:39.121  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:39.121  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D04D0"
+2019.06.05 18:25:39.124  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D04D0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:39.126  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141B03219E6E600C101C1000100006001FEFF02000905EF100D04D05B087E"
+2019.06.05 18:25:39.167  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012"
+2019.06.05 18:25:39.183  (Exc)  {widget_connect.cpp; 707} rxxxx "4121DAF2C0E6E700C501C100090061"
+2019.06.05 18:25:39.199  (Exc)  {widget_connect.cpp; 707} rxxxx "127E"
+2019.06.05 18:25:39.200  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:39.201  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D04C0"
+2019.06.05 18:25:39.202  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D04C0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:39.203  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141D22659E6E600C101C1000100006001FEFF02000905EF100D04C0DA187E"
+2019.06.05 18:25:39.258  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121FC"
+2019.06.05 18:25:39.263  (Exc)  {widget_connect.cpp; 707} rxxxx "C684E6E700C501C100090061127E"
+2019.06.05 18:25:39.264  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:39.265  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D04B0"
+2019.06.05 18:25:39.268  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D04B0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:39.269  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141F4121DE6E600C101C1000100006001FEFF02000905EF100D04B05D6B7E"
+2019.06.05 18:25:39.311  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 18:25:39.327  (Exc)  {widget_connect.cpp; 707} rxxxx "1241211EDA40E6E700C501C1000900"
+2019.06.05 18:25:39.343  (Exc)  {widget_connect.cpp; 707} rxxxx "61127E"
+2019.06.05 18:25:39.343  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:39.344  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D04A0"
+2019.06.05 18:25:39.344  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D04A0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:39.345  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141160ED9E6E600C101C1000100006001FEFF02000905EF100D04A0DC7B7E"
+2019.06.05 18:25:39.391  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012412130A6"
+2019.06.05 18:25:39.407  (Exc)  {widget_connect.cpp; 707} rxxxx "88E6E700C501C100090061127E"
+2019.06.05 18:25:39.408  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:39.409  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0490"
+2019.06.05 18:25:39.411  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0490"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:39.413  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141387211E6E600C101C1000100006001FEFF02000905EF100D04905F4A7E"
+2019.06.05 18:25:39.456  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:39.471  (Exc)  {widget_connect.cpp; 707} rxxxx "2152B2C8E6E700C501C10009006112"
+2019.06.05 18:25:39.488  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:39.488  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:39.489  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0480"
+2019.06.05 18:25:39.490  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0480"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:39.491  (Exc)  {widget_connect.cpp; 973} TX "7EA02021415A6651E6E600C101C1000100006001FEFF02000905EF100D0480DE5A7E"
+2019.06.05 18:25:39.535  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121"
+2019.06.05 18:25:39.551  (Exc)  {widget_connect.cpp; 707} rxxxx "74868CE6E700C501C100090061127E"
+2019.06.05 18:25:39.552  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:39.553  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0470"
+2019.06.05 18:25:39.555  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0470"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:39.556  (Exc)  {widget_connect.cpp; 973} TX "7EA02021417C5215E6E600C101C1000100006001FEFF02000905EF100D047051AD7E"
+2019.06.05 18:25:39.599  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 18:25:39.615  (Exc)  {widget_connect.cpp; 707} rxxxx "124121969A48E6E700C501C100090061"
+2019.06.05 18:25:39.643  (Exc)  {widget_connect.cpp; 707} rxxxx "127E"
+2019.06.05 18:25:39.644  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:39.646  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0460"
+2019.06.05 18:25:39.647  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0460"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:39.648  (Exc)  {widget_connect.cpp; 973} TX "7EA02021419E4ED1E6E600C101C1000100006001FEFF02000905EF100D0460D0BD7E"
+2019.06.05 18:25:39.695  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121B8E680"
+2019.06.05 18:25:39.711  (Exc)  {widget_connect.cpp; 707} rxxxx "E6E700C501C100090061127E"
+2019.06.05 18:25:39.712  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:39.713  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0450"
+2019.06.05 18:25:39.716  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0450"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:39.717  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141B03219E6E600C101C1000100006001FEFF02000905EF100D0450538C7E"
+2019.06.05 18:25:39.759  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 18:25:39.775  (Exc)  {widget_connect.cpp; 707} rxxxx "124121DAF2C0E6E700C501C1000900"
+2019.06.05 18:25:39.791  (Exc)  {widget_connect.cpp; 707} rxxxx "61127E"
+2019.06.05 18:25:39.792  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:39.793  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0440"
+2019.06.05 18:25:39.795  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0440"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:39.796  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141D22659E6E600C101C1000100006001FEFF02000905EF100D0440D29C7E"
+2019.06.05 18:25:39.840  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:39.856  (Exc)  {widget_connect.cpp; 707} rxxxx "21FCC684E6E700C501C100090061127E"
+2019.06.05 18:25:39.857  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:39.858  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0430"
+2019.06.05 18:25:39.860  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0430"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:39.861  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141F4121DE6E600C101C1000100006001FEFF02000905EF100D043055EF7E"
+2019.06.05 18:25:39.903  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012"
+2019.06.05 18:25:39.918  (Exc)  {widget_connect.cpp; 707} rxxxx "41211EDA40E6E700C501C10009006112"
+2019.06.05 18:25:39.935  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:39.936  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:39.937  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0420"
+2019.06.05 18:25:39.937  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0420"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:39.938  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141160ED9E6E600C101C1000100006001FEFF02000905EF100D0420D4FF7E"
+2019.06.05 18:25:39.983  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012412130"
+2019.06.05 18:25:39.999  (Exc)  {widget_connect.cpp; 707} rxxxx "A688E6E700C501C100090061127E"
+2019.06.05 18:25:40.000  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:40.001  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0410"
+2019.06.05 18:25:40.004  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0410"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:40.005  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141387211E6E600C101C1000100006001FEFF02000905EF100D041057CE7E"
+2019.06.05 18:25:40.046  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 18:25:40.063  (Exc)  {widget_connect.cpp; 707} rxxxx "12412152B2C8E6E700C501C1000900"
+2019.06.05 18:25:40.079  (Exc)  {widget_connect.cpp; 707} rxxxx "61127E"
+2019.06.05 18:25:40.080  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:40.081  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0400"
+2019.06.05 18:25:40.081  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0400"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:40.082  (Exc)  {widget_connect.cpp; 973} TX "7EA02021415A6651E6E600C101C1000100006001FEFF02000905EF100D0400D6DE7E"
+2019.06.05 18:25:40.127  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012412174"
+2019.06.05 18:25:40.143  (Exc)  {widget_connect.cpp; 707} rxxxx "868CE6E700C501C100090061127E"
+2019.06.05 18:25:40.144  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:40.145  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D03F0"
+2019.06.05 18:25:40.147  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D03F0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:40.148  (Exc)  {widget_connect.cpp; 973} TX "7EA02021417C5215E6E600C101C1000100006001FEFF02000905EF100D03F051647E"
+2019.06.05 18:25:40.191  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012"
+2019.06.05 18:25:40.219  (Exc)  {widget_connect.cpp; 707} rxxxx "4121969A48E6E700C501C100090061"
+2019.06.05 18:25:40.223  (Exc)  {widget_connect.cpp; 707} rxxxx "127E"
+2019.06.05 18:25:40.223  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:40.224  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D03E0"
+2019.06.05 18:25:40.225  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D03E0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:40.226  (Exc)  {widget_connect.cpp; 973} TX "7EA02021419E4ED1E6E600C101C1000100006001FEFF02000905EF100D03E0D0747E"
+2019.06.05 18:25:40.271  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121B8"
+2019.06.05 18:25:40.287  (Exc)  {widget_connect.cpp; 707} rxxxx "E680E6E700C501C100090061127E"
+2019.06.05 18:25:40.288  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:40.289  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D03D0"
+2019.06.05 18:25:40.292  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D03D0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:40.294  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141B03219E6E600C101C1000100006001FEFF02000905EF100D03D053457E"
+2019.06.05 18:25:40.351  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121DAF2C0E6E700C501C10009"
+2019.06.05 18:25:40.367  (Exc)  {widget_connect.cpp; 707} rxxxx "0061127E"
+2019.06.05 18:25:40.368  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:40.369  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D03C0"
+2019.06.05 18:25:40.371  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D03C0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:40.372  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141D22659E6E600C101C1000100006001FEFF02000905EF100D03C0D2557E"
+2019.06.05 18:25:40.414  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:40.431  (Exc)  {widget_connect.cpp; 707} rxxxx "21FCC684E6E700C501C100090061127E"
+2019.06.05 18:25:40.432  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:40.432  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D03B0"
+2019.06.05 18:25:40.435  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D03B0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:40.438  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141F4121DE6E600C101C1000100006001FEFF02000905EF100D03B055267E"
+2019.06.05 18:25:40.478  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 18:25:40.494  (Exc)  {widget_connect.cpp; 707} rxxxx "1241211EDA40E6E700C501C1000900"
+2019.06.05 18:25:40.511  (Exc)  {widget_connect.cpp; 707} rxxxx "61127E"
+2019.06.05 18:25:40.512  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:40.513  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D03A0"
+2019.06.05 18:25:40.515  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D03A0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:40.516  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141160ED9E6E600C101C1000100006001FEFF02000905EF100D03A0D4367E"
+2019.06.05 18:25:40.559  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121"
+2019.06.05 18:25:40.575  (Exc)  {widget_connect.cpp; 707} rxxxx "30A688E6E700C501C100090061127E"
+2019.06.05 18:25:40.576  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:40.577  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0390"
+2019.06.05 18:25:40.580  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0390"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:40.581  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141387211E6E600C101C1000100006001FEFF02000905EF100D039057077E"
+2019.06.05 18:25:40.622  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:40.649  (Exc)  {widget_connect.cpp; 707} rxxxx "A012412152B2C8E6E700C501C1000900"
+2019.06.05 18:25:40.654  (Exc)  {widget_connect.cpp; 707} rxxxx "61127E"
+2019.06.05 18:25:40.655  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:40.656  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0380"
+2019.06.05 18:25:40.656  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0380"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:40.657  (Exc)  {widget_connect.cpp; 973} TX "7EA02021415A6651E6E600C101C1000100006001FEFF02000905EF100D0380D6177E"
+2019.06.05 18:25:40.703  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012412174"
+2019.06.05 18:25:40.718  (Exc)  {widget_connect.cpp; 707} rxxxx "868CE6E700C501C100090061127E"
+2019.06.05 18:25:40.719  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:40.720  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0370"
+2019.06.05 18:25:40.723  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0370"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:40.724  (Exc)  {widget_connect.cpp; 973} TX "7EA02021417C5215E6E600C101C1000100006001FEFF02000905EF100D037059E07E"
+2019.06.05 18:25:40.766  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:40.782  (Exc)  {widget_connect.cpp; 707} rxxxx "21969A48E6E700C501C10009006112"
+2019.06.05 18:25:40.798  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:40.799  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:40.800  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0360"
+2019.06.05 18:25:40.801  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0360"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:40.802  (Exc)  {widget_connect.cpp; 973} TX "7EA02021419E4ED1E6E600C101C1000100006001FEFF02000905EF100D0360D8F07E"
+2019.06.05 18:25:40.846  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121"
+2019.06.05 18:25:40.862  (Exc)  {widget_connect.cpp; 707} rxxxx "B8E680E6E700C501C100090061127E"
+2019.06.05 18:25:40.863  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:40.864  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0350"
+2019.06.05 18:25:40.866  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0350"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:40.867  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141B03219E6E600C101C1000100006001FEFF02000905EF100D03505BC17E"
+2019.06.05 18:25:40.911  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:40.927  (Exc)  {widget_connect.cpp; 707} rxxxx "21DAF2C0E6E700C501C100090061127E"
+2019.06.05 18:25:40.928  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:40.929  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0340"
+2019.06.05 18:25:40.930  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0340"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:40.931  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141D22659E6E600C101C1000100006001FEFF02000905EF100D0340DAD17E"
+2019.06.05 18:25:40.974  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121"
+2019.06.05 18:25:40.991  (Exc)  {widget_connect.cpp; 707} rxxxx "FCC684E6E700C501C100090061127E"
+2019.06.05 18:25:40.992  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:40.993  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0330"
+2019.06.05 18:25:40.995  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0330"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:40.996  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141F4121DE6E600C101C1000100006001FEFF02000905EF100D03305DA27E"
+2019.06.05 18:25:41.038  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:41.055  (Exc)  {widget_connect.cpp; 707} rxxxx "211EDA40E6E700C501C10009006112"
+2019.06.05 18:25:41.071  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:41.072  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:41.072  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0320"
+2019.06.05 18:25:41.074  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0320"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:41.075  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141160ED9E6E600C101C1000100006001FEFF02000905EF100D0320DCB27E"
+2019.06.05 18:25:41.118  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121"
+2019.06.05 18:25:41.137  (Exc)  {widget_connect.cpp; 707} rxxxx "30A688E6E700C501C100090061127E"
+2019.06.05 18:25:41.138  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:41.139  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0310"
+2019.06.05 18:25:41.141  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0310"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:41.142  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141387211E6E600C101C1000100006001FEFF02000905EF100D03105F837E"
+2019.06.05 18:25:41.182  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:41.198  (Exc)  {widget_connect.cpp; 707} rxxxx "A012412152B2C8E6E700C501C10009"
+2019.06.05 18:25:41.215  (Exc)  {widget_connect.cpp; 707} rxxxx "0061127E"
+2019.06.05 18:25:41.215  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:41.216  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0300"
+2019.06.05 18:25:41.218  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0300"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:41.219  (Exc)  {widget_connect.cpp; 973} TX "7EA02021415A6651E6E600C101C1000100006001FEFF02000905EF100D0300DE937E"
+2019.06.05 18:25:41.262  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:41.278  (Exc)  {widget_connect.cpp; 707} rxxxx "2174868CE6E700C501C100090061127E"
+2019.06.05 18:25:41.279  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:41.280  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D02F0"
+2019.06.05 18:25:41.283  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D02F0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:41.284  (Exc)  {widget_connect.cpp; 973} TX "7EA02021417C5215E6E600C101C1000100006001FEFF02000905EF100D02F0897D7E"
+2019.06.05 18:25:41.327  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:41.342  (Exc)  {widget_connect.cpp; 707} rxxxx "21969A48E6E700C501C10009006112"
+2019.06.05 18:25:41.359  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:41.360  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:41.362  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D02E0"
+2019.06.05 18:25:41.363  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D02E0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:41.364  (Exc)  {widget_connect.cpp; 973} TX "7EA02021419E4ED1E6E600C101C1000100006001FEFF02000905EF100D02E0086D7E"
+2019.06.05 18:25:41.406  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:41.423  (Exc)  {widget_connect.cpp; 707} rxxxx "21B8E680E6E700C501C10009006112"
+2019.06.05 18:25:41.438  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:41.439  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:41.440  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D02D0"
+2019.06.05 18:25:41.442  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D02D0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:41.443  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141B03219E6E600C101C1000100006001FEFF02000905EF100D02D08B5C7E"
+2019.06.05 18:25:41.486  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:41.502  (Exc)  {widget_connect.cpp; 707} rxxxx "21DAF2C0E6E700C501C10009006112"
+2019.06.05 18:25:41.518  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:41.519  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:41.520  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D02C0"
+2019.06.05 18:25:41.520  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D02C0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:41.521  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141D22659E6E600C101C1000100006001FEFF02000905EF100D02C00A4C7E"
+2019.06.05 18:25:41.567  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121FC"
+2019.06.05 18:25:41.582  (Exc)  {widget_connect.cpp; 707} rxxxx "C684E6E700C501C100090061127E"
+2019.06.05 18:25:41.583  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:41.584  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D02B0"
+2019.06.05 18:25:41.586  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D02B0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:41.587  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141F4121DE6E600C101C1000100006001FEFF02000905EF100D02B08D3F7E"
+2019.06.05 18:25:41.631  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:41.647  (Exc)  {widget_connect.cpp; 707} rxxxx "211EDA40E6E700C501C100090061127E"
+2019.06.05 18:25:41.648  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:41.648  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D02A0"
+2019.06.05 18:25:41.649  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D02A0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:41.650  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141160ED9E6E600C101C1000100006001FEFF02000905EF100D02A00C2F7E"
+2019.06.05 18:25:41.695  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121"
+2019.06.05 18:25:41.710  (Exc)  {widget_connect.cpp; 707} rxxxx "30A688E6E700C501C100090061127E"
+2019.06.05 18:25:41.711  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:41.712  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0290"
+2019.06.05 18:25:41.714  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0290"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:41.715  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141387211E6E600C101C1000100006001FEFF02000905EF100D02908F1E7E"
+2019.06.05 18:25:41.757  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:41.775  (Exc)  {widget_connect.cpp; 707} rxxxx "2152B2C8E6E700C501C100090061127E"
+2019.06.05 18:25:41.776  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:41.777  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0280"
+2019.06.05 18:25:41.778  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0280"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:41.778  (Exc)  {widget_connect.cpp; 973} TX "7EA02021415A6651E6E600C101C1000100006001FEFF02000905EF100D02800E0E7E"
+2019.06.05 18:25:41.822  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121"
+2019.06.05 18:25:41.839  (Exc)  {widget_connect.cpp; 707} rxxxx "74868CE6E700C501C100090061127E"
+2019.06.05 18:25:41.840  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:41.842  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0270"
+2019.06.05 18:25:41.845  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0270"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:41.846  (Exc)  {widget_connect.cpp; 973} TX "7EA02021417C5215E6E600C101C1000100006001FEFF02000905EF100D027081F97E"
+2019.06.05 18:25:41.891  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 18:25:41.923  (Exc)  {widget_connect.cpp; 707} rxxxx "124121969A48E6E700C501C1000900"
+2019.06.05 18:25:41.924  (Exc)  {widget_connect.cpp; 707} rxxxx "61127E"
+2019.06.05 18:25:41.925  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:41.928  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0260"
+2019.06.05 18:25:41.928  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0260"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:41.929  (Exc)  {widget_connect.cpp; 973} TX "7EA02021419E4ED1E6E600C101C1000100006001FEFF02000905EF100D026000E97E"
+2019.06.05 18:25:41.982  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121B8E680E6E700C501"
+2019.06.05 18:25:41.998  (Exc)  {widget_connect.cpp; 707} rxxxx "C100090061127E"
+2019.06.05 18:25:41.999  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:42.001  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0250"
+2019.06.05 18:25:42.004  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0250"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:42.005  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141B03219E6E600C101C1000100006001FEFF02000905EF100D025083D87E"
+2019.06.05 18:25:42.047  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012"
+2019.06.05 18:25:42.063  (Exc)  {widget_connect.cpp; 707} rxxxx "4121DAF2C0E6E700C501C100090061"
+2019.06.05 18:25:42.079  (Exc)  {widget_connect.cpp; 707} rxxxx "127E"
+2019.06.05 18:25:42.080  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:42.081  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0240"
+2019.06.05 18:25:42.082  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0240"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:42.082  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141D22659E6E600C101C1000100006001FEFF02000905EF100D024002C87E"
+2019.06.05 18:25:42.125  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121"
+2019.06.05 18:25:42.141  (Exc)  {widget_connect.cpp; 707} rxxxx "FCC684E6E700C501C100090061127E"
+2019.06.05 18:25:42.142  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:42.143  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0230"
+2019.06.05 18:25:42.144  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0230"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:42.145  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141F4121DE6E600C101C1000100006001FEFF02000905EF100D023085BB7E"
+2019.06.05 18:25:42.204  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241211EDA"
+2019.06.05 18:25:42.206  (Exc)  {widget_connect.cpp; 707} rxxxx "40E6E700C501C100090061127E"
+2019.06.05 18:25:42.206  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:42.207  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0220"
+2019.06.05 18:25:42.208  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0220"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:42.209  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141160ED9E6E600C101C1000100006001FEFF02000905EF100D022004AB7E"
+2019.06.05 18:25:42.267  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121"
+2019.06.05 18:25:42.270  (Exc)  {widget_connect.cpp; 707} rxxxx "30A688E6E700C501C100090061127E"
+2019.06.05 18:25:42.271  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:42.272  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0210"
+2019.06.05 18:25:42.274  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0210"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:42.275  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141387211E6E600C101C1000100006001FEFF02000905EF100D0210879A7E"
+2019.06.05 18:25:42.318  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:42.334  (Exc)  {widget_connect.cpp; 707} rxxxx "2152B2C8E6E700C501C10009006112"
+2019.06.05 18:25:42.350  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:42.351  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:42.351  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0200"
+2019.06.05 18:25:42.352  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0200"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:42.353  (Exc)  {widget_connect.cpp; 973} TX "7EA02021415A6651E6E600C101C1000100006001FEFF02000905EF100D0200068A7E"
+2019.06.05 18:25:42.398  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012412174"
+2019.06.05 18:25:42.417  (Exc)  {widget_connect.cpp; 707} rxxxx "868CE6E700C501C100090061127E"
+2019.06.05 18:25:42.418  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:42.419  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D01F0"
+2019.06.05 18:25:42.420  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D01F0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:42.422  (Exc)  {widget_connect.cpp; 973} TX "7EA02021417C5215E6E600C101C1000100006001FEFF02000905EF100D01F0E1577E"
+2019.06.05 18:25:42.478  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121969A48E6E700C501C10009"
+2019.06.05 18:25:42.494  (Exc)  {widget_connect.cpp; 707} rxxxx "0061127E"
+2019.06.05 18:25:42.495  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:42.496  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D01E0"
+2019.06.05 18:25:42.497  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D01E0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:42.497  (Exc)  {widget_connect.cpp; 973} TX "7EA02021419E4ED1E6E600C101C1000100006001FEFF02000905EF100D01E060477E"
+2019.06.05 18:25:42.542  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121B8"
+2019.06.05 18:25:42.559  (Exc)  {widget_connect.cpp; 707} rxxxx "E680E6E700C501C100090061127E"
+2019.06.05 18:25:42.560  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:42.560  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D01D0"
+2019.06.05 18:25:42.563  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D01D0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:42.564  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141B03219E6E600C101C1000100006001FEFF02000905EF100D01D0E3767E"
+2019.06.05 18:25:42.605  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:42.642  (Exc)  {widget_connect.cpp; 707} rxxxx "A0124121DAF2C0E6E700C501C10009"
+2019.06.05 18:25:42.643  (Exc)  {widget_connect.cpp; 707} rxxxx "0061127E"
+2019.06.05 18:25:42.647  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:42.648  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D01C0"
+2019.06.05 18:25:42.648  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D01C0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:42.649  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141D22659E6E600C101C1000100006001FEFF02000905EF100D01C062667E"
+2019.06.05 18:25:42.702  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121FCC684E6E700C501C1"
+2019.06.05 18:25:42.718  (Exc)  {widget_connect.cpp; 707} rxxxx "00090061127E"
+2019.06.05 18:25:42.718  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:42.719  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D01B0"
+2019.06.05 18:25:42.722  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D01B0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:42.723  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141F4121DE6E600C101C1000100006001FEFF02000905EF100D01B0E5157E"
+2019.06.05 18:25:42.766  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:42.791  (Exc)  {widget_connect.cpp; 707} rxxxx "211EDA40E6E700C501C10009006112"
+2019.06.05 18:25:42.798  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:42.798  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:42.799  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D01A0"
+2019.06.05 18:25:42.800  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D01A0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:42.801  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141160ED9E6E600C101C1000100006001FEFF02000905EF100D01A064057E"
+2019.06.05 18:25:42.846  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012412130"
+2019.06.05 18:25:42.862  (Exc)  {widget_connect.cpp; 707} rxxxx "A688E6E700C501C100090061127E"
+2019.06.05 18:25:42.863  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:42.863  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0190"
+2019.06.05 18:25:42.866  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0190"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:42.867  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141387211E6E600C101C1000100006001FEFF02000905EF100D0190E7347E"
+2019.06.05 18:25:42.921  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:42.926  (Exc)  {widget_connect.cpp; 707} rxxxx "2152B2C8E6E700C501C10009006112"
+2019.06.05 18:25:42.941  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:42.942  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:42.943  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0180"
+2019.06.05 18:25:42.944  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0180"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:42.945  (Exc)  {widget_connect.cpp; 973} TX "7EA02021415A6651E6E600C101C1000100006001FEFF02000905EF100D018066247E"
+2019.06.05 18:25:42.989  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012412174"
+2019.06.05 18:25:43.006  (Exc)  {widget_connect.cpp; 707} rxxxx "868CE6E700C501C100090061127E"
+2019.06.05 18:25:43.006  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:43.007  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0170"
+2019.06.05 18:25:43.010  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0170"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:43.011  (Exc)  {widget_connect.cpp; 973} TX "7EA02021417C5215E6E600C101C1000100006001FEFF02000905EF100D0170E9D37E"
+2019.06.05 18:25:43.053  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:43.070  (Exc)  {widget_connect.cpp; 707} rxxxx "21969A48E6E700C501C10009006112"
+2019.06.05 18:25:43.085  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:43.087  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:43.088  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0160"
+2019.06.05 18:25:43.089  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0160"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:43.090  (Exc)  {widget_connect.cpp; 973} TX "7EA02021419E4ED1E6E600C101C1000100006001FEFF02000905EF100D016068C37E"
+2019.06.05 18:25:43.133  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:43.171  (Exc)  {widget_connect.cpp; 707} rxxxx "21B8E680E6E700C501C10009006112"
+2019.06.05 18:25:43.172  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:43.173  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:43.176  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0150"
+2019.06.05 18:25:43.179  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0150"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:43.180  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141B03219E6E600C101C1000100006001FEFF02000905EF100D0150EBF27E"
+2019.06.05 18:25:43.230  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121DAF2C0E6E700"
+2019.06.05 18:25:43.265  (Exc)  {widget_connect.cpp; 707} rxxxx "C501C100090061127E"
+2019.06.05 18:25:43.266  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:43.267  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0140"
+2019.06.05 18:25:43.268  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0140"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:43.272  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141D22659E6E600C101C1000100006001FEFF02000905EF100D01406AE27E"
+2019.06.05 18:25:43.325  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121FCC684E6E700C501C1"
+2019.06.05 18:25:43.342  (Exc)  {widget_connect.cpp; 707} rxxxx "00090061127E"
+2019.06.05 18:25:43.343  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:43.344  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0130"
+2019.06.05 18:25:43.346  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0130"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:43.347  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141F4121DE6E600C101C1000100006001FEFF02000905EF100D0130ED917E"
+2019.06.05 18:25:43.389  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012"
+2019.06.05 18:25:43.406  (Exc)  {widget_connect.cpp; 707} rxxxx "41211EDA40E6E700C501C100090061"
+2019.06.05 18:25:43.421  (Exc)  {widget_connect.cpp; 707} rxxxx "127E"
+2019.06.05 18:25:43.421  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:43.422  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0120"
+2019.06.05 18:25:43.422  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0120"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:43.423  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141160ED9E6E600C101C1000100006001FEFF02000905EF100D01206C817E"
+2019.06.05 18:25:43.469  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012412130A6"
+2019.06.05 18:25:43.485  (Exc)  {widget_connect.cpp; 707} rxxxx "88E6E700C501C100090061127E"
+2019.06.05 18:25:43.486  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:43.487  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0110"
+2019.06.05 18:25:43.490  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0110"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:43.491  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141387211E6E600C101C1000100006001FEFF02000905EF100D0110EFB07E"
+2019.06.05 18:25:43.533  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012"
+2019.06.05 18:25:43.549  (Exc)  {widget_connect.cpp; 707} rxxxx "412152B2C8E6E700C501C100090061"
+2019.06.05 18:25:43.566  (Exc)  {widget_connect.cpp; 707} rxxxx "127E"
+2019.06.05 18:25:43.567  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:43.567  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0100"
+2019.06.05 18:25:43.568  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0100"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:43.569  (Exc)  {widget_connect.cpp; 973} TX "7EA02021415A6651E6E600C101C1000100006001FEFF02000905EF100D01006EA07E"
+2019.06.05 18:25:43.614  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012412174"
+2019.06.05 18:25:43.629  (Exc)  {widget_connect.cpp; 707} rxxxx "868CE6E700C501C100090061127E"
+2019.06.05 18:25:43.630  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:43.631  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D00F0"
+2019.06.05 18:25:43.634  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D00F0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:43.635  (Exc)  {widget_connect.cpp; 973} TX "7EA02021417C5215E6E600C101C1000100006001FEFF02000905EF100D00F0394E7E"
+2019.06.05 18:25:43.677  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:43.693  (Exc)  {widget_connect.cpp; 707} rxxxx "21969A48E6E700C501C10009006112"
+2019.06.05 18:25:43.710  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:43.710  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:43.710  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D00E0"
+2019.06.05 18:25:43.712  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D00E0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:43.713  (Exc)  {widget_connect.cpp; 973} TX "7EA02021419E4ED1E6E600C101C1000100006001FEFF02000905EF100D00E0B85E7E"
+2019.06.05 18:25:43.757  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121B8"
+2019.06.05 18:25:43.774  (Exc)  {widget_connect.cpp; 707} rxxxx "E680E6E700C501C100090061127E"
+2019.06.05 18:25:43.775  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:43.775  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D00D0"
+2019.06.05 18:25:43.778  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D00D0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:43.779  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141B03219E6E600C101C1000100006001FEFF02000905EF100D00D03B6F7E"
+2019.06.05 18:25:43.821  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012"
+2019.06.05 18:25:43.839  (Exc)  {widget_connect.cpp; 707} rxxxx "4121DAF2C0E6E700C501C100090061"
+2019.06.05 18:25:43.853  (Exc)  {widget_connect.cpp; 707} rxxxx "127E"
+2019.06.05 18:25:43.855  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:43.856  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D00C0"
+2019.06.05 18:25:43.858  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D00C0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:43.859  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141D22659E6E600C101C1000100006001FEFF02000905EF100D00C0BA7F7E"
+2019.06.05 18:25:43.901  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 18:25:43.917  (Exc)  {widget_connect.cpp; 707} rxxxx "124121FCC684E6E700C501C100090061"
+2019.06.05 18:25:43.933  (Exc)  {widget_connect.cpp; 707} rxxxx "127E"
+2019.06.05 18:25:43.934  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:43.935  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D00B0"
+2019.06.05 18:25:43.938  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D00B0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:43.939  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141F4121DE6E600C101C1000100006001FEFF02000905EF100D00B03D0C7E"
+2019.06.05 18:25:43.981  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012"
+2019.06.05 18:25:43.997  (Exc)  {widget_connect.cpp; 707} rxxxx "41211EDA40E6E700C501C100090061"
+2019.06.05 18:25:44.013  (Exc)  {widget_connect.cpp; 707} rxxxx "127E"
+2019.06.05 18:25:44.013  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:44.014  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D00A0"
+2019.06.05 18:25:44.015  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D00A0"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:44.016  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141160ED9E6E600C101C1000100006001FEFF02000905EF100D00A0BC1C7E"
+2019.06.05 18:25:44.061  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA012412130"
+2019.06.05 18:25:44.077  (Exc)  {widget_connect.cpp; 707} rxxxx "A688E6E700C501C100090061127E"
+2019.06.05 18:25:44.078  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:44.079  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0090"
+2019.06.05 18:25:44.081  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0090"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:44.082  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141387211E6E600C101C1000100006001FEFF02000905EF100D00903F2D7E"
+2019.06.05 18:25:44.125  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:44.141  (Exc)  {widget_connect.cpp; 707} rxxxx "2152B2C8E6E700C501C10009006112"
+2019.06.05 18:25:44.157  (Exc)  {widget_connect.cpp; 707} rxxxx "7E"
+2019.06.05 18:25:44.158  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:44.159  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0080"
+2019.06.05 18:25:44.160  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0080"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:44.161  (Exc)  {widget_connect.cpp; 973} TX "7EA02021415A6651E6E600C101C1000100006001FEFF02000905EF100D0080BE3D7E"
+2019.06.05 18:25:44.205  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121"
+2019.06.05 18:25:44.233  (Exc)  {widget_connect.cpp; 707} rxxxx "74868CE6E700C501C100090061127E"
+2019.06.05 18:25:44.237  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:44.238  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0070"
+2019.06.05 18:25:44.241  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0070"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:44.242  (Exc)  {widget_connect.cpp; 973} TX "7EA02021417C5215E6E600C101C1000100006001FEFF02000905EF100D007031CA7E"
+2019.06.05 18:25:44.297  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01241"
+2019.06.05 18:25:44.301  (Exc)  {widget_connect.cpp; 707} rxxxx "21969A48E6E700C501C100090061127E"
+2019.06.05 18:25:44.302  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:44.303  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0060"
+2019.06.05 18:25:44.303  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0060"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:44.304  (Exc)  {widget_connect.cpp; 973} TX "7EA02021419E4ED1E6E600C101C1000100006001FEFF02000905EF100D0060B0DA7E"
+2019.06.05 18:25:44.349  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121"
+2019.06.05 18:25:44.365  (Exc)  {widget_connect.cpp; 707} rxxxx "B8E680E6E700C501C100090061127E"
+2019.06.05 18:25:44.366  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:44.367  (Exc)  {widget_log.cpp; 527} tx_electro5 "EF100D0050"
+2019.06.05 18:25:44.370  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF100D0050"
+            }
+        }
+    }
+}
+
+2019.06.05 18:25:44.371  (Exc)  {widget_connect.cpp; 973} TX "7EA0202141B03219E6E600C101C1000100006001FEFF02000905EF100D005033EB7E"
+2019.06.05 18:25:44.413  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.05 18:25:44.429  (Exc)  {widget_connect.cpp; 707} rxxxx "124121DAF2C0E6E700C501C100090061"
+2019.06.05 18:25:44.445  (Exc)  {widget_connect.cpp; 707} rxxxx "127E"
+2019.06.05 18:25:44.446  (Exc)  {hdlc_dlms_exchange.cpp; 801} {
+    "set-response": {
+        "set-response-normal": {
+            "data": {
+                "octet-string": null
+            },
+            "invoke-id-and-priority": 193,
+            "result": "success"
+        }
+    }
+}
+
+2019.06.05 18:25:44.449  (Exc)  {widget_log.cpp; 913} 2222222 {
+    "meterings": [
+        {
+            "1.0.0": 1559347200,
+            "1.6.0": 5,
+            "1.8.0": 50670,
+            "1.8.1": 50589,
+            "1.8.2": 42,
+            "1.8.3": 39,
+            "1.8.4": 0,
+            "2.8.0": 5131,
+            "2.8.1": 5112,
+            "2.8.2": 16,
+            "2.8.3": 1,
+            "2.8.4": 2,
+            "3.8.0": 4307,
+            "3.8.1": 4140,
+            "3.8.2": 134,
+            "3.8.3": 15,
+            "3.8.4": 18,
+            "4.8.0": 233799,
+            "4.8.1": 213711,
+            "4.8.2": 20065,
+            "4.8.3": 23,
+            "4.8.4": 0,
+            "index": 4,
+            "profile": "1.0.98.1.0.255",
+            "ts_get": 0,
+            "type": 13
+        },
+        {
+            "1.0.0": 1556668800,
+            "1.6.0": 0,
+            "1.8.0": 50226,
+            "1.8.1": 50187,
+            "1.8.2": 0,
+            "1.8.3": 39,
+            "1.8.4": 0,
+            "2.8.0": 5104,
+            "2.8.1": 5090,
+            "2.8.2": 12,
+            "2.8.3": 1,
+            "2.8.4": 1,
+            "3.8.0": 4083,
+            "3.8.1": 3956,
+            "3.8.2": 104,
+            "3.8.3": 8,
+            "3.8.4": 15,
+            "4.8.0": 23778,
+            "4.8.1": 23755,
+            "4.8.2": 0,
+            "4.8.3": 23,
+            "4.8.4": 0,
+            "index": 3,
+            "profile": "1.0.98.1.0.255",
+            "ts_get": 0,
+            "type": 13
+        },
+        {
+            "1.0.0": 1554076800,
+            "1.6.0": 4,
+            "1.8.0": 50226,
+            "1.8.1": 50187,
+            "1.8.2": 0,
+            "1.8.3": 39,
+            "1.8.4": 0,
+            "2.8.0": 5064,
+            "2.8.1": 5064,
+            "2.8.2": 0,
+            "2.8.3": 0,
+            "2.8.4": 0,
+            "3.8.0": 3741,
+            "3.8.1": 3738,
+            "3.8.2": 3,
+            "3.8.3": 0,
+            "3.8.4": 0,
+            "4.8.0": 23778,
+            "4.8.1": 23755,
+            "4.8.2": 0,
+            "4.8.3": 23,
+            "4.8.4": 0,
+            "index": 2,
+            "profile": "1.0.98.1.0.255",
+            "ts_get": 0,
+            "type": 13
+        },
+        {
+            "1.0.0": 1551398400,
+            "1.6.0": 0,
+            "1.8.0": 50187,
+            "1.8.1": 50148,
+            "1.8.2": 0,
+            "1.8.3": 39,
+            "1.8.4": 0,
+            "2.8.0": 5054,
+            "2.8.1": 5054,
+            "2.8.2": 0,
+            "2.8.3": 0,
+            "2.8.4": 0,
+            "3.8.0": 3654,
+            "3.8.1": 3654,
+            "3.8.2": 0,
+            "3.8.3": 0,
+            "3.8.4": 0,
+            "4.8.0": 4147,
+            "4.8.1": 4124,
+            "4.8.2": 0,
+            "4.8.3": 23,
+            "4.8.4": 0,
+            "index": 1,
+            "profile": "1.0.98.1.0.255",
+            "ts_get": 0,
+            "type": 13
+        },
+        {
+            "1.0.0": 1548979200,
+            "1.6.0": 0,
+            "1.8.0": 19743,
+            "1.8.1": 19704,
+            "1.8.2": 0,
+            "1.8.3": 39,
+            "1.8.4": 0,
+            "2.8.0": 4037,
+            "2.8.1": 4037,
+            "2.8.2": 0,
+            "2.8.3": 0,
+            "2.8.4": 0,
+            "3.8.0": 3531,
+            "3.8.1": 3531,
+            "3.8.2": 0,
+            "3.8.3": 0,
+            "3.8.4": 0,
+            "4.8.0": 3514,
+            "4.8.1": 3491,
+            "4.8.2": 0,
+            "4.8.3": 23,
+            "4.8.4": 0,
+            "index": 0,
+            "profile": "1.0.98.1.0.255",
+            "ts_get": 0,
+            "type": 13
+        }
+    ]
+}
+
+2019.06.05 18:25:44.453  (Exc)  {mainwindow.cpp; 577} stop_timer
