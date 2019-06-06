@@ -1,6 +1,0 @@
-2019.03.26 11:26:19.424  (Exc)  {widget_connect.cpp;  99} N strok 0
-2019.03.26 11:26:27.522  (Exc)  {mainwindow.cpp; 171} start_timer
-2019.03.26 11:26:27.522  (Exc)  {hdlc_dlms_exchange.cpp;1337} 1 32
-2019.03.26 11:26:27.522  (Exc)  {hdlc_dlms_exchange.cpp;1354} "7EA0070341935A647E"
-2019.03.26 11:26:27.523  (Exc)  {widget_connect.cpp; 962} TX "7EA0070341935A647E"
-2019.03.26 11:26:30.513  (Exc)  {mainwindow.cpp; 177} stop_timer
