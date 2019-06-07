@@ -13,6 +13,7 @@ int count_bar;
 int type_counter;
 QDateTime qdt;
 QByteArray sn;
+int ver_po[2];
 
 typedef struct {
     uint8_t year_highbyte;
@@ -37,40 +38,12 @@ widget_info::widget_info(QWidget *parent) :
     ui->gridLayout->setAlignment( Qt::AlignLeft );
  //   hide();
     tmr_tout = new QTimer();
-    tmr_t = new QTimer();
     connect(tmr_tout, SIGNAL(timeout()), this, SLOT(timeout()));
-    connect(tmr_t, SIGNAL(timeout()), this, SLOT(tmr_time()));
-    connect( ui->horizontalSlider, SIGNAL(valueChanged(int)), this, SLOT(setValue(int)));
 }
 
 widget_info::~widget_info()
 {
     delete ui;
-}
-
-void widget_info::setValue(int val){
-    if ( ver_po[0] > 4 ){
-        ui->horizontalSlider->setValue(val);
-        count_bar = 0;
-        emit signal_bar(count_bar);
-        QByteArray arr;
-        if (val == 0){
-            arr = QByteArray::fromHex("EF44C5FF0000000000");
-            emit signal_write_data(arr); //Переключение на встроенную антенну счётчика
-        }
-        if (val == 1){
-            arr = QByteArray::fromHex("EF44C5FF0101000000");
-            emit signal_write_data(arr); //Переключение на внешнюю антенну счётчика
-        }
-        log_1 << "tx_electro5" << arr.toHex().toUpper();
-        ui->horizontalSlider->setEnabled(false);
-        ui->horizontalSlider->setTracking(false);
-        tmr_t->start(500);
-    }
-    else{
-        ui->horizontalSlider->setTracking(false);
-        ui->horizontalSlider->setEnabled(false);
-    }
 }
 
 bool widget_info::transmitt(){
@@ -90,15 +63,11 @@ void widget_info::timeout() {
     if ( count_tout < 3 ){
         count_tout++;
 
-        if (count == 0) {
+        if (count > 0) {
             transmit = true;
-            count_bar = 0;
-            emit signal_bar(count_bar);
-            emit signal_write_data_PDU (QByteArray::fromHex("C001C100010000600101FF0200")); //Запрос типа счетчика
-            ui->horizontalSlider->setEnabled(false);
-            ui->horizontalSlider->setTracking(false);
-        }
-        else {
+         //   count_bar = 0;
+         //   emit signal_bar(count_bar);
+         //   emit signal_write_data_PDU (QByteArray::fromHex("C001C100010000600101FF0200")); //Запрос типа счетчика
             if (count_tout == 1) count--;
             widget_info::turn ();
         }
@@ -126,8 +95,6 @@ void widget_info::slot_show_widget_info(){
     emit signal_bar(count_bar);
     transmit = true;
     emit signal_write_data_PDU (QByteArray::fromHex("C001C100010000600101FF0200")); //Запрос типа счетчика
-    ui->horizontalSlider->setEnabled(false);
-    ui->horizontalSlider->setTracking(false);
     count_tout = 0;
     tmr_tout->start (3000);
 }
@@ -154,33 +121,6 @@ void widget_info::slot_hide_widget_info(){
   //  hide();
   //  emit signal_bar(0);
   //  emit signal_min_window();
-}
-
-void widget_info::slot_data_from_electro5(QByteArray data){
-    log_1 << "data_electro5" << data.toHex().toUpper();
-    if (transmit){
-        transmit = false;
-        if (count == 16){
-            uint8_t * buf_start = (uint8_t *)data.data();
-            uint8_t * buf = buf_start;
-            *buf++; *buf++; *buf++; *buf++;
-            uint32_t state_ant;
-            state_ant = *buf++; state_ant <<= 8;
-            state_ant+= *buf++;
-            log_1 << "state_ant" << state_ant;
-            if ( state_ant == 0) ui->horizontalSlider->setValue(0); //Вывод состояния внеш/внутр антенны счетчика
-            else ui->horizontalSlider->setValue(1);
-            ui->horizontalSlider->setEnabled(true);
-            ui->horizontalSlider->setTracking(true);
-            count = 17;
-            tmr_tout->stop();
-         //   log_1 << "12345";
-            emit signal_disable_tab_kn(0, 0);
-            count_bar = 100;
-            emit signal_bar(count_bar);
-            return;
-        }
-    }
 }
 
 void widget_info::slot_view_data(QVariant(data))
@@ -230,18 +170,7 @@ void widget_info::slot_view_data(QVariant(data))
         if (count == 6){
             char temp = arr[4];
             ver_po[0] = temp - '0';
-            if (ver_po[0] < 5){
-                ui->horizontalSlider->setTracking(false);
-                ui->horizontalSlider->setEnabled(false);
-                ui->label_10->setEnabled(false);
-                ui->label_11->setEnabled(false);
-                ui->label_14->setEnabled(false);
-            }
-            else {
-                ui->label_10->setEnabled(true);
-                ui->label_11->setEnabled(true);
-                ui->label_14->setEnabled(true);
-            }
+
             temp = arr[6];
             ver_po[1] = temp - '0';
             ui->lineEdit_4->setText(arr.toUpper());     //Вывод версии коммуникационного ПО
@@ -280,16 +209,7 @@ void widget_info::slot_view_data(QVariant(data))
             dev = arr.at(10);
             str_dev = str_dev.setNum((arr.at(9) << 8) + dev);
             ui->lineEdit_11->setText(str_dev);                            //Вывод значения девиации счётчика
-            if ( ver_po[0] > 4 ){
-                count = 15;
-                widget_info::turn ();
-            }
-            else {
-                tmr_tout->stop();
-                emit signal_disable_tab_kn(0, 0);
-                count_bar = 100;
-                emit signal_bar(count_bar);
-            }
+            emit signal_disable_tab_kn(0, 0);
             return;
         }
     }
@@ -351,13 +271,6 @@ void widget_info::turn (){
         count = 14;
         transmit = true;
         emit signal_write_data_PDU (QByteArray::fromHex("C001C100010000010000FF0200")); //Запрос системного времени счётчика
-        tmr_tout->start(3000);
-        return;
-    }
-    if (count == 15){
-        count = 16;
-        transmit = true;
-        emit signal_write_data(QByteArray::fromHex("EF4405FFFFFF000000")); //Запрос: подключенна внутр. или внеш. антенна счётчика
         tmr_tout->start(3000);
         return;
     }

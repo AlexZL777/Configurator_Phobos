@@ -49,7 +49,6 @@ private:
     QString str_dpt = "Пятница";
     QString str_dsu = "Суббота";
     QString str_dvo = "Воскресенье";
-    int ver_po[2];
 
 public slots:
     void slot_view_data (QVariant data);
@@ -58,8 +57,6 @@ public slots:
     void timeout();
     void tmr_time();
     void slot_disconnect();
-    void setValue(int);
-    void slot_data_from_electro5(QByteArray);
 signals:
     void signal_write_data_PDU (QByteArray data);
     void signal_bar(int data);
@@ -72,7 +69,7 @@ signals:
     void signal_main_window_sn(QByteArray);
     void signal_on_pushButton_connect_clicked(bool);
     void signal_disable_tab_kn(bool, int);
-    void signal_write_data(QByteArray);
+ //   void signal_write_data(QByteArray);
 //private slots:
 //    void on_pushButton_clicked();
 };

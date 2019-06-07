@@ -11,8 +11,10 @@
 
 #include <QFile>
 #include <QTextStream>
-
 #include <QPushButton>
+
+uint32_t client_addr;
+int bn_fl = 0;
 
 #define FORMAT_TYPE_HDLC (0xA)
 #define FORMAT_TYPE_ELECTRO5 (0xC)
@@ -50,7 +52,7 @@ widget_connect::widget_connect(QWidget *parent)
 //    ui->comboBox_client_addr->addItem("Отсутствие аутентификации", 0x10);
     ui->comboBox_client_addr->addItem("Низкий уровень безопасности", 0x20);
     ui->comboBox_client_addr->addItem("Высокий уровень безопасности", 0x30);
-    ui->comboBox_client_addr->setCurrentIndex(0);
+    ui->comboBox_client_addr->setCurrentIndex(1);
 
     on_spinBox_modem_dec_valueChanged(ui->spinBox_modem_dec->value());
 
@@ -72,6 +74,7 @@ widget_connect::widget_connect(QWidget *parent)
     ui->radioButton_rs_485->setChecked(true);
 
     ui->pushButton_ReadData->hide();
+    ui->pushButton_2->hide();
 
 //    ui->comboBox_client_addr->hide();
 //    ui->label->hide();
@@ -104,7 +107,7 @@ void widget_connect::start_write_pass(){
         int n = strList.size();
         QString s;
         s = s.setNum(n);
-        log_1 << "N strok" << n;
+     //   log_1 << "N strok" << n;
     }
 }
 
@@ -118,7 +121,7 @@ void widget_connect::slot_write_pass(QByteArray pass, bool err){
         file.close();
     }
 
-    uint32_t client_addr = ui->comboBox_client_addr->currentData().toUInt();
+    client_addr = ui->comboBox_client_addr->currentData().toUInt();
     switch (client_addr) {
         case 0x10: break;
         case 0x20: {
@@ -126,9 +129,9 @@ void widget_connect::slot_write_pass(QByteArray pass, bool err){
                 int n = strList.size();
                 n = strList.size();
                 QString s1;
-                log_1 << "s0.setNum(n);" << s1.setNum(n);
+            //    log_1 << "s0.setNum(n);" << s1.setNum(n);
                 if (n == 0){
-                    log_1 << "stroka0000000";
+             //       log_1 << "stroka0000000";
                     if (err) {strList.insert(0, pass);}
                     QTextStream stream(&file);
                     foreach(QString s, strList){
@@ -136,7 +139,7 @@ void widget_connect::slot_write_pass(QByteArray pass, bool err){
                     }
                 }
                 else if (n >= 1){
-                    log_1 << "stroka1111111";
+             //       log_1 << "stroka1111111";
                     if (err) {strList[0] = pass+"\r\n";}
                     else {strList[0] = "\r\n";}
                     QTextStream stream(&file);
@@ -153,9 +156,9 @@ void widget_connect::slot_write_pass(QByteArray pass, bool err){
                 int n = strList.size();
                 n = strList.size();
                 QString s1;
-                log_1 << "s1.setNum(n);" << s1.setNum(n);
+           //     log_1 << "s1.setNum(n);" << s1.setNum(n);
                 if (n == 0){
-                    log_1 << "stroka22222222";
+           //         log_1 << "stroka22222222";
                     if (err) {
                         strList.insert(0, "\n");
                         strList.insert(1, pass);
@@ -165,11 +168,11 @@ void widget_connect::slot_write_pass(QByteArray pass, bool err){
                         }
                         n = strList.size();
                         QString s1;
-                        log_1 << "s2.setNum(n);" << s1.setNum(n);
+            //            log_1 << "s2.setNum(n);" << s1.setNum(n);
                     }
                 }
                 else if (n == 1){
-                    log_1 << "stroka33333333";
+           //         log_1 << "stroka33333333";
                     if (err) {strList.insert(1, pass);}
                    // else {strList[1] = "";}
                     QTextStream stream(&file);
@@ -178,7 +181,7 @@ void widget_connect::slot_write_pass(QByteArray pass, bool err){
                     }
                 }
                 else if (n >= 2){
-                    log_1 << "stroka444444";
+           //         log_1 << "stroka444444";
                     if (err) {strList[1] = pass;}
                     else {strList[1] = "";}
                     QTextStream stream(&file);
@@ -292,7 +295,7 @@ QByteArray SLIP_Receive(void *vsbuf, QByteArray read)
             if(c == SLIP_END) {
                 sbuf->mode = SLIP_MODE_START;
                 if (CRC8((uint8_t*)sbuf->data.data(), sbuf->data.size() - 1) != (quint8)sbuf->data.at(sbuf->data.size() - 1)) {
-                    log_1 << "error slip crc" << CRC8((uint8_t*)sbuf->data.data(), sbuf->data.size() - 1) << (quint8)sbuf->data.at(sbuf->data.size() - 1);
+           //         log_1 << "error slip crc" << CRC8((uint8_t*)sbuf->data.data(), sbuf->data.size() - 1) << (quint8)sbuf->data.at(sbuf->data.size() - 1);
                     continue;
                 }
                 return sbuf->data.mid(0, sbuf->data.size() - 1);
@@ -328,7 +331,7 @@ QByteArray ELECTRO5_to_HDLC(QByteArray data)
     auto HDLC_TX_add_byte = [&] (uint8_t c) {
         crc = DLMS_crc_byte(crc, c);
         ba.append((char)c);
-//        log_1 << QByteArray(1,(char)c).toHex().toUpper() << crc << (crc ^ 0xFFFF);
+        log_1 << QByteArray(1,(char)c).toHex().toUpper() << crc << (crc ^ 0xFFFF);
     };
 
     ba.append(0x7E);
@@ -385,7 +388,7 @@ QByteArray HDLC_to_ELECTRO5(void *vsbuf, QByteArray read)
 //              << (hdlc->frame_byte_counter >= hdlc->frame_length) << hdlc->crc << (hdlc->crc ^ 0xFFFF);;
         if ((c == 0x7E) && (hdlc->mode_frame > 2) && (hdlc->frame_byte_counter > hdlc->frame_length)) { // end packet
             hdlc->crc ^= 0xFFFF;
-    //        log_1 << hdlc->mode_frame << (hdlc->HCS == hdlc->calc_HCS) << (hdlc->crc == hdlc->FCS) << (hdlc->control.control || hdlc->data_len);
+//            log_1 << hdlc->mode_frame << (hdlc->HCS == hdlc->calc_HCS) << (hdlc->crc == hdlc->FCS) << (hdlc->control.control || hdlc->data_len);
 //            log_1 << hdlc->crc << hdlc->FCS << (hdlc->crc == hdlc->FCS) << hdlc->data.size();
             if ((hdlc->crc == hdlc->FCS) && hdlc->data.size() > 2) {
                 //log_1 << "pdu";// << (hdlc->HCS == hdlc->calc_HCS) << (hdlc->crc == hdlc->FCS) << (hdlc->control.control || hdlc->data_len);
@@ -535,7 +538,7 @@ bool widget_connect::nbfi_read()
 {
     QByteArray buf;
     buf = tx_rx(0x09, QByteArray());
-   // log_1 << buf.toHex().toUpper();
+    log_1 << buf.toHex().toUpper();
     if (buf.size() != 4) return false;
 
     buf = tx_rx(0x40, QByteArray((int)1, NBFI_PARAM_MODE));
@@ -609,7 +612,7 @@ bool widget_connect::nbfi_write()
         buf[1] = (uint8_t)nbfi->handshake_mode & 0xFF;
         buf[2] = (uint8_t)nbfi->mack_mode & 0xFF;
         buf = tx_rx(0x40, buf);
-        log_1 << buf.toHex().toUpper();
+       log_1 << buf.toHex().toUpper();
     }
     { // NBFI_PARAM_MAXLEN
         QByteArray buf((int)8, (char)0);
@@ -759,7 +762,7 @@ void widget_connect::slot_serial_readyRead()
 //        61 71C5C7 808E EF4002010210000A820001000000
 //        data_from_channel += resp;
 //        log_2 << "RX" << QString("%1").arg(resp.size(), 3) << resp.toHex().toUpper() << QByteArray::number(slip_buf.cmd, 16);
-    //    log_1 << "RX" << QString("%1").arg(data_from_channel.size(), 3) << data_from_channel.toHex().toUpper() << QByteArray::number(slip_buf.cmd, 16);
+        log_1 << "RX" << QString("%1").arg(data_from_channel.size(), 3) << data_from_channel.toHex().toUpper() << QByteArray::number(slip_buf.cmd, 16);
         emit signal_read_data(data_from_channel);
         if (sconnect == SWITCH_CONNECT_radio_FASTDL_HDLC) {
             if (!resp.isEmpty() && ((uint8_t)resp.at(0) == 0xD3)) {
@@ -830,7 +833,7 @@ void widget_connect::slot_serial_readyRead()
         if (arr_upack.isEmpty()) break;
         is_connected = true;
         update_button();
-   //     log_1 << "RX" << arr_upack.toHex().toUpper();
+        log_1 << "RX" << arr_upack.toHex().toUpper();
         data_from_channel = arr_upack;
         emit signal_read_data(data_from_channel);
 //        emit signal_HDLC_from_device(data_from_channel);
@@ -879,6 +882,7 @@ void widget_connect::update_button()
         ui->spinBox_server_addr_physical->hide();
         ui->lineEdit_pass->hide();
         ui->comboBox_com_port->hide();
+        ui->pushButton->hide();
     }
     else{
         ui->pushButton_connect->setText("Соединение");
@@ -894,6 +898,7 @@ void widget_connect::update_button()
         uint32_t client_addr = ui->comboBox_client_addr->currentData().toUInt();
         ui->lineEdit_pass->hide();
         ui->label_pass->hide();
+        ui->pushButton->show();
         switch (client_addr) {
             case 0x10: break;
             case 0x20: {
@@ -905,7 +910,7 @@ void widget_connect::update_button()
             case 0x30: {
                 ui->lineEdit_pass->show();
                 ui->label_pass->show();
-             //   ui->lineEdit_pass->setText("SettWaviotPhobos");
+                ui->lineEdit_pass->setText("SettWaviotPhobos");
                 break;
             }
             default: break;
@@ -1027,7 +1032,7 @@ void widget_connect::slot_disconnect()
 void widget_connect::on_pushButton_connect_clicked(bool checked)
 {
     if (checked) {
-        emit signal_timeout_start(3000);
+     //   emit signal_timeout_start(3000);
         switch (sconnect) {
                 case SWITCH_CONNECT_UDP_HDLC: {
             emit signal_connect(server_addr(), ui->comboBox_client_addr->currentData().toUInt(), ui->lineEdit_pass->text().toLocal8Bit());
@@ -1116,11 +1121,14 @@ void widget_connect::on_pushButton_connect_clicked(bool checked)
         default: break;
         }
     } else {
-        emit signal_hide_widget_info();
-        emit signal_hide_widget_pulse();
-        emit signal_hide_point_power();
-        emit signal_hide_power_data();
-        emit signal_hide_power_data_1f();
+//        emit signal_hide_widget_info();
+//        emit signal_hide_widget_pulse();
+//        emit signal_hide_point_power();
+//        emit signal_hide_power_data();
+//        emit signal_hide_power_data_1f();
+        emit signal_disable_tab_kn(0, 0);
+        slot_disable_tab_kn(0, 0);
+        emit signal_tab_hide();
         ui->pushButton_ReadData->hide();
 
         is_connected = false;
@@ -1178,7 +1186,7 @@ void widget_connect::on_comboBox_client_addr_currentIndexChanged(int index)
         case 0x30: {
             ui->lineEdit_pass->show();
             ui->label_pass->show();
-         //   ui->lineEdit_pass->setText("SettWaviotPhobos");
+            ui->lineEdit_pass->setText("SettWaviotPhobos");
             break;
         }
         default: break;
@@ -1197,6 +1205,29 @@ void widget_connect::on_spinBox_modem_hex_valueChanged(int arg1)
 
 void widget_connect::on_pushButton_ReadData_clicked()
 {
-    emit signal_show_widget_info();
-    emit signal_show_widget_pulse();
+    bn_fl = 2;
+    on_pushButton_connect_clicked(true);
+}
+
+void widget_connect::on_pushButton_clicked()
+{
+    update_com_ports();
+}
+
+void widget_connect::on_pushButton_2_clicked()
+{
+    bn_fl = 1;
+    on_pushButton_connect_clicked(true);
+}
+
+void widget_connect::slot_view_log_hide_show(bool hide_show){
+    if (hide_show) ui->pushButton_2->show();
+    else ui->pushButton_2->hide();
+}
+
+void widget_connect::slot_disable_tab_kn(bool fl, int){
+    if (fl) ui->pushButton_ReadData->setEnabled(false);
+    else ui->pushButton_ReadData->setEnabled(true);
+    if (fl) ui->pushButton_2->setEnabled(false);
+    else ui->pushButton_2->setEnabled(true);
 }

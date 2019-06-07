@@ -90,7 +90,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     tab.addTab( winfo, "Информация" );
     ui->mainLayout->addWidget( &tab );
-    tab.addTab( w_pulse, "Импульсные выходы" );
+    tab.addTab( w_pulse, "Настройки" );
     ui->mainLayout->addWidget( &tab );
     tab.addTab( w_pdata, "Мгновенные показания 3ф" );
     ui->mainLayout->addWidget( &tab );
@@ -168,7 +168,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(pdu_w, &pdu_worker::signal_electro5_from_device, w_log_event, &widget_log_event::slot_log_event_read, Qt::QueuedConnection);
     connect(pdu_w, &pdu_worker::signal_electro5_from_device_empty_arr, w_log_event, &widget_log_event::slot_log_event_empty_arr, Qt::QueuedConnection);
     connect(pdu_w, &pdu_worker::signal_electro5_from_device_empty_arr, w_log, &widget_log::slot_log_event_empty_arr, Qt::QueuedConnection);
-    connect(pdu_w, &pdu_worker::signal_electro5_from_device, winfo, &widget_info::slot_data_from_electro5, Qt::QueuedConnection);
+  //  connect(pdu_w, &pdu_worker::signal_electro5_from_device, w_pulse, &widget_pulse_outputs::slot_data_from_electro5, Qt::QueuedConnection);
 
     connect(winfo, &widget_info::signal_write_data_PDU, hdlc_exch, &HDLC_DLMS_exchange::slot_PDU_to_device, Qt::QueuedConnection);
     connect(w_pdata, &widget_power_data::signal_write_data_PDU, hdlc_exch, &HDLC_DLMS_exchange::slot_PDU_to_device, Qt::QueuedConnection);
@@ -182,7 +182,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(w_pulse, &widget_pulse_outputs::signal_write_data_, pdu_w, &pdu_worker::slot_electro5_to_device, Qt::QueuedConnection);
     connect(w_log, &widget_log::signal_write_data, pdu_w, &pdu_worker::slot_electro5_to_device, Qt::QueuedConnection);
     connect(w_log_event, &widget_log_event::signal_write_data, pdu_w, &pdu_worker::slot_electro5_to_device, Qt::QueuedConnection);
-    connect(winfo, &widget_info::signal_write_data, pdu_w, &pdu_worker::slot_electro5_to_device, Qt::QueuedConnection);
+    connect(w_pulse, &widget_pulse_outputs::signal_write_data, pdu_w, &pdu_worker::slot_electro5_to_device, Qt::QueuedConnection);
 
 
     connect(pdu_w, &pdu_worker::signal_data, winfo, &widget_info::slot_view_data, Qt::QueuedConnection);
@@ -598,7 +598,6 @@ void MainWindow::dial_date_season(){
         else{
             emit signal_test_profils_seasons(dial_season.getprofile(), dial_season.getData());
         }
-
     }
 }
 

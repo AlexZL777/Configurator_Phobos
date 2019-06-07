@@ -53,7 +53,7 @@ void pdu_worker::slot_PDU_from_device(QVariant vpdu)
         if (vm.contains("octet-string")) {
             QByteArray arr = QByteArray::fromHex(vm.value("octet-string", "").toString().toLocal8Bit());
             if (!arr.isEmpty()) {
-//                log_1 << this << "RXe5" << arr.toHex().toUpper();
+                log_1 << this << "RXe5" << arr.toHex().toUpper();
                 emit signal_electro5_from_device(arr);
             }
             else emit signal_electro5_from_device_empty_arr();
@@ -87,7 +87,7 @@ void pdu_worker::slot_PDU_from_device(QVariant vpdu)
 
 void pdu_worker::slot_electro5_to_device(QByteArray arr)
 {
-  //  log_1 << this << "TXe5" << arr.toHex().toUpper();
+    log_1 << this << "TXe5" << arr.toHex().toUpper();
     QVariantMap vm_set_request;
     QVariantMap vm_set_request_normal;
     vm_set_request_normal.insert("invoke-id-and-priority", 0xC1);

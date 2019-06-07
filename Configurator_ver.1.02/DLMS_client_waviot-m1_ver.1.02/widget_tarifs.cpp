@@ -611,13 +611,13 @@ QVariant widget_tarifs::write_to_counter(){
     if (!vmap_special_days.isEmpty()) {
         vmap.insert("special_days", vmap_special_days);
     }
- //   log_1 << qPrintable(QJsonDocument::fromVariant(vmap).toJson(QJsonDocument::Indented));
+    log_1 << "vmap" << qPrintable(QJsonDocument::fromVariant(vmap).toJson(QJsonDocument::Indented));
  //   log_1 << tariff_json_pack(vmap).toHex().toUpper();
     transmit = true;
     emit signal_write_data(tariff_json_pack(vmap));
-    emit signal_timeout_start(5000);
+ //   emit signal_timeout_start(5000);
     count_tout = 0;
-    tmr_tout->start(1000);
+ //   tmr_tout->start(3000);
     count_bar = 34;
     emit signal_bar(count_bar);
 }
@@ -1766,9 +1766,9 @@ void widget_tarifs::slot_read_tarifs(){
   //  show();
     transmit = true;
     emit signal_write_data (QByteArray::fromHex("51"));
-    emit signal_timeout_start(5000);
+ //   emit signal_timeout_start(5000);
     count_tout = 0;
-    tmr_tout->start(1000);
+    tmr_tout->start(3000);
     count_bar = 34;
     emit signal_bar(count_bar);
 }

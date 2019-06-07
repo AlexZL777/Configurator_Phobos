@@ -63,7 +63,6 @@ SOURCES += \
     widget_log.cpp \
     widget_log_event.cpp \
     dialog_error_sn.cpp \
-    dialog_insert_data_season.cpp \
     DLMS/DLMS_PDU_buf.c
 #    hdlc_dlms_exchange_.cpp \
 #    ../Phobos_STM/user/DLMS/DLMS_HDLC.c \
@@ -117,7 +116,6 @@ HEADERS += \
     interface.h \
     widget_log_event.h \
     dialog_error_sn.h \
-    dialog_insert_data_season.h \
     main.h \
     NBFi_settings.h \
     DLMS/DLMS_enums.h \
