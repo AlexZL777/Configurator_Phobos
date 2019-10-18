@@ -10,6 +10,8 @@
 #include <QDate>
 #include <QTimer>
 #include <QPushButton>
+#include <QFileDialog>
+#include <QDataStream>
 
 class QTableView;
 class QLineEdit;
@@ -77,6 +79,8 @@ signals:
     void signal_disable_tab_kn(bool, int);
     void signal_on_pushButton_connect_clicked(bool);
 public slots:
+    void slot_save();
+    void slot_open();
     void slot_disconnect();
     void onAppend_syt();
     void onAppend_week();

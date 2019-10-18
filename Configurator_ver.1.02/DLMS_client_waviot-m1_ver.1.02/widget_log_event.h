@@ -12,6 +12,10 @@
 #include <QRadioButton>
 #include <QComboBox>
 #include <QLabel>
+#include <QFileDialog>
+#include "xlsxdocument.h"
+#include "xlsxformat.h"
+#include "xlsxworksheet.h"
 
 class TModel_U;
 class TModel_I;
@@ -90,6 +94,8 @@ public:
     int count_view;
     bool transmitt();
     int count_tout;
+   // void title(QXlsx::Document);
+    //QXlsx::Document xlsx;
  //   OBIS obis(uint8_t A, uint8_t B, uint8_t C, uint8_t D, uint8_t E, uint8_t F);
  //   OBIS obis(uint8_t C, uint8_t D, uint8_t E);
 
@@ -106,6 +112,7 @@ private slots:
     void timeout();
     void slotRadioToggled(bool);
     void slotCombo(int);
+    void slot_click_bn();
 public slots:
     void slot_log_event_read(QByteArray);
     void slot_log_event_empty_arr();
@@ -129,6 +136,7 @@ public:
     void insert_row_data(QVariantMap, int);
     void removeTable();
     void clear_m_data();
+    QList< QHash< int, QVariant > >return_m_data();
 private:
     enum Column {
         c0,
@@ -154,6 +162,7 @@ public:
     void insert_row_data(QVariantMap, int);
     void removeTable();
     void clear_m_data();
+    QList< QHash< int, QVariant > >return_m_data();
 private:
     enum Column {
         c0,
@@ -179,6 +188,7 @@ public:
     void insert_row_data(QVariantMap, int);
     void removeTable();
     void clear_m_data();
+    QList< QHash< int, QVariant > >return_m_data();
 private:
     enum Column {
         c0,
@@ -204,6 +214,9 @@ public:
     void insert_row_data(QVariantMap, int);
     void removeTable();
     void clear_m_data();
+    uint time_start;
+    uint time_end;
+    QList< QHash< int, QVariant > >return_m_data();
 private:
     enum Column {
         c0,
@@ -213,6 +226,7 @@ private:
     typedef QHash< int, QVariant > DData;
     typedef QList<DData > Data;
     Data m_data;
+    Data m_data_prev;
 };
 
 class TModel_ext : public QAbstractTableModel {
@@ -229,6 +243,7 @@ public:
     void insert_row_data(QVariantMap, int);
     void removeTable();
     void clear_m_data();
+    QList< QHash< int, QVariant > >return_m_data();
 private:
     enum Column {
         c0,
@@ -254,6 +269,7 @@ public:
     void insert_row_data(QVariantMap, int);
     void removeTable();
     void clear_m_data();
+    QList< QHash< int, QVariant > >return_m_data();
 private:
     enum Column {
         c0,
@@ -279,6 +295,7 @@ public:
     void insert_row_data(QVariantMap, int);
     void removeTable();
     void clear_m_data();
+    QList< QHash< int, QVariant > >return_m_data();
 private:
     enum Column {
         c0,
@@ -304,6 +321,7 @@ public:
     void insert_row_data(QVariantMap, int);
     void removeTable();
     void clear_m_data();
+    QList< QHash< int, QVariant > >return_m_data();
 private:
     enum Column {
         c0,
@@ -329,6 +347,7 @@ public:
     void insert_row_data(QVariantMap, int);
     void removeTable();
     void clear_m_data();
+    QList< QHash< int, QVariant > >return_m_data();
 private:
     enum Column {
         c0,

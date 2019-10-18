@@ -21,7 +21,6 @@ point_power::point_power(QWidget *parent) :
     ui(new Ui::point_power)
 {
     ui->setupUi(this);
-  // hide();
 }
 
 point_power::~point_power()
@@ -58,24 +57,13 @@ void point_power::paintEvent(QPaintEvent *event)
     r *= 0.8;
     ri = r * 0.7;
 
-//    QString s, s1, s2;
-//    s = s.setNum(r);
-//    s1 = s1.setNum(wmid);
-//    s2 = s2.setNum(hmid);
-//    log_1 << "gffgfgfg" << s << s1 << s2;
-
     painter.setFont(QFont("Arial", 8, QFont::Bold));//  ctx.font = "15px Arial";
-
-  //  painter.setBrush(QBrush(QColor ("#000000"), Qt::SolidPattern));//ctx.strokeStyle = "#000000";
 
     //Окружность
     painter.drawEllipse(wmid-r, hmid-r, r*2, r*2);
 
- //   painter.setBrush(QBrush(QColor ("#808080"), Qt::SolidPattern));//ctx.strokeStyle = "#808080";
-
     //горизонтальная линия
     painter.drawLine(wmid - r, hmid, wmid + r, hmid);
-    //ctx.moveTo(wmid, hmid - r);
 
     //вертикальная линия
     painter.drawLine(wmid, hmid - r, wmid, hmid + r);
@@ -109,18 +97,14 @@ void point_power::paintEvent(QPaintEvent *event)
     angl = 0;
     draw_arrow(painter, "Va", QColor ("#BFBF00"), r, angl, wmid, hmid);
     draw_arrow(painter, "Ia", QColor ("#BFBF00"), ri, angl + powCoefA, wmid, hmid);
- //   log_1 << "A" << angl << powCoefA << angl + powCoefA;
-
     // B
     angl = angl_AB;
     draw_arrow(painter, "Vb", QColor ("#00BF00"), r, angl, wmid, hmid);
     draw_arrow(painter, "Ib", QColor ("#00BF00"), ri, angl + powCoefB, wmid, hmid);
- //   log_1 << "B" << angl << powCoefB << angl + powCoefB;
     // C
     angl = angl_AB + angl_BC;
     draw_arrow(painter, "Vc", QColor ("#FF0000"), r, angl, wmid, hmid);
     draw_arrow(painter, "Ic", QColor ("#FF0000"), ri, angl + powCoefC, wmid, hmid);
-  //  log_1 << "C" << angl << powCoefC << angl + powCoefC;
 }
 
 void point_power::draw_arrow(QPainter &painter, QString txt, QColor style, float r, float angl, float wmid, float hmid) {
@@ -149,9 +133,9 @@ void point_power::draw_arrow(QPainter &painter, QString txt, QColor style, float
     y = -qSin(angl / 180 * M_PI);
     painter.drawLine(wmid + x1 * r * 0.95, hmid + y1 * r * 0.95, wmid + x * r, hmid + y * r);
 
-    painter.setPen(QPen(Qt::NoPen));//, 0.5, Qt::SolidLine, Qt::RoundCap));
+    painter.setPen(QPen(Qt::NoPen));
     painter.drawRect(wmid + x * (r * 0.5) -10, hmid + y * (r * 0.5) - (12 / 2), 10, 12);
 
-    painter.setPen(QPen(Qt::black, 0.2, Qt::SolidLine, Qt::RoundCap));//ctx.fillStyle = "#000000";
+    painter.setPen(QPen(Qt::black, 0.2, Qt::SolidLine, Qt::RoundCap));
     painter.drawText(wmid + x * (r * 0.5) - 10, hmid + y * (r * 0.5) + (10 / 2), txt);
 }

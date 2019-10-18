@@ -50,16 +50,26 @@ void widget_power_data::timeout(){
         transmit = true;
         emit signal_write_data_PDU (QByteArray::fromHex("C001C1000101005E0700FF0200"));
     }
-    if (count_tout < 3){
+    if (count_tout < 2){
         count_tout++;
+        tmr_tout->start(3000);
+    }
+    else if ( count_tout == 2 ) {
+        count_tout++;
+        emit signal_on_pushButton_connect_clicked(true);
         tmr_tout->start(3000);
     }
     else if ( count_tout == 3 ) {
         count_tout++;
         emit signal_on_pushButton_connect_clicked(true);
-        tmr_tout->start(3000);
+        tmr_tout->start(6000);
     }
-    else {
+    else if ( count_tout == 4 ) {
+        count_tout++;
+        emit signal_on_pushButton_connect_clicked(true);
+        tmr_tout->start(12000);
+    }
+    else if ( count_tout > 4 ) {
         transmit = false;
         tmr_tout->stop();
         emit signal_timeout_start (100);
@@ -68,7 +78,6 @@ void widget_power_data::timeout(){
 }
 
 void widget_power_data::slot_show_widget_power_data(){
-   // show();
     transmit = false;
     count = 0;
 }
@@ -81,7 +90,6 @@ void widget_power_data::slot_disconnect(){
 }
 
 void widget_power_data::slot_hide_power_data(){
-  //  hide();
     ui->lineEdit_8->setText("");     //Вывод Ток фазы А
     ui->lineEdit_9->setText("");     //Вывод Ток фазы B
     ui->lineEdit_10->setText("");    //Вывод Ток фазы C
@@ -119,7 +127,6 @@ void widget_power_data::slot_start_pdata(){
     count_bar = 34;
     emit signal_bar(count_bar);
     emit signal_write_data_PDU (arr);
-  //  emit signal_timeout_start(5000);
     count_tout = 0;
     tmr_tout->start(3000);
 }
@@ -144,8 +151,7 @@ void widget_power_data::slot_read_data(QVariant data){
                             if (vm.contains("octet-string")){
                                 arr = QByteArray::fromHex(vm.value("octet-string", "").toString().toLocal8Bit());
                                 obis_buf[i] = arr;
-                             //   log_1 << QString::number(i);
-                                log_1 << "i" << i << obis_buf[k].toHex().toUpper();
+                             //   log_1 << "i" << i << obis_buf[k].toHex().toUpper();
 
                             }
                         }
@@ -154,7 +160,6 @@ void widget_power_data::slot_read_data(QVariant data){
                     transmit = true;
                     count = 1;
                     emit signal_write_data_PDU (arr);
-                //    emit signal_timeout_start(5000);
                     count_tout = 0;
                     tmr_tout->start(3000);
                 }
@@ -188,9 +193,7 @@ void widget_power_data::slot_read_data(QVariant data){
                             }
                         }
                     }
-                  //  log_1 << QString::number(count_buf);
                     for (int n = 0; n < count_buf; ++n) {
-                      //  log_1 << "n" << n;
                         QString b;
                         b.setNum(data_buf[n], 'g', 4);
                     //    log_1 << "n" << n << obis_buf[n].toHex().toUpper() << b;

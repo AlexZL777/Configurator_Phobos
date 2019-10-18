@@ -12,6 +12,7 @@
 #include <math.h>
 
 extern QByteArray sn;
+extern int type[2];
 uint32_t type_data;
 extern int count_bar;
 extern QDateTime qdt;
@@ -97,11 +98,12 @@ widget_log::widget_log(QWidget *parent) :
     gridLayout->addWidget( radio1, 1, 1 );
     gridLayout->setAlignment( radio1, Qt::AlignLeft);
 
-    gridLayout->addWidget( ch_box, 1, 2 );
-    gridLayout->setAlignment( ch_box, Qt::AlignLeft);
-    ch_box->setChecked(false);
-    ch_box->hide();
-    ch_box_fl = false;
+    QPushButton* bn_xls_mod = new QPushButton( trUtf8( "Сохранить в xls (модификация)" ) );
+    connect( bn_xls_mod, SIGNAL( clicked() ), this, SLOT( slot_click_bn_xls_mod() ) );
+    bn_xls_mod->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Minimum);
+    gridLayout->addWidget( bn_xls_mod, 1, 2 );
+    gridLayout->setAlignment( bn_xls_mod, Qt::AlignLeft);
+ //   bn_xls_mod->hide();
 
     radio2->setText("выбрать промежуток времени");
     gridLayout->addWidget( radio2, 2, 1 );
@@ -113,6 +115,12 @@ widget_log::widget_log(QWidget *parent) :
     gridLayout->addWidget( bn_file, 2, 2 );
     gridLayout->setAlignment( bn_file, Qt::AlignLeft);
     bn_file->hide();
+
+    gridLayout->addWidget( ch_box, 2, 3 );
+    gridLayout->setAlignment( ch_box, Qt::AlignLeft);
+    ch_box->setChecked(false);
+    ch_box->hide();
+    ch_box_fl = false;
 
     connect(radio1, SIGNAL(toggled(bool)), this, SLOT(slotRadioToggled(bool)));
     connect(radio2, SIGNAL(toggled(bool)), this, SLOT(slotRadioToggled(bool)));
@@ -177,8 +185,99 @@ void widget_log::slot_click_bn_file(){
     }
 }
 
-void widget_log::slot_click_bn(){
+void widget_log::slot_click_bn_xls_mod(){
+    QXlsx::Document xlsx;
+   // vmap_hour
+    QVariantList vlist = vmap_day_mod["meterings"].toList();
+    for (int n = 0; n < vlist.count()/2; ++n) {
+        vlist.swap(n, vlist.count()-n-1);
+    }
+   // log_1 << "vlist" << qPrintable(QJsonDocument::fromVariant(vlist).toJson(QJsonDocument::Indented));
+    xlsx.write(1, 1, "ТУ");
+    xlsx.write(2, 1, "Фобос-"+QString::number(type[0])+", №"+sn);
+    xlsx.write(3, 1, "Фобос-"+QString::number(type[0])+", №"+sn);
+    xlsx.write(4, 1, "Фобос-"+QString::number(type[0])+", №"+sn);
+    xlsx.write(5, 1, "Фобос-"+QString::number(type[0])+", №"+sn);
+    xlsx.write(1, 2, "Параметр");
+    xlsx.write(2, 2, "Энергия А+ на начало суток, кВт*ч");
+    xlsx.write(3, 2, "Энергия А- на начало суток, кВт*ч");
+    xlsx.write(4, 2, "Энергия Р- на начало суток, кВАр*ч");
+    xlsx.write(5, 2, "Энергия Р+ на начало суток, кВАр*ч");
+    xlsx.setColumnWidth(1, 18);
+    xlsx.setColumnWidth(2, 31);
 
+    int col = 3;
+    foreach (QVariant v, vlist) {
+        QVariantMap vm = v.toMap();
+        if (vm.contains("1.0.0")){
+            QDateTime date = QDateTime::fromTime_t(vm["1.0.0"].toUInt()).toTimeSpec(Qt::OffsetFromUTC);
+            xlsx.write(1, col, date.toString("dd.MM.yyyy hh:mm"));
+        }
+        if (vm.contains("1.8.0")){
+            xlsx.write(2, col, vm["1.8.0"].toDouble()/1000);
+        }
+        if (vm.contains("2.8.0")){
+            xlsx.write(3, col, vm["2.8.0"].toDouble()/1000);
+        }
+        if (vm.contains("4.8.0")){
+            xlsx.write(4, col, vm["4.8.0"].toDouble()/1000);
+        }
+        if (vm.contains("3.8.0")){
+            xlsx.write(5, col, vm["3.8.0"].toDouble()/1000);
+        }
+        xlsx.setColumnWidth(col, 15);
+        col++;
+    }
+    xlsx.renameSheet("Sheet1", "Показания");
+
+    xlsx.addSheet("Профиль");
+    vlist = vmap_hour_mod["meterings"].toList();
+    for (int n = 0; n < vlist.count()/2; ++n) {
+        vlist.swap(n, vlist.count()-n-1);
+    }
+  //  log_1 << "vlist" << qPrintable(QJsonDocument::fromVariant(vlist).toJson(QJsonDocument::Indented));
+    xlsx.write(1, 1, "ТУ");
+    xlsx.write(2, 1, "Фобос-"+QString::number(type[0])+", №"+sn);
+    xlsx.write(3, 1, "Фобос-"+QString::number(type[0])+", №"+sn);
+    xlsx.write(4, 1, "Фобос-"+QString::number(type[0])+", №"+sn);
+    xlsx.write(5, 1, "Фобос-"+QString::number(type[0])+", №"+sn);
+    xlsx.write(1, 2, "Параметр");
+    xlsx.write(2, 2, "Энергия А+ за 1 час, кВт*ч");
+    xlsx.write(3, 2, "Энергия А- за 1 час, кВт*ч");
+    xlsx.write(4, 2, "Энергия Р- за 1 час, кВАр*ч");
+    xlsx.write(5, 2, "Энергия Р+ за 1 час, кВАр*ч");
+    xlsx.setColumnWidth(1, 18);
+    xlsx.setColumnWidth(2, 24);
+
+    col = 3;
+    foreach (QVariant v, vlist) {
+        QVariantMap vm = v.toMap();
+        if (vm.contains("1.0.0")){
+            QDateTime date = QDateTime::fromTime_t(vm["1.0.0"].toUInt()).toTimeSpec(Qt::OffsetFromUTC);
+            xlsx.write(1, col, date.toString("dd.MM.yyyy hh:mm"));
+        }
+        if (vm.contains("1.8.0")){
+            xlsx.write(2, col, vm["1.8.0"].toDouble()/1000);
+        }
+        if (vm.contains("2.8.0")){
+            xlsx.write(3, col, vm["2.8.0"].toDouble()/1000);
+        }
+        if (vm.contains("4.8.0")){
+            xlsx.write(4, col, vm["4.8.0"].toDouble()/1000);
+        }
+        if (vm.contains("3.8.0")){
+            xlsx.write(5, col, vm["3.8.0"].toDouble()/1000);
+        }
+        xlsx.setColumnWidth(col, 15);
+        col++;
+    }
+
+    QFileDialog dialog(this);
+    QString str = dialog.getSaveFileName(this, "Save file", "C:", "*.xlsx");
+    xlsx.saveAs(str);
+}
+
+void widget_log::slot_click_bn(){
     QXlsx::Document xlsx;
     for (int col=1; col<26; ++col){
         switch( col ) {
@@ -276,137 +375,10 @@ void widget_log::slot_click_bn(){
     QFileDialog dialog(this);
     QString str = dialog.getSaveFileName(this, "Save file", "C:", "*.xlsx");
     xlsx.saveAs(str);
-//    QVariantMap vmap;
-//    QFile file1("logg.txt");
-//    if ( file1.open(QIODevice::ReadOnly) ){
-//        QByteArray arr;
-//        arr = file1.readAll();
-//        file1.close();
-//        QJsonDocument d = QJsonDocument::fromJson(arr);
-//        QVariant v = d.toVariant();
-//        vmap = v.toMap();
-//    //    log_1 << "111" << qPrintable(QJsonDocument::fromVariant(vmap).toJson(QJsonDocument::Indented));
-//        QVariantList vlist = vmap["meterings"].toList();
-//        QVariantMap vm;
-//        QVariantList vlist2;
-//        for (int n = 0; n < vlist.count(); ++n) {
-//            for (int i = 0; i < vlist.count(); ++i) {
-//                vm = vlist.at(i).toMap();
-//                if (vm["index"].toInt() == n){
-//                    vm.insert("index", n);
-//                    if (vm.contains("profile")){
-//                        if (vm["profile"].toString() == "1.0.99.1.0.255"){
-//                            vm.insert("type", 15);
-//                        }
-//                        else if (vm["profile"].toString() == "1.0.98.2.0.255"){
-//                            vm.insert("type", 14);
-//                        }
-//                        else if (vm["profile"].toString() == "1.0.98.1.0.255"){
-//                            vm.insert("type", 13);
-//                        }
-//                    }
-//                    if (vm.contains("1.0.0")){
-//                        vm.insert("ts", vm["1.0.0"].toInt());
-//                        vm.remove("1.0.0");
-//                    }
-//                    if (vm.contains("1.6.0")){
-//                        vm.insert("1.0.1.6.0.255", vm["1.6.0"].toFloat()/1000);
-//                        vm.remove("1.6.0");
-//                    }
-//                    if (vm.contains("1.8.0")){
-//                        vm.insert("1.0.1.8.0.255", vm["1.8.0"].toFloat()/1000);
-//                        vm.remove("1.8.0");
-//                    }
-//                    if (vm.contains("1.8.1")){
-//                        vm.insert("1.0.1.8.1.255", vm["1.8.1"].toFloat()/1000);
-//                        vm.remove("1.8.1");
-//                    }
-//                    if (vm.contains("1.8.2")){
-//                        vm.insert("1.0.1.8.2.255", vm["1.8.2"].toFloat()/1000);
-//                        vm.remove("1.8.2");
-//                    }
-//                    if (vm.contains("1.8.3")){
-//                        vm.insert("1.0.1.8.3.255", vm["1.8.3"].toFloat()/1000);
-//                        vm.remove("1.8.3");
-//                    }
-//                    if (vm.contains("1.8.4")){
-//                        vm.insert("1.0.1.8.4.255", vm["1.8.4"].toFloat()/1000);
-//                        vm.remove("1.8.4");
-//                    }
-//                    if (vm.contains("2.8.0")){
-//                        vm.insert("2.0.2.8.0.255", vm["2.8.0"].toInt());
-//                        vm.remove("2.8.0");
-//                    }
-//                    if (vm.contains("2.8.1")){
-//                        vm.insert("2.0.2.8.1.255", vm["2.8.1"].toInt());
-//                        vm.remove("2.8.1");
-//                    }
-//                    if (vm.contains("2.8.2")){
-//                        vm.insert("2.0.2.8.2.255", vm["2.8.2"].toInt());
-//                        vm.remove("2.8.2");
-//                    }
-//                    if (vm.contains("2.8.3")){
-//                        vm.insert("2.0.2.8.3.255", vm["2.8.3"].toInt());
-//                        vm.remove("2.8.3");
-//                    }
-//                    if (vm.contains("2.8.4")){
-//                        vm.insert("2.0.2.8.4.255", vm["2.8.4"].toInt());
-//                        vm.remove("2.8.4");
-//                    }
-//                    if (vm.contains("3.8.0")){
-//                        vm.insert("2.0.3.8.0.255", vm["3.8.0"].toInt());
-//                        vm.remove("3.8.0");
-//                    }
-//                    if (vm.contains("3.8.1")){
-//                        vm.insert("2.0.3.8.1.255", vm["3.8.1"].toInt());
-//                        vm.remove("3.8.1");
-//                    }
-//                    if (vm.contains("3.8.2")){
-//                        vm.insert("2.0.3.8.2.255", vm["3.8.2"].toInt());
-//                        vm.remove("3.8.2");
-//                    }
-//                    if (vm.contains("3.8.3")){
-//                        vm.insert("2.0.3.8.3.255", vm["3.8.3"].toInt());
-//                        vm.remove("3.8.3");
-//                    }
-//                    if (vm.contains("3.8.4")){
-//                        vm.insert("2.0.3.8.4.255", vm["3.8.4"].toInt());
-//                        vm.remove("3.8.4");
-//                    }
-//                    if (vm.contains("4.8.0")){
-//                        vm.insert("2.0.4.8.0.255", vm["4.8.0"].toInt());
-//                        vm.remove("4.8.0");
-//                    }
-//                    if (vm.contains("4.8.1")){
-//                        vm.insert("2.0.4.8.1.255", vm["4.8.1"].toInt());
-//                        vm.remove("4.8.1");
-//                    }
-//                    if (vm.contains("4.8.2")){
-//                        vm.insert("2.0.4.8.2.255", vm["4.8.2"].toInt());
-//                        vm.remove("4.8.2");
-//                    }
-//                    if (vm.contains("4.8.3")){
-//                        vm.insert("2.0.4.8.3.255", vm["4.8.3"].toInt());
-//                        vm.remove("4.8.3");
-//                    }
-//                    if (vm.contains("4.8.4")){
-//                        vm.insert("2.0.4.8.4.255", vm["4.8.4"].toInt());
-//                        vm.remove("4.8.4");
-//                    }
-//                //    log_1 << "vm" << qPrintable(QJsonDocument::fromVariant(vm).toJson(QJsonDocument::Indented));
-//                    vlist2 << vm;
-//                    break;
-//                }
-//            }
-//        }
-//        vmap.insert("meterings", vlist2);
-//     //   log_1 << "122" << qPrintable(QJsonDocument::fromVariant(vlist2).toJson(QJsonDocument::Indented));
-//    }
-//    m_model_log->insert_row( path_report_history(vmap, 0), time_from_form_min(), time_from_form_max());
 }
 
-void widget_log::slotRadioToggled(bool value){
-    if (!value) return;
+void widget_log::slotRadioToggled( bool value ){
+    if ( !value ) return;
     if ( radio1->isChecked() ) {
         radio = true;
         label3->hide();
@@ -423,30 +395,44 @@ void widget_log::slotRadioToggled(bool value){
     }
 }
 
-void widget_log::timeout(){
+void widget_log::timeout() {
     log_1 << "count_tout" << count_tout;
-    if (count_tout < 2){
+    if ( count_tout < 2 ){
         count_tout++;
-        tmr_t_out->start(3000);
-        set_request_data( type, (uint32_t)n_set_data, n_set_data_max);
+        tmr_t_out->start(13000);
+        set_request_data( type_, (uint32_t)n_set_data, n_set_data_max );
     }
     else if ( count_tout == 2 ) {
         count_tout++;
-  //      log_1 << "signal_on_pushButton_connect_clicked";
         emit signal_on_pushButton_connect_clicked(true);
-        tmr_t_out->start(3000);
+        tmr_t_out->start(16000);
     }
-    else if ( count_tout > 2 ) {
+    else if ( count_tout == 3 ) {
+        count_tout++;
+        emit signal_on_pushButton_connect_clicked(true);
+        tmr_t_out->start(22000);
+    }
+    else if ( count_tout == 4 ) {
+        count_tout++;
+        emit signal_on_pushButton_connect_clicked(true);
+        tmr_t_out->start(22000);
+    }
+    else if ( count_tout == 5 ) {
+        count_tout++;
+        emit signal_on_pushButton_connect_clicked(true);
+        tmr_t_out->start(5000);
+    }
+    else if ( count_tout > 5 ) {
         transmit = false;
         tmr_t_out->stop();
         n_set_data = -1;
         n_set_data_max = 0;
-        emit signal_timeout_start (100);
+        emit signal_timeout_start(100);
       //  emit signal_disable_tab_kn(0, 5);
     }
 }
 
-void widget_log::slot_stop_read_log(){
+void widget_log::slot_stop_read_log() {
     transmit = false;
     m_model_log->removeTable();
     tmr_t_out->stop();
@@ -454,12 +440,12 @@ void widget_log::slot_stop_read_log(){
     n_set_data_max = 0;
 }
 
-void widget_log::slot_read_log(){
+void widget_log::slot_read_log() {
  //   log_1 << "n_set_data" << n_set_data << n_set_data_max;
     if (n_set_data > -1 && n_set_data_max > 0) {
         count_tout = 0;
         tmr_t_out->start(3000);
-        set_request_data( type, (uint32_t)n_set_data, n_set_data_max);
+        set_request_data( type_, (uint32_t)n_set_data, n_set_data_max);
     }
     else{
         count_tout = 0;
@@ -470,15 +456,15 @@ void widget_log::slot_read_log(){
         n_set_data_max = 0;
         switch (type_data) {
             case 1: { //месяцы
-                emit signal_write_data(QByteArray::fromHex("EF0F0D"));//0x0D - 13
+                emit signal_write_data(QByteArray::fromHex( "EF0F0D" ));//0x0D - 13
                 break;
             }
             case 2: { //сутки
-                emit signal_write_data(QByteArray::fromHex("EF0F0E"));//0x0E - 14
+                emit signal_write_data(QByteArray::fromHex( "EF0F0E" ));//0x0E - 14
                 break;
             }
             case 3: { //часы
-                emit signal_write_data(QByteArray::fromHex("EF0F0F"));//0x0F - 15
+                emit signal_write_data(QByteArray::fromHex( "EF0F0F" ));//0x0F - 15
                 type_data_hour = 1;
                 break;
             }
@@ -497,7 +483,6 @@ void TModel_log::removeTable(){
 }
 
 void widget_log::slot_log_read(QByteArray data){
-  //  log_1 << "12345676788990";
     if (transmit){
         transmit = false;
      //   log_1 << "data_log" << data.toHex().toUpper();
@@ -528,7 +513,6 @@ void widget_log::set_request_data(uint32_t type, uint32_t index, uint32_t data_m
     transmit = true;
     emit signal_write_data(arr);
     tmr_t_out->start(3000);
-  //  emit signal_timeout_start(5000);
 }
 
 void widget_log::slot_disconnect(){
@@ -705,7 +689,7 @@ void widget_log::parse_arch(QByteArray arr){
                         uint16_t val16;
                         val16 = *buf++;
                         vmap.insert("index", val16);
-                        type = val16;
+                        type_ = val16;
                         val16 = *buf++;
                         vmap.insert("rec_size", val16);
                         val16 = *buf++; val16 <<= 8; val16 += *buf++;
@@ -735,7 +719,7 @@ void widget_log::parse_arch(QByteArray arr){
                             n_set_buf[n] = --count_max_t;
                          //   log_1 << "n" << n << n_set_buf[n];
                         }
-                        set_request_data(type, (uint32_t)n_set_data, n_set_data_max);
+                        set_request_data(type_, (uint32_t)n_set_data, n_set_data_max);
                         progresbar = 100/n_set_data_max;
                         if (progresbar < 1){
                             intermediate = n_set_data_max/100 + 1;
@@ -777,7 +761,6 @@ void widget_log::parse_arch(QByteArray arr){
 
 void widget_log::parse_data_arch(QByteArray arr){
     count_tout = 0;
- //   log_1 << "count_tout" << count_tout;
     uint8_t * buf_start = (uint8_t *)arr.data();
     uint8_t * buf = buf_start;
     uint8_t header = *buf++;
@@ -827,7 +810,7 @@ void widget_log::parse_data_arch(QByteArray arr){
             vmap_data.insert("ts", ul_data.ts);
             vmap_data.insert("index", ul_data.index);
           //  vmap_data.insert("index_ext", ul_data.index_ext);
-            vmap_data.insert("type", type);
+            vmap_data.insert("type", type_);
             for (QMap<OBIS_cpp, QVariant>::iterator iter = ul_data.data.begin(); iter != ul_data.data.end(); ++iter) {
                 OBIS_cpp obis_cpp = iter.key();
                 QVariant val = iter.value();
@@ -864,22 +847,21 @@ void widget_log::data_arch(QVariantList vl_){
     else count_bar += progresbar;
     n_set_data--;
     if (n_set_data > -1){
-        set_request_data( type, (uint32_t)n_set_data, n_set_data_max);
-
+        set_request_data( type_, (uint32_t)n_set_data, n_set_data_max);
+        log_1 << "set_request_data";
     }
     else {
+        log_1 << "signal_timeout_stop";
         tmr_t_out->stop();
         n_set_data = -1;
         n_set_data_max = 0;
         emit signal_timeout_stop();
         if (type_data == 3 && type_data_hour == 1){
             vmap_hour = vmap;
-
             emit signal_write_data(QByteArray::fromHex("EF0F0E"));//0x0E - 14
             type_data_hour = 2;
             transmit = true;
             tmr_t_out->start(3000);
-        //    emit signal_timeout_start(5000);
             count_tout = 0;
         }
         else if (type_data == 3 && type_data_hour == 2){
@@ -890,7 +872,7 @@ void widget_log::data_arch(QVariantList vl_){
             if (!ch_box_fl) vm = path_report_history_hour(vmap, vmap_hour);
             else vm = orig_data(vmap_hour);
           //  log_1 << "2222222" << qPrintable(QJsonDocument::fromVariant(vm).toJson(QJsonDocument::Indented));
-            m_model_log->insert_row( vm, time_from_form_min(), time_from_form_max());
+            m_model_log->insert_row( vm, time_from_form_min(), time_from_form_max() );
             vmap_hour.clear();
             vmap_hour = vm;
         }
@@ -900,7 +882,7 @@ void widget_log::data_arch(QVariantList vl_){
             ch_box_fl = ch_box->isChecked();
             if (!ch_box_fl) vm = path_report_history(vmap, 0);
             else vm = orig_data(vmap);
-            m_model_log->insert_row( vm, time_from_form_min(), time_from_form_max());
+            m_model_log->insert_row( vm, time_from_form_min(), time_from_form_max() );
             vmap_day.clear();
             vmap_day = vm;
         }
@@ -910,7 +892,7 @@ void widget_log::data_arch(QVariantList vl_){
             ch_box_fl = ch_box->isChecked();
             if (!ch_box_fl) vm = path_report_history(vmap, 0);
             else vm = orig_data(vmap);
-            log_1 << "2222222" << qPrintable(QJsonDocument::fromVariant(vm).toJson(QJsonDocument::Indented));
+         //   log_1 << "2222222" << qPrintable(QJsonDocument::fromVariant(vm).toJson(QJsonDocument::Indented));
             m_model_log->insert_row( vm, time_from_form_min(), time_from_form_max());
             vmap_month.clear();
             vmap_month = vm;
@@ -1569,7 +1551,6 @@ QVariantMap widget_log::path_report_history_hour(QVariantMap req, QVariantMap vm
         vl.append(vl_hour.at(n));
     }
  //   log_1 << "all 1" << qPrintable(QJsonDocument::fromVariant(vl).toJson(QJsonDocument::Indented));
-//    return vmap;
     //сортировка времени по возростанию
     for ( int i = 1; i < vl.count(); ++i )
     {
@@ -1589,13 +1570,13 @@ QVariantMap widget_log::path_report_history_hour(QVariantMap req, QVariantMap vm
         }
     }
     vmap.insert("meterings", vl);
-    log_1 << "all 2" << qPrintable(QJsonDocument::fromVariant(vmap).toJson(QJsonDocument::Indented));
-    QByteArray arr = QJsonDocument::fromVariant(vmap).toJson(QJsonDocument::Indented);
-    QFile file("D:\\log_hour.txt");
-    if ( file.open(QIODevice::WriteOnly) ){
-        file.write(arr);
-        file.close();
-    }
+//    log_1 << "all 2" << qPrintable(QJsonDocument::fromVariant(vmap).toJson(QJsonDocument::Indented));
+//    QByteArray arr = QJsonDocument::fromVariant(vmap).toJson(QJsonDocument::Indented);
+//    QFile file("log_hour.txt");
+//    if ( file.open(QIODevice::WriteOnly) ){
+//        file.write(arr);
+//        file.close();
+//    }
     return /*vmap;*/ path_report_history(vmap, 1);
 }
 
@@ -1643,6 +1624,7 @@ QVariantMap widget_log::path_report_history(QVariantMap req, bool fl_hour)
             vlist.swap(n, vlist.count()-n-1);
         }
     }
+    uint type_rec_;
     foreach (QVariant v, vlist) {
         QVariantMap vm = v.toMap();
 
@@ -1650,9 +1632,7 @@ QVariantMap widget_log::path_report_history(QVariantMap req, bool fl_hour)
     //    vm.insert("sts", date2.toString("dd.MM.yyyy hh:mm:ss"));
     //    log_1 << "start" << qPrintable(QJsonDocument::fromVariant(vm).toJson(QJsonDocument::Indented));
         uint type_rec = vm["type"].toUInt();
-     //   uint type_rec_temp = type_rec;
-     //   if (type_data == 3) type_rec = 15;
-   //     log_1 << "type_rec" << type_rec;
+        type_rec_ = type_rec;
         uint ts = vm.value("ts", 0).toUInt();
         if ( ts < 1533070800 ) continue;
    //     log_1 << "ts" << ts;
@@ -1694,10 +1674,10 @@ QVariantMap widget_log::path_report_history(QVariantMap req, bool fl_hour)
                         uint32_t vram = vals.value((C << 4) + E);
                         vram /= 256;
                   //      log_1 << "vals.value" << vals.value((C << 4) + E) << "vram" << vram;
-                        if (v256 <= vram && C >= 3) { // fix R in 0x43
-                   //         log_1 << "continue1";
-                            continue;
-                        }
+//                        if (v256 <= vram && C >= 3) { // fix R in 0x43
+//                   //         log_1 << "continue1";
+//                            continue;
+//                        }
                         if (value <= vals.value((C << 4) + E)) {
                    //         log_1 << "continue2";
                             continue;
@@ -1828,6 +1808,8 @@ QVariantMap widget_log::path_report_history(QVariantMap req, bool fl_hour)
     }
     QVariantMap vout_data;
     vout_data.insert("meterings", meterings);
+    if ( type_rec_ == DLMS_ARCH_profile_day ) vmap_day_mod = vout_data;
+    if ( type_rec_ == DLMS_ARCH_profile_hour ) vmap_hour_mod = vout_data;
 
  //   log_1 << "abc" << qPrintable(QJsonDocument::fromVariant(meterings).toJson(QJsonDocument::Indented));
     return vout_data;

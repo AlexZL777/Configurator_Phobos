@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>451</width>
     <height>267</height>
    </rect>
   </property>
@@ -217,7 +217,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Коэффициент мощности (cosF):</string>
+        <string>Коэффициент мощности (cos f):</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

@@ -63,7 +63,10 @@ SOURCES += \
     widget_log.cpp \
     widget_log_event.cpp \
     dialog_error_sn.cpp \
-    DLMS/DLMS_PDU_buf.c
+    DLMS/DLMS_PDU_buf.c \
+    dialog_change_low_pass.cpp \
+    dialog_change_high_pass.cpp \
+    form_log.cpp
 #    hdlc_dlms_exchange_.cpp \
 #    ../Phobos_STM/user/DLMS/DLMS_HDLC.c \
 #    ../Phobos_STM/user/DLMS/DLMS_obis_pack.c \
@@ -120,7 +123,10 @@ HEADERS += \
     NBFi_settings.h \
     DLMS/DLMS_enums.h \
     display_obis.h \
-    DLMS/DLMS_PDU_buf.h
+    DLMS/DLMS_PDU_buf.h \
+    dialog_change_low_pass.h \
+    dialog_change_high_pass.h \
+    form_log.h
 #    ../Phobos_STM/user/DLMS/DLMS_HDLC.h \
 #    ../Phobos_STM/user/DLMS/DLMS_obis_pack.h \
 #    ../Phobos_STM/user/DLMS/DLMS_PDU.h \
@@ -151,7 +157,10 @@ FORMS += \
     dialog_err_del_profil.ui \
     widget_log.ui \
     widget_log_event.ui \
-    dialog_error_sn.ui
+    dialog_error_sn.ui \
+    dialog_change_low_pass.ui \
+    dialog_change_high_pass.ui \
+    form_log.ui
 
 RESOURCES += \
     res.qrc

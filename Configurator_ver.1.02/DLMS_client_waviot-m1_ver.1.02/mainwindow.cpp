@@ -14,6 +14,7 @@
 #include <QStandardItemModel>
 #include <QDate>
 #include <QLabel>
+#include <qdesktopwidget.h>
 
 #ifndef TS_BUILD
 #define TS_BUILD (QLocale(QLocale::C).toDateTime(__TIMESTAMP__, "ddd MMM d hh:mm:ss yyyy").toTime_t())
@@ -45,15 +46,16 @@ MainWindow::MainWindow(QWidget *parent)
    // initializeLogger(qApp->applicationDirPath()+"/log", 6, true);
     setWindowTitle("Конфигуратор счетчиков Phobos");
 /*QDateTime::fromTime_t(TS_BUILD).toString("yyyy.MM.dd hh:mm:ss")+")*/
-    new HDLC_DLMS_exchange(this);
 
-//    QGridLayout* lay = new QGridLayout;
-//    QWidget* w1 = new QWidget;
+
+
+    new HDLC_DLMS_exchange(this);
 
     pdu_w = new pdu_worker(this);
 
     wconnect = new widget_connect(this);
-    ui->mainLayout->addWidget(wconnect);
+    ui->verticalLayout->addWidget(wconnect);
+  //  wconnect->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
 
     connect(pdu_w, &pdu_worker::signal_PDU_to_device, hdlc_exch, &HDLC_DLMS_exchange::slot_vPDU_to_device, Qt::QueuedConnection);
     connect(hdlc_exch, &HDLC_DLMS_exchange::signal_PDU_from_device, pdu_w, &pdu_worker::slot_PDU_from_device, Qt::QueuedConnection);
@@ -64,52 +66,32 @@ MainWindow::MainWindow(QWidget *parent)
     connect(wconnect, &widget_connect::signal_HDLC_from_device, hdlc_exch, &HDLC_DLMS_exchange::slot_HDLC_from_device, Qt::QueuedConnection);
 
     w_tarifs = new widget_tarifs(this);
-//    ui->mainLayout->addWidget(w_tarifs);
-
     w_current = new widget_current(true, this);
-    ui->mainLayout->addWidget(w_current);
-
     winfo = new widget_info(this);
- //   ui->mainLayout->addWidget(winfo);
-
     w_pulse = new widget_pulse_outputs(this);
- //   ui->mainLayout->addWidget(w_pulse);
-
-  //  point_p = new point_power();
-//    ui->mainLayout->addWidget(point_p);
-
     w_pdata = new widget_power_data();
- //   ui->mainLayout->addWidget(w_pdata);
-
     w_pdata_1f = new widget_power_data_1f(this);
-//    ui->mainLayout->addWidget(w_pdata_1f);
-
     w_log = new widget_log(this);
     w_log_event = new widget_log_event(this);
 
-
     tab.addTab( winfo, "Информация" );
-    ui->mainLayout->addWidget( &tab );
     tab.addTab( w_pulse, "Настройки" );
-    ui->mainLayout->addWidget( &tab );
     tab.addTab( w_pdata, "Мгновенные показания 3ф" );
-    ui->mainLayout->addWidget( &tab );
     tab.addTab( w_pdata_1f, "Мгновенные показания 1ф" );
-    ui->mainLayout->addWidget( &tab );
     tab.addTab( w_tarifs, "Тарифное расписание" );
-    ui->mainLayout->addWidget( &tab );
     tab.addTab( w_log, "Данные" );
-    ui->mainLayout->addWidget( &tab );
     tab.addTab( w_log_event, "Журналы событий" );
-    ui->mainLayout->addWidget( &tab );
-
+    ui->verticalLayout->addWidget( &tab );
+//    tab.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     tab.hide();
-
-  //  ui->mainLayout->addStretch(0);
-    ui->mainLayout->minimumHeightForWidth(true);
+ //   ui->verticalLayout->addStretch(50);
+ //   ui->verticalLayout->setSpacing(0);
+ //   ui->verticalLayout->setContentsMargins(0, 0, 0, 0);
+ //   tab.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
 //    w_update_fw = new widget_update_fw(this);
 //    ui->mainLayout->addWidget(w_update_fw);
+    f_log = new Form_log();
 
     tmr = new QTimer();
     connect(tmr, SIGNAL(timeout()), this, SLOT(timeout_disconnect()));
@@ -168,43 +150,46 @@ MainWindow::MainWindow(QWidget *parent)
     connect(pdu_w, &pdu_worker::signal_electro5_from_device, w_log_event, &widget_log_event::slot_log_event_read, Qt::QueuedConnection);
     connect(pdu_w, &pdu_worker::signal_electro5_from_device_empty_arr, w_log_event, &widget_log_event::slot_log_event_empty_arr, Qt::QueuedConnection);
     connect(pdu_w, &pdu_worker::signal_electro5_from_device_empty_arr, w_log, &widget_log::slot_log_event_empty_arr, Qt::QueuedConnection);
-  //  connect(pdu_w, &pdu_worker::signal_electro5_from_device, w_pulse, &widget_pulse_outputs::slot_data_from_electro5, Qt::QueuedConnection);
 
     connect(winfo, &widget_info::signal_write_data_PDU, hdlc_exch, &HDLC_DLMS_exchange::slot_PDU_to_device, Qt::QueuedConnection);
     connect(w_pdata, &widget_power_data::signal_write_data_PDU, hdlc_exch, &HDLC_DLMS_exchange::slot_PDU_to_device, Qt::QueuedConnection);
     connect(w_pdata_1f, &widget_power_data_1f::signal_write_data_PDU_1f, hdlc_exch, &HDLC_DLMS_exchange::slot_PDU_to_device, Qt::QueuedConnection);
     connect(w_tarifs, &widget_tarifs::signal_write_data_PDU, hdlc_exch, &HDLC_DLMS_exchange::slot_PDU_to_device, Qt::QueuedConnection);
     connect(this, &MainWindow::signal_write_data_PDU, hdlc_exch, &HDLC_DLMS_exchange::slot_PDU_to_device, Qt::QueuedConnection);
+    connect(w_pulse, &widget_pulse_outputs::signal_write_data_PDU, hdlc_exch, &HDLC_DLMS_exchange::slot_PDU_to_device, Qt::QueuedConnection);
 
- //   connect(wconnect, &widget_connect::signal_view_data_first, winfo, &widget_info::slot_view_data_first, Qt::QueuedConnection);
     connect(w_current, &widget_current::signal_write_data, pdu_w, &pdu_worker::slot_electro5_to_device, Qt::QueuedConnection);
     connect(w_tarifs, &widget_tarifs::signal_write_data, pdu_w, &pdu_worker::slot_electro5_to_device, Qt::QueuedConnection);
     connect(w_pulse, &widget_pulse_outputs::signal_write_data_, pdu_w, &pdu_worker::slot_electro5_to_device, Qt::QueuedConnection);
     connect(w_log, &widget_log::signal_write_data, pdu_w, &pdu_worker::slot_electro5_to_device, Qt::QueuedConnection);
     connect(w_log_event, &widget_log_event::signal_write_data, pdu_w, &pdu_worker::slot_electro5_to_device, Qt::QueuedConnection);
     connect(w_pulse, &widget_pulse_outputs::signal_write_data, pdu_w, &pdu_worker::slot_electro5_to_device, Qt::QueuedConnection);
+    connect(this, &MainWindow::signal_write_data, pdu_w, &pdu_worker::slot_electro5_to_device, Qt::QueuedConnection);
 
+    connect(w_pulse, &widget_pulse_outputs::signal_dialog_low_pass, this, &MainWindow::slot_dialog_low_pass, Qt::QueuedConnection);
+    connect(w_pulse, &widget_pulse_outputs::signal_dialog_high_pass, this, &MainWindow::slot_dialog_high_pass, Qt::QueuedConnection);
 
     connect(pdu_w, &pdu_worker::signal_data, winfo, &widget_info::slot_view_data, Qt::QueuedConnection);
+    connect(pdu_w, &pdu_worker::signal_data, w_pulse, &widget_pulse_outputs::slot_data_PDU, Qt::QueuedConnection);
     connect(pdu_w, &pdu_worker::signal_data, w_pdata, &widget_power_data::slot_read_data, Qt::QueuedConnection);
     connect(pdu_w, &pdu_worker::signal_data, w_pdata_1f, &widget_power_data_1f::slot_read_data, Qt::QueuedConnection);
     connect(pdu_w, &pdu_worker::signal_data, this, &MainWindow::slot_control_sn, Qt::QueuedConnection);
 
     connect(this, &MainWindow::signal_show_widget_info, winfo, &widget_info::slot_show_widget_info, Qt::QueuedConnection);
-  //  connect(wconnect, &widget_connect::signal_show_widget_info, winfo, &widget_info::slot_show_widget_info, Qt::QueuedConnection);
     connect(wconnect, &widget_connect::signal_hide_widget_info, winfo, &widget_info::slot_hide_widget_info, Qt::QueuedConnection);
 
     connect(this, &MainWindow::signal_show_widget_pulse, w_pulse, &widget_pulse_outputs::slot_show_widget_pulse, Qt::QueuedConnection);
-//    connect(wconnect, &widget_connect::signal_show_widget_pulse, w_pulse, &widget_pulse_outputs::slot_show_widget_pulse, Qt::QueuedConnection);
     connect(wconnect, &widget_connect::signal_hide_widget_pulse, w_pulse, &widget_pulse_outputs::slot_hide_widget_pulse, Qt::QueuedConnection);
+
+    connect(wconnect, &widget_connect::signal_log, f_log, &Form_log::slot_log, Qt::QueuedConnection);
+    connect(wconnect, &widget_connect::signal_form_log_close, this, &MainWindow::slot_form_log_close, Qt::QueuedConnection);
+    connect(w_pulse, &widget_pulse_outputs::signal_show_form_log, this, &MainWindow::slot_show_form_log, Qt::QueuedConnection);
 
     connect(this, &MainWindow::signal_show_widget_power_data, w_pdata, &widget_power_data::slot_show_widget_power_data, Qt::QueuedConnection);
     connect(this, &MainWindow::signal_show_widget_power_data_1f, w_pdata_1f, &widget_power_data_1f::slot_show_widget_power_data_1f, Qt::QueuedConnection);
     connect(wconnect, &widget_connect::signal_hide_power_data, w_pdata, &widget_power_data::slot_hide_power_data, Qt::QueuedConnection);
     connect(wconnect, &widget_connect::signal_hide_power_data_1f, w_pdata_1f, &widget_power_data_1f::slot_hide_power_data_1f, Qt::QueuedConnection);
 
-//    connect(wconnect, &widget_connect::signal_hide_point_power, point_p, &point_power::slot_hide_point_power, Qt::QueuedConnection);
-//    connect(winfo, &widget_info::signal_show_point_power, point_p, &point_power::slot_show_point_power, Qt::QueuedConnection);
     connect(this, &MainWindow::signal_pushButton_ReadData_show, wconnect, &widget_connect::slot_pushButton_ReadData_show, Qt::QueuedConnection);
     connect(this, &MainWindow::signal_pushButton_connect, wconnect, &widget_connect::on_pushButton_connect_clicked, Qt::QueuedConnection);
     connect(winfo, &widget_info::signal_on_pushButton_connect_clicked, wconnect, &widget_connect::on_pushButton_connect_clicked, Qt::QueuedConnection);
@@ -215,12 +200,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(w_log, &widget_log::signal_on_pushButton_connect_clicked, wconnect, &widget_connect::on_pushButton_connect_clicked, Qt::QueuedConnection);
     connect(w_log_event, &widget_log_event::signal_on_pushButton_connect_clicked, wconnect, &widget_connect::on_pushButton_connect_clicked, Qt::QueuedConnection);
 
-
-
     connect(this, &MainWindow::signal_start_pulse, w_pulse, &widget_pulse_outputs::slot_start_pulse, Qt::QueuedConnection);
     connect(this, &MainWindow::signal_start_pdata, w_pdata, &widget_power_data::slot_start_pdata, Qt::QueuedConnection);
     connect(this, &MainWindow::signal_start_pdata_1f, w_pdata_1f, &widget_power_data_1f::slot_start_pdata_1f, Qt::QueuedConnection);
-
 
     connect(winfo, &widget_info::signal_bar, this, &MainWindow::slot_bar, Qt::QueuedConnection);
     connect(pdu_w, &pdu_worker::signal_bar, this, &MainWindow::slot_bar, Qt::QueuedConnection);
@@ -231,8 +213,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(w_log, &widget_log::signal_bar, this, &MainWindow::slot_bar, Qt::QueuedConnection);
     connect(w_log_event, &widget_log_event::signal_bar, this, &MainWindow::slot_bar, Qt::QueuedConnection);
 
-    connect(winfo, &widget_info::signal_min_window, this, &MainWindow::slot_min_window, Qt::QueuedConnection);
-    connect(w_pulse, &widget_pulse_outputs::signal_min_window, this, &MainWindow::slot_min_window, Qt::QueuedConnection);
     connect(pdu_w, &pdu_worker::signal_write_pass, wconnect, &widget_connect::slot_write_pass, Qt::QueuedConnection);
     connect(pdu_w, &pdu_worker::signal_error_pass, this, &MainWindow::slot_error_pass, Qt::QueuedConnection);
 
@@ -241,7 +221,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(w_tarifs, &widget_tarifs::signal_date_spec, this, &MainWindow::date_spec, Qt::QueuedConnection);
     connect(this, &MainWindow::signal_date_spec, w_tarifs, &widget_tarifs::slot_date_spec, Qt::QueuedConnection);
-
 
     connect(pdu_w, &pdu_worker::tabb_Connect, this, &MainWindow::slot_tabb, Qt::QueuedConnection);
 
@@ -285,6 +264,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(w_log_event, &widget_log_event::signal_disable_tab_kn, wconnect, &widget_connect::slot_disable_tab_kn, Qt::QueuedConnection);
     connect(this, &MainWindow::signal_disable_tab_kn, wconnect, &widget_connect::slot_disable_tab_kn, Qt::QueuedConnection);
     connect(wconnect, &widget_connect::signal_disable_tab_kn, this, &MainWindow::slot_disable_tab_kn, Qt::QueuedConnection);
+    connect(wconnect, &widget_connect::signal_disable_tab_kn, this, &MainWindow::slot_enable_tab_kn, Qt::QueuedConnection);
+
+    connect(wconnect, &widget_connect::signal_min_max_window, this, &MainWindow::slot_min_max_window, Qt::QueuedConnection);
 
   //  connect(wconnect, &widget_connect::signal_save_xls, w_log, &widget_log::slot_save_xls, Qt::QueuedConnection);
 
@@ -303,6 +285,7 @@ MainWindow::MainWindow(QWidget *parent)
     //    connect(w_config_obj, widget_config_obj::signal_write_data, wconnect, widget_connect::slot_HDLC_to_device, Qt::QueuedConnection);
 
 //    display_obis();
+    slot_min_max_window(0);
 }
 
 MainWindow::~MainWindow()
@@ -310,23 +293,53 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::slot_show_form_log(){
+    f_log->show();
+}
+
+void MainWindow::slot_form_log_close(){
+  //  f_log->close();
+}
+
+void MainWindow::slot_enable_tab_kn() {
+    log_1 << "slot_enable_tab_kn";
+    disable_tab = false;
+    tab.setTabEnabled(0, true);
+    tab.setTabEnabled(1, true);
+    tab.setTabEnabled(2, true);
+    tab.setTabEnabled(3, true);
+    tab.setTabEnabled(4, true);
+    tab.setTabEnabled(5, true);
+    tab.setTabEnabled(6, true);
+    tab0 = true;
+    tab1 = true;
+    tab2 = true;
+    tab3 = true;
+    tab4 = true;
+    tab5 = true;
+    tab6 = true;
+}
+
 void MainWindow::slot_disable_tab_kn(bool fl, int act_tab) {
+    log_1 << "tab" << tab0 << tab1 << tab2 << tab3 << tab4 << tab5 << tab6 << "|fl-" << fl << "| disable_tab-" << disable_tab << "|";
     if (fl) {
-        disable_tab = true;
-        tab0 = tab.isTabEnabled(0);
-        tab1 = tab.isTabEnabled(1);
-        tab2 = tab.isTabEnabled(2);
-        tab3 = tab.isTabEnabled(3);
-        tab4 = tab.isTabEnabled(4);
-        tab5 = tab.isTabEnabled(5);
-        tab6 = tab.isTabEnabled(6);
-        if (act_tab != 0) tab.setTabEnabled(0, false);
-        if (act_tab != 1) tab.setTabEnabled(1, false);
-        if (act_tab != 2) tab.setTabEnabled(2, false);
-        if (act_tab != 3) tab.setTabEnabled(3, false);
-        if (act_tab != 4) tab.setTabEnabled(4, false);
-        if (act_tab != 5) tab.setTabEnabled(5, false);
-        if (act_tab != 6) tab.setTabEnabled(6, false);
+        if (!disable_tab){
+            disable_tab = true;
+            tab0 = tab.isTabEnabled(0);
+            tab1 = tab.isTabEnabled(1);
+            tab2 = tab.isTabEnabled(2);
+            tab3 = tab.isTabEnabled(3);
+            tab4 = tab.isTabEnabled(4);
+            tab5 = tab.isTabEnabled(5);
+            tab6 = tab.isTabEnabled(6);
+            if (act_tab != 0) tab.setTabEnabled(0, false);
+            if (act_tab != 1) tab.setTabEnabled(1, false);
+            if (act_tab != 2) tab.setTabEnabled(2, false);
+            if (act_tab != 3) tab.setTabEnabled(3, false);
+            if (act_tab != 4) tab.setTabEnabled(4, false);
+            if (act_tab != 5) tab.setTabEnabled(5, false);
+            if (act_tab != 6) tab.setTabEnabled(6, false);
+        }
     }
     else {
         disable_tab = false;
@@ -376,10 +389,14 @@ void MainWindow::slot_profile_break(){
 }
 
 void MainWindow::tab_show(){
+    log_1 << "tab_show" << "!tab.isVisible()-" << !tab.isVisible();
     if ( !tab.isVisible() ) {
         tab.setCurrentIndex(0);
         tab.show();
+     //   wconnect->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
+    //    tab.setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         emit signal_show_widget_info();
+        not_tab_select = false;
     }
     else {
         transmit = true;
@@ -388,16 +405,18 @@ void MainWindow::tab_show(){
 }
 
 void MainWindow::slot_control_sn(QVariant data){
+    log_1 << "slot_control_sn" << "transmit-" << transmit;
     if (transmit){
         transmit = false;
         QByteArray arr;
         int a;
         QVariantMap vm = data.toMap();
-      //  log_1 << "222" << qPrintable(QJsonDocument::fromVariant(vm).toJson(QJsonDocument::Indented));
+        log_1 << "sn" << qPrintable(QJsonDocument::fromVariant(vm).toJson(QJsonDocument::Indented));
         if (vm.contains("long-unsigned")) a = vm["long-unsigned"].toInt();
         if (vm.contains("octet-string")) arr = QByteArray::fromHex(vm.value("octet-string", "").toString().toLocal8Bit());
         if (vm.contains("date-time")) arr = QByteArray::fromHex(vm.value("date-time", "").toString().toLocal8Bit());
         tmr->stop();
+        log_1 << "arr_sn-" << arr.toHex().toUpper() << "|  sn-" << sn.toHex().toUpper();
         if ( arr == sn){
             if ( change_tab ) {
                 change_tab = false;
@@ -421,6 +440,7 @@ void MainWindow::slot_control_sn(QVariant data){
 }
 
 void MainWindow::slot_tab_hide(){
+    log_1 << "slot_tab_hide";
     emit signal_view_log_hide_show(0);
     emit signal_disconnect();
     if (disable_tab) slot_disable_tab_kn(0, 0);
@@ -450,6 +470,7 @@ void MainWindow::slot_log_read(QByteArray data){
 }
 
 void MainWindow::slot_bn_view_log(){
+    log_1 << "slot_bn_view_log";
     if( tab.currentIndex() == 5 ){
         emit signal_view_log();
     }
@@ -459,19 +480,20 @@ void MainWindow::slot_bn_view_log(){
 }
 
 void MainWindow::slot_tabSelected_button(){
- //   log_1 << "reboot";
+    log_1 << "slot_tabSelected_button" << "change_tab-" << change_tab << "bn_fl-" << bn_fl << "tab.currentIndex()-" << tab.currentIndex();
     if ( change_tab || bn_fl == 2 ){
- //       log_1 << "reboottttttttttt";
         progressBar->setValue(0);
         count_bar = 0;
     }
     bn_fl = 0;
     if( tab.currentIndex() == 5 ){
+        log_1 << "test_2";
         emit signal_disable_tab_kn(1, 5);
         if (!disable_tab) slot_disable_tab_kn(1, 5);
         emit signal_read_log();
     }
     else if( tab.currentIndex() == 6 ){
+        log_1 << "test_3";
         emit signal_disable_tab_kn(1, 6);
         if (!disable_tab) slot_disable_tab_kn(1, 6);
         emit signal_read_log_event();
@@ -480,7 +502,7 @@ void MainWindow::slot_tabSelected_button(){
 }
 
 void MainWindow::slot_tabSelected(){
-    log_1 << "not_tab_select" << not_tab_select;
+    log_1 << "slot_tabSelected" << "not_tab_select-" << not_tab_select;;
     if (!not_tab_select) {
         transmit = true;
         change_tab = true;
@@ -491,14 +513,15 @@ void MainWindow::slot_tabSelected(){
 }
 
 void MainWindow::tabSelected_sn_ok(){
+    log_1 << "tabSelected_sn_ok";
     if ( ( w_log->transmitt() ||
            winfo->transmitt() ||
            w_pdata->transmitt() ||
            w_pdata_1f->transmitt() ||
            w_pulse->transmitt() ||
            w_tarifs->transmitt() ||
-           w_log_event->transmitt() ) && !tmr2_fl ){
-   //     log_1 << "xxxxxxxxx";
+           w_log_event->transmitt() )/* && !tmr2_fl*/ ){
+        log_1 << "tabSelected_sn_ok 1";
         count_bar = 0;
         progressBar->setValue(0);
         tmr2->start(500);
@@ -506,6 +529,7 @@ void MainWindow::tabSelected_sn_ok(){
         emit signal_stop_read_log();
     }
     else {
+        log_1 << "tabSelected_sn_ok 2";
         tmr2_fl = false;
         tmr2->stop();
         tmr->stop();
@@ -556,36 +580,55 @@ void MainWindow::tabSelected_sn_ok(){
 }
 
 void MainWindow::slot_tabb(){
+    log_1 << "slot_tabb";
+    tmr->stop();
     emit signal_pushButton_ReadData_show();
+    slot_min_max_window(1);
     tab_show();
 }
 
 void MainWindow::slot_error_pass(){
+    log_1 << "slot_error_pass";
     emit signal_disconnect();
- //   log_1 << "stop_timer";
     tmr->stop();
     Dialog_error_pass er_pass;
-    er_pass.exec ();
+    er_pass.exec();
+}
+
+void MainWindow::slot_dialog_low_pass(){
+    Dialog_change_low_pass change_low_pass;
+    connect(&change_low_pass, SIGNAL(signal_write_data(QByteArray)), this, SLOT(slot_write_data(QByteArray)));
+    change_low_pass.exec();
+}
+
+void MainWindow::slot_write_data(QByteArray data){
+    log_1 << "slot_write_data";
+    emit signal_write_data(data);
+}
+
+void MainWindow::slot_dialog_high_pass(){
+    Dialog_change_high_pass change_high_pass;
+    connect(&change_high_pass, SIGNAL(signal_write_data(QByteArray)), this, SLOT(slot_write_data(QByteArray)));
+    change_high_pass.exec();
 }
 
 void MainWindow::slot_timeout_start(int interval){
-    log_1 << "start_timer" << interval;
+    log_1 << "slot_timeout_start interval-" << interval;
     tmr->start(interval);
 }
 
 void MainWindow::slot_timeout_stop(){
-    log_1 << "stop_timer";
-   // emit signal_view_log_hide_show(0);
-    if (disable_tab) slot_disable_tab_kn(0, 0);
+    log_1 << "slot_timeout_stop";
+    if (disable_tab) slot_disable_tab_kn(0, -1);
     tmr->stop();
 }
 
 void MainWindow::timeout_disconnect(){
+    log_1 << "timeout_disconnect";
     progressBar->setValue(0);
     emit signal_disconnect();
     emit signal_view_log_hide_show(0);
-    if (disable_tab) slot_disable_tab_kn(0, 0);
-    log_1 << "stop_timer disconnect";
+    if (disable_tab) slot_disable_tab_kn(0, -1);
     tmr->stop();
     Dialog_disconnect dial;
     dial.exec();
@@ -618,6 +661,34 @@ void MainWindow::slot_bar (int data){
     }
 }
 
-void MainWindow::slot_min_window(){
-    ui->mainLayout->minimumHeightForWidth(true);
+void MainWindow::slot_min_max_window(bool fl){
+    if (fl && !maximized_window){
+        log_1 << "slot_min_max_window" << fl;
+        maximized_window = true;
+        QDesktopWidget desktop;
+        QRect rect = desktop.availableGeometry(desktop.primaryScreen()); // прямоугольник с размерами экрана
+        QPoint topleft = rect.topLeft(); //координаты центра экрана
+        int x = topleft.x() /*- (this->width()/2)*/;  // учитываем половину ширины окна
+        int y = topleft.y() /*- (this->height()/2)*/; // .. половину высоты
+        topleft.setX(x);
+        topleft.setY(y);
+        this->move(topleft);
+        QRect screenGeometry = QApplication::desktop()->availableGeometry();
+        resize(screenGeometry.width(), screenGeometry.height());
+        showMaximized ();
+    }
+    else if (!fl){
+        log_1 << "slot_min_max_window" << fl;
+        maximized_window = false;
+        this->resize(400, 500);
+        showNormal();
+        QDesktopWidget desktop;
+        QRect rect = desktop.availableGeometry(desktop.primaryScreen()); // прямоугольник с размерами экрана
+        QPoint center = rect.center(); //координаты центра экрана
+        int x = center.x() - (this->width()/2);  // учитываем половину ширины окна
+        int y = center.y() - (this->height()/2); // .. половину высоты
+        center.setX(x);
+        center.setY(y);
+        this->move(center);
+    }
 }

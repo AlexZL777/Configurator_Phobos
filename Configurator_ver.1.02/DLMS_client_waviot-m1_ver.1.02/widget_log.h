@@ -46,7 +46,7 @@ public:
     int n_set_data;
     uint32_t n_set_data_max;
     int n_set_buf[10000];
-    uint32_t type;
+    uint32_t type_;
     int progresbar;
     int intermediate;
     int dec_intermediate;
@@ -55,6 +55,8 @@ public:
     QVariantMap vmap_month;
     QVariantMap vmap_day;
     QVariantMap vmap_hour;
+    QVariantMap vmap_day_mod;
+    QVariantMap vmap_hour_mod;
     int time_from_form_min();
     int time_from_form_max();
     int count_tout;
@@ -89,6 +91,7 @@ private slots:
     void timeout();
     void slotRadioToggled(bool);
     void slot_click_bn();
+    void slot_click_bn_xls_mod();
     void slot_click_bn_file();
 };
 

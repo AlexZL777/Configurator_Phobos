@@ -4,7 +4,6 @@
 #include <QVariantMap>
 
 #include "Logger/Logger.h"
-
 #include "widget_connect.h"
 
 extern bool pulse_write_bar;
@@ -24,7 +23,7 @@ void pdu_worker::slot_test_pass(uint32_t server, uint32_t client, QByteArray pas
 void pdu_worker::slot_PDU_from_device(QVariant vpdu)
 {
     QVariantMap pdu = vpdu.toMap();
-  //  log_1 << qPrintable(QJsonDocument::fromVariant(vpdu).toJson(QJsonDocument::Indented));
+    log_1 << "pdu_worker" << qPrintable(QJsonDocument::fromVariant(vpdu).toJson(QJsonDocument::Indented));
     if (pdu.contains("UA")) {
         QVariantMap vmp = QJsonDocument::fromJson(R"!!!({"aarq":{"application-context-name": 1,"user-information":"01000000065F1F0400001E1DFFFF"}})!!!").toVariant().toMap();
         emit signal_PDU_to_device(vmp);
@@ -35,6 +34,7 @@ void pdu_worker::slot_PDU_from_device(QVariant vpdu)
        // log_1 << QString::number(vm["result"].toInt());
 //        if (passw.toHex().toUpper() == "") {log_1 << "0000000000000000000";}
 //        else {log_1 << "11111111111111111";}
+
         if (vm["result"].toInt() == 0 && passw.toHex().toUpper() != ""){
             emit tabb_Connect();
             emit signal_write_pass(passw, true);
@@ -81,6 +81,45 @@ void pdu_worker::slot_PDU_from_device(QVariant vpdu)
 //        //    vm = vm.value("data", QVariantMap()).toMap();
 //            emit signal_get_respons_with_data_block(vm, block_number, last_block);
 //        }
+        return;
+    }
+    if (pdu.contains("Action-responce-normal")) {
+        QVariantMap vm = pdu.value("Action-responce-normal", QVariantMap()).toMap();
+       // log_1 << QString::number(vm["result"].toInt());
+//        if (passw.toHex().toUpper() == "") {log_1 << "0000000000000000000";}
+//        else {log_1 << "11111111111111111";}
+        if (vm.contains("error-pass")){
+            emit signal_error_pass();
+            emit signal_write_pass(passw, false);
+        }
+        else {
+            QVariantMap vm1;
+            QByteArray key_chellendge;
+            QByteArray encrypt_value;
+            if (vm.contains("authentication-value")) {
+                vm1 = vm.value("authentication-value", QVariantMap()).toMap();
+                if (vm1.contains("charstring")) {
+                    encrypt_value = vm1["charstring"].toByteArray();
+                }
+            }
+            if (vm.contains("authentication-value")) {
+                vm1 = vm.value("authentication-key-chellendge", QVariantMap()).toMap();
+                if (vm1.contains("charstring")) {
+                    key_chellendge = vm1["charstring"].toByteArray();
+                }
+            }
+            if ( key_chellendge == encrypt_value ){
+                log_1 << "Ураааааааааааааааа, пароль прошел!!!";
+                emit tabb_Connect();
+                emit signal_write_pass(passw, true);
+            }
+            else {
+                emit signal_error_pass();
+                emit signal_write_pass(passw, false);
+            }
+        }
+
+        //slot_electro5_to_device(QByteArray::fromHex("EF06"));
         return;
     }
 }

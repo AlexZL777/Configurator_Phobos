@@ -14,6 +14,7 @@ int type_counter;
 QDateTime qdt;
 QByteArray sn;
 int ver_po[2];
+int type[2];
 
 typedef struct {
     uint8_t year_highbyte;
@@ -60,25 +61,33 @@ void widget_info::timeout() {
     count_bar = 0;
     emit signal_bar(count_bar);
     log_1 << "count_tout" << count_tout;
-    if ( count_tout < 3 ){
+    if ( count_tout < 2 ){
         count_tout++;
 
         if (count > 0) {
             transmit = true;
-         //   count_bar = 0;
-         //   emit signal_bar(count_bar);
-         //   emit signal_write_data_PDU (QByteArray::fromHex("C001C100010000600101FF0200")); //Запрос типа счетчика
-            if (count_tout == 1) count--;
+            count--;
+          //  log_1 << "count" << count;
             widget_info::turn ();
         }
+        tmr_tout->start(3000);
+    }
+    else if ( count_tout == 2 ) {
+        count_tout++;
+        emit signal_on_pushButton_connect_clicked(true);
         tmr_tout->start(3000);
     }
     else if ( count_tout == 3 ) {
         count_tout++;
         emit signal_on_pushButton_connect_clicked(true);
-        tmr_tout->start(3000);
+        tmr_tout->start(6000);
     }
-    else {
+    else if ( count_tout == 4 ) {
+        count_tout++;
+        emit signal_on_pushButton_connect_clicked(true);
+        tmr_tout->start(12000);
+    }
+    else if ( count_tout > 4 ) {
         transmit = false;
         tmr_tout->stop();
         count = 0;
@@ -88,8 +97,6 @@ void widget_info::timeout() {
 }
 
 void widget_info::slot_show_widget_info(){
-  //  show();
-   // emit signal_min_window();
     count = 0;
     count_bar = 0;
     emit signal_bar(count_bar);
@@ -104,7 +111,6 @@ void widget_info::slot_disconnect(){
 }
 
 void widget_info::slot_hide_widget_info(){
-  //  ui->
     tmr_tout->stop();
     ui->lineEdit->setText("");
     ui->lineEdit_2->setText("");
@@ -141,14 +147,11 @@ void widget_info::slot_view_data(QVariant(data))
         if (count == 0){
             type_counter = arr.at(0);
             emit signal_fase(type_counter);
-//            if (type_counter == 51){        //Трёхфазный счётчик
-//                emit signal_fase(type_counter);
-//            }
-//            else if (type_counter == 49){   //Однофазный счётчик
-//                emit signal_fase(type_counter);
-//            }
             emit signal_disable_tab_kn(1, 0);
             ui->lineEdit_2->setText(arr.toUpper());     //Вывод типа счетчика
+            type[0] = arr.at(0) - 48;
+            type[1] = arr.at(2) - 48;
+            log_1 << "type" << type[0] << type[1];
             count = 1;
             widget_info::turn ();
             return;
@@ -170,7 +173,6 @@ void widget_info::slot_view_data(QVariant(data))
         if (count == 6){
             char temp = arr[4];
             ver_po[0] = temp - '0';
-
             temp = arr[6];
             ver_po[1] = temp - '0';
             ui->lineEdit_4->setText(arr.toUpper());     //Вывод версии коммуникационного ПО

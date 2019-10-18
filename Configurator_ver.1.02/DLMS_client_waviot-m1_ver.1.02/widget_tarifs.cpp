@@ -16,6 +16,7 @@
 #include <QAbstractItemView>
 #include <QDate>
 #include <QTime>
+#include <QScrollArea>
 
 extern uint32_t client_addr;
 extern int count_bar;
@@ -186,10 +187,8 @@ widget_tarifs::widget_tarifs(QWidget *parent) :
     ui(new Ui::widget_tarifs)
 {
     ui->setupUi(this);
-  //  hide();
     setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
-  //  QVBoxLayout* mainLayout = new QVBoxLayout;
     setLayout( &mainLayout );
 
     QLabel* label1 = new QLabel( trUtf8( "Управление тарифным расписанием" ) );
@@ -227,9 +226,7 @@ widget_tarifs::widget_tarifs(QWidget *parent) :
 
     QPushButton* bn_Remove_syt = new QPushButton( trUtf8( "Удалить выделенный суточный профиль" ) );
     connect( bn_Remove_syt, SIGNAL( clicked() ), this, SLOT( slot_click_Remove_syt() ) );
-    //lbRemove->setAlignment( Qt::AlignRight );
     panelLayout->addWidget( bn_Remove_syt, 0, 1 );
-  //  bn_Remove_syt->setEnabled(false);
 
     QPushButton* bn_add_week = new QPushButton( trUtf8( "Добавить новый сезонный недельный профиль" ) );
     connect( bn_add_week, SIGNAL( clicked() ), SLOT( onAppend_week() ) );
@@ -237,9 +234,7 @@ widget_tarifs::widget_tarifs(QWidget *parent) :
 
     QPushButton* bn_Remove_week = new QPushButton( trUtf8( "Удалить недельный профиль на активной вкладке" ) );
     connect( bn_Remove_week, SIGNAL( clicked() ), this, SLOT( slot_click_Remove_season() ) );
-    //bn_Remove_week->setAlignment( Qt::AlignRight );
     panelLayout->addWidget( bn_Remove_week, 1, 1 );
-  //  bn_Remove_week->setEnabled(false);
 
     QPushButton* bn_add_sp_day = new QPushButton( trUtf8( "Добавить новую дату особого суточного профиля" ) );
     connect( bn_add_sp_day, SIGNAL( clicked() ), SLOT( onAppend_spec() ) );
@@ -247,9 +242,7 @@ widget_tarifs::widget_tarifs(QWidget *parent) :
 
     QPushButton* bn_Remove_sp_day = new QPushButton( trUtf8( "Удалить выделенную дату особого суточного профиля" ) );
     connect( bn_Remove_sp_day, SIGNAL( clicked() ), this, SLOT( slot_click_Remove_spec() ) );
-    //bn_Remove_sp_day->setAlignment( Qt::AlignRight );
     panelLayout->addWidget( bn_Remove_sp_day, 2, 1 );
- //   bn_Remove_sp_day->setEnabled(false);
 
     connect( bn_write_counter, SIGNAL( clicked() ), SLOT( write_to_counter() ) );
     panelLayout->addWidget( bn_write_counter, 3, 0, 3, 2 );
@@ -294,20 +287,30 @@ widget_tarifs::widget_tarifs(QWidget *parent) :
   //  label3->setStyleSheet("color: red");
     panelLayout->addWidget( label11, 2, 5 );
 
+    QPushButton* bn_safe = new QPushButton( trUtf8( "Сохранить" ) );
+    connect( bn_safe, SIGNAL( clicked() ), SLOT( slot_save() ) );
+    panelLayout->addWidget( bn_safe, 0, 6 );
+
+    QPushButton* bn_open = new QPushButton( trUtf8( "Открыть" ) );
+    connect( bn_open, SIGNAL( clicked() ), SLOT( slot_open() ) );
+    panelLayout->addWidget( bn_open, 1, 6 );
+
+    QVBoxLayout *sLayout = new QVBoxLayout();
+
     QLabel* label12 = new QLabel( trUtf8( "Суточные профили тарифного расписания" ) );
-    label12->setAlignment( Qt::AlignCenter );
-    mainLayout.addWidget( label12 );
+    label12->setAlignment( Qt::AlignLeft );
+    sLayout->addWidget( label12 );
 
     m_view = new QTableView;
     m_view->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents );
- //   m_view->verticalHeader()->hide();
+    m_view->setSelectionBehavior(QAbstractItemView::SelectRows);
 
     m_view->setModel( m_model = new TModel );
-    mainLayout.addWidget( m_view );
+    sLayout->addWidget( m_view );
 
     QLabel* label13 = new QLabel( trUtf8( "Сезонный недельный профиль тарифного расписания" ) );
-    label13->setAlignment( Qt::AlignCenter );
-    mainLayout.addWidget( label13 );
+    label13->setAlignment( Qt::AlignLeft );
+    sLayout->addWidget( label13 );
 
     for (int n = 0; n < 64; ++n) {
         m_view_seasons[n] = new QTableView;
@@ -318,30 +321,37 @@ widget_tarifs::widget_tarifs(QWidget *parent) :
 
     w[0].setLayout( &seasonLayouts[0] );
     tab_w.addTab( &w[0], " " );
-    mainLayout.addWidget( &tab_w );
+    sLayout->addWidget( &tab_w );
 
     QLabel* label14 = new QLabel( trUtf8( "Тарифное расписание особых дат" ) );
-    label14->setAlignment( Qt::AlignCenter );
-    mainLayout.addWidget( label14 );
+    label14->setAlignment( Qt::AlignLeft );
+    sLayout->addWidget( label14 );
 
     m_view_special = new QTableView;
     m_view_special->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents );
- //   m_view->verticalHeader()->hide();
+    m_view_special->setSelectionBehavior(QAbstractItemView::SelectRows);
 
     m_view_special->setModel( m_model_special = new TModel_special );
-    mainLayout.addWidget( m_view_special );
+    sLayout->addWidget( m_view_special );
     connect(m_model_special,SIGNAL(change_data(QModelIndex, int)), this, SLOT(slot_change_data_spec(QModelIndex, int)));
 
     connect( m_model, SIGNAL( profile_break() ), this, SLOT( slot_profile_break() ) );
     connect( m_model, SIGNAL( signal_change_profile(QHash< int, QVariant >) ), this, SLOT( slot_change_profile(QHash< int, QVariant >) ) );
-
-
     connect(m_view,SIGNAL(clicked(QModelIndex)), m_model, SLOT(slot_click(QModelIndex)));
-
     connect(m_view, SIGNAL(itemActivated (QTableViewItem *)), this, SLOT(on_tableWidget_itemClicked(QTableViewItem *)) );
 
     tmr_tout = new QTimer();
     connect(tmr_tout, SIGNAL(timeout()), this, SLOT(timeout()));
+
+    QWidget *workSpace = new QWidget();
+    workSpace->setLayout( sLayout );
+    QSize AdjustSize = workSpace->size()*2.5;
+    AdjustSize.height();
+    workSpace->setMinimumSize(AdjustSize);
+    QScrollArea * scrollArea =  new  QScrollArea;
+    scrollArea->setWidget(workSpace);
+
+    mainLayout.addWidget( scrollArea );
 }
 
 widget_tarifs::~widget_tarifs()
@@ -353,19 +363,191 @@ bool widget_tarifs::transmitt(){
     return transmit;
 }
 
+void widget_tarifs::slot_save(){
+    QVariantMap vmap_days;
+    int n_days = m_model->count_days();
+    QHash< int, QVariant > data_days;
+    for (int n = 0; n < n_days; ++n) {
+        data_days = m_model->data_hash(n);
+        QVariantMap day;
+        int n_data = 0;
+        for (int i = 2; i < 25; ++i) {
+            if (data_days[i] != data_days[i-1] ){
+                day.insert( QString::number( (i - 1) * 60 ), data_days[i].toInt() - 1 );
+            }
+            else n_data++;
+        }
+        if (data_days[1].toInt() != data_days[24].toInt()){
+            day.insert( QString::number(0), data_days[1].toInt() - 1 );
+        }
+        else n_data++;
+        if ( n_data >= 24 ){
+            day.insert( QString::number( 0 ), data_days[1].toInt() - 1 );
+        }
+        vmap_days.insert(QString::number(data_days[0].toInt() - 1), day);
+    }
+    QVariantMap vmap_weeks;
+    int n_weeks = tab_w.count();
+    QList< QHash< int, QVariant > > data_weeks;
+    for (int n = 0; n < n_weeks; ++n) {
+        data_weeks = m_model_seasons[n]->data_list();
+        int week[] = {-1,-1,-1,-1,-1,-1,-1};
+        QHash< int, QVariant > day;
+        for (int i = 0; i < 7; ++i) {
+            day = data_weeks.at(i);
+            week[i] = day[0].toInt() - 1;
+        }
+        QVariantList vlweek;
+        for (int i = 0; i < 7; ++i) {
+            vlweek << week[i];
+        }
+        vmap_weeks.insert(QString::number(n), vlweek);
+    }
+    QVariantMap vmap_seasons;
+    int n_seasons = n_weeks;
+    for (int n = 0; n < n_seasons; ++n) {
+        int t = (tab_w.tabText(n).mid(3, 2) + tab_w.tabText(n).mid(0, 2)).toInt();
+        QString s;
+        s = s.setNum(t);
+        vmap_seasons.insert( s, n);
+    }
+    QVariantMap vmap_special_days;
+    int n_spec_days = m_model_special->count_days();
+    QHash< int, QVariant > data_spec_days;
+    for (int n = 0; n < n_spec_days; ++n) {
+        data_spec_days = m_model_special->data_hash(n);
+        int t = (data_spec_days[0].toString().mid(3, 2) + data_spec_days[0].toString().mid(0, 2)).toInt();
+        QString s;
+        s = s.setNum(t);
+        vmap_special_days.insert(s, data_spec_days[1].toInt() - 1);
+    }
+    QVariantMap vmap;
+    if (!vmap_days.isEmpty()) {
+        vmap.insert("days", vmap_days);
+    }
+    if (!vmap_weeks.isEmpty()) {
+        vmap.insert("weeks", vmap_weeks);
+    }
+    if (!vmap_seasons.isEmpty()) {
+        vmap.insert("seasons", vmap_seasons);
+    }
+    if (!vmap_special_days.isEmpty()) {
+        vmap.insert("special_days", vmap_special_days);
+    }
+    QFileDialog dialog(this);
+    QString str = dialog.getSaveFileName(this, "Сохранить в файл", "C:", "*.json");
+    QFile jsonFile(str);
+    if ( jsonFile.open(QFile::WriteOnly) ){
+        jsonFile.write(QJsonDocument::fromVariant(vmap).toJson(QJsonDocument::Indented));
+        jsonFile.close();
+    }
+}
+
+void widget_tarifs::slot_open(){
+    QFileDialog dialog(this);
+    QString str = dialog.getOpenFileName(this, "Открыть файл", "", "*.json");
+    QFile jsonFile(str);
+    QVariantMap vm;
+    if ( jsonFile.open(QFile::ReadOnly) ){
+        vm = QJsonDocument().fromJson(jsonFile.readAll()).toVariant().toMap();
+        jsonFile.close();
+        QVariantMap vm1 = vm;
+        slot_disconnect();
+        for (int n = tab_w.count() -1 ; n >= 0; n--) {
+            tab_w.removeTab(n);
+        }
+        if (vm.contains("seasons")){
+            vm = vm.value("seasons", QVariantMap()).toMap();
+            qty_seasons = 0;
+            foreach(const QString& key, vm.keys()) {
+                QString value = vm[key].toString();
+                seasons[qty_seasons][0] = key;
+                seasons[qty_seasons][1] = value;
+                qty_seasons++;
+            }
+        }
+        vm = vm1;
+        if (vm.contains("weeks")){
+            vm = vm.value("weeks", QVariantMap()).toMap();
+            qty_weeks = 0;
+            foreach(const QString& key, vm.keys()) {
+                weeks[qty_weeks][0] = key;
+                QVariantList list = vm[key].toList();
+                for (int i = 0; i < list.size(); ++i) {
+                    int temp = list.at(i).toInt() + 1;
+                    weeks[qty_weeks][i+1] = QString::number(temp);
+                }
+                qty_weeks++;
+            }
+        }
+        vm = vm1;
+        if (vm.contains("days")){
+            vm = vm.value("days", QVariantMap()).toMap();
+            qty_days = 0;
+            int k = 0;
+            foreach(const QString& key, vm.keys()) {
+                k = 0;
+                int temp = key.toInt() + 1;
+                days[qty_days][k][0] = QString::number(temp);
+                QVariantMap vm_value = vm[key].toMap();
+                foreach(const QString& key1, vm_value.keys()){
+                    QString value = vm_value[key1].toString();
+                    int i = key1.toInt();
+                    i = i / 60;
+                    QString str;
+                    str = str.setNum(i);
+                    days[qty_days][k][2] = str;
+                    days[qty_days][k][3] = value;
+                    k++;
+                }
+                days[qty_days][0][1] = QString::number(k);
+                qty_days++;
+            }
+            m_model->appendData( qty_seasons, seasons, qty_weeks, weeks, qty_days, days );
+            seasons_view(qty_seasons);
+            for (int n = 0; n < qty_seasons; ++n) {
+                m_model_seasons[n]->appendData( n, qty_seasons, seasons, qty_weeks, weeks, qty_days, days );
+            }
+        }
+        vm = vm1;
+        if (vm.contains("special_days")){
+            vm = vm.value("special_days", QVariantMap()).toMap();
+            qty_special_days = 0;
+            foreach(const QString& key, vm.keys()) {
+                int temp = vm[key].toInt() + 1;
+                QString value = QString::number(temp);
+                special_days[qty_special_days][0] = key;
+                special_days[qty_special_days][1] = value;
+                qty_special_days++;
+            }
+            m_model_special->appendData( qty_special_days, special_days, qty_days, days );
+        }
+    }
+}
+
 void widget_tarifs::timeout(){
     transmit = true;
     emit signal_write_data (QByteArray::fromHex("51"));
-    if (count_tout < 3){
+    if (count_tout < 2){
         count_tout++;
+        tmr_tout->start(3000);
+    }
+    else if ( count_tout == 2 ) {
+        count_tout++;
+        emit signal_on_pushButton_connect_clicked(true);
         tmr_tout->start(3000);
     }
     else if ( count_tout == 3 ) {
         count_tout++;
         emit signal_on_pushButton_connect_clicked(true);
-        tmr_tout->start(3000);
+        tmr_tout->start(6000);
     }
-    else {
+    else if ( count_tout == 4 ) {
+        count_tout++;
+        emit signal_on_pushButton_connect_clicked(true);
+        tmr_tout->start(12000);
+    }
+    else if ( count_tout > 4 ) {
         transmit = false;
         tmr_tout->stop();
         emit signal_timeout_start (100);
@@ -416,8 +598,6 @@ void widget_tarifs::slot_click_Remove_season(){
     if ( tab_w.count() > 1 ) {
         int cur_index = tab_w.currentIndex();
         int count_index = tab_w.count();
-     //   log_1 << cur_index;
-     //   log_1 << count_index;
         if (cur_index == count_index-1){
             seasonLayouts[cur_index].removeWidget( m_view_seasons[cur_index] );
             m_model_seasons[cur_index]->removeData();
@@ -435,14 +615,12 @@ void widget_tarifs::slot_click_Remove_season(){
                 w[n].update();
                 QString str = tab_w.tabText(n+1);
                 tab_w.insertTab( n, &w[n], str );
-            //    log_1 << "n1" << n << str;
                 if (n >= count_index - 2){
                     m_model_seasons[n+1]->removeData();
                     seasonLayouts[n+1].removeWidget(m_view_seasons[n+1]);
                     seasonLayouts[n+1].update();
                     w[n+1].update();
                     tab_w.removeTab(n + 1);
-                 //   log_1 << n+1;
                 }
             }
         }
@@ -533,7 +711,6 @@ QList< QHash< int, QVariant > > TModel_s::data_list(){
     return m_data;
 }
 
-//#########
 QVariant widget_tarifs::write_to_counter(){
     QVariantMap vmap_days;
     int n_days = m_model->count_days();
@@ -582,7 +759,6 @@ QVariant widget_tarifs::write_to_counter(){
         int t = (tab_w.tabText(n).mid(3, 2) + tab_w.tabText(n).mid(0, 2)).toInt();
         QString s;
         s = s.setNum(t);
-      //  log_1 << s;
         vmap_seasons.insert( s, n);
     }
   //  log_1 << qPrintable(QJsonDocument::fromVariant(vmap_seasons).toJson(QJsonDocument::Indented));
@@ -594,7 +770,6 @@ QVariant widget_tarifs::write_to_counter(){
         int t = (data_spec_days[0].toString().mid(3, 2) + data_spec_days[0].toString().mid(0, 2)).toInt();
         QString s;
         s = s.setNum(t);
-      //  log_1 << s;
         vmap_special_days.insert(s, data_spec_days[1].toInt() - 1);
     }
   //  log_1 << qPrintable(QJsonDocument::fromVariant(vmap_special_days).toJson(QJsonDocument::Indented));
@@ -615,9 +790,8 @@ QVariant widget_tarifs::write_to_counter(){
  //   log_1 << tariff_json_pack(vmap).toHex().toUpper();
     transmit = true;
     emit signal_write_data(tariff_json_pack(vmap));
- //   emit signal_timeout_start(5000);
     count_tout = 0;
- //   tmr_tout->start(3000);
+    tmr_tout->start(3000);
     count_bar = 34;
     emit signal_bar(count_bar);
 }
@@ -690,7 +864,6 @@ void widget_tarifs::onAppend_syt() {
 
 void widget_tarifs::onAppend_week() {
     int n_tab = tab_w.count();
-   // log_1 << n_tab;
     if ( n_tab < 64){
         emit signal_dial_date_season();
     }
@@ -699,12 +872,6 @@ void widget_tarifs::onAppend_week() {
 void widget_tarifs::slot_date_season(QDate date, QHash<int,int> profils){
     QDateTime qdt(date);
     int n_tab = tab_w.count();
-
-    //w[n_tab - 1].setLayout(&seasonLayouts[n_tab]);
-    log_1 << n_tab;
-
-
-  //  if (del) n_tab = n_tab + 1;
     QList< QHash< int, QVariant > > m_data = m_model->copydata(profils);
     seasonLayouts[n_tab].removeWidget(m_view_seasons[n_tab]);
     m_model_seasons[n_tab]->removeData();
@@ -795,7 +962,6 @@ bool TModel::test_profils_seasons(QHash<int, int> profils){
             }
         }
         if (!fl){
-          //  log_1 << "return true";
             return true;
         }
     }
@@ -832,7 +998,6 @@ QHash< int, QVariant > TModel::copyhash_spec_withDate(QString date, int profil, 
         data.clear();
         return data;
     }
-
     data = m_data.at(row);
     DData data1;
     data1[0] = date;
@@ -859,7 +1024,6 @@ void TModel_s::appendweek(QList< QHash< int, QVariant > > m_data1){
         m_data.removeAt(n);
         endRemoveRows();
     }
-  //  m_data.clear();
     for (int n = 0; n < 7; ++n) {
         data = m_data1.at(n);
         m_data.append( data );
@@ -903,7 +1067,6 @@ void widget_tarifs::slot_tariff_json_unpack (QByteArray tariff){
         transmit = false;
         count_bar += 34;
         emit signal_bar(count_bar);
-    //    log_1 << "tariff" << tariff.toHex().toUpper();
         QVariantMap vm = tariff_json_unpack(tariff);
         QVariantMap vm1 = vm;
         log_1 << qPrintable(QJsonDocument::fromVariant(vm).toJson(QJsonDocument::Indented));
@@ -960,7 +1123,6 @@ void widget_tarifs::slot_tariff_json_unpack (QByteArray tariff){
                     QString value = vm_value[key1].toString();
                     int i = key1.toInt();
                     i = i / 60;
-                 //   key1 = QString::number(i);
                     QString str;
                     str = str.setNum(i);
                     days[qty_days][k][2] = str;
@@ -1075,7 +1237,6 @@ void TModel_special::appendData( int qty_special_days, QString special_days[100]
                         }
                     }
                 }
-              //  log_1 << data;
                 int row = m_data.count();
                 m_data.append( data );
                 beginInsertRows( QModelIndex(), row, row );
@@ -1092,74 +1253,55 @@ void TModel::appendData( int qty_seasons, QString seasons[100][2], int qty_weeks
         m_data.removeAt(n);
         endRemoveRows();
     }
-  //  m_data.clear();
-    //цикл по каждому сезону
-  //  for (int n = 0; n < qty_seasons; n++) {
+    for (int l = 0; l < qty_days; l++) {
+        data.clear();
+        data[ 0 ] = days[l][0][0];
+        int buf_days[100];
+        int buf_tarif[100];
+        for(int i = 0; i < days[l][0][1].toInt(); ++i)
+        {
+            buf_days[i] = days[l][i][2].toInt();
+            buf_tarif[i] = days[l][i][3].toInt() + 1;
+        }
 
-  //      seasons[ n ][ 0 ]; //вывод в таблицу сезона
-        //цикл по каждому типу недели в сезоне
-  //      for (int k = 0; k < qty_weeks; k++) {
-  //          if ( weeks[k][0] == seasons[ n ][ 1 ] ){
-                //цикл по каждому типу дня в неделе
-  //              for (int v = 1; v < 8; v++) {
-           //         log_1 << "qty_days" << qty_days;
-                    for (int l = 0; l < qty_days; l++) {
-                    //    if ( weeks[k][v] == days[l][0][0] ){
-                    //        log_1 << weeks[k][v] << k << v;
-                      //      log_1 << days[l][0][0] << l;
-                            data.clear();
-                            data[ 0 ] = days[l][0][0];
-                            int buf_days[100];
-                            int buf_tarif[100];
-                            for(int i = 0; i < days[l][0][1].toInt(); ++i)
-                            {
-                                buf_days[i] = days[l][i][2].toInt();
-                                buf_tarif[i] = days[l][i][3].toInt() + 1;
-                            }
-
-                            //сортировка времени по возростанию
-                            for(int i = 1; i < days[l][0][1].toInt(); ++i)
-                            {
-                                for(int r = 0; r < days[l][0][1].toInt() - i; r++)
-                                {
-                                    if(buf_days[r] > buf_days[r+1])
-                                    {
-                                        // Обмен местами
-                                        int temp = buf_days[r];
-                                        int temp1 = buf_tarif[r];
-                                        buf_days[r] = buf_days[r+1];
-                                        buf_tarif[r] = buf_tarif[r+1];
-                                        buf_days[r+1] = temp;
-                                        buf_tarif[r+1] = temp1;
-                                    }
-                                }
-                            }
-                            //цикл по (времени + тарифу) внутри каждого типа дня
-                            for(int i = 0; i < days[l][0][1].toInt(); ++i){
-                                if (i < days[l][0][1].toInt() - 1){
-                                    for(int n = buf_days[i]; n < buf_days[i+1]; ++n){
-                                        data[ n + 1 ] = buf_tarif[i];
-                                    }
-                                }
-                                else {
-                                    for(int n = buf_days[days[l][0][1].toInt() - 1]; n < 24; ++n){
-                                        data[ n + 1 ] = buf_tarif[i];
-                                    }
-                                    for(int n = 0; n < buf_days[0]; ++n){
-                                        data[ n + 1 ] = buf_tarif[i];
-                                    }
-                                }
-                            }
-                            int row = m_data.count();
-                            beginInsertRows( QModelIndex(), row, row );
-                            m_data.append( data );
-                            endInsertRows();
-                        }
-                    //}
-  //              }
-  //          }
-  //      }
-  //  }
+        //сортировка времени по возростанию
+        for(int i = 1; i < days[l][0][1].toInt(); ++i)
+        {
+            for(int r = 0; r < days[l][0][1].toInt() - i; r++)
+            {
+                if(buf_days[r] > buf_days[r+1])
+                {
+                    // Обмен местами
+                    int temp = buf_days[r];
+                    int temp1 = buf_tarif[r];
+                    buf_days[r] = buf_days[r+1];
+                    buf_tarif[r] = buf_tarif[r+1];
+                    buf_days[r+1] = temp;
+                    buf_tarif[r+1] = temp1;
+                }
+            }
+        }
+        //цикл по (времени + тарифу) внутри каждого типа дня
+        for(int i = 0; i < days[l][0][1].toInt(); ++i){
+            if (i < days[l][0][1].toInt() - 1){
+                for(int n = buf_days[i]; n < buf_days[i+1]; ++n){
+                    data[ n + 1 ] = buf_tarif[i];
+                }
+            }
+            else {
+                for(int n = buf_days[days[l][0][1].toInt() - 1]; n < 24; ++n){
+                    data[ n + 1 ] = buf_tarif[i];
+                }
+                for(int n = 0; n < buf_days[0]; ++n){
+                    data[ n + 1 ] = buf_tarif[i];
+                }
+            }
+        }
+        int row = m_data.count();
+        beginInsertRows( QModelIndex(), row, row );
+        m_data.append( data );
+        endInsertRows();
+    }
 }
 
 void widget_tarifs::seasons_view(int qty_seasons){
@@ -1167,7 +1309,6 @@ void widget_tarifs::seasons_view(int qty_seasons){
         seasonLayouts[n].addWidget( m_view_seasons[n], 0, 0 );
         w[n].setLayout( &seasonLayouts[n] );
         widg[n] = m_view_seasons[n];
-     //   m_view_seasons[n]->clearSpans();
         del = false;
         //вывод в таблицу даты сезона
         int date = seasons[ n ][ 0 ].toInt();
@@ -1186,7 +1327,6 @@ void widget_tarifs::seasons_view(int qty_seasons){
         }
         else str_m = str_m.setNum(date);
         str_m = str_d + "." + str_m;
-
         tab_w.addTab( &w[n], str_m );
     }
 }
@@ -1198,7 +1338,6 @@ void TModel_s::appendData( int n_tab, int qty_seasons, QString seasons[100][2], 
         m_data.removeAt(n);
         endRemoveRows();
     }
- //   m_data.clear();
     //цикл по каждому типу недели в сезоне
     for (int k = 0; k < qty_weeks; k++) {
         if ( weeks[k][0] == seasons[ n_tab ][ 1 ] ){
@@ -1249,10 +1388,8 @@ void TModel_s::appendData( int n_tab, int qty_seasons, QString seasons[100][2], 
                             }
                         }
                         int row = m_data.count();
-                    //    log_1 << "row" << row;
                         beginInsertRows( QModelIndex(), row, row );
                         m_data.append( data );
-                     //   log_1 << m_data;
                         endInsertRows();
                     }
                 }
@@ -1308,12 +1445,8 @@ bool TModel_special::setData( const QModelIndex& index, const QVariant& value, i
     if( !index.isValid() || role != Qt::EditRole || m_data.count() <= index.row() ) {
         return false;
     }
-
-
     if (role != Qt::BackgroundRole){
-     //   m_data[ index.row() ][ Column( index.column() ) ] = value;
         emit change_data(index, value.toInt());
-     //   emit dataChanged( index, index );
         return true;
     }
 }
@@ -1381,7 +1514,6 @@ QVariant TModel_special::headerData( int section, Qt::Orientation orientation, i
     case c23:
         return "23";
     }
-
     return QVariant();
 }
 
@@ -1451,9 +1583,7 @@ bool TModel_s::setData( const QModelIndex& index, const QVariant& value, int rol
         return false;
     }
     if (role != Qt::BackgroundRole){
-     //   m_data[  Row( index.row() ) ][ Column( index.column() ) ] = value;
         emit change_data(index, value.toInt());
-      //  emit dataChanged( index, index );
         return true;
     }
 }
@@ -1462,9 +1592,7 @@ QVariant TModel_s::headerData( int section, Qt::Orientation orientation, int rol
     if( role != Qt::DisplayRole ) {
         return QVariant();
     }
-
     if( orientation == Qt::Vertical ) {
-      //  log_1 << "section" << section;
         switch( section ) {
         case pn:
             return "ПН";
@@ -1483,7 +1611,6 @@ QVariant TModel_s::headerData( int section, Qt::Orientation orientation, int rol
         default: return QVariant();
         }
     }
-
     if( orientation == Qt::Horizontal ) {
         switch( section ) {
         case c:
@@ -1538,7 +1665,6 @@ QVariant TModel_s::headerData( int section, Qt::Orientation orientation, int rol
             return "23";
         }
     }
-
     return QVariant();
 }
 
@@ -1628,11 +1754,9 @@ QVariant TModel::headerData( int section, Qt::Orientation orientation, int role 
     if( role != Qt::DisplayRole ) {
         return QVariant();
     }
-
     if( orientation == Qt::Vertical ) {
         return "   ";
     }
-
     switch( section ) {
     case c:
         return "№ профиля\\часы";
@@ -1685,7 +1809,6 @@ QVariant TModel::headerData( int section, Qt::Orientation orientation, int role 
     case c23:
         return "23";
     }
-
     return QVariant();
 }
 
@@ -1708,21 +1831,22 @@ Qt::ItemFlags TModel::flags( const QModelIndex& index ) const {
 
 void widget_tarifs::slot_click_Remove_syt(){
     QItemSelectionModel* selectModel = m_view->selectionModel();
-    if (selectModel->hasSelection()){
-        int index = selectModel->selectedRows().first().row();
-        int profil = m_model->index_m_model(index);
-     //   log_1 << profil;
-        for (int n = 0; n < tab_w.count(); ++n) {
-            if (m_model_seasons[n]->test_profil_seasons(profil)){
+    if ( !selectModel->selectedRows().isEmpty() ) {
+        if (selectModel->hasSelection()){
+            int index = selectModel->selectedRows().first().row();
+            int profil = m_model->index_m_model(index);
+            for (int n = 0; n < tab_w.count(); ++n) {
+                if (m_model_seasons[n]->test_profil_seasons(profil)){
+                    emit signal_err_del_profil();
+                    return;
+                }
+            }
+            if (m_model_special->test_profil_spec(profil)){
                 emit signal_err_del_profil();
                 return;
             }
+            m_model->removeSelected(index);
         }
-        if (m_model_special->test_profil_spec(profil)){
-            emit signal_err_del_profil();
-            return;
-        }
-        m_model->removeSelected(index);
     }
 }
 
@@ -1763,10 +1887,8 @@ void TModel::removeSelected(int indexrow) {
 void widget_tarifs::slot_read_tarifs(){
     if (client_addr == 0x30) bn_write_counter->setEnabled(true);
     else bn_write_counter->setEnabled(false);
-  //  show();
     transmit = true;
     emit signal_write_data (QByteArray::fromHex("51"));
- //   emit signal_timeout_start(5000);
     count_tout = 0;
     tmr_tout->start(3000);
     count_bar = 34;
@@ -1778,25 +1900,21 @@ QByteArray widget_tarifs::tariff_json_pack(QVariantMap vmap_tariff)
     QByteArray tt;
     QVariantMap vmap_days = vmap_tariff.value("days", "").toMap();
 //    log_1 << qPrintable(QJsonDocument::fromVariant(vmap_days).toJson(QJsonDocument::Indented));
-
     QMap<int, QVariantMap> md;
     for (QVariantMap::iterator iter = vmap_days.begin(); iter != vmap_days.end(); ++iter) {
         md.insert(iter.key().toInt(), iter.value().toMap());
     }
     for (QMap<int, QVariantMap>::iterator iter = md.begin(); iter != md.end(); ++iter) {
-//        log_1 << iter.key();
         TARIFF_header th;
         th.days.id_block = 2;
         th.days.day_id = iter.key();
         tt.append((char)(*(char*)&th));
-
         QVariantMap vmap_day = iter.value();
         QMap<int,int> m;
         for (QVariantMap::iterator iter_day = vmap_day.begin(); iter_day != vmap_day.end(); ++iter_day) {
             m.insert(iter_day.key().toInt(), iter_day.value().toInt());
         }
         for (QMap<int,int>::iterator iter_day = m.begin(); iter_day != m.end(); ++iter_day) {
-//            log_1 << iter_day.key() << iter_day.value();
             TARIFF_zone tz;
             tz.start_zone = iter_day.key();
             tz.tariff = iter_day.value();
@@ -1808,8 +1926,6 @@ QByteArray widget_tarifs::tariff_json_pack(QVariantMap vmap_tariff)
             tt.append((char)d2);
         }
     }
-
-
     QVariantMap vmap_weeks = vmap_tariff.value("weeks", "").toMap();
 //    log_1 << qPrintable(QJsonDocument::fromVariant(vmap_weeks).toJson(QJsonDocument::Indented));
     md.clear();
@@ -1819,18 +1935,14 @@ QByteArray widget_tarifs::tariff_json_pack(QVariantMap vmap_tariff)
 //        md.insert(iter.key().toInt(), iter.value().toMap());
     }
     for (QMap<int, QVariantList>::iterator iter = mweek.begin(); iter != mweek.end(); ++iter) {
-//        log_1 << iter.key();
         TARIFF_header th;
         th.weeks.id_block = 3;
         th.weeks.week_id = iter.key();
         tt.append((char)(*(char*)&th));
-//        log_1 << QString::number(*(uint8_t*)&th, 16);
-
         QVariantList vlist_day = iter.value();
         while (vlist_day.size() < 7) {
             vlist_day.append(0);
         }
-//        log_1 << vlist_day;
         QMap<int,int> m;
         for (int i = 0; i < 7; ++i) {
             if (vlist_day.at(i).toString().isEmpty()) continue;
@@ -1845,12 +1957,10 @@ QByteArray widget_tarifs::tariff_json_pack(QVariantMap vmap_tariff)
             }
             m.insert(mask, val_day);
         }
-      //  log_1 << m;
 //        for (QVariantMap::iterator iter_day = vmap_day.begin(); iter_day != vmap_day.end(); ++iter_day) {
 //            m.insert(iter_day.key().toInt(), iter_day.value().toInt());
 //        }
         for (QMap<int,int>::iterator iter_week = m.begin(); iter_week != m.end(); ++iter_week) {
-//            log_1 << iter_week.key() << iter_week.value();
             TARIFF_week tw;
             tw.reserv = 0;
             tw.mask_week = iter_week.key();
@@ -1878,7 +1988,6 @@ QByteArray widget_tarifs::tariff_json_pack(QVariantMap vmap_tariff)
         m.insert(iter.key().toInt(), iter.value().toInt());
     }
     for (QMap<int,int>::iterator iter_season = m.begin(); iter_season != m.end(); ++iter_season) {
-//        log_1 << iter_season.key() << iter_season.value();
         TARIFF_season ts;
         ts.month = iter_season.key() / 100;
         ts.day = iter_season.key() % 100;
@@ -1894,34 +2003,32 @@ QByteArray widget_tarifs::tariff_json_pack(QVariantMap vmap_tariff)
     QVariantMap special_days = vmap_tariff.value("special_days", "").toMap();
     if (!special_days.isEmpty()) {
 //    log_1 << qPrintable(QJsonDocument::fromVariant(special_days).toJson(QJsonDocument::Indented));
-    {
-        TARIFF_header th;
-        th.special_day.id_block = 1;
-        th.special_day.id_sub_block = 2;
-        th.special_day.res = 0;
-        tt.append((char)(*(char*)&th));
+        {
+            TARIFF_header th;
+            th.special_day.id_block = 1;
+            th.special_day.id_sub_block = 2;
+            th.special_day.res = 0;
+            tt.append((char)(*(char*)&th));
+        }
+        m.clear();
+        for (QVariantMap::iterator iter = special_days.begin(); iter != special_days.end(); ++iter) {
+            m.insert(iter.key().toInt(), iter.value().toInt());
+        }
+        for (QMap<int,int>::iterator iter_special_days = m.begin(); iter_special_days != m.end(); ++iter_special_days) {
+    //        log_1 << iter_special_days.key() << iter_special_days.value();
+            TARIFF_special_day tsd;
+            tsd.month = iter_special_days.key() / 100;
+            tsd.day = iter_special_days.key() % 100;
+            tsd.day_id = iter_special_days.value();
+            tsd.next = (iter_special_days+1 != m.end());
+            uint8_t d1;
+            uint8_t d2;
+            TARIFF_block_to_u8(&tsd, &d1, &d2);
+            tt.append((char)d1);
+            tt.append((char)d2);
+        }
     }
-    m.clear();
-    for (QVariantMap::iterator iter = special_days.begin(); iter != special_days.end(); ++iter) {
-        m.insert(iter.key().toInt(), iter.value().toInt());
-    }
-    for (QMap<int,int>::iterator iter_special_days = m.begin(); iter_special_days != m.end(); ++iter_special_days) {
-//        log_1 << iter_special_days.key() << iter_special_days.value();
-        TARIFF_special_day tsd;
-        tsd.month = iter_special_days.key() / 100;
-        tsd.day = iter_special_days.key() % 100;
-        tsd.day_id = iter_special_days.value();
-        tsd.next = (iter_special_days+1 != m.end());
-        uint8_t d1;
-        uint8_t d2;
-        TARIFF_block_to_u8(&tsd, &d1, &d2);
-        tt.append((char)d1);
-        tt.append((char)d2);
-    }
-    }
-
     uint32_t activate = vmap_tariff.value("activate", "").toUInt();
-//    log_1 << activate;
     if (activate) {
         {
             TARIFF_header th;
@@ -1936,13 +2043,10 @@ QByteArray widget_tarifs::tariff_json_pack(QVariantMap vmap_tariff)
         tt.append((char)((activate >>16) & 0xFF));
         tt.append((char)((activate >>24) & 0xFF));
     }
-
     uint8_t res = DLMS_tariff_test_buf((uint8_t*)tt.data(), tt.size());
     tt.prepend(0x51);
     log_1 << "pack" << res << tt.toHex().toUpper();
     if (!res) return tt;
-
-
 //    518000008181A40D64841800C0 8101 8604 7800 504580
  //   return (QByteArray::fromHex("518000008181A40D64841800C08101A6047800504580"));
     return QByteArray();

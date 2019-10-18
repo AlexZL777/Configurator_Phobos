@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>530</width>
-    <height>209</height>
+    <width>1368</width>
+    <height>1165</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -21,235 +21,1062 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0" columnstretch="0,0,0,0" rowminimumheight="0,0,0,0,0" columnminimumwidth="0,0,0,0">
-     <property name="sizeConstraint">
-      <enum>QLayout::SetMinAndMaxSize</enum>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
      </property>
-     <item row="1" column="2">
-      <widget class="QComboBox" name="comboBox_ADE_Pulse0_Energy_type">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_4_">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Светодиод</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="3">
-      <widget class="QPushButton" name="pushButton">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Ignored">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Записать</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="2">
-      <widget class="QComboBox" name="comboBox_ADE_Pulse1_Energy_type">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="label_3_">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Оптопара</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QTextEdit" name="textEdit">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Ignored">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="verticalScrollBarPolicy">
-        <enum>Qt::ScrollBarAlwaysOff</enum>
-       </property>
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-       <property name="html">
-        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QAbstractScrollArea::AdjustIgnored</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1344</width>
+        <height>1141</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QGridLayout" name="gridLayout_9">
+         <item row="0" column="4">
+          <widget class="Line" name="line_6">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="4">
+          <layout class="QVBoxLayout" name="verticalLayout_5"/>
+         </item>
+         <item row="0" column="5">
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QWidget" name="widget" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0" columnstretch="0,0,0,0,0">
+                <property name="sizeConstraint">
+                 <enum>QLayout::SetMinAndMaxSize</enum>
+                </property>
+                <item row="2" column="1">
+                 <widget class="QTextEdit" name="textEdit">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Ignored">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="verticalScrollBarPolicy">
+                   <enum>Qt::ScrollBarAlwaysOff</enum>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                  <property name="html">
+                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QTextEdit" name="textEdit_2">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Ignored">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="verticalScrollBarPolicy">
-        <enum>Qt::ScrollBarAlwaysOff</enum>
-       </property>
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-       <property name="html">
-        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QTextEdit" name="textEdit_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Ignored">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="verticalScrollBarPolicy">
+                   <enum>Qt::ScrollBarAlwaysOff</enum>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                  <property name="html">
+                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0" colspan="3">
-      <widget class="QLabel" name="label">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Настройки импульсных выходов:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0" colspan="4">
-      <widget class="Line" name="line">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QGridLayout" name="gridLayout_2">
-     <item row="2" column="0" alignment="Qt::AlignRight">
-      <widget class="QLabel" name="label_10">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Встроенная антенна</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="3">
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="2" column="2" alignment="Qt::AlignLeft">
-      <widget class="QLabel" name="label_11">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Внешняя антенна</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0" colspan="3">
-      <widget class="QLabel" name="label_14">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Выбор антенны:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1" alignment="Qt::AlignHCenter">
-      <widget class="QSlider" name="horizontalSlider">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="maximum">
-        <number>1</number>
-       </property>
-       <property name="pageStep">
-        <number>1</number>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_4_">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Светодиод</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="2">
+                 <widget class="QComboBox" name="comboBox_ADE_Pulse0_Energy_type">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="2">
+                 <widget class="QComboBox" name="comboBox_ADE_Pulse1_Energy_type">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QLabel" name="label_3_">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Оптопара</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="3">
+                 <widget class="QPushButton" name="pushButton">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Ignored">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Записать</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="4">
+                 <spacer name="horizontalSpacer_10">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="1" column="0" colspan="2">
+                 <widget class="QLabel" name="label">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Настройки импульсных выходов:</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_2" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <layout class="QGridLayout" name="gridLayout_2">
+                <item row="2" column="1" alignment="Qt::AlignRight">
+                 <widget class="QLabel" name="label_10">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Встроенная антенна</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="3" alignment="Qt::AlignLeft">
+                 <widget class="QLabel" name="label_11">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Внешняя антенна</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="4">
+                 <widget class="QPushButton" name="pushButton_3">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Записать</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="5">
+                 <spacer name="horizontalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="2" column="2" alignment="Qt::AlignHCenter">
+                 <widget class="QSlider" name="horizontalSlider">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximum">
+                   <number>1</number>
+                  </property>
+                  <property name="pageStep">
+                   <number>1</number>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0" colspan="2">
+                 <widget class="QLabel" name="label_14">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Выбор антенны:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QPushButton" name="pushButton_2">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Считать</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_3" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_7">
+              <item>
+               <layout class="QGridLayout" name="gridLayout_3">
+                <item row="1" column="2">
+                 <spacer name="horizontalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_2">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Смена пароля:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QPushButton" name="pushButton_4">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Низкий уровень безопасности</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QPushButton" name="pushButton_5">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Высокий уровень безопасности</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_4" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_8">
+              <item>
+               <layout class="QGridLayout" name="gridLayout_4">
+                <item row="1" column="2">
+                 <widget class="QPushButton" name="pushButton_13">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Записать</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="3">
+                 <spacer name="horizontalSpacer_8">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="0" column="0" colspan="4">
+                 <widget class="QLabel" name="label_5">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Поправка точности хода часов, мсек/сут:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QSpinBox" name="spinBox_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>200</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="minimum">
+                   <number>-60000</number>
+                  </property>
+                  <property name="maximum">
+                   <number>60000</number>
+                  </property>
+                  <property name="singleStep">
+                   <number>100</number>
+                  </property>
+                  <property name="stepType">
+                   <enum>QAbstractSpinBox::DefaultStepType</enum>
+                  </property>
+                  <property name="value">
+                   <number>0</number>
+                  </property>
+                  <property name="displayIntegerBase">
+                   <number>10</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QPushButton" name="pushButton_12">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Считать</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_5" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <item>
+               <layout class="QGridLayout" name="gridLayout_8">
+                <item row="0" column="0" colspan="4">
+                 <widget class="QLabel" name="label_21">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Установка даты и времени:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QPushButton" name="pushButton_15">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Записать</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="3">
+                 <widget class="QPushButton" name="pushButton_16">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Записать системную дату и время</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="4">
+                 <spacer name="horizontalSpacer_9">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QPushButton" name="pushButton_14">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Считать</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QDateTimeEdit" name="dateTimeEdit">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="displayFormat">
+                   <string>dd.MM.yyyy H:mm:ss</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_6" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_10">
+              <item>
+               <layout class="QGridLayout" name="gridLayout_7">
+                <item row="1" column="2" alignment="Qt::AlignLeft">
+                 <widget class="QPushButton" name="pushButton_10">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Включить реле</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1" alignment="Qt::AlignHCenter">
+                 <widget class="QLabel" name="label_18">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Реле ВКЛЮЧЕНО</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="4">
+                 <spacer name="horizontalSpacer_7">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="1" column="0" alignment="Qt::AlignRight">
+                 <widget class="QPushButton" name="pushButton_9">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Отключить реле</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0" colspan="3">
+                 <widget class="QLabel" name="label_19">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Управление нагрузкой:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0" colspan="3">
+                 <widget class="Line" name="line">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QGridLayout" name="gridLayout_5">
+                <item row="3" column="0">
+                 <widget class="QRadioButton" name="radioButton_3">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>2</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="2">
+                 <spacer name="horizontalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="8" column="0">
+                 <widget class="QRadioButton" name="radioButton_8">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>7</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QLabel" name="label_7">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string> - разрешено любое (кроме ручного) отключение, а также ручное включение</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="1">
+                 <widget class="QLabel" name="label_8">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string> - разрешено любое (кроме ручного) отключение, а также удалённое и ручное включение</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLabel" name="label_3">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string> - запрещено любое отключение/включение</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="0">
+                 <widget class="QRadioButton" name="radioButton_5">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>4</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="8" column="1">
+                 <widget class="QLabel" name="label_13">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string> - разрешено любое отключение и любое включение (это рекомендуемый режим работы электросчётчика)</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="1">
+                 <widget class="QLabel" name="label_12">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string> - разрешено любое (кроме ручного) отключение. разрешено автоматическое и удалённо выдаётся разрешение на ручное включение</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="0">
+                 <widget class="QRadioButton" name="radioButton_7">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>6</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QLabel" name="label_6">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string> - разрешено любое отключение, а также удалённое и ручное включение</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="9" column="0" colspan="2" alignment="Qt::AlignLeft">
+                 <widget class="QPushButton" name="pushButton_11">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Записать режим работы</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QRadioButton" name="radioButton_2">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>1</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0" colspan="2">
+                 <widget class="QLabel" name="label_20">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Режим работы электросчётчика:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLabel" name="label_4">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string> - разрешено любое отключение, а также ручное включение</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="0">
+                 <widget class="QRadioButton" name="radioButton_6">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>5</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="1">
+                 <widget class="QLabel" name="label_9">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string> - разрешено любое отключение, разрешено автоматическое и удалённо выдаётся разрешение на ручное включение</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QRadioButton" name="radioButton_4">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>3</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QRadioButton" name="radioButton">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>0</string>
+                  </property>
+                  <property name="autoExclusive">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="10" column="0" colspan="2">
+                 <widget class="Line" name="line_2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QGridLayout" name="gridLayout_6">
+                <item row="0" column="3">
+                 <spacer name="horizontalSpacer_4">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QPushButton" name="pushButton_6">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Записать</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_17">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Время до включения, секунд:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="2">
+                 <widget class="QPushButton" name="pushButton_8">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Записать</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QSpinBox" name="spinBox_3">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="maximum">
+                   <number>360</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="3">
+                 <spacer name="horizontalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QSpinBox" name="spinBox_2">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="maximum">
+                   <number>360</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="2">
+                 <widget class="QPushButton" name="pushButton_7">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Записать</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_15">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Максимальная мощность, Ватт:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QSpinBox" name="spinBox">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="maximum">
+                   <number>40000</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_16">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Период измерения потребляемой мощности, секунд:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="3">
+                 <spacer name="horizontalSpacer_5">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignLeft">
+            <widget class="QPushButton" name="pushButton_17">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Открыть окно с логами</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
    </item>
   </layout>
  </widget>

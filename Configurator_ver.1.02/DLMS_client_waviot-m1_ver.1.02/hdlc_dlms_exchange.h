@@ -189,6 +189,7 @@ protected:
 //    HDLC_BUF * hbuf_out;
 //    HDLC_BUF * hbuf_in;
     QByteArray pass;
+    QByteArray chellendge;
 
 //    QByteArray hdlc_out_buf;
 //    QByteArray hdlc_in_buf_data;

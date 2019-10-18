@@ -27,6 +27,9 @@
 #include <dialog_error_sn.h>
 #include <widget_log.h>
 #include <widget_log_event.h>
+#include <dialog_change_low_pass.h>
+#include <dialog_change_high_pass.h>
+#include <form_log.h>
 
 #include <QTimer>
 #include <QDate>
@@ -55,6 +58,7 @@ public:
     widget_log * w_log;
     widget_log_event * w_log_event;
     pdu_worker * pdu_w;
+    Form_log * f_log;
 
  //   Dialog_disconnect * disconnect;
  //   Dialog_error_pass * error_pass;
@@ -84,6 +88,7 @@ private:
     QTimer *tmr2;
     void tab_show();
     bool tmr2_fl = false;
+    bool maximized_window = true;
 signals:
     void signal_disconnect();
     void signal_start_write_pass();
@@ -109,15 +114,18 @@ signals:
     void signal_view_log();
     void signal_view_log_event();
     void signal_write_data_PDU (QByteArray);
+    void signal_write_data(QByteArray);
     void signal_pushButton_connect(bool);
     void signal_view_log_to_screen();
     void signal_disable_tab_kn(bool, int);
 private slots:
     void slot_tabSelected();
 public slots:
+    void slot_form_log_close();
+    void slot_show_form_log();
     void slot_control_sn(QVariant);
     void slot_bar (int data);
-    void slot_min_window();
+    void slot_min_max_window(bool);
     void timeout_disconnect();
     void slot_timeout_start(int);
     void slot_error_pass();
@@ -138,6 +146,10 @@ public slots:
     void slot_bn_view_log();
     void slot_main_window_sn(QByteArray);
     void slot_disable_tab_kn(bool, int);
+    void slot_dialog_low_pass();
+    void slot_dialog_high_pass();
+    void slot_write_data(QByteArray);
+    void slot_enable_tab_kn();
 };
 
 #endif // MAINWINDOW_H

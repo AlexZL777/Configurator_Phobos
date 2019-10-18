@@ -21,6 +21,8 @@ public:
     bool transmitt();
 private:
     Ui::widget_power_data_1f *ui;
+    float reactPow;
+    float actPow;
     bool transmit = false;
     QByteArray obis_buf[255];
     float data_buf[255];

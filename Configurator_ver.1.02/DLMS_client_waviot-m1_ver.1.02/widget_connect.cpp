@@ -8,13 +8,21 @@
 #include <QJsonDocument>
 #include <Logger/Logger.h>
 #include "DLMS_CRC.h"
+#include <QHostAddress>
+#include <QNetworkProxy>
+#include <qiodevice.h>
 
 #include <QFile>
 #include <QTextStream>
 #include <QPushButton>
+#include <QThread>
+#include <QTime>
 
 uint32_t client_addr;
 int bn_fl = 0;
+bool servis_pass = false;
+bool servis_pass2 = false;
+QByteArray pass_hi_level;
 
 #define FORMAT_TYPE_HDLC (0xA)
 #define FORMAT_TYPE_ELECTRO5 (0xC)
@@ -45,6 +53,12 @@ widget_connect::widget_connect(QWidget *parent)
 
     udp = new QUdpSocket(this);
     connect(udp, QUdpSocket::readyRead, this, widget_connect::slot_udp_readyRead);
+    tcp = new QTcpSocket(this);
+    connect(tcp, SIGNAL(connected()), SLOT(slotConnected()));
+    connect(tcp, SIGNAL(readyRead()), SLOT(slot_tcp_readyRead()));
+    connect(tcp, SIGNAL(disconnected()),this, SLOT(disconnected()));
+    connect(tcp, SIGNAL(bytesWritten(qint64)),this, SLOT(bytesWritten(qint64)));
+    connect(tcp, SIGNAL(error(QAbstractSocket::SocketError)) ,this, SLOT(slotError(QAbstractSocket::SocketError)));
     serial = new QSerialPort(this);
     connect(serial, QSerialPort::readyRead, this, widget_connect::slot_serial_readyRead);
 
@@ -52,26 +66,44 @@ widget_connect::widget_connect(QWidget *parent)
 //    ui->comboBox_client_addr->addItem("Отсутствие аутентификации", 0x10);
     ui->comboBox_client_addr->addItem("Низкий уровень безопасности", 0x20);
     ui->comboBox_client_addr->addItem("Высокий уровень безопасности", 0x30);
-    ui->comboBox_client_addr->setCurrentIndex(1);
+    ui->comboBox_client_addr->setCurrentIndex(0);
+
+    ui->comboBox_BaudRate->clear();
+    ui->comboBox_BaudRate->addItem("9600", 0x10);
+    ui->comboBox_BaudRate->addItem("19200", 0x20);
+    ui->comboBox_BaudRate->addItem("38400", 0x30);
+    ui->comboBox_BaudRate->addItem("57600", 0x40);
+    ui->comboBox_BaudRate->addItem("115200", 0x50);
+    ui->comboBox_BaudRate->addItem("230400", 0x60);
+    ui->comboBox_BaudRate->setCurrentIndex(4);
 
     on_spinBox_modem_dec_valueChanged(ui->spinBox_modem_dec->value());
 
+    connect(ui->radioButton_rs_485, SIGNAL(toggled(bool)), this, SLOT(slot_update_switch_connect()));
+    connect(ui->radioButton_opto_port, SIGNAL(toggled(bool)), this, SLOT(slot_update_switch_connect()));
+    connect(ui->radioButton_usb_dongle, SIGNAL(toggled(bool)), this, SLOT(slot_update_switch_connect()));
+    connect(ui->radioButton_tcp_hdlc, SIGNAL(toggled(bool)), this, SLOT(slot_update_switch_connect()));
     connect(ui->radioButton_udp_hdlc, SIGNAL(toggled(bool)), this, SLOT(slot_update_switch_connect()));
     connect(ui->radioButton_rs_fastdl, SIGNAL(toggled(bool)), this, SLOT(slot_update_switch_connect()));
     connect(ui->radioButton_rs_fastdl_hdlc, SIGNAL(toggled(bool)), this, SLOT(slot_update_switch_connect()));
-    connect(ui->radioButton_rs_485, SIGNAL(toggled(bool)), this, SLOT(slot_update_switch_connect()));
     connect(ui->radioButton_opto_hdlc, SIGNAL(toggled(bool)), this, SLOT(slot_update_switch_connect()));
     connect(ui->radioButton_opto_mode_e, SIGNAL(toggled(bool)), this, SLOT(slot_update_switch_connect()));
     connect(ui->radioButton_rs_fastdl_electro, SIGNAL(toggled(bool)), this, SLOT(slot_update_switch_connect()));
 
+  //  ui->radioButton_rs_485->hide();
+  //  ui->radioButton_opto_port->hide();
+  //  ui->radioButton_usb_dongle->hide();
+    //ui->radioButton_tcp_hdlc->hide();
+ //   ui->label_5->hide();
+
     ui->radioButton_udp_hdlc->hide();
     ui->radioButton_rs_fastdl->hide();
-    ui->radioButton_rs_fastdl_hdlc->hide();
+  //  ui->radioButton_rs_fastdl_hdlc->hide();
     ui->radioButton_opto_mode_e->hide();
-    ui->radioButton_rs_485->hide();
     ui->radioButton_opto_hdlc->hide();
     ui->radioButton_rs_fastdl_electro->hide();
-    ui->radioButton_rs_485->setChecked(true);
+
+    ui->radioButton_opto_port->setChecked(true);
 
     ui->pushButton_ReadData->hide();
     ui->pushButton_2->hide();
@@ -88,11 +120,93 @@ widget_connect::widget_connect(QWidget *parent)
 //    ui->spinBox_server_addr_physical->hide();
 
     slot_update_switch_connect();
+    tmr_tout = new QTimer();
+    connect(tmr_tout, SIGNAL(timeout()), this, SLOT(timeout()));
+    ui->pushButton_3->hide();
+    ui->pushButton_4->hide();
+   // ui->label_6->hide();
+    setMinimumSize(100,100);
 }
 
 widget_connect::~widget_connect()
 {
     delete ui;
+}
+
+void widget_connect::timeout(){
+    switch (sconnect) {
+    case SWITCH_CONNECT_radio_FASTDL:
+    case SWITCH_CONNECT_radio_FASTDL_HDLC:
+    case SWITCH_CONNECT_radio_FASTDL_electro: {
+        on_pushButton_connect_clicked(true);
+        tmr_tout->stop();
+        break;
+    }
+    case SWITCH_CONNECT_rs485: {
+        break;
+    }
+    case SWITCH_CONNECT_usb_dongle: {
+        break;
+    }
+    case SWITCH_CONNECT_opto_HDLC: {
+        break;
+    }
+    case SWITCH_CONNECT_TCP_HDLC: {
+        QByteArray data = nextSendTcpData.mid(40, nextSendTcpData.size()-40);
+        log_1 << "data.mid(40, data.size()-40)" << data.toHex().toUpper();
+        if (data.size() > 40){
+            tcp->write(data.mid(0, 40));
+            nextSendTcpData = data;
+            nextSendTcpDataSize = data.size();
+            contains_enough_data = true;
+            m_headerRead = false;
+            tmr_tout->start(100);
+        }
+        else {
+            tcp->write(data.mid(0, data.size()));
+            contains_enough_data = true;
+            m_headerRead = false;
+            tmr_tout->stop();
+        }
+        break;
+    }
+    default:
+        break;
+    }
+}
+
+void widget_connect::slotConnected()
+{
+    ui->label_6->setText("");
+    log_1 << "connected...";
+    log_1 << "data send:" << firstSendTcpData.toHex().toUpper() << QHostAddress(ui->lineEdit_host_udp_direct->text()) << ui->spinBox_port_udp_direct->value();
+    tcp->write(firstSendTcpData);
+    contains_enough_data = true;
+    m_headerRead = false;
+}
+
+void widget_connect::disconnected ()
+{
+    log_1 << "отключено ...";
+}
+
+void widget_connect::bytesWritten(qint64 bytes)
+{
+    log_1 << bytes << " bytes written...";
+}
+
+void widget_connect::slotError(QAbstractSocket::SocketError err)
+{
+    QString strError =
+        "Error: " + (err == QAbstractSocket::HostNotFoundError ?
+                     "The host was not found." :
+                     err == QAbstractSocket::RemoteHostClosedError ?
+                     "The remote host is closed." :
+                     err == QAbstractSocket::ConnectionRefusedError ?
+                     "The connection was refused." :
+                     QString(tcp->errorString())
+                    );
+    ui->label_6->setText(strError);
 }
 
 void widget_connect::slot_pushButton_ReadData_show(){
@@ -516,17 +630,15 @@ QByteArray HDLC_to_ELECTRO5(void *vsbuf, QByteArray read)
 QByteArray widget_connect::tx_rx(uint cmd, QByteArray arr_send)
 {
     data_from_channel.clear();
-    uint32_t read_timeout = 10000;
+    uint32_t read_timeout = 30000;
 //    if (serial->baudRate() != 115200 && cmd == 0x32) {
 //        cmd = 0x10;
 //    }
     QEventLoop loop;
     QTimer::singleShot(read_timeout, &loop, SLOT(quit()));
     connect(this, SIGNAL(signal_read_data(QByteArray)), &loop, SLOT(quit()));
-
     arr_send = CMD_to_SLIP(cmd, (quint8 *)arr_send.data(), arr_send.size());
     serial->write(arr_send);
-
     loop.exec();
 //    if (serial->baudRate() != 115200) {
 //        rx_data.prepend(QByteArray::fromHex("00FF00001122"));
@@ -699,34 +811,71 @@ void widget_connect::slot_udp_readyRead()
     }
 }
 
+void widget_connect::slot_tcp_readyRead(){
+    log_1 << "slot_tcp_readyRead";
+    log_1 << "чтение ...";
+    QByteArray buff;
+//    while (contains_enough_data) {
+//        if (! m_headerRead && tcp->bytesAvailable() >= sizeof(qint32)) {
+//            buff = tcp->readAll();
+//            m_msgSize = buff.at(2);
+//            m_headerRead = true;
+//        } else if (m_headerRead && tcp->bytesAvailable() >= m_msgSize+2) {
+//            buff = tcp->readAll();
+//            m_headerRead = false;
+//          //  emit dataAvailable();
+//        } else {
+//            contains_enough_data = false; //wait that further data arrived
+//        }
+//    }
+    if ( tcp->bytesAvailable() ) buff = tcp->readAll();
+    log_1 << "buff итог" << buff.toHex().toUpper();
+    emit signal_log("RX  (" + QString::number(buff.size()) + ")  " + buff.toHex().toUpper());
+    emit signal_HDLC_from_device(buff);
+    buff.clear();
+    is_connected = true;
+    update_button();
+}
+
 void widget_connect::slot_serial_readyRead()
 {
     static type_slip_buf slip_buf;
     if (!serial->isOpen()) return;
     QByteArray resp = serial->readAll();
-    log_6 << "RX" << resp.toHex().toUpper();
+    log_6 << "RX_" << resp.toHex().toUpper();
 //    log_1 << sconnect;
     switch (sconnect) {
     case SWITCH_CONNECT_radio_FASTDL:
     case SWITCH_CONNECT_radio_FASTDL_HDLC:
     case SWITCH_CONNECT_radio_FASTDL_electro: {
+     //   log_1 << "11111111111111111";
         resp = SLIP_Receive(&slip_buf, resp);
-        if (resp.isEmpty()) return;
+        log_1 << "resp" << resp.toHex().toUpper();
+        if (resp.isEmpty()){
+            log_1 << "ret1";
+            return;
+        }
         if (slip_buf.cmd == SLIP_CMD && resp.size() == 1 && resp.at(0) == 0) {
+            log_1 << "ret2";
             return;
         }
         if (resp.size() < 7 && slip_buf.cmd == SLIP_CMD) {
             log_1 << QString::number(slip_buf.cmd, 16);
+            log_1 << "ret3";
             return;
         }
         if (slip_buf.cmd == SLIP_CMD && resp.size() == 7 && resp.at(6) == 0) {
+            log_1 << "ret4";
             return;
         }
         if (slip_buf.cmd == 0x10 && resp.size() < 6) {
             data_from_channel.clear();
+            log_1 << "ret5";
             break;
         }
+        log_1 << "slip_buf.com" << slip_buf.cmd;
         if (slip_buf.cmd == 0x10) {
+            log_1 << "попали сюда!!";
             uint8_t * buf_in = (uint8_t *)resp.data();
 //            QByteArray header = resp.left(6);
 //            log_2 << "RX" << QString("%1").arg(resp.size(), 3) << resp.toHex().toUpper() << QByteArray::number(slip_buf.cmd, 16);
@@ -734,7 +883,9 @@ void widget_connect::slot_serial_readyRead()
             modem_id <<= 8; modem_id += buf_in[1];
             modem_id <<= 8; modem_id += buf_in[2];
             modem_id <<= 8; modem_id += buf_in[3];
+            log_1 << "modem_id" << modem_id << nbfi->dl_ID;
             if (modem_id != nbfi->dl_ID) {
+                log_1 << "break1";
                 break;
             }
 //            log_2 << "RX" << QString("%1").arg(resp.size(), 3) << resp.toHex().toUpper() << QByteArray::number(slip_buf.cmd, 16);
@@ -744,6 +895,7 @@ void widget_connect::slot_serial_readyRead()
                 uint8_t lens = buf_in[5];
                 if (!(lens & 0x80)) { // not multi packet
                     data_from_channel = resp.mid(8);
+                    log_1 << "break2";
                     break;
                 }
                 data_from_channel = resp.mid(6);
@@ -761,20 +913,24 @@ void widget_connect::slot_serial_readyRead()
         update_button();
 //        61 71C5C7 808E EF4002010210000A820001000000
 //        data_from_channel += resp;
-//        log_2 << "RX" << QString("%1").arg(resp.size(), 3) << resp.toHex().toUpper() << QByteArray::number(slip_buf.cmd, 16);
         log_1 << "RX" << QString("%1").arg(data_from_channel.size(), 3) << data_from_channel.toHex().toUpper() << QByteArray::number(slip_buf.cmd, 16);
+        emit signal_log("RX  (" + QString::number(data_from_channel.size()) + ")  " + data_from_channel.toHex().toUpper());
         emit signal_read_data(data_from_channel);
         if (sconnect == SWITCH_CONNECT_radio_FASTDL_HDLC) {
-            if (!resp.isEmpty() && ((uint8_t)resp.at(0) == 0xD3)) {
-                data_from_channel = resp.mid(1);
+            if (!data_from_channel.isEmpty() && ((uint8_t)data_from_channel.at(0) == 0xD3)) {
+            //    log_1 << "теперь сюда попали!!";
+                data_from_channel = data_from_channel.mid(1);
+            //    log_1 << "data_from_channel_3" << data_from_channel.toHex().toUpper();
                 emit signal_HDLC_from_device(data_from_channel);
             }
         }
 //        if (sconnect == SWITCH_CONNECT_radio_FASTDL_electro || sconnect == SWITCH_CONNECT_radio_FASTDL_HDLC) {
-        if (data_from_channel.size() > 2 && ((uint8_t)data_from_channel.at(0) == 0xEF) && ((uint8_t)data_from_channel.at(1) == 0x40)) {
-            slot_HDLC_to_device(QByteArray::fromHex("EF01"));
-            slot_HDLC_to_device(QByteArray::fromHex("EF06"));
-        }
+        log_1 << "data_from_channel" << data_from_channel.toHex().toUpper();
+            if (data_from_channel.size() > 2 && ((uint8_t)data_from_channel.at(0) == 0xEF) && ((uint8_t)data_from_channel.at(1) == 0x40)) {
+                log_1 << "data_from_channel.at(0) == 0xEF && data_from_channel.at(1) == 0x40" << data_from_channel.toHex().toUpper();
+                slot_HDLC_to_device(ELECTRO5_to_HDLC(QByteArray::fromHex("EF01")));
+                if (!connect_ok) tmr_tout->start(500);
+            }
 //            if (resp.size() > 2 && ((uint8_t)resp.at(0) == 0x40)) {
 //                slot_HDLC_to_device(QByteArray::fromHex("EF01"));
 //            }
@@ -815,7 +971,21 @@ void widget_connect::slot_serial_readyRead()
     case SWITCH_CONNECT_rs485: {
         data_from_channel.append(resp);
         if (data_from_channel.size() > 5 && data_from_channel.right(1).at(0) == 0x7E) {
-            log_5 << "RX" << data_from_channel.toHex().toUpper();
+            log_5 << "RX" << data_from_channel.toHex().toUpper() << data_from_channel.size();
+            //emit signal_log("RX  (" + QString::number(data_from_channel.size()) + ")  " + data_from_channel.toHex().toUpper());
+            emit signal_HDLC_from_device(data_from_channel);
+            data_from_channel.clear();
+        }
+        is_connected = true;
+        update_button();
+     //   emit signal_show_widget_info();
+     //   emit signal_show_widget_pulse();
+        break;
+    }
+    case SWITCH_CONNECT_usb_dongle: {
+        data_from_channel.append(resp);
+        if (data_from_channel.size() > 5 && data_from_channel.right(1).at(0) == 0x7E) {
+            log_1 << "RX_usb_dongle" << data_from_channel.toHex().toUpper();
             emit signal_HDLC_from_device(data_from_channel);
             data_from_channel.clear();
         }
@@ -871,11 +1041,15 @@ void widget_connect::update_com_ports()
 void widget_connect::update_button()
 {
     if (is_connected){
-        ui->pushButton_connect->setText("Связь установлена/Отключить соединение");
+    //    log_1 << "label_5_hide";
+      //  ui->pushButton_connect->setText("Связь установлена/Отключить соединение");
+        if (!connect_ok) ui->pushButton_connect->setText("Ожидание соединения с счётчиком");
         ui->label->hide();
         ui->label_2->hide();
         ui->label_pass->hide();
         ui->comboBox_client_addr->hide();
+        ui->lineEdit_servis_pass->hide();
+        ui->label_servis_pass->hide();
         ui->label_3->hide();
         ui->label_4->hide();
         ui->spinBox_server_addr_logical->hide();
@@ -883,34 +1057,84 @@ void widget_connect::update_button()
         ui->lineEdit_pass->hide();
         ui->comboBox_com_port->hide();
         ui->pushButton->hide();
+        ui->radioButton_rs_485->hide();
+        ui->radioButton_opto_port->hide();
+        ui->radioButton_usb_dongle->hide();
+        ui->radioButton_tcp_hdlc->hide();
+        ui->radioButton_rs_fastdl_hdlc->hide();
+        ui->label_9->hide();
+        ui->spinBox_modem_dec->hide();
+        ui->label_5->hide();
+        ui->comboBox_client_addr->hide();
+        ui->lineEdit_pass->hide();
+        ui->label_7->hide();
+        ui->label_8->hide();
+        ui->lineEdit_host_udp_direct->hide();
+        ui->spinBox_port_udp_direct->hide();
+        ui->label_10->hide();
+        ui->comboBox_BaudRate->hide();
     }
     else{
+        log_1 << "label_5_show";
         ui->pushButton_connect->setText("Соединение");
         ui->label->show();
         ui->label_2->show();
         ui->label_pass->show();
         ui->comboBox_client_addr->show();
+        uint32_t client_addr = ui->comboBox_client_addr->currentData().toUInt();
+        if ( client_addr == 0x30 ){
+            ui->lineEdit_servis_pass->show();
+            ui->label_servis_pass->show();
+        }
         ui->label_3->show();
         ui->label_4->show();
         ui->spinBox_server_addr_logical->show();
         ui->spinBox_server_addr_physical->show();
-        ui->comboBox_com_port->show();
-        uint32_t client_addr = ui->comboBox_client_addr->currentData().toUInt();
+        if ( ui->radioButton_rs_485->isChecked() ||
+             ui->radioButton_usb_dongle->isChecked() ||
+             ui->radioButton_opto_port->isChecked() ) {
+            ui->comboBox_com_port->show();
+            ui->pushButton->show();
+        }
+        if ( ui->radioButton_tcp_hdlc->isChecked() ){
+            ui->spinBox_port_udp_direct->show();
+            ui->lineEdit_host_udp_direct->show();
+            ui->label_7->show();
+            ui->label_8->show();
+            ui->pushButton->hide();
+        }
+        if ( ui->radioButton_rs_fastdl_hdlc->isChecked() ){
+            ui->comboBox_com_port->show();
+            ui->pushButton->show();
+            ui->label_9->show();
+            ui->spinBox_modem_dec->show();
+        }
+        if (ui->radioButton_usb_dongle->isChecked()){
+            ui->label_10->show();
+            ui->comboBox_BaudRate->show();
+            ui->comboBox_com_port->show();
+            ui->pushButton->show();
+        }
         ui->lineEdit_pass->hide();
         ui->label_pass->hide();
-        ui->pushButton->show();
+        ui->radioButton_rs_485->show();
+        ui->radioButton_opto_port->show();
+        ui->radioButton_rs_fastdl_hdlc->show();
+        ui->radioButton_usb_dongle->show();
+        ui->radioButton_tcp_hdlc->show();
+        ui->label_5->show();
         switch (client_addr) {
             case 0x10: break;
             case 0x20: {
                 ui->lineEdit_pass->show();
                 ui->label_pass->show();
-             //   ui->lineEdit_pass->setText("Reader");
+       //         ui->lineEdit_pass->setText("Reader");
                 break;
             }
             case 0x30: {
                 ui->lineEdit_pass->show();
                 ui->label_pass->show();
-                ui->lineEdit_pass->setText("SettWaviotPhobos");
+            //    ui->lineEdit_pass->setText("SettWaviotPhobos");
                 break;
             }
             default: break;
@@ -922,10 +1146,13 @@ void widget_connect::slot_update_switch_connect()
 {
     is_connected = false;
     emit signal_disconnect();
+    ui->label_6->setText("");
     ui->lineEdit_host_udp_direct->hide();
     ui->spinBox_port_udp_direct->hide();
+    ui->label_7->hide();
+    ui->label_8->hide();
     ui->comboBox_com_port->hide();
-    ui->spinBox_modem_dec->hide();
+ //   ui->spinBox_modem_dec->hide();
     ui->spinBox_modem_hex->hide();
     sconnect = SWITCH_CONNECT_none;
     if (ui->pushButton_connect->isChecked()) {
@@ -937,7 +1164,22 @@ void widget_connect::slot_update_switch_connect()
     if (ui->radioButton_udp_hdlc->isChecked()) {
         ui->lineEdit_host_udp_direct->show();
         ui->spinBox_port_udp_direct->show();
+        ui->label_7->show();
+        ui->label_8->show();
         sconnect = SWITCH_CONNECT_UDP_HDLC;
+    }
+    if (ui->radioButton_tcp_hdlc->isChecked()) {
+        ui->lineEdit_host_udp_direct->show();
+        ui->spinBox_port_udp_direct->show();
+        ui->label_7->show();
+        ui->label_8->show();
+        ui->pushButton->hide();
+        ui->comboBox_com_port->hide();
+        ui->spinBox_modem_dec->hide();
+        ui->label_9->hide();
+        ui->label_10->hide();
+        ui->comboBox_BaudRate->hide();
+        sconnect = SWITCH_CONNECT_TCP_HDLC;
     }
     if (ui->radioButton_rs_fastdl->isChecked()) {
         update_com_ports();
@@ -947,12 +1189,58 @@ void widget_connect::slot_update_switch_connect()
     if (ui->radioButton_rs_fastdl_hdlc->isChecked()) {
         update_com_ports();
         ui->comboBox_com_port->show();
+        ui->pushButton->show();
+        ui->spinBox_modem_dec->show();
+        ui->label_9->show();
+        ui->lineEdit_host_udp_direct->hide();
+        ui->spinBox_port_udp_direct->hide();
+        ui->label_7->hide();
+        ui->label_8->hide();
+        ui->label_10->hide();
+        ui->comboBox_BaudRate->hide();
         sconnect = SWITCH_CONNECT_radio_FASTDL_HDLC;
+    }
+    if (ui->radioButton_opto_port->isChecked()) {
+        update_com_ports();
+        ui->comboBox_com_port->show();
+        ui->pushButton->show();
+        ui->spinBox_modem_dec->hide();
+        ui->label_9->hide();
+        ui->lineEdit_host_udp_direct->hide();
+        ui->spinBox_port_udp_direct->hide();
+        ui->label_7->hide();
+        ui->label_8->hide();
+        ui->label_10->hide();
+        ui->comboBox_BaudRate->hide();
+        sconnect = SWITCH_CONNECT_rs485;
     }
     if (ui->radioButton_rs_485->isChecked()) {
         update_com_ports();
         ui->comboBox_com_port->show();
+        ui->pushButton->show();
+        ui->spinBox_modem_dec->hide();
+        ui->label_9->hide();
+        ui->lineEdit_host_udp_direct->hide();
+        ui->spinBox_port_udp_direct->hide();
+        ui->label_7->hide();
+        ui->label_8->hide();
+        ui->label_10->hide();
+        ui->comboBox_BaudRate->hide();
         sconnect = SWITCH_CONNECT_rs485;
+    }
+    if (ui->radioButton_usb_dongle->isChecked()) {
+        update_com_ports();
+        ui->comboBox_com_port->show();
+        ui->pushButton->show();
+        ui->spinBox_modem_dec->hide();
+        ui->label_9->hide();
+        ui->lineEdit_host_udp_direct->hide();
+        ui->spinBox_port_udp_direct->hide();
+        ui->label_7->hide();
+        ui->label_8->hide();
+        ui->label_10->show();
+        ui->comboBox_BaudRate->show();
+        sconnect = SWITCH_CONNECT_usb_dongle;
     }
     if (ui->radioButton_opto_hdlc->isChecked()) {
         update_com_ports();
@@ -974,14 +1262,54 @@ void widget_connect::slot_update_switch_connect()
     update_button();
 }
 
+QByteArray widget_connect::IntToArray(qint32 source) //Use qint32 to ensure that the number have 4 bytes
+{
+    //Avoid use of cast, this is the Qt way to serialize objects
+    QByteArray temp;
+    QDataStream data(&temp, QIODevice::ReadWrite);
+    data << source;
+    return temp;
+}
+
 void widget_connect::slot_HDLC_to_device(QByteArray data)
 {
     log_5 << "TX" << data.toHex().toUpper();
+    emit signal_log("TX  (" + QString::number(data.size()) + ")  " + data.toHex().toUpper());
     switch (sconnect) {
     case SWITCH_CONNECT_UDP_HDLC: {
         //udp->writeDatagram(data, udp_senderAddress, udp_senderPort);
         log_1 << data.toHex().toUpper() << QHostAddress(ui->lineEdit_host_udp_direct->text()) << ui->spinBox_port_udp_direct->value();
         udp->writeDatagram(data, QHostAddress(ui->lineEdit_host_udp_direct->text()), ui->spinBox_port_udp_direct->value());
+        break;
+    }
+    case SWITCH_CONNECT_TCP_HDLC: {
+        if( tcp->state() == QAbstractSocket::ConnectedState ) {
+            log_1 << "data send (повторы)" << data.toHex().toUpper() << QHostAddress(ui->lineEdit_host_udp_direct->text()) << ui->spinBox_port_udp_direct->value();
+            log_1 << "data.size()" << data.size();
+         /*   if (data.size()>40){
+                log_1 << "data.mid(0, 40)" << data.mid(0, 40).toHex().toUpper();
+                tcp->write(data.mid(0, 40));
+                nextSendTcpData = data;
+                nextSendTcpDataSize = data.size();
+                tmr_tout->start(100);
+            }
+            else tcp->write(data);*/
+            tcp->write(data);
+            contains_enough_data = true;
+            m_headerRead = false;
+        }
+        else {
+            log_1 << "connecting...";
+            firstSendTcpData = data;
+            tcp->connectToHost(ui->lineEdit_host_udp_direct->text(), ui->spinBox_port_udp_direct->value());
+            if(!tcp->waitForConnected(5000))
+            {
+                log_1 << "Error: " << tcp->errorString();
+                ui->label_6->setText("Error: " + tcp->errorString());
+                ui->label_6->setStyleSheet("QLabel {color : red}");
+                on_pushButton_connect_clicked(false);
+            }
+        }
         break;
     }
     case SWITCH_CONNECT_radio_FASTDL: {
@@ -1004,6 +1332,12 @@ void widget_connect::slot_HDLC_to_device(QByteArray data)
         serial->write(data);
         break;
     }
+    case SWITCH_CONNECT_usb_dongle: {
+        if (!serial->isOpen()) break;
+       // is_connected = true;
+        serial->write(data);
+        break;
+    }
     case SWITCH_CONNECT_opto_HDLC: {
         if (!serial->isOpen()) break;
         data = ELECTRO5_to_HDLC(data);
@@ -1021,7 +1355,6 @@ void widget_connect::slot_HDLC_to_device(QByteArray data)
     }
 }
 
-//#include <QPushButton>
 void widget_connect::slot_disconnect()
 {
     if (ui->pushButton_connect->isChecked()) {
@@ -1032,104 +1365,168 @@ void widget_connect::slot_disconnect()
 void widget_connect::on_pushButton_connect_clicked(bool checked)
 {
     if (checked) {
-     //   emit signal_timeout_start(3000);
+        ui->label_6->setText("");
+        log_1 << "ui->label_6->setText("");";
+        if (ui->radioButton_tcp_hdlc->isChecked()) emit signal_timeout_start(60000);
+        else if (ui->radioButton_rs_fastdl_hdlc->isChecked()) emit signal_timeout_start(120000);
+        else emit signal_timeout_start(20000);
+        pass_hi_level = ui->lineEdit_pass->text().toLocal8Bit();
+        log_1 << "pass_hi_level" << pass_hi_level;
+      //  log_1 << "serv_pass" << serv_pass.toLocal8Bit();
+        if ( ui->lineEdit_servis_pass->text().toLocal8Bit() == serv_pass.toLocal8Bit() ) servis_pass = true;
+        else servis_pass = false;
+        if ( ui->lineEdit_servis_pass->text().toLocal8Bit() == serv_pass2.toLocal8Bit() ) servis_pass2 = true;
+        else servis_pass2 = false;
         switch (sconnect) {
-                case SWITCH_CONNECT_UDP_HDLC: {
-            emit signal_connect(server_addr(), ui->comboBox_client_addr->currentData().toUInt(), ui->lineEdit_pass->text().toLocal8Bit());
-            break;
-        }
-        case SWITCH_CONNECT_radio_FASTDL:
-        case SWITCH_CONNECT_radio_FASTDL_HDLC: {
-            if (serial->isOpen()) {
-                serial->close();
-            }
-            serial->setPortName(ui->comboBox_com_port->currentData().toString());
-            serial->setDataBits(QSerialPort::Data8);
-            serial->setParity(QSerialPort::NoParity);
-            serial->setStopBits(QSerialPort::OneStop);
-            serial->setFlowControl(QSerialPort::NoFlowControl);
-            serial->setBaudRate(115200);
-            if (!serial->open(QIODevice::ReadWrite)) {
-                log_1 << "cant open" << serial->portName();
+            case SWITCH_CONNECT_UDP_HDLC: {
+                emit signal_connect(server_addr(), ui->comboBox_client_addr->currentData().toUInt(), ui->lineEdit_pass->text().toLocal8Bit());
                 break;
             }
-            nbfi_set_FastDL();
+            case SWITCH_CONNECT_TCP_HDLC: {
+                //tcp->connectToHost(QHostAddress(ui->lineEdit_host_udp_direct->text()), ui->spinBox_port_udp_direct->value());
+                emit signal_connect(server_addr(), ui->comboBox_client_addr->currentData().toUInt(), ui->lineEdit_pass->text().toLocal8Bit());
+                break;
+            }
+            case SWITCH_CONNECT_radio_FASTDL:
+            case SWITCH_CONNECT_radio_FASTDL_HDLC: {
+                if (serial->isOpen()) {
+                    serial->close();
+                }
+                serial->setPortName(ui->comboBox_com_port->currentData().toString());
+                serial->setDataBits(QSerialPort::Data8);
+                serial->setParity(QSerialPort::NoParity);
+                serial->setStopBits(QSerialPort::OneStop);
+                serial->setFlowControl(QSerialPort::NoFlowControl);
+                serial->setBaudRate(115200);
+                if (!serial->open(QIODevice::ReadWrite)) {
+                    log_1 << "cant open" << serial->portName();
+                    break;
+                }
+                nbfi_set_FastDL();
+                emit signal_connect(server_addr(), ui->comboBox_client_addr->currentData().toUInt(), ui->lineEdit_pass->text().toLocal8Bit());
+                break;
+            }
+            case SWITCH_CONNECT_rs485: {
+                if (serial->isOpen()) {
+                    serial->close();
+                }
+                serial->setPortName(ui->comboBox_com_port->currentData().toString());
+                serial->setDataBits(QSerialPort::Data8);
+                serial->setParity(QSerialPort::NoParity);
+                serial->setStopBits(QSerialPort::OneStop);
+                serial->setFlowControl(QSerialPort::NoFlowControl);
+                serial->setBaudRate(9600);
+                if (!serial->open(QIODevice::ReadWrite)) {
+                    log_1 << "cant open" << serial->portName();
+                    break;
+                }
+                emit signal_connect(server_addr(), ui->comboBox_client_addr->currentData().toUInt(), ui->lineEdit_pass->text().toLocal8Bit());
+                break;
+            }
+            case SWITCH_CONNECT_usb_dongle: {
+                if (serial->isOpen()) {
+                    serial->close();
+                }
+                serial->setPortName(ui->comboBox_com_port->currentData().toString());
+                serial->setDataBits(QSerialPort::Data8);
+                serial->setParity(QSerialPort::NoParity);
+                serial->setStopBits(QSerialPort::OneStop);
+                serial->setFlowControl(QSerialPort::NoFlowControl);
+                switch (ui->comboBox_BaudRate->currentData().toUInt()) {
+                    case 0x10: {
+                        serial->setBaudRate(9600);
+                        break;
+                    }
+                    case 0x20: {
+                        serial->setBaudRate(19200);
+                        break;
+                    }
+                    case 0x30: {
+                        serial->setBaudRate(38400);
+                        break;
+                    }
+                    case 0x40: {
+                        serial->setBaudRate(57600);
+                        break;
+                    }
+                    case 0x50: {
+                        serial->setBaudRate(115200);
+                        break;
+                    }
+                    case 0x60: {
+                        serial->setBaudRate(230400);
+                        break;
+                    }
+                    default: break;
+                }
 
-            emit signal_connect(server_addr(), ui->comboBox_client_addr->currentData().toUInt(), ui->lineEdit_pass->text().toLocal8Bit());
-            break;
-        }
-        case SWITCH_CONNECT_rs485: {
-            if (serial->isOpen()) {
-                serial->close();
-            }
-            serial->setPortName(ui->comboBox_com_port->currentData().toString());
-            serial->setDataBits(QSerialPort::Data8);
-            serial->setParity(QSerialPort::NoParity);
-            serial->setStopBits(QSerialPort::OneStop);
-            serial->setFlowControl(QSerialPort::NoFlowControl);
-            serial->setBaudRate(9600);
-            if (!serial->open(QIODevice::ReadWrite)) {
-                log_1 << "cant open" << serial->portName();
+                if (!serial->open(QIODevice::ReadWrite)) {
+                    log_1 << "cant open" << serial->portName();
+                    break;
+                }
+                emit signal_connect(server_addr(), ui->comboBox_client_addr->currentData().toUInt(), ui->lineEdit_pass->text().toLocal8Bit());
                 break;
             }
-            emit signal_connect(server_addr(), ui->comboBox_client_addr->currentData().toUInt(), ui->lineEdit_pass->text().toLocal8Bit());
-            break;
-        }
-        case SWITCH_CONNECT_opto_HDLC: {
-            if (serial->isOpen()) {
-                serial->close();
-            }
-            serial->setPortName(ui->comboBox_com_port->currentData().toString());
-            serial->setDataBits(QSerialPort::Data8);
-            serial->setParity(QSerialPort::NoParity);
-            serial->setStopBits(QSerialPort::OneStop);
-            serial->setFlowControl(QSerialPort::NoFlowControl);
-            serial->setBaudRate(9600);
-            if (!serial->open(QIODevice::ReadWrite)) {
-                log_1 << "cant open" << serial->portName();
-                break;
-            }
-//            static type_slip_buf slip_buf;
+            case SWITCH_CONNECT_opto_HDLC: {
+                if (serial->isOpen()) {
+                    serial->close();
+                }
+                serial->setPortName(ui->comboBox_com_port->currentData().toString());
+                serial->setDataBits(QSerialPort::Data8);
+                serial->setParity(QSerialPort::NoParity);
+                serial->setStopBits(QSerialPort::OneStop);
+                serial->setFlowControl(QSerialPort::NoFlowControl);
+                serial->setBaudRate(9600);
+                if (!serial->open(QIODevice::ReadWrite)) {
+                    log_1 << "cant open" << serial->portName();
+                    break;
+                }
+    //            static type_slip_buf slip_buf;
 
-            QByteArray arr = ELECTRO5_to_HDLC(QByteArray::fromHex("EF06"));
-//            log_1 << arr.toHex().toUpper();
-//            QByteArray arr_upack = HDLC_to_ELECTRO5(&slip_buf, arr);
-//            log_1 << arr_upack.toHex().toUpper();
-            serial->write(arr);
-//            emit signal_connect(server_addr(), ui->comboBox_client_addr->currentData().toUInt(), ui->lineEdit_pass->text().toLocal8Bit());
-            break;
-        }
-        case SWITCH_CONNECT_radio_FASTDL_electro: {
-            if (serial->isOpen()) {
-                serial->close();
-            }
-            serial->setPortName(ui->comboBox_com_port->currentData().toString());
-            serial->setDataBits(QSerialPort::Data8);
-            serial->setParity(QSerialPort::NoParity);
-            serial->setStopBits(QSerialPort::OneStop);
-            serial->setFlowControl(QSerialPort::NoFlowControl);
-            serial->setBaudRate(115200);
-            if (!serial->open(QIODevice::ReadWrite)) {
-                log_1 << "cant open" << serial->portName();
+                QByteArray arr = ELECTRO5_to_HDLC(QByteArray::fromHex("EF06"));
+    //            log_1 << arr.toHex().toUpper();
+    //            QByteArray arr_upack = HDLC_to_ELECTRO5(&slip_buf, arr);
+    //            log_1 << arr_upack.toHex().toUpper();
+                serial->write(arr);
+    //            emit signal_connect(server_addr(), ui->comboBox_client_addr->currentData().toUInt(), ui->lineEdit_pass->text().toLocal8Bit());
                 break;
             }
-            nbfi_set_FastDL();
-            log_1 << "send";
-            slot_HDLC_to_device(QByteArray::fromHex("EF06"));
-            break;
-        }
-        default: break;
+            case SWITCH_CONNECT_radio_FASTDL_electro: {
+                if (serial->isOpen()) {
+                    serial->close();
+                }
+                serial->setPortName(ui->comboBox_com_port->currentData().toString());
+                serial->setDataBits(QSerialPort::Data8);
+                serial->setParity(QSerialPort::NoParity);
+                serial->setStopBits(QSerialPort::OneStop);
+                serial->setFlowControl(QSerialPort::NoFlowControl);
+                serial->setBaudRate(115200);
+                if (!serial->open(QIODevice::ReadWrite)) {
+                    log_1 << "cant open" << serial->portName();
+                    break;
+                }
+                nbfi_set_FastDL();
+                log_1 << "send";
+                slot_HDLC_to_device(QByteArray::fromHex("EF06"));
+                break;
+            }
+            default: break;
         }
     } else {
+        emit signal_form_log_close();
+        servis_pass = false;
+        ui->lineEdit_servis_pass->setText("");
 //        emit signal_hide_widget_info();
 //        emit signal_hide_widget_pulse();
 //        emit signal_hide_point_power();
 //        emit signal_hide_power_data();
 //        emit signal_hide_power_data_1f();
-        emit signal_disable_tab_kn(0, 0);
+        emit signal_enable_tab_kn();
         slot_disable_tab_kn(0, 0);
+        connect_ok = false;
         emit signal_tab_hide();
         ui->pushButton_ReadData->hide();
+        resize(100, 100);
 
         is_connected = false;
         update_button();
@@ -1137,34 +1534,46 @@ void widget_connect::on_pushButton_connect_clicked(bool checked)
 //            serial->close();
 //        }
         emit signal_disconnect();
+        emit signal_min_max_window(0);
         switch (sconnect) {
-        case SWITCH_CONNECT_UDP_HDLC: {
-//            emit signal_connect(server_addr(), ui->comboBox_client_addr->currentData().toUInt(), ui->lineEdit_pass->text().toLocal8Bit());
-            break;
-        }
-        case SWITCH_CONNECT_radio_FASTDL:
-        case SWITCH_CONNECT_radio_FASTDL_HDLC:
-        case SWITCH_CONNECT_radio_FASTDL_electro: {
-            if (serial->isOpen()) {
-                slot_HDLC_to_device(QByteArray::fromHex("EF02"));
-                serial->waitForReadyRead(1000);
-                serial->close();
+            case SWITCH_CONNECT_UDP_HDLC: {
+    //            emit signal_connect(server_addr(), ui->comboBox_client_addr->currentData().toUInt(), ui->lineEdit_pass->text().toLocal8Bit());
+                break;
             }
-            break;
-        }
-        case SWITCH_CONNECT_rs485: {
-            if (serial->isOpen()) {
-                serial->close();
+            case SWITCH_CONNECT_TCP_HDLC: {
+    //            emit signal_connect(server_addr(), ui->comboBox_client_addr->currentData().toUInt(), ui->lineEdit_pass->text().toLocal8Bit());
+                tcp->abort();
+                break;
             }
-            break;
-        }
-        case SWITCH_CONNECT_opto_HDLC: {
-            if (serial->isOpen()) {
-                serial->close();
+            case SWITCH_CONNECT_radio_FASTDL:
+            case SWITCH_CONNECT_radio_FASTDL_HDLC:
+            case SWITCH_CONNECT_radio_FASTDL_electro: {
+                if (serial->isOpen()) {
+                    slot_HDLC_to_device(QByteArray::fromHex("EF01"));
+                    serial->waitForReadyRead(1000);
+                    serial->close();
+                }
+                break;
             }
-            break;
-        }
-        default: break;
+            case SWITCH_CONNECT_rs485: {
+                if (serial->isOpen()) {
+                    serial->close();
+                }
+                break;
+            }
+            case SWITCH_CONNECT_usb_dongle: {
+                if (serial->isOpen()) {
+                    serial->close();
+                }
+                break;
+            }
+            case SWITCH_CONNECT_opto_HDLC: {
+                if (serial->isOpen()) {
+                    serial->close();
+                }
+                break;
+            }
+            default: break;
         }
     }
 }
@@ -1180,13 +1589,17 @@ void widget_connect::on_comboBox_client_addr_currentIndexChanged(int index)
         case 0x20: {
             ui->lineEdit_pass->show();
             ui->label_pass->show();
-         //   ui->lineEdit_pass->setText("Reader");
+     //       ui->lineEdit_pass->setText("Reader");
+            ui->lineEdit_servis_pass->hide();
+            ui->label_servis_pass->hide();
             break;
         }
         case 0x30: {
             ui->lineEdit_pass->show();
             ui->label_pass->show();
-            ui->lineEdit_pass->setText("SettWaviotPhobos");
+         //   ui->lineEdit_pass->setText("SettWaviotPhobos");
+            ui->lineEdit_servis_pass->show();
+            ui->label_servis_pass->show();
             break;
         }
         default: break;
@@ -1226,8 +1639,26 @@ void widget_connect::slot_view_log_hide_show(bool hide_show){
 }
 
 void widget_connect::slot_disable_tab_kn(bool fl, int){
-    if (fl) ui->pushButton_ReadData->setEnabled(false);
-    else ui->pushButton_ReadData->setEnabled(true);
-    if (fl) ui->pushButton_2->setEnabled(false);
-    else ui->pushButton_2->setEnabled(true);
+    if (fl){
+        ui->pushButton_ReadData->setEnabled(false);
+        ui->pushButton_2->setEnabled(false);
+    }
+    else{
+        ui->pushButton_ReadData->setEnabled(true);
+        ui->pushButton_2->setEnabled(true);
+        ui->pushButton_connect->setText("Связь установлена/Отключить соединение");
+        connect_ok = true;
+    }
+}
+
+void widget_connect::on_pushButton_3_clicked()
+{
+    if( tcp->state() == QAbstractSocket::ConnectedState ) log_1 << "tcp->state() - connected";
+    else log_1 << "tcp->state() - disconnected";
+}
+
+void widget_connect::on_pushButton_4_clicked()
+{
+    tcp->abort();
+    ui->label_6->setText("");
 }

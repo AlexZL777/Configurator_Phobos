@@ -4,6 +4,7 @@
 #include <QJsonDocument>
 #include <QBitArray>
 #include <Logger/Logger.h>
+#include <DLMS_AES.h>
 
 #include <QDataStream>
 
@@ -251,6 +252,7 @@ QPair<uint32_t, QVariant> pdu_data_reader(QByteArray pdu)
 
 QByteArray HDLC_DLMS_exchange::DLMS_QVariantMap_to_PDU(QVariantMap vpdu)
 {
+    log_1 << "vpdu" << qPrintable(QJsonDocument::fromVariant(vpdu).toJson());
     QByteArray out;
     if (vpdu.contains("get-request")) {
         out += DLMS_COMMAND_GET_REQUEST;
@@ -459,10 +461,31 @@ QByteArray HDLC_DLMS_exchange::DLMS_QVariantMap_to_PDU(QVariantMap vpdu)
         out += arr_tmp.size();
         out += arr_tmp;
     }
+    if (vpdu.contains("Action-request-normal")) {
+        out += DLMS_COMMAND_METHOD_REQUEST;
+        vpdu = vpdu.value("Action-request-normal").toMap();
+        QByteArray arr_tmp;
+        arr_tmp += 0x01;
+        arr_tmp += 0xC1;
+        arr_tmp += QByteArray::fromHex("000F");
+        arr_tmp += QByteArray::fromHex("0000280000FF");
+        arr_tmp += 0x01;
+        arr_tmp += 0x01;
+        arr_tmp += 0x09;
+      //  arr_tmp += 0x11;
+        if (vpdu.contains("calling-authentication-value")) {
+            QByteArray pass = QByteArray::fromHex(vpdu.value("calling-authentication-value", QVariantMap()).toMap().value("charstring", QString()).toString().toLocal8Bit());
+            arr_tmp += pass.size();
+            arr_tmp += pass;
+        }
+     //   out += arr_tmp.size();
+        out += arr_tmp;
+    }
 
 //    if (!vpdu.isEmpty()) {
 //        log_1 << qPrintable(QJsonDocument::fromVariant(vpdu).toJson());
 //    }
+    log_1 << "out" << out.toHex().toUpper();
     return out;
 }
 QVariantMap HDLC_DLMS_exchange::DLMS_PDU_to_QVariantMap(QByteArray pdu)
@@ -584,6 +607,13 @@ QVariantMap HDLC_DLMS_exchange::DLMS_PDU_to_QVariantMap(QByteArray pdu)
                 }
                 break;
             }
+            case 0xAA: {
+                if (size == 18) {
+                    QByteArray arr_val((const char*)pb_data+2, size-2);
+                    vmap_aare.insert("key-chellendge", arr_val);
+                }
+                break;
+            }
             default:
                 log_1 << "unknow header AARE" << QString::number(tag, 16).toUpper();
                 break;
@@ -592,6 +622,39 @@ QVariantMap HDLC_DLMS_exchange::DLMS_PDU_to_QVariantMap(QByteArray pdu)
             pb_data += size;
         }
         vout.insert("aare", vmap_aare);
+        break;
+    }
+    case DLMS_COMMAND_METHOD_RESPONSE: {
+        pb_data++;pb_data++;pb_data++;pb_data++;pb_data++;
+        uint8_t tag;
+        uint8_t size;
+        QVariantMap vmap_action_resp;
+        while (pdu.size() > (pb_data - (uint8_t *)pdu.data())) {
+            tag = *pb_data++;
+            size = *pb_data++;
+            switch (tag) {
+            case 0x09: {
+                if (size == 16) {
+                    QByteArray arr_val((const char*)pb_data, size);
+                    log_1 << "response" << arr_val.toHex().toUpper();
+                    vmap_action_resp.insert("f-CtoS", arr_val);
+                }
+                break;
+            }
+            case 0x03: {
+                if (size == 0) {
+                    vmap_action_resp.insert("error-pass", 1);
+                }
+                break;
+            }
+            default:
+                log_1 << "unknow header AARE" << QString::number(tag, 16).toUpper();
+                break;
+            }
+//            log_1 << tag << size << QByteArray((const char*)pb_data, size).toHex().toUpper();
+            pb_data += size;
+        }
+        vout.insert("action-responce-normal", vmap_action_resp);
         break;
     }
 
@@ -786,7 +849,7 @@ QVariantMap HDLC_DLMS_exchange::DLMS_PDU_to_QVariantMap(QByteArray pdu)
         break;
     }
     }
-   // log_1 << qPrintable(QJsonDocument::fromVariant(vout).toJson());
+    log_1 << qPrintable(QJsonDocument::fromVariant(vout).toJson());
 
     return vout;
 }
@@ -1424,7 +1487,7 @@ void HDLC_DLMS_exchange::HDLC_MAC_parser_controller(HDLC_BUF *hdlc)
 //        emit signal_PDU_from_device(DLMS_PDU_to_QVariantMap(QByteArray((const char *)hdlc->data_buf, hdlc->data_len)));
         log_4 << "RX PDU"<< hdlc_in_buf_data.toHex().toUpper();
         QVariantMap vm = DLMS_PDU_to_QVariantMap(hdlc_in_buf_data);
-     //   log_1 << qPrintable(QJsonDocument::fromVariant(vm).toJson());
+        log_1 << qPrintable(QJsonDocument::fromVariant(vm).toJson());
         QVariantMap vm1 = vm;
         if (vm.contains("get-response")){
             vm = vm.value("get-response", QVariantMap()).toMap();
@@ -1456,6 +1519,103 @@ void HDLC_DLMS_exchange::HDLC_MAC_parser_controller(HDLC_BUF *hdlc)
                 }
             }
             else emit signal_PDU_from_device(vm1);
+        }
+        else if (vm.contains("aare")){
+            vm = vm.value("aare", QVariantMap()).toMap();
+            if (vm.contains("key-chellendge")){
+                QByteArray key_chellendge = vm["key-chellendge"].toByteArray();
+                pass = pass.append(QByteArray::fromHex("000000000000000000000000000000000000"));
+                pass = pass.mid(0, 16);
+                log_1 << "key_chellendge" << key_chellendge.toHex().toUpper();
+                uint8_t encrypt_pass[16];
+                uint8_t key[16];
+                uint8_t chellendge[16];
+                for (int n = 0; n < 16; ++n) {
+                  chellendge[n] = key_chellendge.at(n);
+                }
+                for (int n = 0; n < pass.size(); ++n) {
+                  key[n] = pass.at(n);
+                }
+                  log_1 << "chellendge" << chellendge[0] << chellendge[1] << chellendge[2] << chellendge[3] << chellendge[4] << chellendge[5] << chellendge[6] << chellendge[7] << chellendge[8] << chellendge[9] << chellendge[10] << chellendge[11] << chellendge[12] << chellendge[13] << chellendge[14] << chellendge[15];
+            //    log_1 << "key_chellendge" << key_chellendge.toUpper();
+                log_1 << "key" << key[0] << key[1] << key[2] << key[3] << key[4] << key[5] << key[6] << key[7] << key[8] << key[9] << key[10] << key[11] << key[12] << key[13] << key[14] << key[15];;
+                DLMS_Aes1Encrypt( chellendge, key, encrypt_pass);
+                log_1 << "encrypt_pass" << encrypt_pass[0] << encrypt_pass[1] << encrypt_pass[2] << encrypt_pass[3] << encrypt_pass[4] << encrypt_pass[5] << encrypt_pass[6] << encrypt_pass[7] << encrypt_pass[8] << encrypt_pass[9] << encrypt_pass[10] << encrypt_pass[11] << encrypt_pass[12] << encrypt_pass[13] << encrypt_pass[14] << encrypt_pass[15];
+
+                //        for (int n = 0; n < pass.size(); ++n) {
+                //            pass[n] = encrypt_pass[n];
+                //        }
+                //    log_1 << "pass_encrypt" << pass.toHex().toUpper();
+                QVariantMap vm_charstring;
+                QVariantMap vm_action;
+                QVariantMap vm;
+                QByteArray aes_enc;
+                for (int n = 0; n < 16; ++n) {
+                  aes_enc = aes_enc.append(encrypt_pass[n]);
+                }
+                vm_charstring.insert("charstring", aes_enc.toHex().toUpper());
+                vm_action.insert("calling-authentication-value", vm_charstring);
+                vm.insert("Action-request-normal", vm_action);
+                log_1 << "pass" << qPrintable(QJsonDocument::fromVariant(vm).toJson());
+                QByteArray arr = DLMS_QVariantMap_to_PDU(vm);
+                log_4 << "TX PDU"<< arr.toHex().toUpper();
+                slot_PDU_to_device(arr);
+            }
+            else emit signal_PDU_from_device(vm1);
+
+        }
+        else if (vm.contains("action-responce-normal")){
+            vm = vm.value("action-responce-normal", QVariantMap()).toMap();
+            if (vm.contains("f-CtoS")){
+                QByteArray key_chellendge = vm["f-CtoS"].toByteArray();
+                pass = pass.append(QByteArray::fromHex("000000000000000000000000000000000000"));
+                pass = pass.mid(0, 16);
+                uint8_t encrypt_pass[16];
+                uint8_t key[16];
+                uint8_t chellendge[] = {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2};
+//                for (int n = 0; n < 16; ++n) {
+//                  chellendge[n] = key_chellendge.at(n);
+//                }
+                for (int n = 0; n < pass.size(); ++n) {
+                  key[n] = pass.at(n);
+                }
+                  log_1 << "chellendge" << chellendge[0] << chellendge[1] << chellendge[2] << chellendge[3] << chellendge[4] << chellendge[5] << chellendge[6] << chellendge[7] << chellendge[8] << chellendge[9] << chellendge[10] << chellendge[11] << chellendge[12] << chellendge[13] << chellendge[14] << chellendge[15];
+            //    log_1 << "key_chellendge" << key_chellendge.toUpper();
+                log_1 << "key" << key[0] << key[1] << key[2] << key[3] << key[4] << key[5] << key[6] << key[7] << key[8] << key[9] << key[10] << key[11] << key[12] << key[13] << key[14] << key[15];;
+                DLMS_Aes1Encrypt( chellendge, key, encrypt_pass);
+                QByteArray enc_pass;
+                for (int n = 0; n < 16; ++n) {
+                  enc_pass[n] = encrypt_pass[n];
+                }
+                log_1 << "encrypt_pass" << encrypt_pass[0] << encrypt_pass[1] << encrypt_pass[2] << encrypt_pass[3] << encrypt_pass[4] << encrypt_pass[5] << encrypt_pass[6] << encrypt_pass[7] << encrypt_pass[8] << encrypt_pass[9] << encrypt_pass[10] << encrypt_pass[11] << encrypt_pass[12] << encrypt_pass[13] << encrypt_pass[14] << encrypt_pass[15];
+                log_1 << "key_chellendge" << key_chellendge.toHex().toUpper() << enc_pass.toHex().toUpper();;
+                if ( key_chellendge == enc_pass ) log_1 << "Ураааааа!!!";
+
+                QVariantMap vm_charstring;
+                QVariantMap vm_action;
+                QVariantMap vm;
+                vm_charstring.insert("charstring", enc_pass.toHex().toUpper());
+                vm_action.insert("authentication-value", vm_charstring);
+                vm.insert("Action-responce-normal", vm_action);
+                vm_charstring.insert("charstring", key_chellendge.toHex().toUpper());
+                vm_action.insert("authentication-key-chellendge", vm_charstring);
+                vm.insert("Action-responce-normal", vm_action);
+                log_1 << "pass" << qPrintable(QJsonDocument::fromVariant(vm).toJson());
+                QByteArray arr = DLMS_QVariantMap_to_PDU(vm);
+                log_4 << "TX PDU"<< arr.toHex().toUpper();
+                emit signal_PDU_from_device(vm);
+            }
+            if (vm.contains("error-pass")){
+                QVariantMap vm_action;
+                QVariantMap vm;
+                vm_action.insert("error-pass", 1);
+                vm.insert("Action-responce-normal", vm_action);
+                log_1 << "pass" << qPrintable(QJsonDocument::fromVariant(vm).toJson());
+                QByteArray arr = DLMS_QVariantMap_to_PDU(vm);
+                log_4 << "TX PDU"<< arr.toHex().toUpper();
+                emit signal_PDU_from_device(vm);
+            }
+         //   else emit signal_PDU_from_device(vm1);
         }
         else emit signal_PDU_from_device(vm);
         hdlc_in_buf_data.clear();
@@ -1649,13 +1809,32 @@ void HDLC_DLMS_exchange::slot_vPDU_to_device(QVariant vpdu)
         QVariantMap vm_aarq = vm.value("aarq", QVariantMap()).toMap();
         vm_aarq.insert("sender-acse-requirements", 1);
         vm_aarq.insert("mechanism-name", 1);
+        chellendge = pass.append(QByteArray::fromHex("000000000000000000000000000000000000"));
+        chellendge = chellendge.mid(0, 16);
         if (hdlc->clnt.bytes4.addr == 0x30) {
             vm_aarq.insert("mechanism-name", 2);
+            chellendge = QByteArray::fromHex("02020202020202020202020202020202");
         }
         QVariantMap vm_charstring;
-        vm_charstring.insert("charstring", pass.toHex().toUpper());
+//        uint8_t encrypt_pass[16];
+//        uint8_t key[] = "1230000000000000";
+//        uint8_t pass_[16];
+//        for (int n = 0; n < pass.size(); ++n) {
+//            key[n] = pass.at(n);
+//        }
+     //   for (int n = 0; n < pass.size(); ++n) {
+     //       pass_[n] = pass.at(n);
+     //   }
+     //   log_1 << "pass_" << pass.toHex().toUpper() << pass_[0] << pass_[1] << pass_[2] << pass_[3] << pass_[4] << pass_[5] << pass_[6] << pass_[7] << pass_[8] << pass_[9] << pass_[10] << pass_[11] << pass_[12] << pass_[13] << pass_[14] << pass_[15];
+     //   log_1 << "key" << key[0] << key[1] << key[2] << key[3] << key[4] << key[5] << key[6] << key[7] << key[8] << key[9] << key[10] << key[11] << key[12] << key[13] << key[14] << key[15];;
+     //   DLMS_Aes1Encrypt( pass_, key, encrypt_pass);
+     //   log_1 << "encrypt_pass" << encrypt_pass[0] << encrypt_pass[1] << encrypt_pass[2] << encrypt_pass[3] << encrypt_pass[4] << encrypt_pass[5] << encrypt_pass[6] << encrypt_pass[7] << encrypt_pass[8] << encrypt_pass[9] << encrypt_pass[10] << encrypt_pass[11] << encrypt_pass[12] << encrypt_pass[13] << encrypt_pass[14] << encrypt_pass[15];
+     //   log_1 << "pass_encrypt" << pass.toHex().toUpper();
+        vm_charstring.insert("charstring", chellendge.toHex().toUpper());
+
         vm_aarq.insert("calling-authentication-value", vm_charstring);
         vm.insert("aarq", vm_aarq);
+        log_1 << "chellendge" << qPrintable(QJsonDocument::fromVariant(vm).toJson());
     }
     QByteArray arr = DLMS_QVariantMap_to_PDU(vm);
 //    log_4 << "TX PDU"<< arr.toHex().toUpper();
@@ -1663,7 +1842,7 @@ void HDLC_DLMS_exchange::slot_vPDU_to_device(QVariant vpdu)
 }
 void HDLC_DLMS_exchange::slot_HDLC_from_device(QByteArray data)
 {
-//    log_1 << data.toHex().toUpper() << data.size();
+    log_1 << data.toHex().toUpper() << data.size();
     for (int i = 0; i < data.size(); ++i) {
 //        log_1 << hbuf_in->mode_frame;
         HDLC_MAC_LLC_parser(hdlc, data[i]);

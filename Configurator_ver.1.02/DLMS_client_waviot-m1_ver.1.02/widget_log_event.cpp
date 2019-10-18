@@ -10,6 +10,7 @@
 #include <QSpacerItem>
 #include <QScrollArea>
 
+
 extern int count_bar;
 
 typedef enum {
@@ -45,12 +46,28 @@ widget_log_event::widget_log_event(QWidget *parent) :
     connect(tmr_t_out, SIGNAL(timeout()), this, SLOT(timeout()));
     setLayout( &mainLayout );
 
+    QGridLayout* gridLayout = new QGridLayout;
+    mainLayout.addLayout( gridLayout );
+
+  //  QSpacerItem* hspacer = new QSpacerItem();
+
+    gridLayout->setColumnStretch(0, 1);
+    gridLayout->setColumnStretch(1, 1);
+    gridLayout->setColumnStretch(2, 1);
+
     radio1->setText("считать все журналы событий");
-    mainLayout.addWidget( radio1  );
-    mainLayout.setAlignment( radio1, Qt::AlignCenter);
+    gridLayout->addWidget( radio1, 0, 1  );
+    gridLayout->setAlignment( radio1, Qt::AlignLeft);
+
+    QPushButton* bn = new QPushButton( trUtf8( "Сохранить в xls" ) );
+    connect( bn, SIGNAL( clicked() ), this, SLOT( slot_click_bn() ) );
+    bn->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Minimum);
+    gridLayout->addWidget( bn, 0, 2 );
+    gridLayout->setAlignment( bn, Qt::AlignLeft);
+
     radio2->setText("выбрать журнал событий для считывания");
-    mainLayout.addWidget( radio2 );
-    mainLayout.setAlignment( radio2, Qt::AlignCenter);
+    gridLayout->addWidget( radio2, 1, 1 );
+    gridLayout->setAlignment( radio2, Qt::AlignLeft);
     connect(radio1, SIGNAL(toggled(bool)), this, SLOT(slotRadioToggled(bool)));
     connect(radio2, SIGNAL(toggled(bool)), this, SLOT(slotRadioToggled(bool)));
 
@@ -66,8 +83,8 @@ widget_log_event::widget_log_event(QWidget *parent) :
     combo->addItem("Превышение реактивной мощности (тангенса сети)", 9);
     combo->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Minimum);
     type_data = combo->currentData().toUInt();
-    mainLayout.addWidget( combo );
-    mainLayout.setAlignment(combo, Qt::AlignCenter);
+    gridLayout->addWidget( combo, 2, 1 );
+    gridLayout->setAlignment(combo, Qt::AlignLeft);
 
     connect(combo, SIGNAL(currentIndexChanged(int)), this, SLOT(slotCombo(int)));
 
@@ -172,12 +189,6 @@ widget_log_event::widget_log_event(QWidget *parent) :
     m_view_tg_pow->verticalHeader()->hide();
     m_view_tg_pow->setModel( m_model_tg_pow = new TModel_tg_pow );
     sLayout->addWidget( m_view_tg_pow );
- //   m_view_tg_pow->hide();
-
- //   sLayout->setMargin(0);
- //   sLayout->setSpacing(0);
- //   sLayout->setSizeConstraint(QLayout::SetMaximumSize);
- //  sLayout->setGeometry();
 
     QWidget *workSpace = new QWidget();
     workSpace->setLayout( sLayout );
@@ -199,6 +210,342 @@ widget_log_event::widget_log_event(QWidget *parent) :
 widget_log_event::~widget_log_event()
 {
     delete ui;
+}
+
+QList< QHash< int, QVariant > > TModel_U::return_m_data(){
+    return m_data;
+}
+
+QList< QHash< int, QVariant > > TModel_I::return_m_data(){
+    return m_data;
+}
+
+QList< QHash< int, QVariant > > TModel_rele::return_m_data(){
+    return m_data;
+}
+
+QList< QHash< int, QVariant > > TModel_prog::return_m_data(){
+    return m_data;
+}
+
+QList< QHash< int, QVariant > > TModel_ext::return_m_data(){
+    return m_data;
+}
+
+QList< QHash< int, QVariant > > TModel_com::return_m_data(){
+    return m_data;
+}
+
+QList< QHash< int, QVariant > > TModel_access::return_m_data(){
+    return m_data;
+}
+
+QList< QHash< int, QVariant > > TModel_diagnos::return_m_data(){
+    return m_data;
+}
+
+QList< QHash< int, QVariant > > TModel_tg_pow::return_m_data(){
+    return m_data;
+}
+
+void widget_log_event::slot_click_bn(){
+    QXlsx::Document xlsx;
+    QList< QHash< int, QVariant > > m_data;
+    if ( radio1->isChecked()) {
+        for (int i = 1; i < 10; ++i) {
+            switch( i ) {
+                case 1:
+                    xlsx.setColumnWidth(2, 20);
+                    xlsx.write(1, 1, "События, связанные с напряжением");
+                    xlsx.write(3, 1, "№ п/п");
+                    xlsx.write(3, 2, "Время");
+                    xlsx.write(3, 3, "Событие");
+                    m_data = m_model_U->return_m_data();
+                    for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                        QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                        xlsx.write(row_t, 1, data_row[0].toInt());
+                        xlsx.write(row_t, 2, data_row[1].toString());
+                        xlsx.write(row_t, 3, data_row[2].toString());
+                    }
+                    xlsx.renameSheet("Sheet1", "U");
+                    break;
+                case 2:
+                    xlsx.addSheet("I");
+                    xlsx.setColumnWidth(2, 20);
+                    xlsx.write(1, 1, "События, связанные с током");
+                    xlsx.write(3, 1, "№ п/п");
+                    xlsx.write(3, 2, "Время");
+                    xlsx.write(3, 3, "Событие");
+                    m_data = m_model_I->return_m_data();
+                    for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                        QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                        xlsx.write(row_t, 1, data_row[0].toInt());
+                        xlsx.write(row_t, 2, data_row[1].toString());
+                        xlsx.write(row_t, 3, data_row[2].toString());
+                    }
+                    break;
+                case 3:
+                    xlsx.addSheet("rele");
+                    xlsx.setColumnWidth(2, 20);
+                    xlsx.write(1, 1, "События, связанные с вкл./выкл. счётчика, коммутации реле нагрузки");
+                    xlsx.write(3, 1, "№ п/п");
+                    xlsx.write(3, 2, "Время");
+                    xlsx.write(3, 3, "Событие");
+                    m_data = m_model_rele->return_m_data();
+                    for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                        QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                        xlsx.write(row_t, 1, data_row[0].toInt());
+                        xlsx.write(row_t, 2, data_row[1].toString());
+                        xlsx.write(row_t, 3, data_row[2].toString());
+                    }
+                    break;
+                case 4:
+                    xlsx.addSheet("prog");
+                    xlsx.setColumnWidth(2, 20);
+                    xlsx.write(1, 1, "События программирования параметров счётчика");
+                    xlsx.write(3, 1, "№ п/п");
+                    xlsx.write(3, 2, "Время");
+                    xlsx.write(3, 3, "Событие");
+                    m_data = m_model_prog->return_m_data();
+                    for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                        QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                        xlsx.write(row_t, 1, data_row[0].toInt());
+                        xlsx.write(row_t, 2, data_row[1].toString());
+                        xlsx.write(row_t, 3, data_row[2].toString());
+                    }
+                    break;
+                case 5:
+                    xlsx.addSheet("ext");
+                    xlsx.setColumnWidth(2, 20);
+                    xlsx.write(1, 1, "События внешних воздействий");
+                    xlsx.write(3, 1, "№ п/п");
+                    xlsx.write(3, 2, "Время");
+                    xlsx.write(3, 3, "Событие");
+                    m_data = m_model_ext->return_m_data();
+                    for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                        QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                        xlsx.write(row_t, 1, data_row[0].toInt());
+                        xlsx.write(row_t, 2, data_row[1].toString());
+                        xlsx.write(row_t, 3, data_row[2].toString());
+                    }
+                    break;
+                case 6:
+                    xlsx.addSheet("com");
+                    xlsx.setColumnWidth(2, 20);
+                    xlsx.write(1, 1, "Коммуникационные события");
+                    xlsx.write(3, 1, "№ п/п");
+                    xlsx.write(3, 2, "Время");
+                    xlsx.write(3, 3, "Событие");
+                    m_data = m_model_com->return_m_data();
+                    for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                        QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                        xlsx.write(row_t, 1, data_row[0].toInt());
+                        xlsx.write(row_t, 2, data_row[1].toString());
+                        xlsx.write(row_t, 3, data_row[2].toString());
+                    }
+                    break;
+                case 7:
+                    xlsx.addSheet("access");
+                    xlsx.setColumnWidth(2, 20);
+                    xlsx.write(1, 1, "События контроля доступа");
+                    xlsx.write(3, 1, "№ п/п");
+                    xlsx.write(3, 2, "Время");
+                    xlsx.write(3, 3, "Событие");
+                    m_data = m_model_access->return_m_data();
+                    for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                        QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                        xlsx.write(row_t, 1, data_row[0].toInt());
+                        xlsx.write(row_t, 2, data_row[1].toString());
+                        xlsx.write(row_t, 3, data_row[2].toString());
+                    }
+                    break;
+                case 8:
+                    xlsx.addSheet("diagnos");
+                    xlsx.setColumnWidth(2, 20);
+                    xlsx.write(1, 1, "Журнал самодиагностики");
+                    xlsx.write(3, 1, "№ п/п");
+                    xlsx.write(3, 2, "Время");
+                    xlsx.write(3, 3, "Событие");
+                    m_data = m_model_diagnos->return_m_data();
+                    for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                        QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                        xlsx.write(row_t, 1, data_row[0].toInt());
+                        xlsx.write(row_t, 2, data_row[1].toString());
+                        xlsx.write(row_t, 3, data_row[2].toString());
+                    }
+                    break;
+                case 9:
+                    xlsx.addSheet("tg_pow");
+                    xlsx.setColumnWidth(2, 20);
+                    xlsx.write(1, 1, "Превышение реактивной мощности (тангенса сети)");
+                    xlsx.write(3, 1, "№ п/п");
+                    xlsx.write(3, 2, "Время");
+                    xlsx.write(3, 3, "Событие");
+                    m_data = m_model_tg_pow->return_m_data();
+                    for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                        QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                        xlsx.write(row_t, 1, data_row[0].toInt());
+                        xlsx.write(row_t, 2, data_row[1].toString());
+                        xlsx.write(row_t, 3, data_row[2].toString());
+                    }
+                    break;
+            }
+        }
+    }
+    else {
+        type_data = combo->currentData().toUInt();
+        switch (type_data) {
+            case 1: { //event_U
+                xlsx.setColumnWidth(2, 20);
+                xlsx.write(1, 1, "События, связанные с напряжением");
+                xlsx.write(3, 1, "№ п/п");
+                xlsx.write(3, 2, "Время");
+                xlsx.write(3, 3, "Событие");
+                m_data = m_model_U->return_m_data();
+                for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                    QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                    xlsx.write(row_t, 1, data_row[0].toInt());
+                    xlsx.write(row_t, 2, data_row[1].toString());
+                    xlsx.write(row_t, 3, data_row[2].toString());
+                }
+                xlsx.renameSheet("Sheet1", "U");
+                break;
+            }
+            case 2: { //event_I
+                xlsx.setColumnWidth(2, 20);
+                xlsx.write(1, 1, "События, связанные с током");
+                xlsx.write(3, 1, "№ п/п");
+                xlsx.write(3, 2, "Время");
+                xlsx.write(3, 3, "Событие");
+                m_data = m_model_I->return_m_data();
+                for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                    QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                    xlsx.write(row_t, 1, data_row[0].toInt());
+                    xlsx.write(row_t, 2, data_row[1].toString());
+                    xlsx.write(row_t, 3, data_row[2].toString());
+                }
+                xlsx.renameSheet("Sheet1", "I");
+                break;
+            }
+            case 3: { //event_rele
+                xlsx.setColumnWidth(2, 20);
+                xlsx.write(1, 1, "События, связанные с вкл./выкл. счётчика, коммутации реле нагрузки");
+                xlsx.write(3, 1, "№ п/п");
+                xlsx.write(3, 2, "Время");
+                xlsx.write(3, 3, "Событие");
+                m_data = m_model_rele->return_m_data();
+                for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                    QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                    xlsx.write(row_t, 1, data_row[0].toInt());
+                    xlsx.write(row_t, 2, data_row[1].toString());
+                    xlsx.write(row_t, 3, data_row[2].toString());
+                }
+                xlsx.renameSheet("Sheet1", "rele");
+                break;
+            }
+            case 4: { //event_prog
+                xlsx.setColumnWidth(2, 20);
+                xlsx.write(1, 1, "События программирования параметров счётчика");
+                xlsx.write(3, 1, "№ п/п");
+                xlsx.write(3, 2, "Время");
+                xlsx.write(3, 3, "Событие");
+                m_data = m_model_prog->return_m_data();
+                for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                    QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                    xlsx.write(row_t, 1, data_row[0].toInt());
+                    xlsx.write(row_t, 2, data_row[1].toString());
+                    xlsx.write(row_t, 3, data_row[2].toString());
+                }
+                xlsx.renameSheet("Sheet1", "prog");
+                break;
+            }
+            case 5: { //event_ext
+                xlsx.setColumnWidth(2, 20);
+                xlsx.write(1, 1, "События внешних воздействий");
+                xlsx.write(3, 1, "№ п/п");
+                xlsx.write(3, 2, "Время");
+                xlsx.write(3, 3, "Событие");
+                m_data = m_model_ext->return_m_data();
+                for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                    QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                    xlsx.write(row_t, 1, data_row[0].toInt());
+                    xlsx.write(row_t, 2, data_row[1].toString());
+                    xlsx.write(row_t, 3, data_row[2].toString());
+                }
+                xlsx.renameSheet("Sheet1", "ext");
+                break;
+            }
+            case 6: { //event_com
+                xlsx.setColumnWidth(2, 20);
+                xlsx.write(1, 1, "Коммуникационные события");
+                xlsx.write(3, 1, "№ п/п");
+                xlsx.write(3, 2, "Время");
+                xlsx.write(3, 3, "Событие");
+                m_data = m_model_com->return_m_data();
+                for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                    QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                    xlsx.write(row_t, 1, data_row[0].toInt());
+                    xlsx.write(row_t, 2, data_row[1].toString());
+                    xlsx.write(row_t, 3, data_row[2].toString());
+                }
+                xlsx.renameSheet("Sheet1", "com");
+                break;
+            }
+            case 7: { //event_access
+                xlsx.setColumnWidth(2, 20);
+                xlsx.write(1, 1, "События контроля доступа");
+                xlsx.write(3, 1, "№ п/п");
+                xlsx.write(3, 2, "Время");
+                xlsx.write(3, 3, "Событие");
+                m_data = m_model_access->return_m_data();
+                for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                    QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                    xlsx.write(row_t, 1, data_row[0].toInt());
+                    xlsx.write(row_t, 2, data_row[1].toString());
+                    xlsx.write(row_t, 3, data_row[2].toString());
+                }
+                xlsx.renameSheet("Sheet1", "access");
+                break;
+            }
+            case 8: { //event_diagnos
+                xlsx.setColumnWidth(2, 20);
+                xlsx.write(1, 1, "Журнал самодиагностики");
+                xlsx.write(3, 1, "№ п/п");
+                xlsx.write(3, 2, "Время");
+                xlsx.write(3, 3, "Событие");
+                m_data = m_model_diagnos->return_m_data();
+                for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                    QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                    xlsx.write(row_t, 1, data_row[0].toInt());
+                    xlsx.write(row_t, 2, data_row[1].toString());
+                    xlsx.write(row_t, 3, data_row[2].toString());
+                }
+                xlsx.renameSheet("Sheet1", "diagnos");
+                break;
+            }
+            case 9: { //event_tg_pow
+                xlsx.setColumnWidth(2, 20);
+                xlsx.write(1, 1, "Превышение реактивной мощности (тангенса сети)");
+                xlsx.write(3, 1, "№ п/п");
+                xlsx.write(3, 2, "Время");
+                xlsx.write(3, 3, "Событие");
+                m_data = m_model_tg_pow->return_m_data();
+                for (int row_t = 4; row_t < m_data.count() + 4; ++row_t) {
+                    QHash< int, QVariant > data_row = m_data.at(row_t - 4);
+                    xlsx.write(row_t, 1, data_row[0].toInt());
+                    xlsx.write(row_t, 2, data_row[1].toString());
+                    xlsx.write(row_t, 3, data_row[2].toString());
+                }
+                xlsx.renameSheet("Sheet1", "tg_pow");
+                break;
+            }
+            default: break;
+        }
+    }
+
+    QFileDialog dialog(this);
+    QString str = dialog.getSaveFileName(this, "Save file", "C:", "*.xlsx");
+    xlsx.saveAs(str);
 }
 
 bool widget_log_event::transmitt(){
@@ -512,7 +859,7 @@ void widget_log_event::set_request_data(uint32_t type, uint32_t index, uint32_t 
     uint32_t val = type;    //тип архива
     *drbuffer_head++ = (val >> 0) & 0xFF;
     val = (uint32_t)n_set_buf[data_max - index]; //индекс записи
-    log_1 << "val" << val;
+  //  log_1 << "val" << val;
     val = val << 4;
     *drbuffer_head++ = (val >> 8) & 0xFF;
     *drbuffer_head++ = (val >> 0) & 0xFF;
@@ -520,7 +867,7 @@ void widget_log_event::set_request_data(uint32_t type, uint32_t index, uint32_t 
     transmit = true;
     emit signal_write_data(arr);
     tmr_t_out->start(1000);
-    emit signal_timeout_start(5000);
+  //  emit signal_timeout_start(5000);
 }
 
 void widget_log_event::slot_disconnect(){
@@ -591,7 +938,7 @@ void widget_log_event::parse_arch(QByteArray arr){
                         vmap.insert("sec_before_send_max", val16);
                         val16 = *buf++; val16 <<= 8; val16 += *buf++;
                         vmap.insert("sec_before_send", val16);
-                        log_1 << "111" << qPrintable(QJsonDocument::fromVariant(vmap).toJson(QJsonDocument::Indented));
+                     //   log_1 << "111" << qPrintable(QJsonDocument::fromVariant(vmap).toJson(QJsonDocument::Indented));
                         n_set_data = count_max-1;
                         n_set_data_max = count_max-1;
                     //    log_1 << "n_set_data" << n_set_data;
@@ -599,7 +946,7 @@ void widget_log_event::parse_arch(QByteArray arr){
                         uint16_t index_head_t = index_head;
                         for (int n = 0; n < index_head; ++n) {
                             n_set_buf[n] = --index_head_t;
-                            log_1 << "n" << n << n_set_buf[n];
+                         //   log_1 << "n" << n << n_set_buf[n];
                         }
                         uint16_t count_max_t = count_max;
                         for (int n = index_head; n < count_max; ++n) {
@@ -805,19 +1152,13 @@ void widget_log_event::data_arch(uint32_t ts, uint32_t work, uint16_t index, uin
         vm.insert("ts", ts);
         vm.insert("work", work);
         vm.insert("event", event);
-        //  vm.insert("obis", ul_event.obis);
-        //   log_1 << ul_event.obis.A << ul_event.obis.B << ul_event.obis.C << ul_event.obis.D << ul_event.obis.E << ul_event.obis.F;
-        //  vm.insert("event_ext", ul_event.event_ext);
         vm.insert("index", index);
-     //   vm.insert("index_ext", ul_event.index_ext);
-        // vm.insert("type", type);
-        //   log_1 << "1111111" << qPrintable(QJsonDocument::fromVariant(vm).toJson(QJsonDocument::Indented));
-        //  res_ul.ul_events << ul_event;
+        //   log_1 << "111" << qPrintable(QJsonDocument::fromVariant(vm).toJson(QJsonDocument::Indented));
         vl << vm;
     }
     QVariantMap vmap;
     vmap.insert("meterings", vl);
-    //  log_1 << "1111111" << qPrintable(QJsonDocument::fromVariant(vmap).toJson(QJsonDocument::Indented));
+    //  log_1 << "111" << qPrintable(QJsonDocument::fromVariant(vmap).toJson(QJsonDocument::Indented));
     emit signal_bar(count_bar);
     if (fl_intermediate){
         if (--dec_intermediate == 0){
@@ -834,10 +1175,7 @@ void widget_log_event::data_arch(uint32_t ts, uint32_t work, uint16_t index, uin
         tmr_t_out->stop();
         n_set_data = -1;
         n_set_data_max = 0;
-        emit signal_timeout_stop();
-     //   m_model_log->insert_row( path_report_history(vmap), time_from_form_min(), time_from_form_max());
-        QByteArray arr = QJsonDocument::fromVariant(vmap).toJson(QJsonDocument::Indented);
-        log_1 << qPrintable(QJsonDocument::fromVariant(vl).toJson(QJsonDocument::Indented));
+      //  log_1 << qPrintable(QJsonDocument::fromVariant(vl).toJson(QJsonDocument::Indented));
         transmit = false;
         if (all_data){
             transmit = true;
@@ -913,6 +1251,7 @@ void widget_log_event::data_arch(uint32_t ts, uint32_t work, uint16_t index, uin
                     radio1->setEnabled(true);
                     radio2->setEnabled(true);
                     combo->setEnabled(true);
+                    emit signal_disable_tab_kn(0, 6);
                     break;
                 }
                 default: {
@@ -972,8 +1311,9 @@ void widget_log_event::data_arch(uint32_t ts, uint32_t work, uint16_t index, uin
             radio1->setEnabled(true);
             radio2->setEnabled(true);
             combo->setEnabled(true);
+            emit signal_disable_tab_kn(0, 6);
         }
-        emit signal_disable_tab_kn(0, 6);
+   //     QByteArray arr = QJsonDocument::fromVariant(vmap).toJson(QJsonDocument::Indented);
     //     log_1 << qPrintable(arr);
      //  QFile file("logg.txt");
     //    if ( file.open(QIODevice::WriteOnly) ){
@@ -993,7 +1333,6 @@ void widget_log_event::data_arch(uint32_t ts, uint32_t work, uint16_t index, uin
 
 void widget_log_event::slot_view_log_event(){
     if (radio){
-        log_1 << "hhhhhh";
         m_model_U->insert_row( vmap_U, 0, 0 );
         m_view_U->resizeColumnsToContents();
         m_model_I->insert_row( vmap_I, 0, 0 );
@@ -1088,13 +1427,22 @@ void widget_log_event::timeout(){
         emit signal_on_pushButton_connect_clicked(true);
         tmr_t_out->start(3000);
     }
-    else {
+    else if ( count_tout == 3 ) {
+        count_tout++;
+        emit signal_on_pushButton_connect_clicked(true);
+        tmr_t_out->start(6000);
+    }
+    else if ( count_tout == 4 ) {
+        count_tout++;
+        emit signal_on_pushButton_connect_clicked(true);
+        tmr_t_out->start(12000);
+    }
+    else if ( count_tout > 4 ) {
         transmit = false;
         tmr_t_out->stop();
         n_set_data = -1;
         n_set_data_max = 0;
         emit signal_timeout_start (100);
-      //  emit signal_disable_tab_kn(0, 5);
     }
 }
 
@@ -1177,12 +1525,10 @@ void TModel_I::insert_row(QVariantMap vmap, int date_form_min, int date_form_max
                 insert_row_data(vlist.at(n).toMap(), vlist.count() - n - 1);
             }
         }
-      //  insert_row_data(vlist.at(n).toMap());
     }
 }
 void TModel_I::insert_row_data(QVariantMap vmap, int n){
     DData data;
-   // if (vmap.contains("index")) data[0] = vmap["index"];
     data[0] = n;
     if (vmap.contains("ts")){
         QDateTime date = QDateTime::fromTime_t(vmap["ts"].toUInt()).toTimeSpec(Qt::OffsetFromUTC);
@@ -1251,12 +1597,10 @@ void TModel_rele::insert_row(QVariantMap vmap, int date_form_min, int date_form_
                 insert_row_data(vlist.at(n).toMap(), vlist.count() - n - 1);
             }
         }
-       // insert_row_data(vlist.at(n).toMap());
     }
 }
 void TModel_rele::insert_row_data(QVariantMap vmap, int n){
     DData data;
-   // if (vmap.contains("index")) data[0] = vmap["index"];
     data[0] = n;
     if (vmap.contains("ts")){
         QDateTime date = QDateTime::fromTime_t(vmap["ts"].toUInt()).toTimeSpec(Qt::OffsetFromUTC);
@@ -1311,19 +1655,46 @@ void TModel_prog::insert_row(QVariantMap vmap, int date_form_min, int date_form_
                 insert_row_data(vlist.at(n).toMap(), vlist.count() - n - 1);
             }
         }
-       // insert_row_data(vlist.at(n).toMap());
     }
+//    for (int n = vlist.count() - 1; n >= 0; n--) {
+//        QVariantMap v = vlist.at(n).toMap();
+//        if (v.contains("ts")){
+//            int ts = v["ts"].toInt();
+//            if ( ts > 1533070800 ){
+//                insert_row_data(vlist.at(n).toMap(), vlist.count() - n - 1);
+//            }
+//        }
+//    }
 }
 void TModel_prog::insert_row_data(QVariantMap vmap, int n){
     DData data;
-  //  if (vmap.contains("index")) data[0] = vmap["index"];
     data[0] = n;
+    uint time_ = 0;
+    int time_delta;
     if (vmap.contains("ts")){
         QDateTime date = QDateTime::fromTime_t(vmap["ts"].toUInt()).toTimeSpec(Qt::OffsetFromUTC);
         data[1] = date.toString("dd.MM.yyyy hh:mm:ss");
+        time_ = vmap["ts"].toUInt();
     }
     int ev = 0;
     if (vmap.contains("event")) ev = vmap["event"].toInt();
+//    if (ev == 75){
+//        time_start = time_;
+//        QDateTime date = QDateTime::fromTime_t(time_start).toTimeSpec(Qt::OffsetFromUTC);
+//        QString str = date.toString("hh:mm:ss");
+//        log_1 << "time_start" << str;
+//    }
+//    if (ev == 68){
+//        time_end = time_;
+//        QDateTime date = QDateTime::fromTime_t(time_end).toTimeSpec(Qt::OffsetFromUTC);
+//        QString str = date.toString("hh:mm:ss");
+//        log_1 << "time_end" << str;
+//        time_delta = time_start - time_end;
+//        date = QDateTime::fromTime_t(time_delta).toTimeSpec(Qt::OffsetFromUTC);
+//        str = date.toString("hh:mm:ss");
+//        log_1 << "time_delta" << str;
+//      //  log_1 << "time" << time_end << time_start << time_;
+//    }
     switch (ev) {
         case 1: { data[2] = "Изменение адреса или скорости обмена RS-485-1";break; }
         case 2: { data[2] = "Изменение адреса или скорости обмена RS-485-2";break; }
@@ -1379,6 +1750,7 @@ void TModel_prog::insert_row_data(QVariantMap vmap, int n){
         case 52: { data[2] = "Изменение режима инициативного выхода";break; }
         case 53: { data[2] = "Изменение одноадресного ключа шифрования для низкой секретности";break; }
         case 54: { data[2] = "Изменение широковещательного ключа шифрования для низкой секретности";break; }
+    //    case 54: { data[2] = "Изменение ключа аутентификации для низкой секретности";break; }
         case 55: { data[2] = "Изменение одноадресного ключа шифрования для высокой секретности";break; }
         case 56: { data[2] = "Изменение широковещательного ключа шифрования для высокой секретности";break; }
         case 57: { data[2] = "Изменение ключа аутентификации для высокой секретности";break; }
@@ -1392,7 +1764,19 @@ void TModel_prog::insert_row_data(QVariantMap vmap, int n){
         case 65: { data[2] = "Обновление ПО";break; }
         case 66: { data[2] = "Изменение режима отключения по разбалансу токов";break; }
         case 67: { data[2] = "Изменение режима отключения по температуре";break; }
-        case 68: { data[2] = "Коррекция времени";break; }
+        case 68: {
+          //  QDateTime date = QDateTime::fromTime_t(time_end).toTimeSpec(Qt::OffsetFromUTC);
+          //  QString str = date.toString("hh:mm:ss");
+          //  data[2] = "Коррекция времени. Дельта: " + str;
+            data[2] = "Коррекция времени (начало)";
+            break;
+        }
+      //  case 70: { data[2] = "Очистка флагов инициативного выхода";break; }
+      //  case 71: { data[2] = "Изменение таймаута для HDLC соединения";break; }
+      //  case 72: { data[2] = "Изменение часов больших нагрузок";break; }
+      //  case 73: { data[2] = "Изменение часов контроля максимума";break; }
+      //  case 74: { data[2] = "Изменение схемы подключения";break; }
+        case 75: { data[2] = "Коррекция времени (окончание)";break; }
     }
     int row = m_data.count();
     beginInsertRows( QModelIndex(), row, row );
@@ -1422,12 +1806,10 @@ void TModel_ext::insert_row(QVariantMap vmap, int date_form_min, int date_form_m
                 insert_row_data(vlist.at(n).toMap(), vlist.count() - n - 1);
             }
         }
-      //  insert_row_data(vlist.at(n).toMap());
     }
 }
 void TModel_ext::insert_row_data(QVariantMap vmap, int n){
     DData data;
-   // if (vmap.contains("index")) data[0] = vmap["index"];
     data[0] = n;
     if (vmap.contains("ts")){
         QDateTime date = QDateTime::fromTime_t(vmap["ts"].toUInt()).toTimeSpec(Qt::OffsetFromUTC);
@@ -1471,12 +1853,10 @@ void TModel_com::insert_row(QVariantMap vmap, int date_form_min, int date_form_m
                 insert_row_data(vlist.at(n).toMap(), vlist.count() - n - 1);
             }
         }
-      //  insert_row_data(vlist.at(n).toMap());
     }
 }
 void TModel_com::insert_row_data(QVariantMap vmap, int n){
     DData data;
- //   if (vmap.contains("index")) data[0] = vmap["index"];
     data[0] = n;
     if (vmap.contains("ts")){
         QDateTime date = QDateTime::fromTime_t(vmap["ts"].toUInt()).toTimeSpec(Qt::OffsetFromUTC);
@@ -1516,12 +1896,10 @@ void TModel_access::insert_row(QVariantMap vmap, int date_form_min, int date_for
                 insert_row_data(vlist.at(n).toMap(), vlist.count() - n - 1);
             }
         }
-     //   insert_row_data(vlist.at(n).toMap());
     }
 }
 void TModel_access::insert_row_data(QVariantMap vmap, int n){
     DData data;
-    //if (vmap.contains("index")) data[0] = vmap["index"];
     data[0] = n;
     if (vmap.contains("ts")){
         QDateTime date = QDateTime::fromTime_t(vmap["ts"].toUInt()).toTimeSpec(Qt::OffsetFromUTC);
@@ -1561,12 +1939,10 @@ void TModel_diagnos::insert_row(QVariantMap vmap, int date_form_min, int date_fo
                 insert_row_data(vlist.at(n).toMap(), vlist.count() - n - 1);
             }
         }
-      //  insert_row_data(vlist.at(n).toMap());
     }
 }
 void TModel_diagnos::insert_row_data(QVariantMap vmap, int n){
     DData data;
-    //if (vmap.contains("index")) data[0] = vmap["index"];
     data[0] = n;
     if (vmap.contains("ts")){
         QDateTime date = QDateTime::fromTime_t(vmap["ts"].toUInt()).toTimeSpec(Qt::OffsetFromUTC);
@@ -1616,12 +1992,10 @@ void TModel_tg_pow::insert_row(QVariantMap vmap, int date_form_min, int date_for
                 insert_row_data(vlist.at(n).toMap(), vlist.count() - n - 1);
             }
         }
-      //  insert_row_data(vlist.at(n).toMap());
     }
 }
 void TModel_tg_pow::insert_row_data(QVariantMap vmap, int n){
     DData data;
-    //if (vmap.contains("index")) data[0] = vmap["index"];
     data[0] = n;
     if (vmap.contains("ts")){
         QDateTime date = QDateTime::fromTime_t(vmap["ts"].toUInt()).toTimeSpec(Qt::OffsetFromUTC);

@@ -42,6 +42,9 @@
          <height>20</height>
         </size>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="2" column="0">
@@ -64,6 +67,9 @@
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="2" column="4">
@@ -80,6 +86,9 @@
          <height>20</height>
         </size>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="4" column="4">
@@ -95,6 +104,9 @@
          <width>60</width>
          <height>20</height>
         </size>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -128,6 +140,9 @@
          <height>20</height>
         </size>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="8" column="2">
@@ -143,6 +158,9 @@
          <width>60</width>
          <height>20</height>
         </size>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -175,6 +193,9 @@
          <width>60</width>
          <height>20</height>
         </size>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -235,6 +256,9 @@
          <height>20</height>
         </size>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="9" column="2">
@@ -251,6 +275,9 @@
          <height>20</height>
         </size>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="9" column="1">
@@ -266,6 +293,9 @@
          <width>60</width>
          <height>20</height>
         </size>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -288,6 +318,9 @@
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -326,6 +359,9 @@
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -370,6 +406,9 @@
          <height>20</height>
         </size>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="5" column="2">
@@ -386,6 +425,9 @@
          <height>20</height>
         </size>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="8" column="4">
@@ -401,6 +443,9 @@
          <width>60</width>
          <height>20</height>
         </size>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -423,6 +468,9 @@
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -461,6 +509,9 @@
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -529,6 +580,9 @@
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -606,6 +660,9 @@
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="3" column="1">
@@ -621,6 +678,9 @@
          <width>60</width>
          <height>20</height>
         </size>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -660,6 +720,9 @@
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="4" column="2">
@@ -675,6 +738,9 @@
          <width>60</width>
          <height>20</height>
         </size>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -692,6 +758,9 @@
          <height>20</height>
         </size>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="7" column="1">
@@ -708,6 +777,9 @@
          <height>20</height>
         </size>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="3" column="2">
@@ -723,6 +795,9 @@
          <width>60</width>
          <height>20</height>
         </size>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -746,6 +821,9 @@
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="9" column="0">
@@ -767,6 +845,9 @@
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -806,6 +887,9 @@
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="8" column="0">
@@ -828,6 +912,9 @@
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="5" column="4">
@@ -844,6 +931,9 @@
          <height>20</height>
         </size>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="3" column="4">
@@ -859,6 +949,9 @@
          <width>60</width>
          <height>20</height>
         </size>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -882,6 +975,9 @@
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="5" column="5">
@@ -904,6 +1000,9 @@
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="8" column="1">
@@ -920,6 +1019,9 @@
          <height>20</height>
         </size>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item row="7" column="2">
@@ -935,6 +1037,9 @@
          <width>60</width>
          <height>20</height>
         </size>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>

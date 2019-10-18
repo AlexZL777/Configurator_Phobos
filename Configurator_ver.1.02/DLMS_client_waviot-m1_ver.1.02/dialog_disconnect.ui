@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>361</width>
-    <height>119</height>
+    <width>512</width>
+    <height>135</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -49,7 +49,19 @@
       <bool>false</bool>
      </property>
      <property name="text">
-      <string>Нет связи. Проверьте подключение кабеля к счётчику</string>
+      <string>Нет связи. В зависимости от вида подключения проверьте все параметры</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string> подключения к счётчику (соединительный кабель, оптоголовку, настройки и т.п.)</string>
      </property>
     </widget>
    </item>
