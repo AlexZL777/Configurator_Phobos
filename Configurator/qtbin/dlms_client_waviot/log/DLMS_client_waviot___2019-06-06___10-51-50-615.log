@@ -1,0 +1,110 @@
+2019.06.06 10:51:51.149  (Wrn)  QObject::connect: No such signal QTableView::itemActivated (QTableViewItem *)
+2019.06.06 10:51:51.149  (Wrn)  QObject::connect:  (receiver name: 'widget_tarifs')
+2019.06.06 10:51:51.157  (Wrn)  QMetaObject::connectSlotsByName: No matching signal for on_pushButton_clicked()
+2019.06.06 10:51:53.587  (Exc)  {hdlc_dlms_exchange.cpp;1618} 16 32
+2019.06.06 10:51:53.588  (Trc)  {hdlc_dlms_exchange.cpp; 946} TX "7EA007214193D9D27E"
+2019.06.06 10:51:53.588  (Exc)  {widget_connect.cpp; 973} TX "7EA007214193D9D27E"
+2019.06.06 10:51:53.601  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.06 10:51:53.617  (Exc)  {widget_connect.cpp; 707} rxxxx "20412173BD8D818014050200800602"
+2019.06.06 10:51:53.633  (Exc)  {widget_connect.cpp; 707} rxxxx "0080070400000001080400000001CE"
+2019.06.06 10:51:53.649  (Exc)  {widget_connect.cpp; 707} rxxxx "6A7E"
+2019.06.06 10:51:53.650  (Trc)  {hdlc_dlms_exchange.cpp; 852} "H(a 0) Len(32) SaddrF(10) Caddr(20) Ctrl(RRR=3 PF=1 SSS=1 I=0 = UA) Len(32) HCS(8dbd 8dbd) FCS(6ace 6ace)" data_len 23
+2019.06.06 10:51:53.651  (Exc)  {hdlc_dlms_exchange.cpp;1416} cf_UA
+2019.06.06 10:51:53.652  (Ntc)  {hdlc_dlms_exchange.cpp;1674} TX PDU "6034A1090607608574050801018A0207808B0760857405080201AC088006526561646572BE10040E01000000065F1F0400001E1DFFFF"
+2019.06.06 10:51:53.653  (Trc)  {hdlc_dlms_exchange.cpp; 946} TX "7EA042214110AA1CE6E6006034A1090607608574050801018A0207808B0760857405080201AC088006526561646572BE10040E01000000065F1F0400001E1DFFFFB6E17E"
+2019.06.06 10:51:53.654  (Exc)  {widget_connect.cpp; 973} TX "7EA042214110AA1CE6E6006034A1090607608574050801018A0207808B0760857405080201AC088006526561646572BE10040E01000000065F1F0400001E1DFFFFB6E17E"
+2019.06.06 10:51:53.728  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.06 10:51:53.745  (Exc)  {widget_connect.cpp; 707} rxxxx "37412130A269E6E7006129A1090607"
+2019.06.06 10:51:53.761  (Exc)  {widget_connect.cpp; 707} rxxxx "60857405080101A203020100A305A103"
+2019.06.06 10:51:53.777  (Exc)  {widget_connect.cpp; 707} rxxxx "020100BE10040E0800065F1F040000"
+2019.06.06 10:51:53.793  (Exc)  {widget_connect.cpp; 707} rxxxx "1014100000076B7F7E"
+2019.06.06 10:51:53.794  (Trc)  {hdlc_dlms_exchange.cpp; 852} "H(a 0) Len(55) SaddrF(10) Caddr(20) Ctrl(RRR=1 PF=1 SSS=0 I=1 = I) Len(55) HCS(69a2 69a2) FCS(7f6b 7f6b)" data_len 43
+2019.06.06 10:51:53.794  (Ntc)  {hdlc_dlms_exchange.cpp;1425} RX PDU "6129A109060760857405080101A203020100A305A103020100BE10040E0800065F1F040000101410000007"
+2019.06.06 10:51:53.862  (Wrn)  setGeometry: Unable to set geometry 996x675+-1063+285 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  998x683+-1063+285 (frame: 8, 31, 8, 8, custom margin: 0, 0, 0, 0, minimum size: 996x675, maximum size: 16777215x16777215).
+2019.06.06 10:51:54.029  (Wrn)  setGeometry: Unable to set geometry 998x710+-1063+285 on QWidgetWindow/'MainWindowWindow'. Resulting geometry:  998x718+-1063+285 (frame: 8, 31, 8, 8, custom margin: 0, 0, 0, 0, minimum size: 996x710, maximum size: 16777215x16777215).
+2019.06.06 10:51:54.063  (Ntc)  {hdlc_dlms_exchange.cpp;1674} TX PDU "C001C100010000600101FF0200"
+2019.06.06 10:51:54.064  (Trc)  {hdlc_dlms_exchange.cpp; 946} TX "7EA019214132B90BE6E600C001C100010000600101FF020032BC7E"
+2019.06.06 10:51:54.065  (Exc)  {widget_connect.cpp; 973} TX "7EA019214132B90BE6E600C001C100010000600101FF020032BC7E"
+2019.06.06 10:51:54.097  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0"
+2019.06.06 10:51:54.113  (Exc)  {widget_connect.cpp; 707} rxxxx "15412152939FE6E700C401C1000903"
+2019.06.06 10:51:54.129  (Exc)  {widget_connect.cpp; 707} rxxxx "312E3117127E"
+2019.06.06 10:51:54.130  (Trc)  {hdlc_dlms_exchange.cpp; 852} "H(a 0) Len(21) SaddrF(10) Caddr(20) Ctrl(RRR=2 PF=1 SSS=1 I=1 = I) Len(21) HCS(9f93 9f93) FCS(1217 1217)" data_len 9
+2019.06.06 10:51:54.131  (Ntc)  {hdlc_dlms_exchange.cpp;1425} RX PDU "C401C1000903312E31"
+2019.06.06 10:51:54.141  (Ntc)  {hdlc_dlms_exchange.cpp;1674} TX PDU "C001C100010000600100FF0200"
+2019.06.06 10:51:54.141  (Trc)  {hdlc_dlms_exchange.cpp; 946} TX "7EA019214154890DE6E600C001C100010000600100FF020089A07E"
+2019.06.06 10:51:54.147  (Exc)  {widget_connect.cpp; 973} TX "7EA019214154890DE6E600C001C100010000600100FF020089A07E"
+2019.06.06 10:51:54.193  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA019412174934CE6E700C401"
+2019.06.06 10:51:54.209  (Exc)  {widget_connect.cpp; 707} rxxxx "C100090737353230333739E9167E"
+2019.06.06 10:51:54.210  (Trc)  {hdlc_dlms_exchange.cpp; 852} "H(a 0) Len(25) SaddrF(10) Caddr(20) Ctrl(RRR=3 PF=1 SSS=2 I=1 = I) Len(25) HCS(4c93 4c93) FCS(16e9 16e9)" data_len 13
+2019.06.06 10:51:54.211  (Ntc)  {hdlc_dlms_exchange.cpp;1425} RX PDU "C401C100090737353230333739"
+2019.06.06 10:51:54.222  (Ntc)  {hdlc_dlms_exchange.cpp;1674} TX PDU "C001C100010000600102FF0200"
+2019.06.06 10:51:54.223  (Trc)  {hdlc_dlms_exchange.cpp; 946} TX "7EA019214176990FE6E600C001C100010000600102FF0200FF997E"
+2019.06.06 10:51:54.223  (Exc)  {widget_connect.cpp; 973} TX "7EA019214176990FE6E600C001C100010000600102FF0200FF997E"
+2019.06.06 10:51:54.257  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA016"
+2019.06.06 10:51:54.272  (Exc)  {widget_connect.cpp; 707} rxxxx "412196763AE6E700C401C100090441"
+2019.06.06 10:51:54.289  (Exc)  {widget_connect.cpp; 707} rxxxx "3435356C097E"
+2019.06.06 10:51:54.290  (Trc)  {hdlc_dlms_exchange.cpp; 852} "H(a 0) Len(22) SaddrF(10) Caddr(20) Ctrl(RRR=4 PF=1 SSS=3 I=1 = I) Len(22) HCS(3a76 3a76) FCS(96c 96c)" data_len 10
+2019.06.06 10:51:54.291  (Ntc)  {hdlc_dlms_exchange.cpp;1425} RX PDU "C401C100090441343535"
+2019.06.06 10:51:54.299  (Ntc)  {hdlc_dlms_exchange.cpp;1674} TX PDU "C001C100010000600103FF0200"
+2019.06.06 10:51:54.299  (Trc)  {hdlc_dlms_exchange.cpp; 946} TX "7EA019214198E901E6E600C001C100010000600103FF020044857E"
+2019.06.06 10:51:54.300  (Exc)  {widget_connect.cpp; 973} TX "7EA019214198E901E6E600C001C100010000600103FF020044857E"
+2019.06.06 10:51:54.336  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0194121B8F3"
+2019.06.06 10:51:54.352  (Exc)  {widget_connect.cpp; 707} rxxxx "40E6E700C401C1000907312E312E35"
+2019.06.06 10:51:54.369  (Exc)  {widget_connect.cpp; 707} rxxxx "2E33946A7E"
+2019.06.06 10:51:54.369  (Trc)  {hdlc_dlms_exchange.cpp; 852} "H(a 0) Len(25) SaddrF(10) Caddr(20) Ctrl(RRR=5 PF=1 SSS=4 I=1 = I) Len(25) HCS(40f3 40f3) FCS(6a94 6a94)" data_len 13
+2019.06.06 10:51:54.369  (Ntc)  {hdlc_dlms_exchange.cpp;1425} RX PDU "C401C1000907312E312E352E33"
+2019.06.06 10:51:54.371  (Ntc)  {hdlc_dlms_exchange.cpp;1674} TX PDU "C001C100010100000402FF0200"
+2019.06.06 10:51:54.371  (Trc)  {hdlc_dlms_exchange.cpp; 946} TX "7EA0192141BAF903E6E600C001C100010100000402FF0200A5B97E"
+2019.06.06 10:51:54.372  (Exc)  {widget_connect.cpp; 973} TX "7EA0192141BAF903E6E600C001C100010100000402FF0200A5B97E"
+2019.06.06 10:51:54.417  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121DAF2C0E6E700C401C100"
+2019.06.06 10:51:54.455  (Exc)  {widget_connect.cpp; 707} rxxxx "1101925C7E"
+2019.06.06 10:51:54.456  (Trc)  {hdlc_dlms_exchange.cpp; 852} "H(a 0) Len(18) SaddrF(10) Caddr(20) Ctrl(RRR=6 PF=1 SSS=5 I=1 = I) Len(18) HCS(c0f2 c0f2) FCS(5c92 5c92)" data_len 6
+2019.06.06 10:51:54.456  (Ntc)  {hdlc_dlms_exchange.cpp;1425} RX PDU "C401C1001101"
+2019.06.06 10:51:54.464  (Ntc)  {hdlc_dlms_exchange.cpp;1674} TX PDU "C001C100010100000403FF0200"
+2019.06.06 10:51:54.464  (Trc)  {hdlc_dlms_exchange.cpp; 946} TX "7EA0192141DCC905E6E600C001C100010100000403FF02001EA57E"
+2019.06.06 10:51:54.466  (Exc)  {widget_connect.cpp; 973} TX "7EA0192141DCC905E6E600C001C100010100000403FF02001EA57E"
+2019.06.06 10:51:54.540  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0124121FCC684E6E700C401C100"
+2019.06.06 10:51:54.545  (Exc)  {widget_connect.cpp; 707} rxxxx "1101925C7E"
+2019.06.06 10:51:54.546  (Trc)  {hdlc_dlms_exchange.cpp; 852} "H(a 0) Len(18) SaddrF(10) Caddr(20) Ctrl(RRR=7 PF=1 SSS=6 I=1 = I) Len(18) HCS(84c6 84c6) FCS(5c92 5c92)" data_len 6
+2019.06.06 10:51:54.546  (Ntc)  {hdlc_dlms_exchange.cpp;1425} RX PDU "C401C1001101"
+2019.06.06 10:51:54.554  (Ntc)  {hdlc_dlms_exchange.cpp;1674} TX PDU "C001C100010000600104FF0200"
+2019.06.06 10:51:54.555  (Trc)  {hdlc_dlms_exchange.cpp; 946} TX "7EA0192141FED907E6E600C001C100010000600104FF020065D27E"
+2019.06.06 10:51:54.556  (Exc)  {widget_connect.cpp; 973} TX "7EA0192141FED907E6E600C001C100010000600104FF020065D27E"
+2019.06.06 10:51:54.593  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA0134121"
+2019.06.06 10:51:54.624  (Exc)  {widget_connect.cpp; 707} rxxxx "1E615CE6E700C401C1001207E39E297E"
+2019.06.06 10:51:54.630  (Trc)  {hdlc_dlms_exchange.cpp; 852} "H(a 0) Len(19) SaddrF(10) Caddr(20) Ctrl(RRR=0 PF=1 SSS=7 I=1 = I) Len(19) HCS(5c61 5c61) FCS(299e 299e)" data_len 7
+2019.06.06 10:51:54.631  (Ntc)  {hdlc_dlms_exchange.cpp;1425} RX PDU "C401C1001207E3"
+2019.06.06 10:51:54.638  (Ntc)  {hdlc_dlms_exchange.cpp;1674} TX PDU "C001C100010000010000FF0200"
+2019.06.06 10:51:54.638  (Trc)  {hdlc_dlms_exchange.cpp; 946} TX "7EA019214110A909E6E600C001C100010000010000FF020057287E"
+2019.06.06 10:51:54.639  (Exc)  {widget_connect.cpp; 973} TX "7EA019214110A909E6E600C001C100010000010000FF020057287E"
+2019.06.06 10:51:54.672  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01D"
+2019.06.06 10:51:54.701  (Exc)  {widget_connect.cpp; 707} rxxxx "4121305F3AE6E700C401C1001907E306"
+2019.06.06 10:51:54.707  (Exc)  {widget_connect.cpp; 707} rxxxx "06040A34010000B400C4467E"
+2019.06.06 10:51:54.708  (Trc)  {hdlc_dlms_exchange.cpp; 852} "H(a 0) Len(29) SaddrF(10) Caddr(20) Ctrl(RRR=1 PF=1 SSS=0 I=1 = I) Len(29) HCS(3a5f 3a5f) FCS(46c4 46c4)" data_len 17
+2019.06.06 10:51:54.709  (Ntc)  {hdlc_dlms_exchange.cpp;1425} RX PDU "C401C1001907E30606040A34010000B400"
+2019.06.06 10:51:54.719  (Exc)  {pdu_worker.cpp; 105} {
+    "set-request": {
+        "set-request-normal": {
+            "cosem-attribute-descriptor": {
+                "attribute-id": 2,
+                "class-id": 1,
+                "instance-id": "00006001FEFF"
+            },
+            "invoke-id-and-priority": 193,
+            "value": {
+                "octet-string": "EF4405FFFFFF000000"
+            }
+        }
+    }
+}
+
+2019.06.06 10:51:54.720  (Ntc)  {hdlc_dlms_exchange.cpp;1674} TX PDU "C101C1000100006001FEFF02000909EF4405FFFFFF000000"
+2019.06.06 10:51:54.721  (Trc)  {hdlc_dlms_exchange.cpp; 946} TX "7EA024214132C4CCE6E600C101C1000100006001FEFF02000909EF4405FFFFFF00000028227E"
+2019.06.06 10:51:54.721  (Exc)  {widget_connect.cpp; 973} TX "7EA024214132C4CCE6E600C101C1000100006001FEFF02000909EF4405FFFFFF00000028227E"
+2019.06.06 10:51:54.780  (Exc)  {widget_connect.cpp; 707} rxxxx "7EA01B41"
+2019.06.06 10:51:54.791  (Exc)  {widget_connect.cpp; 707} rxxxx "2152D131E6E700C501C1000909EF44"
+2019.06.06 10:51:54.812  (Exc)  {widget_connect.cpp; 707} rxxxx "85000000FFFFFF26887E"
+2019.06.06 10:51:54.814  (Trc)  {hdlc_dlms_exchange.cpp; 852} "H(a 0) Len(27) SaddrF(10) Caddr(20) Ctrl(RRR=2 PF=1 SSS=1 I=1 = I) Len(27) HCS(31d1 31d1) FCS(8826 8826)" data_len 15
+2019.06.06 10:51:54.814  (Ntc)  {hdlc_dlms_exchange.cpp;1425} RX PDU "C501C1000909EF4485000000FFFFFF"
+2019.06.06 10:51:54.816  (Exc)  {widget_info.cpp; 160} data_electro5 "EF4485000000FFFFFF"
+2019.06.06 10:51:54.817  (Exc)  {widget_info.cpp; 170} state_ant 0
